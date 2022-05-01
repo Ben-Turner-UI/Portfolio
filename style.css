@@ -1,422 +1,228 @@
-*{  
-    padding: 0; 
-    margin: 0;
+body {
+    font-family: 'Barlow', sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
+/* width */
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; 
+    width: 15px;
 }
-@font-face  {
-    font-family: "Axiforma";
-    src: url(fonts/Kastelov - Axiforma Black.otf);
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
-/*---------------------------------------------*/
-.box1{
-    height: 100vh;
-    width: 100vw;
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #DFDFDF;
+    border-style: solid;
+    border-width: 0px;
 }
-nav {
-      padding-top: 30px;
-      padding-left: 30px;
-      z-index: 5;
-      font-family: 'Axiforma', sans-serif;
-      font-weight: 600;
-      position: fixed;
+
+
+
+
+
+/*------ TYPOGRAPHY ------*/
+
+header{
+    width: 90%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
-nav ul li {
-    display: inline-block;
-    float: left;
-    padding: 10px;
+
+header h1{
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
 }
-nav ul li a {
-      border-style: solid;
-      border-width: 3.5px;
-      border-color: white;
-      border-radius: 20px;
-    
-      width: 75px;
-      height: 40px;
-      padding: 10px;
-      display: block; 
-    
-      color: white;
-      font-size: 1.1em;
-      text-decoration: none;
-      text-align: center;
-      line-height: 41px;
-}
-nav ul li a:hover {
-      color: lightgrey;
-}
-.logo{
-    width:50%;
-    max-width: 400px;
-    height: auto;
-    position: relative; 
-    float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-.downarrow{
-    width: 60px;
-    height: 60px;
-    position: absolute; 
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    top: 90%;
-    animation: fadein 5s;
-    filter: drop-shadow(0px 0px 40px white);
-}
-/*---------------------------------------------*/
-.box2 {
-    height: 100%;
-    width: 100%;
-    float: left;
-    color: white;
-    font-family: 'Axiforma', sans-serif;
-    padding-top: 75px;
-}
-.portfoliointroduction p{
+
+header h1, header p{
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
-.portfoliointroduction h1 p{
-    font-weight: 900;
-    font-size: 3em;
-    line-height: 90px;
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
 }
-.portfoliointroduction h3{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 500;
-    margin-bottom: 50px;
+
+h2 {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 600;
 }
-.centerproject{
-    width: 81%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+
+h3 {
+    font-size: 28px;
+    line-height: 42px;
 }
-.project{
-    width: 46%;
-    float: left;
-    margin: 0% 2% 0% 2%;
+
+h4 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 24px;
+    margin-bottom: 8px;
 }
-.project a{
+
+
+
+
+p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    Letter-spacing: .16px;
+}
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    padding-right: 25px;
+}
+
+
+a {
+    color: black;
     text-decoration: none;
-    color: #FFFFFF;
 }
-.projecttext{
-    height: 100%;
-    padding: 5%;
-}
-.project1box{
-    width: 100%;
-    height: 200px;
-    border-radius: 20px;
-    background-image: url(img/junction.svg);
 
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(255,255,255, 0.05);
-    backdrop-filter: blur(15px) saturate(3);
-    -webkit-backdrop-filter: blur(15px) saturate(3);
+
+a:hover {
+    color: #CE685D;
 }
-.project2box{
-    width: 100%;
-    height: 200px;
-    border-radius: 20px;
-    background-image: url(img/style.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(255,255,255, 0.05);
-    backdrop-filter: blur(15px) saturate(3);
-    -webkit-backdrop-filter: blur(15px) saturate(3);
+
+
+br {
+    line-height: 200px;
 }
-.project3box{
-    width: 100%;
-    height: 200px;
-    border-radius: 20px;
-    background-image: url(img/.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(255,255,255, 0.05);
-    backdrop-filter: blur(15px) saturate(3);
-    -webkit-backdrop-filter: blur(15px) saturate(3);
+
+
+
+
+
+
+
+
+/*------ LAYOUT ------*/
+
+header,
+nav,
+footer,
+main {
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
-/*---------------------------------------------*/
-.box3 {
-    height: 100%;
-    width: 100%;
-    float: left;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.about{
-    height: 100%;
-    width: 78%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.aboutbox{
-  width: 100%;
-  height: 150px;
-  border-radius: 30px;
-  text-align: center;
-  background-color: rgba(255,255,255, 0.05);
-  backdrop-filter: blur(15px) saturate(3);
-  -webkit-backdrop-filter: blur(15px) saturate(3);
-}
-.abouttext{
-    color: white;
-    width: 84%;
-    height: 85%;
+
+
+
+footer {
     display: inline-block;
-    padding-top: 30px;
-}
-/*---------------------------------------------*/
-.box4 {
-    height: 100%;
     width: 100%;
-    float: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    
-}
-.social{
-    width: 600px; 
-    margin: 0 auto;
-    position: relative;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 50px;
-  align-items: center;
-  justify-content: center;
 }
 
 
 
+/*------ GRIDS ------*/
 
-
-
-
-
-
-
-
-/*---------------------------------------------*/
-/*---------------------------------------------*/
-/*-------------------Page 2--------------------*/
-/*---------------------------------------------*/
-/*---------------------------------------------*/
-.work1{
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Axiforma', sans-serif;
-}
-.contentcontainer{
-    height: 100%;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 160px;
-}
-.content{
-    color: white;
-}
-.content h1{
-    width: 100%;
-    font-weight: 900;
-    font-size: 5em;
-    line-height: 50px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-.content p{
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
-/*---------------------Images Page 2-----------------------*/
-.junction1, .junction2{
-    margin: 30px 0 30px 0;
-    backdrop-filter: blur(15px) saturate(3);
-    -webkit-backdrop-filter: blur(15px) saturate(3);
-}
-
-.junction1{
-    width: 100%;
-    height: 350px;
-    background-image: url(img/concept1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 20px;
-    background-color: rgba(255,255,255, 0.05);
-}
-.junction2{
-    width: 100%;
-    height: 350px;
-    background-image: url(img/concept2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 20px;
-    background-color: rgba(255,255,255, 0.05);
-}
-/*---------------------Parallax-----------------------*/
-.parallax-window {
-    background: transparent;
-    min-height: 30%;
-}
-.parallax-window2 {
-    background: transparent;
-    min-height: 30%;
-}
-.parallax-background {
-    background: transparent;
-    min-height: 30%;
-}
-.parallax-background2 {
-    background: transparent;
-    min-height: 30%;
-}
-/*---------------------CSS Animation-----------------------*/
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*---------------------------------------------*/
-/*---------------------------------------------*/
-/*---------------------------------------------*/
-/*---------------------------------------------
-
-MEDIA QUERIES
-
----------------------------------------------*/
-/*---------------------------------------------*/
-/*---------------------------------------------*/
-/*---------------------------------------------*/
-
-
-@media (max-width: 1200px) {
-/*---------------------------------------------*/
-.portfoliointroduction h1 p{
-    font-size: 2.5em;
-}
-.portfoliointroduction h3{
-    font-size: 1em;
-}  
-.projecttext{
-font-size: 14px;
-}
-    
-.centerproject{
-    width: 94%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-    
-nav {
-      padding-top: 10px;
-      padding-left: 10px;
-
-}
-nav ul li {
-    display: inline-block;
-    float: left;
-    margin-right: 20px;
-}
-nav ul li a {
-      width: 100%;
-      height: 20px;
-      font-size: 1.1em;
-      line-height: 22px;
-}
-
-.content h1{
-    width: 100%;
-    font-weight: 900;
-    font-size: 4em;
-    line-height: 50px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-    .content p{
-        font-size: 14px;
-    }
-    
-    .contentcontainer{
-    width: 70%;
-    }
-    
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 700px) {
-/*---------------------------------------------*/
-.projecttext{
-font-size: 13px;
-}
-     
-.portfoliointroduction h1 p{
-    font-size: 2em;
-}
-    
-.centerproject{
-    width: 95%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-    
-.social{
-    width: 78%; 
-    margin: 0 auto;
-    position: relative;
-}
-.grid-container {
+main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-column-gap: 1%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
 }
-    
-.contentcontainer{
-    width: 85%;
+
+
+[class^="project_box"] {
+    height: 200px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
 }
+
+
+/*------ IMAGES ------*/
+
+#avatar {
+    width: 86px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.project_box_1 {
+    background: url(img/Olympus.svg);
+
+}
+
+.project_box_2 {
+    background-image: url(img/AI.svg);
+}
+
+.project_box_3 {
+    background-image: url(img/Desk.svg);
+}
+
+.project_box_4 {
+    background-image: url(img/Game.svg);
+}
+
+.project_box_5 {
+    background-image: url(img/Airline.svg);
+}
+
+.project_box_6 {
+    background-image: url(img/NHS.svg);
+}
+
+
+.project_box_7 {
+    background-image: url(img/BBC.svg);
+}
+
+
+.project_box_8 {
+    background-image: url(img/Shop.svg);
+}
+
+
+/*------ MEDIA QUERY ------*/
+
+
+
+@media only screen and (max-width: 700px) {
+
+
+
+    body {
+        width: 90%;
+    }
+
+
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 25px;
+    }
 
 }

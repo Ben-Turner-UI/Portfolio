@@ -1,113 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="jquery/jquery.fadethis.min.js"></script>
-<script src="jquery/parallax.js"></script>
-<script src="jquery/jquery.smoothscroll.min.js"></script>
-<head></head>
-<title>Portfolio</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Turner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
 <body>
-<section class="box1">
-<nav>
-<ul>
-    <li>
-      <a href="#box2">Work</a>
-    <li>
-      <a href="#box3">About</a>
-      </li>
-  </ul>
-</nav>  
-<div class="logo">
-<img src="img/logo.svg">
-</div>
-<div class="downarrow">
-<a href="#box2"><img src="img/arrow.svg"></a>
-</div>
-<div class="parallax-window" data-parallax="scroll" data-bleed="2200" data-speed="0.12" data-z-index="-1" data-image- src="img/shapes1.svg"></div>
-<div class="parallax-background" data-parallax="scroll" data-bleed="2500" data-speed="0.08" data-z-index="-2" data-image- src="img/shapes2.svg"></div>
-<div class="parallax-background2" data-parallax="scroll" data-bleed="2500" data-speed="0.05" data-z-index="-3" data-image- src="img/shapes3.svg"></div>
-</section> 
-
-<section id="box2" class="box2"> 
-
-<div class="block1">
-<div class="slide-top">
-<div class="portfoliointroduction">
-    <h1><p>My Portfolio</p></h1>
-    <h3><p>This is my portfolio, displayed on a colourful and fun website.</p></h3>
-</div>
-</div>
-</div>
-<div class="centerproject">
-<div class="block2">
-<div class="slide-left">
-<div class="project">
-<a href="project1.html">
-    <div class="project1box">
-    </div>
-    <div class="projecttext">
-    This is Junction, a minimal travel app designed for travel around Europe. It allows the user to display their journeys information clearly and progressively.
-    </div>
-</a></div>
-<div class="project">
-    <div class="project2box">
-    </div>
-    <div class="projecttext">
-    This is my style guide, a guide you users will use to control and use my style. 
-    </div>
-</div>
-<div class="project">
-    <div class="project3box">
-    </div>
-    <div class="projecttext">
-    This is my style guide, a guide you users will use to control and use my style. 
-    </div>
-</div>
-</div>
-</div>
-</div>
-</section> 
-<section id="box3" class="box3">
-<div class="block2">
-<div class="slide-left">
-<div class="about">
-<div class="aboutbox">
-<span class="abouttext">
-Description for stuff and nice things.
-</span>
-</div>
-</div>
-</div>
-</div>
-</section> 
-<section class="box4">
-<div class="social">
-<div class="socialimages"> 
-<div class="grid-container">
-  <a href="https://dribbble.com/Ben_Turner_IxD" target="_blank"><div class="grid-item"><img src="img/dribble.svg"></div></a>
-  <a href="index.html"  target="_blank"><div class="grid-item"><img src="img/facebook.svg"></div></a>
-  <a href="https://twitter.com/Ben_Turner_IxD" target="_blank"><div class="grid-item"><img src="img/twitter.svg"></div></a> 
-  <a href="https://github.com/BenTurnerIxD" target="_blank"><div class="grid-item"><img src="img/github.svg"></div></a>
-</div>
-</div>
-</div>
-</section>     
-
-<script>$('.block1').fadeThis({speed: 1500, reverse: false});</script>
-<script>$('.block2').fadeThis({speed: 1500, reverse: false});</script>
-
-<div class="windowanimation">
-<script>$('.parallax-window').parallax({imageSrc: 'img/shapes1.svg'});</script></div>
-<script>$('.parallax-background').parallax({imageSrc: 'img/shapes2.svg'});</script>
-<script>$('.parallax-background2').parallax({imageSrc: 'img/shapes3.svg'});</script>
-
-<script>   
-$(function() {
-$('html').smoothScroll(1500);
-});
-</script>
-</body>
-</html>
 
 
+
+
+
+    <nav>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/benturnerwork/">LinkedIn</a></li>
+            <li><a href="mailto:ben.turner.ixd@gmail.com">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+    <header>
+        <img id="avatar" src="img/header-image.svg">
+        <h1>Hi, I’m Ben, I’m what you’d call a considerate designer.</h1>
+        <p>Living in Northern Ireland, I'm currently employed with Dawson Andrews. There I work as a UI Designer for people like SportsWork.co, CityFibre, GSMA, GAA and many more.</p>
+    </header>
+
+
+
+
+
+
+    <main>
+        <a href="https://www.notion.so/Olympus-a-Smart-Watch-brand-designed-with-core-UX-principles-dbef2a09817247238cc24387946e07e3">
+            <div class="project_box_1">
+            </div>
+            <span class="project_text">
+                <h4>Building a wearable experience</h4>
+                <p>Olympus, a 'smart-watch' brand, designed with core UX principles</p>
+            </span>
+        </a>
+
+
+        <a href="./websites/Artificial_Creativity/index.html">
+            <div class="project_box_2">
+            </div>
+            <span class="project_text">
+                <h4>Researching artificial intelligence within design</h4>
+                <p>Artificial creativity, comparing human creativity to that of machines</p>
+            </span>
+        </a>
+
+
+        <a href="https://www.notion.so/The-user-interfaces-of-desk-booking-software-and-my-take-on-how-to-improve-it-on-a-deadline-without--9d020bd1cc4d4744a0fab64e5d977687">
+            <div class="project_box_3">
+            </div>
+            <span class="project_text">
+                <h4>User Interface case study</h4>
+                <p>Working with a client to upgrade their desk booking dashboard</p>
+            </span>
+        </a>
+
+
+
+        <a href="https://www.notion.so/Remastering-the-textures-and-UI-of-a-classic-Real-Time-Strategy-game-9e8ea2fc52f34307b17e5323f74354d9">
+            <div class="project_box_4">
+            </div>
+            <span class="project_text">
+                <h4>Game Design and Image Upscaling</h4>
+                <p>Remastering the textures and UI of a classic strategy game</p>
+            </span>
+        </a>
+
+
+
+
+            <a href="https://www.notion.so/Thrive-designing-a-customer-success-story-with-AirFrance-KLM-85bf45f4db9a43c6b54e0e1b6e165b64">
+            <div class="project_box_5">
+            </div>
+            <span class="project_text">
+                <h4>Customer success story</h4>
+                <p>Designing a customer success story for Thrive about AirFrance KLM</p>
+            </span>
+        </a>
+
+
+
+        <a href="">
+            <div class="project_box_6">
+            </div>
+            <span class="project_text">
+                <h4>User Interface case study (Coming Soon)</h4>
+                <p>How can we streamline the consultation to carehome process using better user interfaces</p>
+            </span>
+        </a>
+
+
+
+        <a href="">
+            <div class="project_box_7">
+            </div>
+            <span class="project_text">
+                <h4>3D case study (Coming Soon)</h4>
+                <p>A mission from the BBC to design a new intro loop in 3D</p>
+            </span>
+        </a>
+        
+        
+        
+
+        
+        
+        
+        
+        <a href="">
+            <div class="project_box_8">
+            </div>
+            <span class="project_text">
+                <h4>User Interface case study (Coming Soon)</h4>
+                <p>Augmented Reality shopping, solving the returns crisis</p>
+            </span>
+        </a>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <h3>
+            Want to start a conversation?</h3>
+        <p>
+            <a href="mailto:ben.turner.ixd@gmail.com">Ben.turner.ixd@gmail.com</a>
+        </p>
+        <p>&#169; Ben Turner 2021</p>
+    </footer>
+
+
+
+</body></html>
