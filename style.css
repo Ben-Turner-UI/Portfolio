@@ -177,32 +177,28 @@ main {
 }
 
 .project_box_2 {
-    background-image: url(img/AI.svg);
-}
-
-.project_box_3 {
     background-image: url(img/Desk.svg);
 }
 
-.project_box_4 {
+.project_box_3 {
     background-image: url(img/Game.svg);
 }
 
-.project_box_5 {
+.project_box_4 {
     background-image: url(img/Airline.svg);
 }
 
-.project_box_6 {
+.project_box_5 {
     background-image: url(img/NHS.svg);
 }
 
 
-.project_box_7 {
+.project_box_6 {
     background-image: url(img/BBC.svg);
 }
 
 
-.project_box_8 {
+.project_box_7 {
     background-image: url(img/Shop.svg);
 }
 
