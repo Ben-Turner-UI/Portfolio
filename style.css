@@ -1,224 +1,744 @@
+/* ==========================================================================
+   CSS RESET STYLES
+   ========================================================================== */
+body,
+div,
+html,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* ==========================================================================
+   GENERAL STYLES
+   ========================================================================== */
 body {
-    font-family: 'Barlow', sans-serif;
-    margin: 0 auto;
-    max-width: 800px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+body:not(h1) {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+main {
+  background-color: white;
 }
 
 
-/* width */
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #DFDFDF;
-    border-style: solid;
-    border-width: 0px;
-}
-
-
-
-
-
-/*------ TYPOGRAPHY ------*/
-
-header{
-    width: 90%;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-header h1{
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-header h1, header p{
-    text-align: center;
-}
 
 h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-}
-
-h2 {
-    font-size: 32px;
-    line-height: 48px;
-    font-weight: 600;
+  font-size: 48px;
+  font-family: Big Shoulders Text;
+  font-weight: 900;
+  line-height: 115%;
+  text-transform: uppercase;
+  margin: 0 auto;
 }
 
 h3 {
-    font-size: 28px;
-    line-height: 42px;
+  font-size: 32px;
+  font-family: Big Shoulders Text;
+  font-weight: 900;
+  line-height: 125%;
+  margin: 0 auto;
 }
 
 h4 {
-    font-size: 24px;
-    line-height: 36px;
-    margin-top: 24px;
-    margin-bottom: 8px;
+  font-size: 24px;
+  font-family: Big Shoulders Text;
+  font-weight: 900;
+  line-height: 115%;
+  text-transform: uppercase;
+  margin: 0 auto;
 }
+
+
 
 
 
 
 p {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    Letter-spacing: .16px;
+  font-size: 15px;
+  line-height: 160%;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #D6D6D6;
+  margin: 0;
+  padding: 0;
 }
 
 
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+body::-webkit-scrollbar {
+  width: 1em;
 }
 
-li {
-    display: inline;
-    padding-right: 25px;
+body::-webkit-scrollbar-thumb {
+  background: darkgrey;
+}
+
+body::-webkit-scrollbar-track {
+  background: whitesmoke;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY STYLES
+   ========================================================================== */
+/* Add your typography styles here */
+
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+
+button {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  color: var(--ui-0, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: white;
+  border-radius: 0;
+  background: var(--ui-1000, #000);
+}
+
+button:hover {
+  background: var(--industrial-orange, #F0622C);
+}
+
+.related-contact-button{
+  border: 1.5px solid var(--ui-1000, #000);
+background: var(--ui-0, #FFF);
+color: black;
+width: 100%;
+}
+
+button a {
+  color: white;
+}
+
+button img{
+  width: 14px;
+  height: 14px;
+  top: 1.5px;
+  position: relative;
 }
 
 
+.button-group {
+  margin-top: 64px;
+}
+
+.previous-button {
+  margin-right: 8px;
+}
+
+
+#button-previous {
+  margin-right: 16px;
+}
+
+
+.button-icon-right {
+  margin-left: 8px;
+}
+
+.button-icon-left {
+  margin-right: 8px;
+}
+
+
+/* ==========================================================================
+   TAG STYLES
+   ========================================================================== */
+
+.tag {
+  padding: 3px 6px;
+  border: 1px solid var(--ui-200, #D6D6D6);
+  background: var(--ui-0, #FFF);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   LINK STYLES
+   ========================================================================== */
 a {
-    color: black;
-    text-decoration: none;
+  text-decoration: none;
 }
 
-
-a:hover {
-    color: #CE685D;
-}
-
-
-br {
-    line-height: 200px;
-}
-
-
-
-
-
-
-
-
-/*------ LAYOUT ------*/
-
-header,
-nav,
-footer,
-main {
-    padding-bottom: 50px;
-    padding-top: 50px;
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 
 
+.home p {
+  max-width: 800px;
+  padding-top: 32px;
+}
+
+
+.header-content p {
+  margin: 0;
+}
+
+
+.header-content {
+  max-width: 880px;
+}
+
+
+header h1 {
+  margin-bottom: 0px
+}
+
+
+.client-info-group,
+.project-tools,
+.project-overview {
+  margin: 32px 0;
+}
+
+.client-info-group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.client-info {
+  display: inline-block;
+}
+
+.client,
+.industry {
+  margin-right: 32px;
+}
+
+.header-info-title {
+  font-weight: normal;
+  color: #949494;
+  font-size: 14px;
+  line-height: 160%;
+}
+
+
+/* ==========================================================================
+   SCROLLER STYLES
+   ========================================================================== */
+
+
+.scroller {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--industrial-orange, #FF5100);
+  padding: 16px;
+}
+
+.scroll-items {
+  display: flex;
+  width: max-content;
+  animation:
+    scroll-left 400s linear infinite,
+    fade 400s linear infinite;
+}
+
+
+.scroll-item {
+  display: flex;
+  color: var(--ui-1000, #000);
+  font-family: Big Shoulders Text;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 115%;
+  text-transform: uppercase;
+  margin-right: 32px;
+}
+
+.scroll-item span {
+  margin-right: 16px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+@keyframes fade {
+
+  0%,
+  0.1% {
+    opacity: 0;
+  }
+
+  .3%,
+  98% {
+    opacity: 1;
+  }
+
+  99.9%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* ==========================================================================
+   NAVIGATION STYLES
+   ========================================================================== */
+.nav-container {
+  position: sticky;
+  top: 0;
+  background: var(--industrial-orange, #FF5100);
+  z-index: 100;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  width: 86%;
+  max-width: 1408px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.nav-item {
+  color: var(--industrial-orange-accent, #873516);
+  padding: 16px 32px 16px 0;
+  font-family: Big Shoulders Text;
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration-line: none;
+  text-transform: uppercase;
+}
+
+.nav-item:hover {
+  color: black;
+}
+
+.nav-item.active {
+  color: black;
+}
+
+.nav-item::before {
+  margin-top: 32px;
+}
+
+header:not(:target) .nav-item::before {
+  margin-top: 0;
+}
+
+
+
+
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
 footer {
-    display: inline-block;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+footer .contact-links {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-title{
+  font-size: 32px;
+  font-family: Big Shoulders Text;
+  font-weight: 900;
+  line-height: 125%;
+  margin: 0 auto;
+}
+
+.contact-links p a {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+.contact-links p img {
+  margin-right: 12px;
+}
+
+.footer-text-content p {
+  margin-top: 8px;
+}
+
+footer i {
+  margin-right: 8px;
+}
+
+
+#footer-top-arrow {
+  margin-left: 6px;
+
+}
+
+#footer-logo {
+  margin-top: 32px;
+}
+
+.copyright {
+  color: #949494;
+}
+
+/* ==========================================================================
+   WIDTH CONTAINER STYLES
+   ========================================================================== */
+.width-container {
+  width: 86%;
+  max-width: 1408px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   PROJECTS SECTION STYLES
+   ========================================================================== */
+.projects {
+  margin-bottom: 64px;
+}
+
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px 32px;
+}
+
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--ui-1000, #000);
+  background: var(--ui-0, #FFF);
+  position: relative;
+}
+
+
+.grid-item-content {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid-item-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 
 
-/*------ GRIDS ------*/
+.view {
+width:100%;
+}
 
-main {
+
+.grid-item-content {
+  padding: 32px;
+}
+
+.grid-item p {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+
+#project-grid-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: black;
+  border-bottom: 1px solid var(--ui-1000, #000);
+}
+
+.grid-item h4 {
+  color: black;
+}
+
+.project-description {
+  color: black;
+  margin: 4px 0 12px 0;
+}
+
+
+
+#project-grid-arrow {
+  margin-left: 6px;
+  color: white;
+}
+
+/* ==========================================================================
+   CONTENT CONTAINER STYLES
+   ========================================================================== */
+
+   .content-container {
+    padding-bottom: 64px;
     display: grid;
+    grid-template-columns: 2fr 1fr; 
+    grid-auto-rows: min-content; /* This will make each row size to fit its content */
+    gap: 64px;
+  }
+  
+
+
+
+
+.project-paragraph-list h3 {
+  margin-bottom: 0;
+  margin-top: 32px;
+}
+
+.project-paragraph h2 {
+  margin-bottom: 0px;
+}
+
+.project-paragraph-list-item {
+  margin-top: 0px;
+}
+
+.project-paragraph h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.project-paragraph-list-item h3 {
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
+
+.project-paragraph-list-item p {
+  margin-top: 0px;
+}
+
+
+
+.image-with-caption {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.content-image {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+
+figcaption {
+  color: #7D7D7D;
+  font-size: 14px;
+  line-height: 160%;
+  margin-top: 4px;
+}
+
+
+/* ==========================================================================
+   RELATED CONTENT STYLES
+   ========================================================================== */
+
+    
+  .related-content {
+    border: 1px solid #D6D6D6;
+    display: flex;
+    flex-direction: column; /* changed from row to column to stack related-items vertically */
+    flex-wrap: wrap;
+    padding: 32px;
+    gap:32px;
+    position: sticky; 
+    top: 128px; 
+    align-self: start; /* This aligns the flex item at the start of the container */
+  }
+
+  .related-content a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .related-content .contact-links a{
+    color: black;
+  }
+
+  .related-content h3{
+    padding: 0 auto;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .related-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .related-item-img {
+    height: 86px;
+    width: 128px;
+    object-fit: cover;
+  }
+  
+  .related-item-info {
+    padding-left: 10px;
+  }
+  
+  .related-item-title {
+    margin: 0 0 8px 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; 
+  }
+  
+
+/* ==========================================================================
+   MEDIA QUERY STYLES
+   ========================================================================== */
+
+
+   @media (max-width: 1480px) {
+
+  
+    .content-container{
+      grid-template-columns: 3fr 2fr; 
+    }
+    
+  }
+  
+  /* ================ */
+   
+
+@media (max-width: 1200px) {
+
+  .project-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+  }
+
+  .content-container{
+    grid-template-columns: 1fr; 
+  }
+
+  .related-content{
+    display: none;
+  }
+  
 }
 
+/* ================ */
 
-[class^="project_box"] {
-    height: 200px;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
+@media (max-width: 1024px) {
+
+  
 }
 
+/* ================ */
 
-/*------ IMAGES ------*/
 
-#avatar {
-    width: 86px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+@media (max-width: 768px) {
+
+
+  H1{
+    font-size: 32px;
+    line-height: 125%;
+  }
+
+
+  p{
+    font-size: 14px;
+  }
+
+.nav-item {
+  padding: 12px 24px 12px 0;
+  font-size: 18px;
 }
 
-.project_box_1 {
-    background: url(img/Olympus.svg);
-
+.grid-item-content {
+  padding: 24px;
 }
 
-.project_box_2 {
-    background-image: url(img/Desk.svg);
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
 }
 
-.project_box_3 {
-    background-image: url(img/Game.svg);
-}
+/* ================ */
 
-.project_box_4 {
-    background-image: url(img/Airline.svg);
-}
-
-.project_box_5 {
-    background-image: url(img/NHS.svg);
-}
+@media (max-width: 440px) {
 
 
-.project_box_6 {
-    background-image: url(img/BBC.svg);
-}
+  .nav-item {
+    padding: 12px 16px 12px 0;
+    font-size: 16px;
+  }
+
+  }
 
 
-.project_box_7 {
-    background-image: url(img/Shop.svg);
-}
+  /* ================ */
 
 
-/*------ MEDIA QUERY ------*/
+  @media (max-width: 360px) {
 
-
-
-@media only screen and (max-width: 700px) {
-
-
-
-    body {
-        width: 90%;
+    .nav-item {
+      font-size: 14px;
     }
-
-
-    main {
-        grid-template-columns: repeat(1, 1fr);
-        grid-row-gap: 25px;
+  
     }
-
-}
