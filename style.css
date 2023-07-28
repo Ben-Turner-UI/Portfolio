@@ -28,52 +28,6 @@ main {
   background-color: white;
 }
 
-
-
-h1 {
-  font-size: 40px;
-  font-family: Big Shoulders Text;
-  font-weight: 900;
-  line-height: 115%;
-  text-transform: uppercase;
-  margin: 0 auto;
-}
-
-h3 {
-  font-size: 32px;
-  font-family: Big Shoulders Text;
-  font-weight: 900;
-  line-height: 125%;
-  margin: 0 auto;
-}
-
-h4 {
-  font-size: 24px;
-  font-family: Big Shoulders Text;
-  font-weight: 900;
-  line-height: 115%;
-  text-transform: uppercase;
-  margin: 0 auto;
-}
-
-
-
-
-
-
-p {
-  font-size: 15px;
-  line-height: 160%;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #D6D6D6;
-  margin: 0;
-  padding: 0;
-}
-
-
 body::-webkit-scrollbar {
   width: 1em;
 }
@@ -86,10 +40,54 @@ body::-webkit-scrollbar-track {
   background: whitesmoke;
 }
 
+
+
 /* ==========================================================================
    TYPOGRAPHY STYLES
    ========================================================================== */
-/* Add your typography styles here */
+
+   h1 {
+    font-size: 40px;
+    font-family: Big Shoulders Text;
+    font-weight: 900;
+    line-height: 115%;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+  
+  h3 {
+    font-size: 32px;
+    font-family: Big Shoulders Text;
+    font-weight: 900;
+    line-height: 125%;
+    margin: 0 auto;
+  }
+  
+  h4 {
+    font-size: 24px;
+    font-family: Big Shoulders Text;
+    font-weight: 900;
+    line-height: 115%;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+  
+  
+  
+  
+  
+  
+  p {
+    font-size: 15px;
+    line-height: 160%;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #D6D6D6;
+    margin: 0;
+    padding: 0;
+  }
 
 /* ==========================================================================
    BUTTON STYLES
@@ -228,8 +226,8 @@ header h1 {
 
 .header-info-title {
   font-weight: normal;
-  color: #949494;
-  font-size: 14px;
+  color: #636363;
+  font-size: 16px;
   line-height: 160%;
 }
 
@@ -370,7 +368,7 @@ footer .contact-links {
 }
 
 .footer-title{
-  font-size: 32px;
+  font-size: 28px;
   font-family: Big Shoulders Text;
   font-weight: 900;
   line-height: 125%;
@@ -469,8 +467,6 @@ footer i {
 }
 
 
-
-
 .view {
 width:100%;
 }
@@ -550,14 +546,13 @@ width:100%;
 
    .content-container {
     padding-bottom: 64px;
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
-    grid-auto-rows: min-content; /* This will make each row size to fit its content */
-    gap: 64px;
   }
   
 
-
+.project-paragraph{
+  width: 100%;
+  max-width: 880px;
+}
 
 
 .project-paragraph-list h3 {
