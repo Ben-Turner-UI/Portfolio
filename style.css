@@ -448,6 +448,7 @@ footer i {
   background: var(--ui-0, #FFF);
   position: relative;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .grid-item-content {
