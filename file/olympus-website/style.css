@@ -39,7 +39,7 @@ h4 {
 
 
 h1 {
-    font-size: 48px;
+    font-size: 32px;
     line-height: 130%;
     color: white;
     margin-top: 0px;
@@ -47,24 +47,24 @@ h1 {
 
 h2 {
     color: white;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 140%;
 }
 
 h3 {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 150%;
 }
 
 h4 {
     color: #A1A1A6;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 150%;
 }
 
 p {
-    font-size: 16px;
+    font-size: 15px;
     color: #A1A1A6;
     line-height: 160%;
 }
@@ -78,6 +78,7 @@ ul li {
 
     list-style: none;
     font-weight: normal;
+    font-size: 16px;
 }
 
 
@@ -92,7 +93,7 @@ ul li {
 }
 
 
-.nav_links p {}
+
 
 
 
@@ -153,7 +154,7 @@ nav .brandmark {
 /*-----------MAIN-----------*/
 
 
-main {}
+
 
 
 
@@ -235,13 +236,17 @@ footer .brandmark {
     grid-row-gap: 0px;
 }
 
+.landing_text{
+    margin-top: 96px;
+}
+
 #landing_text_list li {
     margin-left: 1em;
 }
 
 .landing ul li {
     line-height: 200%;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     list-style: disc;
 }
@@ -297,7 +302,7 @@ footer .brandmark {
     margin-bottom: 5em;
 }
 
-kit_download h4 {
+.kit_download h4 {
     font-weight: 400;
 }
 
@@ -307,7 +312,7 @@ kit_download h4 {
     padding: 1em 2em 1em 2em;
     border-radius: 10px;
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: 700;
     border-style: none;
     font-weight: 600;
     margin: 0px;
@@ -490,6 +495,9 @@ kit_download h4 {
 
 @media only screen and (max-width: 800px) {
 
+    .landing_text{
+        margin-top: 0px;
+    }
 
     #landing_image_watch {
         width: 200px;
@@ -622,7 +630,7 @@ kit_download h4 {
 
 
     [class^="faces_grid"] {
-        ;
+    
         grid-area: auto;
     }
 
