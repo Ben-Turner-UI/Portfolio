@@ -442,7 +442,7 @@ footer i {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid var(--ui-1000, #474747);
+  border: 1px solid var(--ui-1000, #D6D6D6);
   background: var(--ui-0, #FFF);
   position: relative;
   border-radius: 8px;
@@ -488,7 +488,7 @@ width:100%;
   height: 260px;
   object-fit: cover;
   background-color: black;
-  border-bottom: 1px solid var(--ui-1000, #474747);
+  border-bottom: 1px solid var(--ui-1000, #D6D6D6);
 }
 
 .grid-item h4 {
