@@ -105,12 +105,12 @@ button {
   font-size: 14px;
   font-weight: 800;
   color: white;
-  border-radius: 0;
+  border-radius: 8px;
   background: var(--ui-1000, #000);
 }
 
 button:hover {
-  background: var(--industrial-orange, #F0622C);
+  background: var(--industrial-orange, #474747);
 }
 
 .related-contact-button{
@@ -447,6 +447,7 @@ footer i {
   border: 1px solid var(--ui-1000, #000);
   background: var(--ui-0, #FFF);
   position: relative;
+  border-radius: 8px;
 }
 
 .grid-item-content {
