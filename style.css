@@ -522,7 +522,7 @@ width:100%;
   
   .tag {
     padding: 3px 6px;
-    border: 1px solid var(--ui-200, #949494);
+    border: 1px solid var(--ui-200, #D6D6D6);
     background: var(--ui-0, #FFF);
     font-size: 12px;
     font-weight: 600;
