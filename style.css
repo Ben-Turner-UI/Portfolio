@@ -718,6 +718,10 @@ figcaption {
 
 @media (max-width: 768px) {
 
+  .footer-text-content h3 {
+    margin-bottom: 16px;
+  }
+
 
   H1{
     font-size: 32px;
