@@ -492,7 +492,7 @@ width:100%;
 
 #project-grid-thumbnail {
   width: 100%;
-  height: 200px;
+  height: 260px;
   object-fit: cover;
   background-color: black;
   border-bottom: 1px solid var(--ui-1000, #000);
@@ -513,6 +513,34 @@ width:100%;
   margin-left: 6px;
   color: white;
 }
+
+/* ==========================================================================
+   TAG STYLES
+   ========================================================================== */
+
+   .tag-container {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  
+  .tag {
+    border-radius: 4px;
+    border: 1px solid var(--ui-200, #D6D6D6);
+    background: var(--ui-0, #FFF);
+    display: inline-flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
 
 /* ==========================================================================
    CONTENT CONTAINER STYLES
