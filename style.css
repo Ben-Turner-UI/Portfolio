@@ -155,18 +155,6 @@ button img{
 }
 
 
-/* ==========================================================================
-   TAG STYLES
-   ========================================================================== */
-
-.tag {
-  padding: 3px 6px;
-  border: 1px solid var(--ui-200, #D6D6D6);
-  background: var(--ui-0, #FFF);
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
 
 /* ==========================================================================
    LINK STYLES
@@ -456,13 +444,13 @@ footer i {
   position: relative;
 }
 
-
 .grid-item-content {
   flex: 1;
   padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 32px; 
 }
 
 .grid-item-content-wrapper {
@@ -470,7 +458,9 @@ footer i {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  gap: 32px; 
 }
+
 
 
 
@@ -485,8 +475,8 @@ width:100%;
 
 .grid-item p {
   margin-top: 16px;
-  margin-bottom: 32px;
   font-size: 14px;
+  margin-bottom: 0;
 }
 
 
@@ -525,12 +515,15 @@ width:100%;
     gap: 12px;
     align-self: stretch;
     flex-wrap: wrap;
-    margin-bottom: 32px;
   }
   
   .tag {
-    border-radius: 4px;
+    padding: 3px 6px;
     border: 1px solid var(--ui-200, #D6D6D6);
+    background: var(--ui-0, #FFF);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
     background: var(--ui-0, #FFF);
     display: inline-flex;
     padding: 4px 8px;
@@ -539,7 +532,9 @@ width:100%;
     gap: 10px;
     text-decoration: none;
     color: black;
+    border-radius: 4px;
   }
+
   
 
 /* ==========================================================================
