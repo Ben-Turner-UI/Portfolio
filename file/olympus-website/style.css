@@ -243,6 +243,10 @@ footer .brandmark {
     grid-row-gap: 0px;
 }
 
+.landing h4{
+    margin-bottom: 0;
+}
+
 .landing_text{
     display: flex;
     align-items: center;
