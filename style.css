@@ -333,9 +333,10 @@ nav {
   color: black;
 }
 
-.nav-item.active {
+#nav-item-active{
   color: black;
 }
+
 
 .nav-item::before {
   margin-top: 32px;
