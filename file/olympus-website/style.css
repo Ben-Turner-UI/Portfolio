@@ -514,12 +514,6 @@ footer .brandmark {
     }
 
 
-    main,
-    footer,
-    nav {
-        width: 90%;
-    }
-
 
     footer {
         margin-bottom: 2.5em;
@@ -529,25 +523,7 @@ footer .brandmark {
         margin-top: 2.5em;
     }
 
-    h1 {
-        font-size: 28px;
-        line-height: 140%;
-        margin: 0 auto;
-    }
-
-    h2 {
-        font-size: 22px;
-        line-height: 150%;
-    }
-
-    h3,
-    .landing ul li {
-        font-size: 18px;
-    }
-
-    h4 {
-        font-size: 18px;
-    }
+  
 
     p,
     ul li,
@@ -572,13 +548,9 @@ footer .brandmark {
     .landing_image_watch {
         grid-area: 1 / 1 / 2 / 2;
         margin-bottom: 2em;
-        
-
     }
 
     #landing_image_watch {
-        height: 400px;
-        object-fit: contain;
         width: 100%;
     }
 
