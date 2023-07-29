@@ -42,7 +42,7 @@ h1 {
     font-size: 32px;
     line-height: 130%;
     color: white;
-    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 h2 {
@@ -237,7 +237,14 @@ footer .brandmark {
 }
 
 .landing_text{
-    margin-top: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: flex-start;
 }
 
 #landing_text_list li {
@@ -525,6 +532,7 @@ footer .brandmark {
     h1 {
         font-size: 28px;
         line-height: 140%;
+        margin: 0 auto;
     }
 
     h2 {
