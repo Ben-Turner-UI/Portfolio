@@ -196,7 +196,8 @@ header {
 
 
 .header-content p {
-  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 0;
 }
 
 
@@ -216,22 +217,23 @@ header h1 {
   display: flex;
   justify-content: flex-start;
   text-align: left;
+  gap: 32px;
 }
 
 .client-info {
   display: inline-block;
 }
 
-.client,
-.industry {
-  margin-right: 32px;
-}
 
 .header-info-title {
   font-weight: normal;
   color: #636363;
   font-size: 14px;
   line-height: 160%;
+}
+
+.header-info-title p{
+margin-bottom: 40px;
 }
 
 .client-info-website a{
