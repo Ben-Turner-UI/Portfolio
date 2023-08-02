@@ -589,14 +589,13 @@ width:100%;
 }
 
 .project-paragraph h2 {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
 }
 
 .project-paragraph-list-item h3 {
   font-family: Inter;
-  font-size: 17px;
-  line-height: 150%;
+  font-size: 16px;
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 4px;
