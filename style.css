@@ -613,6 +613,7 @@ width:100%;
   max-width: 1408px;
   max-height: 720px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 .content-image {
@@ -786,8 +787,6 @@ figcaption {
 
   @media (max-width: 360px) {
 
-    .nav-item {
-      font-size: 14px;
-    }
+
   
     }
