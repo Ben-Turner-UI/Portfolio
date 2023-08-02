@@ -174,7 +174,7 @@ header {
   margin-bottom: 64px;
 }
 
-.project-header .header-content{
+.project-header{
   margin-left: auto;
   margin-right: auto;
 }
@@ -200,11 +200,6 @@ header {
 
 .header-content p {
   margin: 0;
-}
-
-
-.header-content {
-  max-width: 880px;
 }
 
 
@@ -238,7 +233,7 @@ header h1 {
 .header-info-title {
   font-weight: normal;
   color: #636363;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 160%;
 }
 
@@ -571,7 +566,7 @@ width:100%;
   }
   
 
-.project-paragraph, .button-group{
+.project-paragraph, .button-group, figcaption, .project-header .header-content{
   width: 100%;
   max-width: 880px;
   margin-left: auto;
@@ -594,15 +589,15 @@ width:100%;
 }
 
 .project-paragraph h2 {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 19px;
+  font-weight: 600;
 }
 
 .project-paragraph-list-item h3 {
   font-family: Inter;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 150%;
-  font-weight: bold;
+  font-weight: 600;
   margin-top: 24px;
   margin-bottom: 4px;
 }
@@ -630,10 +625,7 @@ figcaption {
   color: #7D7D7D;
   font-size: 14px;
   line-height: 160%;
-  margin-top: 4px;
-  max-width: 860px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 8px;
 }
 
 
@@ -666,7 +658,7 @@ figcaption {
   .related-content h3{
     padding: 0 auto;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     width: 100%;
   }
