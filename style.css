@@ -1,14 +1,8 @@
 /* ==========================================================================
    CSS RESET STYLES
    ========================================================================== */
-body,
-div,
-html,
-img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+
+
 
 /* ==========================================================================
    GENERAL STYLES
@@ -26,7 +20,15 @@ body:not(h1) {
 
 main {
   background-color: white;
+  margin-bottom: 64px;
 }
+
+.main-content, .project-details_text{
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
 
 body::-webkit-scrollbar {
   width: 1em;
@@ -52,7 +54,7 @@ body::-webkit-scrollbar-track {
     font-weight: 900;
     line-height: 115%;
     text-transform: uppercase;
-    margin: 0 auto;
+    margin: 0;
   }
   
   h3 {
@@ -127,10 +129,6 @@ button img{
 }
 
 
-.button-group {
-  margin-top: 64px;
-}
-
 .previous-button {
   margin-right: 8px;
 }
@@ -190,7 +188,6 @@ header {
 
 .home p {
   max-width: 800px;
-  padding-top: 32px;
 }
 
 
@@ -206,11 +203,6 @@ header h1 {
 }
 
 
-.client-info-group,
-.project-tools,
-.project-overview {
-  margin: 32px 0;
-}
 
 .client-info-group {
   width: 100%;
@@ -560,9 +552,6 @@ width:100%;
    CONTENT CONTAINER STYLES
    ========================================================================== */
 
-   .content-container {
-    padding-bottom: 64px;
-  }
   
 
 .project-paragraph, .button-group, figcaption, .project-header .header-content{
@@ -572,33 +561,43 @@ width:100%;
   margin-right: auto;
 }
 
-
-
-.project-paragraph-list h3 {
-  margin-bottom: 0;
-  margin-top: 32px;
-  line-height: 150%;
+.header-content{
+  display: flex;
+  flex-direction: column; 
+  gap: 32px;
+  justify-content: flex-start;
 }
+
+.project-header{
+  margin-bottom: 64px;
+}
+
+.project-paragraph-list{
+  display: flex;
+  flex-direction: column; 
+  gap: 16px;
+}
+
+
 
 .project-paragraph h2 {
   margin-bottom: 0px;
 }
 
-.project-paragraph-list-item {
-  margin-top: 0px;
-}
 
 .project-paragraph h2 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 0;
 }
 
 .project-paragraph-list-item h3 {
   font-family: Inter;
   font-size: 16px;
   font-weight: 600;
-  margin-top: 24px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  line-height: 150%;
 }
 
 .project-paragraph-list-item p {
@@ -615,10 +614,6 @@ width:100%;
   border-radius: 4px;
 }
 
-.content-image {
-  margin-top: 64px;
-  margin-bottom: 64px;
-}
 
 
 figcaption {
