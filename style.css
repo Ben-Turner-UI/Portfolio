@@ -845,6 +845,34 @@ figcaption {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
   }
+
+
+  .partner-logo {
+    height: 64px;
+    gap: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .home .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .home img{
+    height: 128px;
+    width: 128px;
+  }
+  
+  .partner-wrapper {
+    gap: 16px;
+  }
+
+  .partner{
+    max-height: 32px;
+  }
+
 }
 
 /* ================ */
