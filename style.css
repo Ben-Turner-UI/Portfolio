@@ -556,7 +556,6 @@ footer i {
 
 .partner-logo {
   display: flex;
-  width: auto;
   height: 64px;
   width: 128px;
   flex-direction: column;
@@ -885,7 +884,7 @@ figcaption {
   }
 
   .partner{
-    max-height: 32px;
+    max-height: 40px;
   }
 
 }
