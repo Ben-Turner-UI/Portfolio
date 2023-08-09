@@ -88,6 +88,10 @@ ul li {
     font-size: 16px;
 }
 
+ul a{
+    line-height: 200%;
+}
+
 
 .brandmark {
     font-family: 'Syne', sans-serif;
@@ -403,10 +407,10 @@ footer .brandmark {
 }
 
 #RNIB {
-    width: 200px;
+    width: 160px;
     height: auto;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .kit_grid_5 {
@@ -476,7 +480,6 @@ footer .brandmark {
     grid-area: 2 / 2 / 3 / 3;
 }
 
-#faces_grid_link {}
 
 
 #faces_grid_img {
@@ -523,6 +526,13 @@ footer .brandmark {
         margin-right: auto;
         display: block;
     }
+
+
+
+
+#RNIB {
+    width: 120px;
+}
 
 
 
@@ -602,10 +612,7 @@ footer .brandmark {
     }
 
 
-    [class^="kit_grid"] {
-        ;
-        grid-area: auto;
-    }
+
 
 
     .kit_grid_5 {
@@ -631,7 +638,9 @@ footer .brandmark {
 
 
 
-
+    [class^="kit_grid"] {
+        grid-area: auto;
+    }
 
 
 
