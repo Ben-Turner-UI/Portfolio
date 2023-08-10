@@ -173,8 +173,8 @@ header {
 }
 
 .home {
-  margin-bottom: 64px;
-  margin-top: 64px;
+  margin-bottom: 96px;
+  margin-top: 96px;
 }
 
 .portrait {
@@ -444,7 +444,7 @@ footer i {
    PROJECTS SECTION STYLES
    ========================================================================== */
 .projects {
-  margin-bottom: 128px;
+  margin-bottom: 96px;
 }
 
 
@@ -539,7 +539,7 @@ footer i {
    ========================================================================== */
 
   .partners{
-    margin-bottom: 128px;
+    margin-bottom: 96px;
   }
 
   .partners p{
