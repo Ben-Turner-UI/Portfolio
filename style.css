@@ -50,7 +50,7 @@ body::-webkit-scrollbar-track {
    ========================================================================== */
 
 h1 {
-  font-size: 40px;
+  font-size: 48px;
   font-family: Big Shoulders Text;
   font-weight: 900;
   line-height: 115%;
@@ -94,7 +94,7 @@ hr {
    ========================================================================== */
 
 button {
-  padding: 12px 24px;
+  padding: 16px 32px;
   border: none;
   cursor: pointer;
   outline: inherit;
@@ -173,15 +173,14 @@ header {
 }
 
 .home {
-  margin-bottom: 96px;
-  margin-top: 96px;
+  margin-bottom: 128px;
+  margin-top: 128px;
 }
 
 .portrait {
-  width: 186px;
-  height: 186px;
-  border-radius: 8px;
-  border: 1px solid var(--ui-200, #D6D6D6);
+  width: 350px;
+  height: 436px;
+  border-radius: 16px;
 }
 
 
@@ -191,9 +190,8 @@ header {
   margin-right: auto;
 }
 
-.project-header {
-  margin-left: auto;
-  margin-right: auto;
+.project-header h1 {
+  font-size: 40px;
 }
 
 
@@ -204,7 +202,7 @@ header {
 
 
 .home p {
-  max-width: 800px;
+  width: 100%;
 }
 
 
@@ -216,7 +214,7 @@ header {
 
 
 header h1 {
-  margin-bottom: 0px
+  margin-bottom: 0px;
 }
 
 
@@ -453,7 +451,7 @@ footer i {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 32px 32px;
+  gap: 48px 48px;
 }
 
 
@@ -466,7 +464,7 @@ footer i {
   border: 1px solid var(--ui-1000, #D6D6D6);
   background: var(--ui-0, #FFF);
   position: relative;
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
 }
 
@@ -493,7 +491,7 @@ footer i {
 }
 
 
-.view {
+.view{
   width: 100%;
 }
 
@@ -625,7 +623,7 @@ footer i {
 figcaption,
 .project-header .header-content {
   width: 100%;
-  max-width: 880px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -638,6 +636,8 @@ figcaption,
 }
 
 .home-header-content {
+  max-width: 600px;
+  width: 100%;
   gap: 16px;
   display: flex;
   flex-direction: column;
@@ -647,7 +647,7 @@ figcaption,
 .home .header-content {
   display: flex;
   flex-direction: row;
-  gap: 64px;
+  gap: 96px;
   align-items: center;
 }
 
@@ -672,7 +672,7 @@ figcaption,
 
 .project-paragraph-list-item h3 {
   font-family: Inter;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 4px;
   line-height: 150%;
@@ -790,6 +790,7 @@ figcaption {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+      gap: 32px 32px;
   }
 
   .content-container {
@@ -876,8 +877,8 @@ figcaption {
   }
 
   .home {
-    margin-bottom: 64px;
-    margin-top: 64px;
+    margin-bottom: 96px;
+    margin-top: 96px;
   }
   
   .partner-wrapper {
