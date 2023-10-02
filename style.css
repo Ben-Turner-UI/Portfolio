@@ -650,7 +650,7 @@ figcaption,
   display: flex;
   flex-direction: column;
   gap: 32px;
-  align-items: center;
+  align-items: left;
   justify-content: center;
 }
 
