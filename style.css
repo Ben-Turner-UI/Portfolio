@@ -682,7 +682,7 @@ figcaption,
 .project-paragraph-list-item h3 {
   font-family: Inter;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 4px;
   line-height: 150%;
   letter-spacing: 0;
@@ -860,9 +860,7 @@ figcaption {
     font-size: 19px;
   }
 
-  .project-paragraph-list-item h3 {
-    font-size: 18px;
-  }
+ 
 
   .header-info-title {
     font-size: 16px;
