@@ -685,6 +685,7 @@ figcaption,
   font-weight: 600;
   margin-bottom: 4px;
   line-height: 150%;
+  letter-spacing: 0;
 }
 
 .project-paragraph-list-item p {
