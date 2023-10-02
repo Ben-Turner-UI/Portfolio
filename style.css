@@ -664,6 +664,10 @@ figcaption,
   justify-content: center;
 }
 
+#home-arrow{
+  margin-top: 16px;
+}
+
 .home .header-content {
   display: flex;
   flex-direction: row;
