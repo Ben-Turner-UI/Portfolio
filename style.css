@@ -183,8 +183,10 @@ header {
 }
 
 .home {
-  margin-bottom: 96px;
+  padding-bottom: 96px;
   margin-top: 96px;
+  border-bottom: 1px solid var(--ui-400, #ABABAB);
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 74, 0, 0.10) 100%);
 }
 
 .portrait {
@@ -655,7 +657,7 @@ figcaption,
 .home-header-content {
   max-width: 1000px;
   width: 100%;
-  gap: 16px;
+  gap: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
