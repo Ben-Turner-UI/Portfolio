@@ -491,7 +491,7 @@ footer i {
   border: 1px solid var(--ui-1000, #D6D6D6);
   background: var(--ui-0, #FFF);
   position: relative;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
