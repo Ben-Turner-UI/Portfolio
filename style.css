@@ -835,6 +835,24 @@ figcaption {
     line-height: 125%;
   }
 
+  .project-header h1 {
+    font-size: 32px;
+  }
+
+  h2{
+    font-size: 28px;
+    line-height: 125%;
+  }
+
+  h3{
+    font-size: 24px;
+    line-height: 125%;
+  }
+
+  h4{
+    font-size: 24px;
+  }
+
   p {
     font-size: 15px;
   }
