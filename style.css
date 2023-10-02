@@ -66,9 +66,9 @@ h3 {
   font-family: Instrument Serif;
   letter-spacing: 1px;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 130%;
   text-transform: capitalize;
-  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-width: .75px;
   margin: 0;
 
 }
@@ -78,9 +78,9 @@ h4 {
   font-family: Instrument Serif;
   letter-spacing: 1px;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 130%;
   text-transform: capitalize;
-  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-width: .75px;
   margin: 0;
 
 }
@@ -115,6 +115,7 @@ button {
   color: white;
   border-radius: 8px;
   background: var(--ui-1000, #000);
+  text-transform: capitalize;
 }
 
 .button-group {
@@ -152,10 +153,14 @@ button img {
 
 .button-icon-right {
   margin-left: 8px;
+  width: 12px;
+  height: 12px;
 }
 
 .button-icon-left {
   margin-right: 8px;
+  width: 12px;
+  height: 12px;
 }
 
 
