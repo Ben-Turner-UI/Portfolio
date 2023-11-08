@@ -49,38 +49,28 @@ body::-webkit-scrollbar-track {
    TYPOGRAPHY STYLES
    ========================================================================== */
 
-h1 {
-  font-size: 48px;
-  font-family: Instrument Serif;
-  letter-spacing: 1px;
-  font-weight: 400;
-  line-height: 120%;
-  text-transform: capitalize;
-  -webkit-text-stroke-width: .5px;
-  margin: 0;
 
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 135%;
+  margin: 0;
 }
 
+
 h3 {
-  font-size: 28px;
-  font-family: Instrument Serif;
-  font-weight: 400;
-  line-height: 130%;
-  text-transform: capitalize;
-  -webkit-text-stroke-width: .5px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 135%;
   margin: 0;
 
 }
 
 h4 {
-  font-size: 24px;
-  font-family: Instrument Serif;
-  font-weight: 400;
-  line-height: 130%;
-  text-transform: capitalize;
-  -webkit-text-stroke-width: .5px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 135%;
   margin: 0;
-  letter-spacing: 1px;
 }
 
 .home  h3{
@@ -210,9 +200,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 74, 
   margin-right: auto;
 }
 
-.project-header h1 {
-  font-size: 40px;
-}
+
 
 
 #short-header {
@@ -285,6 +273,7 @@ header h1 {
 
 
 .scroller {
+  display: none;
   overflow: hidden;
   white-space: nowrap;
   background: var(--industrial-orange, #FF5100);
@@ -303,7 +292,6 @@ header h1 {
 .scroll-item {
   display: flex;
   color: var(--ui-1000, #000);
-  font-family: Sofia Sans Extra Condensed;
   font-size: 20px;
   font-weight: 900;
   line-height: 115%;
@@ -369,8 +357,8 @@ nav {
 .nav-item {
   color: var(--industrial-orange-accent, #873516);
   padding: 12px 20px 12px 0;
-  font-family: Sofia Sans Extra Condensed;
-  font-size: 24px;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration-line: none;
   text-transform: capitalize;
 }
@@ -701,9 +689,8 @@ figcaption,
 }
 
 .project-paragraph-list-item h3 {
-  font-family: Inter;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 4px;
   line-height: 150%;
 }
