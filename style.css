@@ -13,10 +13,21 @@ body {
   margin: 0 auto;
 }
 
-body:not(h1) {
+body:not(h1){
   font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
+
+
+h1, h2, h3, h4, .home h3, .nav-item, button{
+  font-family: 'Big Shoulders Text';
+  font-weight: bold;
+ }
+
+ .project-paragraph h2, .project-paragraph h3{
+  font-family: 'Inter', sans-serif;
+ }
+
 
 main {
   background-color: white;
@@ -49,10 +60,7 @@ body::-webkit-scrollbar-track {
    TYPOGRAPHY STYLES
    ========================================================================== */
 
-   h1, h2, h3, h4, .home h3, .nav-item{
-    font-family: 'Big Shoulders Text';
-    font-weight: bold;
-   }
+
 
 h1 {
   font-size: 32px;
@@ -105,7 +113,7 @@ button {
   outline: inherit;
   color: var(--ui-0, #FFF);
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   color: white;
   border-radius: 8px;
@@ -141,7 +149,7 @@ button a {
 button img {
   width: 14px;
   height: 14px;
-  top: 1.5px;
+  top: 0px;
   position: relative;
 }
 
