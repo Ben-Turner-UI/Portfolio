@@ -595,28 +595,31 @@
     gap: 24px;
   }
   
-  .partner-logo {
-    display: flex;
-    height: 64px;
-    width: 128px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 75%;
-  }
-  
-  .partner{
-    max-height: 40px;
-  }
-  
+
+
   .partner-wrapper {
     display: flex;
-    align-items: left;
-    justify-content: left;
-    gap: 20px;
-    align-self: stretch;
     flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    justify-content: flex-start;
   }
+  
+  .partner-logo {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .partner-logo img {
+    max-height: 40px;
+    height: auto;
+    width: auto;
+    max-width: 100px; /* You can tweak this */
+    object-fit: contain;
+  }
+  
   
   /* ==========================================================================
      TAG STYLES
