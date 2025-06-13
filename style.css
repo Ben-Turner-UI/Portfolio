@@ -180,7 +180,6 @@ header {
   width: 200px;
   height: 200px;
   border-radius: 8px;
-  border: 1px solid var(--ui-400, #ABABAB);
   object-fit: cover;
 }
 
