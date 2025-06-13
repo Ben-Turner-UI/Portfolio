@@ -534,6 +534,7 @@ footer i {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: .8;
 }
 
 .partner-logo img {
