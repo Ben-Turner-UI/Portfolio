@@ -489,7 +489,7 @@ footer i {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 48px 48px;
+  gap: 32px 32px;
 }
 
 .grid-item {
@@ -942,10 +942,12 @@ figcaption {
     display: block;
     object-fit: cover;
   }
-  .main-content figcaption {
-    padding: 0 24px;
-    box-sizing: border-box;
-  }
+
+}
+
+.main-content .content-image {
+  width: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 360px) {}
