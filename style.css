@@ -2,10 +2,9 @@
    GENERAL STYLES
    ========================================================================== */
 body {
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0 auto;
   font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
 }
 
 h1,
@@ -49,24 +48,41 @@ body::-webkit-scrollbar-track {
   background: whitesmoke;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid #D6D6D6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* ==========================================================================
    TYPOGRAPHY STYLES
    ========================================================================== */
+
+body {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 h1 {
   font-size: 32px;
-  line-height: 135%;
+  line-height: 1.35;
   margin: 0;
 }
 
 h3 {
   font-size: 28px;
-  line-height: 135%;
+  line-height: 1.35;
   margin: 0;
 }
 
 h4 {
   font-size: 24px;
-  line-height: 135%;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -77,18 +93,96 @@ h4 {
 p,
 ul li {
   font-size: 15px;
-  line-height: 160%;
+  line-height: 1.6;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #D6D6D6;
-  margin: 0;
-  padding: 0;
+button {
+  font-size: 16px;
+  line-height: normal; /* Or specify a value if needed */
 }
 
-a {
-  text-decoration: underline;
+.header-info-title {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.scroll-item {
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.nav-item {
+  font-size: 20px;
+  line-height: normal; /* Or specify a value if needed */
+}
+
+.grid-item p {
+  font-size: 14px;
+}
+
+.project-paragraph h2 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.project-paragraph h3 {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-paragraph-list-item h3 {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+figcaption {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ataglance-table th,
+.ataglance-table td,
+.improvements-table thead th,
+.improvements-table tbody td {
+  font-size: 15px;
+  line-height: 1.5; /* Reduced line-height */
+}
+
+.tag {
+  font-size: 12px;
+}
+
+/* Typography Media Queries */
+@media (max-width: 768px) {
+  h1,
+  .project-header h1 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .project-paragraph h2 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 440px) {
+  .improvements-table thead th,
+  .improvements-table tbody td,
+  .ataglance-table th,
+  .ataglance-table td {
+    font-size: 14px;
+    line-height: 1.4; /* Adjusted for smaller screens */
+  }
 }
 
 /* ==========================================================================
@@ -101,7 +195,6 @@ button {
   outline: inherit;
   color: var(--ui-0, #FFF);
   text-align: center;
-  font-size: 16px;
   font-weight: 800;
   color: white;
   border-radius: 8px;
@@ -148,13 +241,6 @@ button img {
   margin-right: 8px;
   width: 12px;
   height: 12px;
-}
-
-/* ==========================================================================
-   LINK STYLES
-   ========================================================================== */
-a {
-  text-decoration: none;
 }
 
 /* ==========================================================================
@@ -217,8 +303,6 @@ header h1 {
 .header-info-title {
   color: black;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 160%;
 }
 
 .header-info-title p {
@@ -250,9 +334,7 @@ header h1 {
 .scroll-item {
   display: flex;
   color: var(--ui-1000, #000);
-  font-size: 20px;
   font-weight: 900;
-  line-height: 115%;
   text-transform: capitalize;
   margin-right: 32px;
 }
@@ -308,7 +390,6 @@ nav {
 .nav-item {
   color: darkgray;
   padding: 12px 20px 12px 0;
-  font-size: 20px;
   font-weight: 600;
   text-decoration-line: none;
   text-transform: capitalize;
@@ -454,7 +535,6 @@ footer i {
 
 .grid-item p {
   margin-top: 16px;
-  font-size: 14px;
   margin-bottom: 0;
 }
 
@@ -560,10 +640,8 @@ footer i {
   padding: 3px 6px;
   border: 1px solid var(--ui-200, #D6D6D6);
   background: var(--ui-0, #FFF);
-  font-size: 12px;
   font-weight: 600;
   text-transform: capitalize;
-  background: var(--ui-0, #FFF);
   display: inline-flex;
   padding: 4px 8px;
   justify-content: center;
@@ -651,17 +729,13 @@ figcaption,
 }
 
 .project-paragraph h2 {
-  font-size: 18px;
   font-weight: 600;
   margin: 0 0 16px;
-  line-height: 140%;
 }
 
 .project-paragraph h3 {
-  font-size: 15px;
   font-weight: 600;
   margin: 0 0 8px;
-  line-height: 150%;
 }
 
 /* This new rule ensures consistent spacing after headings */
@@ -671,10 +745,8 @@ figcaption,
 }
 
 .project-paragraph-list-item h3 {
-  font-size: 15px;
   font-weight: 600;
   margin-bottom: 4px;
-  line-height: 150%;
 }
 
 .project-paragraph-list-item p {
@@ -691,8 +763,6 @@ figcaption,
 
 figcaption {
   color: #7D7D7D;
-  font-size: 14px;
-  line-height: 160%;
   margin-top: 8px;
 }
 
@@ -700,8 +770,6 @@ figcaption {
 .ataglance-table td,
 .improvements-table thead th,
 .improvements-table tbody td {
-  font-size: 15px;
-  line-height: 160%;
   vertical-align: top;
 }
 
@@ -783,24 +851,7 @@ figcaption {
   .button-group {
     gap: 16px;
   }
-  h1 {
-    font-size: 32px;
-    line-height: 125%;
-  }
-  .project-header h1 {
-    font-size: 32px;
-  }
-  h2 {
-    font-size: 28px;
-    line-height: 125%;
-  }
-  h3 {
-    font-size: 24px;
-    line-height: 125%;
-  }
-  .project-paragraph h2 {
-    font-size: 19px;
-  }
+
   .nav-item {
     padding: 12px 24px 12px 0;
   }
@@ -859,8 +910,6 @@ figcaption {
   .improvements-table tbody td,
   .ataglance-table th,
   .ataglance-table td {
-    font-size: 14px; 
-    line-height: 1.5; 
     padding: 8px 5px;
     word-break: break-word;
     vertical-align: top;
