@@ -63,9 +63,17 @@ a {
    TYPOGRAPHY STYLES
    ========================================================================== */
 
+body,
+p,
+ul li,
+.header-info-title,
+figcaption,
+.stat-description {
+  line-height: 1.6;
+}
+
 body {
   font-size: 15px;
-  line-height: 1.6;
 }
 
 h1 {
@@ -93,7 +101,6 @@ h4 {
 p,
 ul li {
   font-size: 15px;
-  line-height: 1.6;
 }
 
 button {
@@ -103,7 +110,6 @@ button {
 
 .header-info-title {
   font-size: 15px;
-  line-height: 1.6;
 }
 
 .scroll-item {
@@ -125,11 +131,7 @@ button {
   line-height: 1.4;
 }
 
-.project-paragraph h3 {
-  font-size: 15px;
-  line-height: 1.5;
-}
-
+.project-paragraph h3,
 .project-paragraph-list-item h3 {
   font-size: 15px;
   line-height: 1.5;
@@ -137,7 +139,6 @@ button {
 
 figcaption {
   font-size: 14px;
-  line-height: 1.6;
 }
 
 .ataglance-table th,
@@ -733,7 +734,8 @@ figcaption,
   margin: 0 0 16px;
 }
 
-.project-paragraph h3 {
+.project-paragraph h3,
+.project-paragraph-list-item h3 {
   font-weight: 600;
   margin: 0 0 8px;
 }
@@ -742,11 +744,6 @@ figcaption,
 .project-paragraph > h2 + *,
 .project-paragraph > h3 + * {
   margin-top: 0;
-}
-
-.project-paragraph-list-item h3 {
-  font-weight: 600;
-  margin-bottom: 4px;
 }
 
 .project-paragraph-list-item p {
