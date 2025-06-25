@@ -253,15 +253,17 @@ header {
   justify-content: center;
   align-items: center;
   color: black;
-  margin-top: 64px;
+  padding-top: 48px;
   margin-bottom: 64px;
 }
+
 
 .home,
 .project-header {
   padding-bottom: 64px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 74, 0, 0.15) 100%), linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 74, 0, 0.20) 100%), linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)
 }
+
 
 
 .portrait {
@@ -372,12 +374,18 @@ header h1 {
 /* ==========================================================================
    NAVIGATION STYLES
    ========================================================================== */
+
 .nav-container {
   position: sticky;
   top: 0;
-  background: white;
-  z-index: 100;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+background-color: white;
 }
+
+
+
 
 nav {
   display: flex;
@@ -891,7 +899,7 @@ figcaption {
   }
   .home {
     margin-bottom: 64px;
-    margin-top: 64px;
+    margin-top: 0;
   }
   .partner-wrapper {
     gap: 16px;
