@@ -78,6 +78,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-weight: 600;
+}
+
 h3 {
   font-size: 28px;
   line-height: 1.35;
@@ -987,10 +991,6 @@ a.testimonial-avatar:hover {
     padding: 16px 0;
   }
 
-  .project-statistics-stat {
-    font-size: 20px;
-  }
-
   .project-statistics .stat-description {
     font-size: 14px;
     line-height: 1.4;
@@ -1039,10 +1039,6 @@ a.testimonial-avatar:hover {
 
   .project-statistics-group {
     padding: 12px 0;
-  }
-
-  .project-statistics-stat {
-    font-size: 18px;
   }
 
   .improvements-table,
