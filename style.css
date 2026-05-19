@@ -220,6 +220,23 @@ button img {
   height: 12px;
 }
 
+.btn-chevron {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
 /* ==========================================================================
    HEADER STYLES
    ========================================================================== */
@@ -814,9 +831,10 @@ figcaption {
 }
 
 .show-more-btn {
-  display: inline-flex;
+  display: inline-grid;
+  grid-auto-flow: column;
   align-items: center;
-  gap: 8px;
+  column-gap: 8px;
   width: auto;
   background: #fff;
   color: #000;
@@ -826,6 +844,9 @@ figcaption {
   font-family: 'Big Shoulders', sans-serif;
   font-size: 16px;
   font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  text-transform: none;
   cursor: pointer;
 }
 
@@ -833,11 +854,31 @@ figcaption {
   background: #f5f5f5;
 }
 
-.show-more-chevron {
-  flex-shrink: 0;
+.show-more-btn #show-more-label {
+  margin: 0;
+  line-height: 1;
 }
 
-.show-more-chevron--open {
+.show-more-btn .show-more-chevron {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
+.show-more-btn .show-more-chevron--open {
   transform: rotate(180deg);
 }
 
