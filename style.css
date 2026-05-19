@@ -220,23 +220,6 @@ button img {
   height: 12px;
 }
 
-.btn-chevron {
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
-}
-
 /* ==========================================================================
    HEADER STYLES
    ========================================================================== */
@@ -504,10 +487,6 @@ footer .contact-links {
   overflow: hidden;
 }
 
-#inactive-project {
-  opacity: 50%;
-}
-
 .grid-item-content {
   flex: 1;
   padding: 32px;
@@ -540,10 +519,6 @@ footer .contact-links {
   object-fit: cover;
   background-color: black;
   border-bottom: 1px solid var(--ui-1000, #D6D6D6);
-}
-
-.project-grid-thumbnail--empty {
-  background-color: #f5f5f5;
 }
 
 .grid-item--coming-soon .view:disabled {
@@ -1025,6 +1000,10 @@ a.testimonial-avatar:hover {
 
   .grid-item-content {
     padding: 24px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-statistics {
