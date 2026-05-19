@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <meta name="theme-color" content="#FF5100">
     <meta name="msapplication-navbutton-color" content="#FF5100">
     <meta name="apple-mobile-web-app-status-bar-style" content="#FF5100">
@@ -22,6 +21,246 @@
       gtag('js', new Date());
       gtag('config', 'G-THTRN14NFN');
     </script>
+    <style>
+      /* ── About page – employment history ─────────────────────────── */
+      /* Tighten the gap between all top-level children on the about page */
+      .about-page-content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .about-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .about-section-title {
+        font-family: 'Big Shoulders', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0 4px;
+        color: #111;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid #D6D6D6;
+        padding-bottom: 8px;
+      }
+
+      .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .experience-card {
+        border: none;
+        border-bottom: 1px solid #D6D6D6;
+        border-radius: 0;
+        padding: 16px 0;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .experience-card:first-child {
+        padding-top: 8px;
+      }
+
+      .experience-card:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .experience-card-header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .experience-role {
+        font-family: 'Big Shoulders', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        color: #111;
+        margin: 0;
+      }
+
+      .experience-company {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ff4d00;
+        margin: 1px 0 0;
+      }
+
+      .experience-company a {
+        color: #ff4d00;
+        text-decoration: underline;
+      }
+
+      .experience-company a:hover {
+        color: #cc3d00;
+      }
+
+      .experience-dates {
+        font-size: 12px;
+        font-weight: 600;
+        color: #595959;
+        white-space: nowrap;
+        padding-top: 2px;
+      }
+
+      .experience-meta {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .experience-description {
+        font-size: 14px;
+        line-height: 1.55;
+        color: #444;
+        margin: 0;
+      }
+
+      .experience-description p {
+        margin: 0 0 4px;
+      }
+
+      .experience-description ul {
+        margin: 4px 0 0;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .experience-description ul li {
+        position: relative;
+        margin-bottom: 6px;
+        padding-left: 14px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .experience-description ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #000;
+      }
+
+      .experience-description ul li:last-child {
+        margin-bottom: 0;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        column-gap: 12px;
+        row-gap: 24px;
+      }
+
+      .skills-card {
+        display: contents;
+      }
+
+      .skills-card-title {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: #595959;
+        margin: 3px 0 0;
+      }
+
+      .skills-card .tag-container {
+        gap: 6px;
+      }
+
+      .education-card {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .education-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        border-bottom: 1px solid #D6D6D6;
+      }
+
+      .education-item:first-child {
+        padding-top: 8px;
+      }
+
+      .education-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .education-qual {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: #111;
+        margin: 0;
+      }
+
+      .education-school {
+        font-size: 13px;
+        color: #595959;
+        margin: 2px 0 0;
+      }
+
+      .education-grade {
+        font-size: 12px;
+        font-weight: 700;
+        color: #ff4d00;
+        white-space: nowrap;
+        padding-top: 2px;
+      }
+
+      @media (max-width: 768px) {
+        .experience-card-header {
+          flex-direction: column;
+          gap: 2px;
+        }
+        .skills-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+        .skills-card {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .education-item {
+          flex-direction: column;
+          gap: 2px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -29,7 +268,7 @@
       <nav>
         <a href="index.html" class="nav-item">Home</a>
         <a href="about.html" id="nav-item-active" class="nav-item">About</a>
-        <a href="file/Ben-Turner-CV.pdf" class="nav-item" rel="nofollow">résumé</a>
+        <a href="file/Ben-Turner-CV.pdf" class="nav-item" rel="nofollow">Resume</a>
         <a href="mailto:Benjamin.turner.design@gmail.com" class="nav-item">Contact</a>
       </nav>
     </div>
@@ -42,24 +281,164 @@
       </div>
     </header>
 
-<main>
-  <div class="width-container">
-    <div class="project-details_text">
-      <div class="project-paragraph">
-        <p>Experienced Product Designer skilled in conducting detailed user research, simplifying complex workflows, and delivering measurable improvements that make a real business impact.</p>
+    <main>
+      <div class="width-container">
+        <div class="about-page-content">
 
-        <p>Empathetic communicator who builds rapport easily, communicates clearly, and works effectively across teams. Highly coachable, with years of sporting experience that has shaped a growth mindset I bring into my professional career.</p>
+          <!-- Summary -->
+          <div>
+            <p style="margin:0 0 10px;">Experienced Product Designer who turns complex workflows into simple, easy-to-use interfaces, prototyping in real code rather than just static screens to speed up delivery.</p>
+            <p style="margin:0 0 10px;">Empathetic communicator who builds rapport easily, communicates clearly, and works effectively across teams. Highly coachable, with years of sporting experience that has shaped a growth mindset I bring into my professional career.</p>
+            <p style="margin:0;">A straightforward, empathetic communicator who brings a sense of humour and strong values. I naturally take the lead in organising team social activities, helping to create a positive environment where people genuinely have fun!</p>
+          </div>
 
-        <p>Collaborative team member known for fostering trust, mentoring peers, and aligning design work with business goals.</p>
+          <!-- Experience -->
+          <div class="about-section">
+            <h3 class="about-section-title">Experience</h3>
+            <div class="experience-list">
 
-        <p>Studied martial arts since 2007, with over 18 years of experience. Black belt in Jiu-Jitsu and several years of Judo practice. Also enjoy fishkeeping, karting, and have a real love for dogs, especially fluffy ones!</p>
+              <div class="experience-card">
+                <div class="experience-card-header">
+                  <div class="experience-meta">
+                    <p class="experience-role">Product Designer</p>
+                    <p class="experience-company"><a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a> &mdash; <a href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer">P4 Plan</a> &amp; <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">P4 DAM</a> &mdash; Enterprise software</p>
+                  </div>
+                  <span class="experience-dates">Sep 2025 &ndash; Present</span>
+                </div>
+                <div class="experience-description">
+                  <ul>
+                    <li>Led the product design for P4 Plan and P4 DAM (Digital Asset Manager), for major enterprise clients like Electronic Arts, Pinewood Studios, Xbox Game Studios and Meta Games.</li>
+                    <li>Redesigned core product areas from the ground up, including a complete overhaul of search, filtering and onboarding. This directly reduced backend server load, improved clarity for first-time users and helped the team win dozens of new sales.</li>
+                    <li>Bridged the gap between design and development by building interactive, coded prototypes using React, Ember.js and the Force UI design system, rather than just handing off static Figma screens.</li>
+                    <li>Integrated an AI-driven workflow that allows designers to move directly from product manager notes to coded prototypes in Claude Code. By utilising the system's existing context management (CLAUDE.md) and slash-command tools, I helped design teams across the business significantly speed up their prototyping process.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="experience-card">
+                <div class="experience-card-header">
+                  <div class="experience-meta">
+                    <p class="experience-role">Product Designer</p>
+                    <p class="experience-company"><a href="https://budibase.com/" target="_blank" rel="noopener noreferrer">Budibase</a> &mdash; A low-code platform for agentic AI workflows and internal tools</p>
+                  </div>
+                  <span class="experience-dates">Jul 2024 &ndash; Jul 2025</span>
+                </div>
+                <div class="experience-description">
+                  <ul>
+                    <li>Led UI design across core database features in Budibase's enterprise platform, creating intuitive interfaces that helped the product stand out in the low-code market. Recognised in the no-code community for standout UX, with frequent mentions across forums and competitor roadmaps.</li>
+                    <li>Ran a paid research study with over 30 users to identify usability issues in the automation builder. Findings influenced roadmap priorities and led to a measurable increase in satisfaction and a reduction in support queries.</li>
+                    <li>Designed new AI-powered features from concept to prototype, including generative apps and smart workflows, ensuring alignment with user needs and business goals.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="experience-card">
+                <div class="experience-card-header">
+                  <div class="experience-meta">
+                    <p class="experience-role">UX / Designer</p>
+                    <p class="experience-company"><a href="https://www.dawsonandrews.com/" target="_blank" rel="noopener noreferrer">Dawson Andrews</a> &mdash; Digital Product Agency</p>
+                  </div>
+                  <span class="experience-dates">Jun 2021 &ndash; Jul 2024</span>
+                </div>
+                <div class="experience-description">
+                  <ul>
+                    <li>Redesigned a B2C homepage using data-driven UX improvements that led to a 90% increase in conversions. This and future design and development work contributed to major new business opportunities for Dawson Andrews.</li>
+                    <li>Built and maintained a scalable Figma design system, improving developer handoff accuracy to 95% and reducing rework by 20%.</li>
+                    <li>Other experience and freelance work available on <a href="https://www.linkedin.com/in/benturnerwork" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="about-section">
+            <h3 class="about-section-title">Skills</h3>
+            <div class="skills-grid">
+
+              <div class="skills-card">
+                <p class="skills-card-title">Product &amp; UX Design</p>
+                <div class="tag-container">
+                  <div class="tag"><span>Interaction Design</span></div>
+                  <div class="tag"><span>Rapid Prototyping</span></div>
+                  <div class="tag"><span>Design Systems (Architecture &amp; Tokens)</span></div>
+                  <div class="tag"><span>Usability Testing</span></div>
+                  <div class="tag"><span>Data-Driven UX</span></div>
+                  <div class="tag"><span>Accessibility (WCAG)</span></div>
+                  <div class="tag"><span>Information Architecture</span></div>
+                </div>
+              </div>
+
+              <div class="skills-card">
+                <p class="skills-card-title">Frontend Prototyping</p>
+                <div class="tag-container">
+                  <div class="tag"><span>React.js</span></div>
+                  <div class="tag"><span>Ember.js</span></div>
+                  <div class="tag"><span>TypeScript</span></div>
+                  <div class="tag"><span>Tailwind CSS</span></div>
+                  <div class="tag"><span>HTML/CSS</span></div>
+                  <div class="tag"><span>Git Version Control</span></div>
+                  <div class="tag"><span>Component-Driven Development</span></div>
+                </div>
+              </div>
+
+              <div class="skills-card">
+                <p class="skills-card-title">AI &amp; Automation</p>
+                <div class="tag-container">
+                  <div class="tag"><span>AI-Assisted Workflows</span></div>
+                  <div class="tag"><span>Claude Code</span></div>
+                  <div class="tag"><span>GitHub Copilot</span></div>
+                  <div class="tag"><span>Prompt Engineering</span></div>
+                  <div class="tag"><span>Generative UI Concepts</span></div>
+                </div>
+              </div>
+
+              <div class="skills-card">
+                <p class="skills-card-title">Tools &amp; Analytics</p>
+                <div class="tag-container">
+                  <div class="tag"><span>Figma</span></div>
+                  <div class="tag"><span>PostHog</span></div>
+                  <div class="tag"><span>Maze</span></div>
+                  <div class="tag"><span>Mouseflow</span></div>
+                  <div class="tag"><span>Google Analytics</span></div>
+                  <div class="tag"><span>Local Dev Environments</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="about-section">
+            <h3 class="about-section-title">Education</h3>
+            <div class="education-card">
+              <div class="education-item">
+                <div>
+                  <p class="education-qual">BDes (Hons) Interaction Design</p>
+                  <p class="education-school"><a href="https://www.ulster.ac.uk/" target="_blank" rel="noopener noreferrer" style="color:#595959;">Ulster University</a> &mdash; 2017&ndash;2021</p>
+                </div>
+                <span class="education-grade">First Class Honours</span>
+              </div>
+              <div class="education-item">
+                <div>
+                  <p class="education-qual">Extended Diploma in Interactive Media</p>
+                  <p class="education-school">2015&ndash;2017</p>
+                </div>
+                <span class="education-grade">Distinction*, Distinction*, Distinction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hobbies -->
+          <div class="about-section">
+            <h3 class="about-section-title">Hobbies</h3>
+            <p style="margin:0;font-size:14px;line-height:1.6;color:#444;">Studied martial arts since 2007, with over 18 years of experience. Black belt in Jiu-Jitsu and several years of Judo practice. Also enjoy fishkeeping, karting, and have a real love for dogs, especially fluffy ones!</p>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </div>
-</main>
-
-
-
+    </main>
 
     <footer>
       <div class="width-container">
@@ -68,14 +447,10 @@
           <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
         </div>
         <div class="contact-links">
-          <p>
-            <a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg">Benjamin.turner.design@gmail.com</a>
-          </p>
-          <p>
-            <a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg">LinkedIn</a>
-          </p>
+          <p><a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg" alt="">Benjamin.turner.design@gmail.com</a></p>
+          <p><a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg" alt="">LinkedIn</a></p>
         </div>
-        <p class="copyright">©2025, All Rights Reserved</p>
+        <p class="copyright">©2026, All Rights Reserved</p>
       </div>
     </footer>
   </body>

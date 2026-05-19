@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF5100">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTRN14NFN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-THTRN14NFN');
+    </script>
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <nav>
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="file/Ben-Turner-CV.pdf" class="nav-item" rel="nofollow">Resume</a>
+        <a href="mailto:Benjamin.turner.design@gmail.com" class="nav-item">Contact</a>
+      </nav>
+    </div>
+
+    <header class="project-header">
+      <div class="width-container">
+        <div class="header-content">
+          <h1>Shipping my first end-to-end feature: HDRI backgrounds in the P4 DAM 3D viewer</h1>
+
+          <div class="client-info-group">
+            <div class="client-info client">
+              <span class="header-info-title">Company:</span>
+              <p>Perforce Software</p>
+            </div>
+            <div class="client-info industry">
+              <span class="header-info-title">Industry:</span>
+              <p>Digital Asset Management (Games &amp; VFX)</p>
+            </div>
+            <div class="client-info-website">
+              <span class="header-info-title">Website:</span>
+              <p><a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">perforce.com</a></p>
+            </div>
+          </div>
+          <div class="project-tools">
+            <p class="header-info-title">Tools:</p>
+            <p>Claude Code, multiple MCP (Model Context Protocol) servers, The Force Design System, React, Three.js, and Poly Haven.</p>
+          </div>
+          <div class="project-client-description">
+            <p class="header-info-title">My role &amp; the business context:</p>
+            <p>As Lead Product Designer on P4 DAM, I design for game studios like Xbox and Meta. P4 DAM is a digital library where studios store, organise, and review their assets. My goal for this project was to establish a highly efficient, AI-assisted design-to-code workflow, using a new 3D lighting feature as the proof of concept.</p>
+          </div>
+          <div class="project-overview">
+            <p class="header-info-title">Project overview:</p>
+            <p>I took this feature—adding realistic lighting environments to our in-browser 3D viewer—from a rough PM call directly to a working React build. The core achievement wasn't just the UI update, but the process. It proved that a designer could use Claude Code to ship high-fidelity, coded prototypes built directly on our live design system, drastically reducing handover friction.</p>
+          </div>
+          <div class="project-statistics">
+            <div class="project-statistics-group">
+              <h4 class="project-statistics-stat">2</h4>
+              <p class="stat-description">Improved handoff for developers.</p>
+            </div>
+            <div class="project-statistics-group">
+              <h4 class="project-statistics-stat">1<span style="opacity:.4">·</span>1<span style="opacity:.4">·</span>1</h4>
+              <p class="stat-description">Tiny-team loop: one designer, one developer, one PM</p>
+            </div>
+            <div class="project-statistics-group">
+              <h4 class="project-statistics-stat">1st</h4>
+              <p class="stat-description">End-to-end AI feature</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="width-container">
+        <div class="content-container">
+          <div class="main-content">
+            <div class="project-details_text">
+
+              <div class="project-paragraph">
+                <h2>Problem Statement</h2>
+                <p>P4 DAM lets users review FBX and GLTF models directly in the browser, but the viewer only offered a single solid-colour background. That's fine for a quick look and wrong for the audience that actually matters here — game developers who'll ship the same asset into Unreal or Unity later that week. A polished hero prop looks correct in a studio render and wrong in a flat grey void, so reviewers either trusted their imagination or pulled the file out into their own DCC tool to see it properly. Both options broke the review flow.</p>
+              </div>
+
+              <div class="content-image">
+                <img src="img/project-image/p4-hdri/p4-hdri-1.jpg" alt="3D viewer before and after: the same model rendered against a flat grey background and then against an HDRI studio environment" class="image-with-caption">
+                <figcaption>Before and after: the same model against the old solid-colour backdrop and against one of the new HDRI presets.</figcaption>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>The workflow, told through this feature</h2>
+                <p>This was the first feature I took end-to-end on a Claude Code workflow I'd been refining for a few months. The point of the case study is the workflow; HDRI backgrounds are the artefact that proves it.</p>
+                <div class="project-paragraph-list">
+                  <div class="project-paragraph-list-item">
+                    <h3>1. Gather requirements on a call with the PM</h3>
+                    <p>I sat down with my PM and worked through the usual questions — what does a successful outcome look like, what are the deliverables, what's must-have vs nice-to-have. The acceptance criteria flagged custom HDRI upload from a DAM asset as nice-to-have and "out of the box, right now" as must-have. That single line shaped the whole scope decision later.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>2. Gather requirements, auto-transcribe the call</h3>
+                    <p>The meeting platform generated a structured summary of the call — context, decisions, action items. I fed the summary through an AI assistant to convert it into a properly-shaped ticket in our project-management tool, ready for sprint planning rather than another rewrite.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>3. Lightweight wireframe + inspiration imagery</h3>
+                    <p>Rather than draw every state in Figma, I built a small wireframe and pulled inspiration from Mobbin and Dribbble for the segmented-control pattern. The point of this step is to give Claude Code a visual target — enough context to make sensible decisions, not enough to over-constrain it.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>4. Feed the full context into Claude Code and build in real code</h3>
+                    <p>The ticket, the wireframe, The Force Design System, a short <code>CLAUDE.md</code> describing the project conventions, and a stack of MCP servers (Figma and project-management) all sit in one workspace. Claude Code scaffolds a fresh branch, spins up the dev server and starts work against the actual 3D viewer. The build is real React on The Force Design System, not a Figma frame.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>5. Refine with a tiny team: one designer, one dev, one PM</h3>
+                    <p>The review loop is deliberately small. Three people, fast cycles, shared screen, edits happen in Claude Code while we talk. The principle designers were forming a design system at the top of the funnel; I needed to help the people at the bottom of the funnel ship things, so this is the loop I optimised for.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>6. Hand off as MD files, screenshots and a working branch</h3>
+                    <p>The handover isn't a Figma frame. It's a Markdown document describing the change, a screenshots/snapshots file taken from my machine at the point of handover, and the branch itself. The screenshots matter — if a developer pulls the branch and what they see doesn't match the snapshot, they know to flag it immediately rather than discover it three days into review.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-image">
+                <img src="img/project-image/p4-hdri/p4-hdri-2.jpg" alt="The new Background and grid panel in the 3D viewer, showing the segmented Color / Image (HDRI) control with a 2x1 grid of HDRI preset tiles" class="image-with-caption">
+                <figcaption>The new "Background and grid" panel: a segmented Color / Image (HDRI) control sits on top of the original colour picker, with a 2&times;1 grid of curated presets underneath.</figcaption>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>The artefact: what actually shipped</h2>
+                <p>The "Environment" section of the 3D viewer was renamed to "Background and grid" and now sits on top of a segmented <strong>Color / Image (HDRI)</strong> control. <strong>Color</strong> keeps the original colour-picker behaviour untouched. <strong>Image (HDRI)</strong> reveals a 2&times;1 grid of preset tiles, each one a curated lighting environment with a short label and description. Clicking a tile loads the HDR file, applies it as the scene background, and uses it as the lighting and reflection source. A checkmark badge marks the active preset. Reset returns the user to Color mode and the default preset.</p>
+                <p>The two shipped presets cover the most contrasting review contexts, with a wider set of environments lined up as the next iteration:</p>
+                <div class="table-container">
+                  <table class="improvements-table">
+                    <thead>
+                      <tr><th>Preset</th><th>Why it's in the set</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Photo Studio</td><td>Warm indoor studio with natural window light. The default, and the most neutral "show me the asset honestly" option.</td></tr>
+                      <tr><td>Outdoor</td><td>Bright daylight exterior with trees and sky — the obvious counterpart for outdoor-context assets and the visual opposite of the studio default.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Design decisions worth calling out</h2>
+                <div class="project-paragraph-list">
+                  <div class="project-paragraph-list-item">
+                    <h3>Curated presets, not open upload first</h3>
+                    <p>There was a real temptation to lead with "upload your own" — DAM is, after all, a library of assets. But the must-have was "out of the box, right now". The user problem is "I want to see this model in a believable environment", not "I want to manage my HDRI library". A small set of strong defaults solves most of the problem in one click; custom upload is a follow-on once we've validated the simpler path.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>HDRIs from Poly Haven, on a CC0 licence</h3>
+                    <p>Image-based lighting needs HDR data, not regular JPEGs — the high dynamic range is what produces convincing reflections and lighting falloff on PBR materials. Poly Haven hosts professionally-shot, 4K, CC0-licensed HDRIs. The acceptance criteria flagged "if paid assets are needed, get approval before purchasing"; CC0 sidesteps that entirely. No attribution, no per-seat licensing, no procurement conversation.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>A segmented Color / Image control rather than a single stack</h3>
+                    <p>The old panel had one job: pick a colour. Adding HDRIs without a clear modal switch would have meant either burying the colour picker (breaking existing users) or jamming both into one stack (visually noisy, unclear which one wins). A segmented control makes the choice explicit, mirrors a pattern users already recognise, and leaves a slot for a third mode later (custom upload) without a redesign.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>"Background and grid", not "Environment"</h3>
+                    <p>"Environment" is technically correct but reads like jargon, and worse, it conflates the visual backdrop with the lighting setup. "Background and grid" describes what's actually in the section. That's consistent with the wider onboarding work, where unclear terminology keeps showing up as the recurring issue.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Honest scope: what's parked, and why</h2>
+                <p>The handoff document flags this honestly. The feature is functionally complete in one of the two model viewers and ready for engineering review on its feature branch. These items are explicitly parked:</p>
+                <div class="table-container">
+                  <table class="improvements-table">
+                    <thead>
+                      <tr><th>Parked work</th><th>Why</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>HDRI lighting effect on the model itself</td><td>Backgrounds and reflections work. Material shading doesn't yet — a recent rendering-engine update tightened how textures are handled, which forced a safer fallback that's visually less impactful. Needs another pass.</td></tr>
+                      <tr><td>Preset switching on already-converted materials</td><td>Switching presets needs to update the environment map on materials that have already been converted, not just on the next load.</td></tr>
+                      <tr><td>Parity across both model viewers</td><td>The same treatment needs porting from the first viewer to the second.</td></tr>
+                      <tr><td>Automated tests</td><td>None yet. Manual review only at this point.</td></tr>
+                      <tr><td>Custom HDRI upload from a DAM asset</td><td>The original nice-to-have. Parked as the next ticket once the core experience is solid.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="content-image">
+                <img src="img/project-image/p4-hdri/p4-hdri-3.jpg" alt="The handover bundle: a Markdown handoff document, a screenshots/snapshots file and the working branch" class="image-with-caption">
+                <figcaption>The handover bundle: Markdown handoff doc, snapshots file taken from my machine, and the working branch — no Figma redraws required.</figcaption>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Why this workflow worked for the team</h2>
+                <p>I presented the workflow back to the wider design team and gathered feedback from developers, writers and PMs across the company. Three things came back consistently:</p>
+                <div class="project-paragraph-list">
+                  <div class="project-paragraph-list-item">
+                    <h3>Better handovers than Figma alone</h3>
+                    <p>Developers said that working from a Markdown handoff doc plus a real branch was clearer than a Figma frame plus a written spec. Less interpretation, fewer "what did you mean here" questions in refinement.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>Critique happens in the build, not next to it</h3>
+                    <p>In review sessions, feedback could be applied in Claude Code directly and worked through afterwards. No "we'll come back to this in the next round of Figma updates".</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>Faster time to market</h3>
+                    <p>By the time engineering picked the ticket up, the prototype was already on The Force Design System, the rationale was written down, and the parked work was explicit. The conversation moved from "what is this?" to "what do we need to merge it?"</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>What I learned by presenting this to the design team</h2>
+                <div class="project-paragraph-list">
+                  <div class="project-paragraph-list-item">
+                    <h3>Be kind. AI is moving fast and not everyone is at the same speed.</h3>
+                    <p>Some people on the team are further ahead with AI tooling, some are slower, some are less technical. Perforce is a diverse global team — Belfast, India, Sweden, Estonia and more — and the workflow only works if the whole team can pick it up. Bring people along instead of leaving them behind.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>Don't leave anyone out. Include developers, writers and PMs from the start.</h3>
+                    <p>Every team member has a part to play in shaping these workflows. The best results came from building them together, not presenting a finished method and hoping people followed it.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>Don't gatekeep. Share what you know and make it fun.</h3>
+                    <p>Designing in code unlocks the things Figma can't easily do — 3D scenes, animation, small interactive details that surprise people. With Claude Code I'm able to build truly interactive product prototypes that engage users rather than just satisfy a spec. That's worth sharing, not hoarding.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Conclusion</h2>
+                <p>This was the first feature I took from a PM call to a working build entirely through an AI-assisted workflow. The artefact is HDRI backgrounds in the P4 DAM 3D viewer — useful in its own right for game developers reviewing assets under realistic lighting. The bigger result is a workflow the rest of the design team, and the wider product team, can pick up and use on their own features.</p>
+              </div>
+
+              <div class="button-group">
+                <a href="budibase-automations.html">
+                  <button id="button-next">
+                    Next project: Budibase workflow builder
+                    <img class="button-icon-right" src="img/arrow-black-right.svg" alt="">
+                  </button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="width-container">
+        <div class="footer-text-content">
+          <h3>Ben Turner, Designer and Creator</h3>
+          <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
+        </div>
+        <div class="contact-links">
+          <p><a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg" alt="">Benjamin.turner.design@gmail.com</a></p>
+          <p><a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg" alt="">LinkedIn</a></p>
+        </div>
+        <p class="copyright">©2026, All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
