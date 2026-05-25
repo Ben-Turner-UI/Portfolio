@@ -87,8 +87,8 @@
       }
 
       .experience-role {
-        font-family: 'Big Shoulders', sans-serif;
-        font-size: 17px;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 15px;
         font-weight: 700;
         color: #111;
         margin: 0;
@@ -97,18 +97,19 @@
       .experience-company {
         font-family: 'Noto Sans', sans-serif;
         font-size: 14px;
-        font-weight: 600;
-        color: #ff4d00;
+        font-weight: 400;
+        color: #000;
         margin: 1px 0 0;
       }
 
       .experience-company a {
-        color: #ff4d00;
-        text-decoration: underline;
+        font-weight: 400;
       }
 
-      .experience-company a:hover {
-        color: #cc3d00;
+      .experience-company-sep {
+        color: #d6d6d6;
+        margin: 0 0.4em;
+        font-weight: 400;
       }
 
       .experience-dates {
@@ -126,7 +127,6 @@
 
       .experience-description {
         font-size: 14px;
-        line-height: 1.55;
         color: #444;
         margin: 0;
       }
@@ -146,7 +146,6 @@
         margin-bottom: 6px;
         padding-left: 14px;
         font-size: 14px;
-        line-height: 1.5;
       }
 
       .experience-description ul li::before {
@@ -181,10 +180,6 @@
         font-weight: 700;
         color: #595959;
         margin: 3px 0 0;
-      }
-
-      .skills-card .tag-container {
-        gap: 6px;
       }
 
       .education-card {
@@ -234,7 +229,7 @@
       .education-grade {
         font-size: 12px;
         font-weight: 700;
-        color: #ff4d00;
+        color: #000;
         white-space: nowrap;
         padding-top: 2px;
       }
@@ -268,7 +263,7 @@
         <a href="index.html" class="nav-item">Home</a>
         <a href="resume.html" id="nav-item-active" class="nav-item">Resume</a>
         <a href="https://www.linkedin.com/in/benturnerwork" class="nav-item" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <button type="button" class="nav-item nav-copy-email" data-copy-email="Benjamin.turner.design@gmail.com">Contact</button>
+        <button type="button" class="nav-item nav-copy-email" data-copy-email="Benjamin.turner.design@gmail.com">Email</button>
       </nav>
     </div>
 
@@ -309,8 +304,8 @@
               <div class="experience-card">
                 <div class="experience-card-header">
                   <div class="experience-meta">
-                    <p class="experience-role">Lead Product Designer</p>
-                    <p class="experience-company"><a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a> &mdash; <a href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer">P4 Plan</a> &amp; <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">P4 DAM</a> &mdash; Enterprise software</p>
+                    <p class="experience-role">Product Designer</p>
+                    <p class="experience-company"><a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a><span class="experience-company-sep" aria-hidden="true">|</span><a href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer">P4 Plan</a> &amp; <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">P4 DAM</a><span class="experience-company-sep" aria-hidden="true">|</span>Enterprise software</p>
                   </div>
                   <span class="experience-dates">September 2025 &ndash; Present</span>
                 </div>
@@ -328,14 +323,14 @@
                 <div class="experience-card-header">
                   <div class="experience-meta">
                     <p class="experience-role">Product Designer</p>
-                    <p class="experience-company"><a href="https://budibase.com/" target="_blank" rel="noopener noreferrer">Budibase</a> &mdash; A low-code platform for agentic AI workflows and internal tools</p>
+                    <p class="experience-company"><a href="https://budibase.com/" target="_blank" rel="noopener noreferrer">Budibase</a><span class="experience-company-sep" aria-hidden="true">|</span>A low-code platform for agentic AI workflows and internal tools</p>
                   </div>
                   <span class="experience-dates">Jul 2024 &ndash; Jul 2025</span>
                 </div>
                 <div class="experience-description">
                   <ul>
                     <li>Led UI design across core database features in Budibase's enterprise platform, creating intuitive interfaces that helped the product stand out in the low-code market. Recognised in the no-code community for standout UX, with frequent mentions across forums and competitor roadmaps.</li>
-                    <li>Ran a paid research study with over 30 users to identify usability issues in the automation builder. Findings influenced roadmap priorities and led to a measurable increase in satisfaction and a reduction in support queries.</li>
+                    <li>Led the end-to-end UX redesign of Budibase&rsquo;s core workflow builder, guided by a paid research study of 25 users. Established a scalable, highly visible data framework that laid structural groundwork for the company&rsquo;s pivot to an AI-first automations platform, with measurable gains in satisfaction and fewer support queries.</li>
                     <li>Designed new AI-powered features from concept to prototype, including generative apps and smart workflows, ensuring alignment with user needs and business goals.</li>
                   </ul>
                 </div>
@@ -345,7 +340,7 @@
                 <div class="experience-card-header">
                   <div class="experience-meta">
                     <p class="experience-role">UX / Designer</p>
-                    <p class="experience-company"><a href="https://www.dawsonandrews.com/" target="_blank" rel="noopener noreferrer">Dawson Andrews</a> &mdash; Digital Product Agency</p>
+                    <p class="experience-company"><a href="https://www.dawsonandrews.com/" target="_blank" rel="noopener noreferrer">Dawson Andrews</a><span class="experience-company-sep" aria-hidden="true">|</span>Digital Product Agency</p>
                   </div>
                   <span class="experience-dates">Jun 2021 &ndash; Jul 2024</span>
                 </div>
@@ -424,7 +419,7 @@
               <div class="education-item">
                 <div>
                   <p class="education-qual">BDes (Hons) Interaction Design</p>
-                  <p class="education-school"><a href="https://www.ulster.ac.uk/" target="_blank" rel="noopener noreferrer" style="color:#595959;">Ulster University</a> &mdash; 2017&ndash;2021</p>
+                  <p class="education-school"><a href="https://www.ulster.ac.uk/" target="_blank" rel="noopener noreferrer">Ulster University</a> &mdash; 2017&ndash;2021</p>
                 </div>
                 <span class="education-grade">First Class Honours</span>
               </div>
@@ -440,7 +435,7 @@
 
           <div class="about-section">
             <h3 class="about-section-title">Hobbies</h3>
-            <p style="margin:0;font-size:14px;line-height:1.6;color:#444;">Studied martial arts since 2007, with over 18 years of experience. Black belt in Jiu-Jitsu and several years of Judo practice. Also enjoy fishkeeping, karting, and have a real love for dogs, especially fluffy ones!</p>
+            <p style="margin:0;font-size:14px;color:#444;">Studied martial arts since 2007, with over 18 years of experience. Black belt in Jiu-Jitsu and several years of Judo practice. Also enjoy fishkeeping, karting, and have a real love for dogs, especially fluffy ones!</p>
           </div>
 
         </div>

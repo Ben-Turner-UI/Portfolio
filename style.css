@@ -20,7 +20,8 @@ button {
 }
 
 .project-paragraph h2,
-.project-paragraph h3 {
+.project-paragraph h3,
+.project-paragraph-list-item h3 {
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -59,17 +60,55 @@ a {
   text-decoration: none;
 }
 
+.home-header-content-text a,
+.client-info-website a,
+.experience-description a,
+.education-school a {
+  color: #000;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.experience-company a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.home-header-content-text a:hover,
+.client-info-website a:hover,
+.experience-company a:hover,
+.experience-description a:hover,
+.education-school a:hover {
+  color: #000;
+}
+
 /* ==========================================================================
    TYPOGRAPHY STYLES
    ========================================================================== */
 
+/* Unified reading text line-height */
 body,
 p,
 ul li,
 .header-info-title,
 figcaption,
+.testimonial-text,
+.testimonial-role,
+.experience-description,
+.experience-description ul li,
+.ataglance-table th,
+.ataglance-table td,
+.improvements-table thead th,
+.improvements-table tbody td,
+.partner-more {
+  line-height: 1.6;
+}
+
 .stat-description {
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 h1 {
@@ -108,6 +147,29 @@ button {
   font-size: 15px;
 }
 
+/* Project case study section labels */
+.project-header p.header-info-title,
+.project-paragraph-list-item h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.project-paragraph h2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.project-header .project-client-description > p:not(.header-info-title),
+.project-header .project-overview > p:not(.header-info-title),
+.project-paragraph-list-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 .nav-item {
   font-size: 20px;
   line-height: normal;
@@ -115,17 +177,6 @@ button {
 
 .grid-item p {
   font-size: 15px;
-}
-
-.project-paragraph h2 {
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.project-paragraph h3,
-.project-paragraph-list-item h3 {
-  font-size: 14px;
-  line-height: 1.5;
 }
 
 figcaption {
@@ -137,7 +188,6 @@ figcaption {
 .improvements-table thead th,
 .improvements-table tbody td {
   font-size: 14px;
-  line-height: 1.5;
 }
 
 /* Typography Media Queries */
@@ -156,10 +206,6 @@ figcaption {
   h3 {
     font-size: 24px;
     line-height: 1.25;
-  }
-
-  .project-paragraph h2 {
-    font-size: 20px;
   }
 }
 
@@ -228,15 +274,38 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
   color: black;
   padding-top: 48px;
+  padding-bottom: 64px;
   margin-bottom: 64px;
+  background:
+    linear-gradient(to top, rgba(255, 74, 0, 0.2) 0, transparent 100px),
+    linear-gradient(180deg, #fff 0%, #eeedea 100%);
+  overflow: hidden;
 }
 
-header.home,
-.project-header {
-  padding-bottom: 64px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 74, 0, 0.20) 100%), linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.14) 0.6px, transparent 0.6px);
+  background-size: 4px 4px;
+  background-position: center bottom;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
 }
 
 header.home {
@@ -247,7 +316,7 @@ header.home {
 .project-header {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 64px;
+  box-sizing: border-box;
 }
 
 .portrait {
@@ -279,11 +348,6 @@ header.home {
   gap: 8px;
   max-width: 800px;
   text-align: left;
-}
-
-.home-header-content-text a {
-  text-decoration: underline;
-  color: black;
 }
 
 .home .header-content {
@@ -327,11 +391,6 @@ header h1 {
 
 .header-info-title p {
   margin-bottom: 40px;
-}
-
-.client-info-website a {
-  text-decoration: underline;
-  color: black;
 }
 
 /* ==========================================================================
@@ -567,6 +626,7 @@ footer .contact-links {
 
 .view {
   width: 100%;
+  padding: 10px 20px;
 }
 
 .grid-item p {
@@ -603,24 +663,39 @@ footer .contact-links {
 }
 
 .project-statistics {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: nowrap;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: 100%;
+  padding: 0;
+  align-items: stretch;
 }
 
 .project-statistics-group {
-  flex: 1;
-  padding: 20px 0;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 4px;
+}
+
+.project-statistics-group:not(:first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  padding-left: 32px;
+}
+
+.project-statistics-group:not(:last-child) {
+  padding-right: 32px;
+}
+
+.project-statistics-stat {
+  margin: 0;
+}
+
+.project-statistics-accent {
+  color: #ff5100;
 }
 
 #project-grid-arrow {
@@ -698,6 +773,21 @@ footer .contact-links {
   max-width: 180px;
 }
 
+.partner-logo img.partner-visitbelfast {
+  height: 48px;
+  max-width: 160px;
+}
+
+.partner-more {
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  white-space: nowrap;
+}
+
 /* ==========================================================================
    TAG STYLES
    ========================================================================== */
@@ -705,9 +795,13 @@ footer .contact-links {
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 12px;
+  gap: 8px;
   align-self: stretch;
   flex-wrap: wrap;
+}
+
+.project-header .project-tools .tag-container {
+  margin-top: 6px;
 }
 
 .tag {
@@ -717,13 +811,27 @@ footer .contact-links {
   align-items: center;
   gap: 8px;
   border: 1px solid var(--ui-200, #D6D6D6);
-  background: var(--ui-0, #FFF);
+  background: transparent;
   font-size: 12px;
   font-weight: 600;
   text-transform: capitalize;
   text-decoration: none;
   color: black;
   border-radius: 4px;
+}
+
+.tag .tag-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.tag--claude-code {
+  border-color: #d97757;
+  text-transform: none;
+  gap: 6px;
 }
 
 /* ==========================================================================
@@ -737,10 +845,6 @@ figcaption,
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.client-info {
-  display: inline-block;
 }
 
 .project-item-group {
@@ -781,6 +885,7 @@ figcaption,
 
 .project-paragraph h3,
 .project-paragraph-list-item h3 {
+  font-size: 16px;
   font-weight: 600;
   margin: 0 0 8px;
 }
@@ -848,6 +953,7 @@ figcaption {
   text-align: left;
   padding: 12px 12px;
   border-bottom: 1px solid #000;
+  font-weight: 600;
 }
 
 .improvements-table tbody td {
@@ -882,7 +988,7 @@ figcaption {
   color: #000;
   border: 1px solid #D6D6D6;
   border-radius: 8px;
-  padding: 12px 24px;
+  padding: 10px 20px;
   font-family: 'Big Shoulders', sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -970,7 +1076,6 @@ a.show-more-btn {
 
 .testimonial-text {
   font-size: 15px;
-  line-height: 1.6;
   color: #111;
   margin: 0 0 24px;
   flex: 1;
@@ -1073,16 +1178,24 @@ a.testimonial-avatar:hover {
   }
 
   .project-statistics {
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
-  .project-statistics-group {
-    padding: 16px 0;
+  .project-statistics-group:not(:first-child) {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .project-statistics-group:not(:last-child) {
+    padding-right: 0;
   }
 
   .project-statistics .stat-description {
     font-size: 14px;
-    line-height: 1.4;
   }
 
   .home .header-content {
@@ -1111,6 +1224,12 @@ a.testimonial-avatar:hover {
     box-sizing: border-box;
   }
 
+  .partner-more {
+    min-height: 64px;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
   .partner-content {
     align-items: center;
     text-align: center;
@@ -1122,12 +1241,9 @@ a.testimonial-avatar:hover {
     padding: 12px 16px 12px 0;
   }
 
-  .project-statistics {
-    gap: 8px;
-  }
-
-  .project-statistics-group {
-    padding: 12px 0;
+  .project-statistics-group:not(:first-child) {
+    padding-top: 16px;
+    margin-top: 16px;
   }
 
   .improvements-table,
@@ -1140,7 +1256,6 @@ a.testimonial-avatar:hover {
   .ataglance-table th,
   .ataglance-table td {
     font-size: 14px;
-    line-height: 1.5;
     padding: 8px 4px;
     word-break: break-word;
     vertical-align: top;
