@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
@@ -22,8 +23,6 @@
       gtag('config', 'G-THTRN14NFN');
     </script>
     <style>
-      /* ── About page – employment history ─────────────────────────── */
-      /* Tighten the gap between all top-level children on the about page */
       .about-page-content {
         display: flex;
         flex-direction: column;
@@ -267,16 +266,22 @@
     <div class="nav-container">
       <nav>
         <a href="index.html" class="nav-item">Home</a>
-        <a href="about.html" id="nav-item-active" class="nav-item">About</a>
-        <a href="file/Ben-Turner-CV.pdf" class="nav-item" rel="nofollow">Resume</a>
-        <a href="mailto:Benjamin.turner.design@gmail.com" class="nav-item">Contact</a>
+        <a href="resume.html" id="nav-item-active" class="nav-item">Resume</a>
+        <a href="https://www.linkedin.com/in/benturnerwork" class="nav-item" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button type="button" class="nav-item nav-copy-email" data-copy-email="Benjamin.turner.design@gmail.com">Contact</button>
       </nav>
     </div>
 
-    <header id="short-header" class="project-header">
+    <header class="project-header">
       <div class="width-container">
         <div class="header-content">
-          <h1>Who am I?</h1>
+          <h1>Resume</h1>
+          <div class="button-group">
+            <a href="file/Ben-Turner-CV.pdf" class="show-more-btn" download="Ben-Turner-CV.pdf" rel="nofollow">
+              <span>Download</span>
+              <span class="material-symbols-outlined show-more-chevron" aria-hidden="true">download</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -285,14 +290,18 @@
       <div class="width-container">
         <div class="about-page-content">
 
-          <!-- Summary -->
-          <div>
-            <p style="margin:0 0 10px;">Experienced Product Designer who turns complex workflows into simple, easy-to-use interfaces, prototyping in real code rather than just static screens to speed up delivery.</p>
-            <p style="margin:0 0 10px;">Empathetic communicator who builds rapport easily, communicates clearly, and works effectively across teams. Highly coachable, with years of sporting experience that has shaped a growth mindset I bring into my professional career.</p>
-            <p style="margin:0;">A straightforward, empathetic communicator who brings a sense of humour and strong values. I naturally take the lead in organising team social activities, helping to create a positive environment where people genuinely have fun!</p>
+          <div class="about-section">
+            <h3 class="about-section-title">Summary</h3>
+            <div class="experience-description">
+              <ul>
+                <li><strong>Lead Product Designer:</strong> Own multiple products, driving research, feedback, and product vision to transform complex technical workflows into simple, intuitive interfaces.</li>
+                <li><strong>AI-First Workflow:</strong> Prototype in real code using Claude Code, Cursor, and Figma to successfully publish end-to-end features much faster than traditional static screen handoffs.</li>
+                <li><strong>Growth Mindset:</strong> Bring a highly coachable, growth-oriented mindset to my professional career, shaped by years of high-level martial arts training and coaching.</li>
+                <li><strong>Witty &amp; Down-to-Earth:</strong> Thrive as an extraverted, empathetic culture builder who organises team socials and loves chatting with real people about their lives. Tell me one interesting thing or fact about yourself during our first chat!</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Experience -->
           <div class="about-section">
             <h3 class="about-section-title">Experience</h3>
             <div class="experience-list">
@@ -300,17 +309,17 @@
               <div class="experience-card">
                 <div class="experience-card-header">
                   <div class="experience-meta">
-                    <p class="experience-role">Product Designer</p>
+                    <p class="experience-role">Lead Product Designer</p>
                     <p class="experience-company"><a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a> &mdash; <a href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer">P4 Plan</a> &amp; <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">P4 DAM</a> &mdash; Enterprise software</p>
                   </div>
-                  <span class="experience-dates">Sep 2025 &ndash; Present</span>
+                  <span class="experience-dates">September 2025 &ndash; Present</span>
                 </div>
                 <div class="experience-description">
                   <ul>
                     <li>Led the product design for P4 Plan and P4 DAM (Digital Asset Manager), for major enterprise clients like Electronic Arts, Pinewood Studios, Xbox Game Studios and Meta Games.</li>
                     <li>Redesigned core product areas from the ground up, including a complete overhaul of search, filtering and onboarding. This directly reduced backend server load, improved clarity for first-time users and helped the team win dozens of new sales.</li>
                     <li>Bridged the gap between design and development by building interactive, coded prototypes using React, Ember.js and the Force UI design system, rather than just handing off static Figma screens.</li>
-                    <li>Integrated an AI-driven workflow that allows designers to move directly from product manager notes to coded prototypes in Claude Code. By utilising the system's existing context management (CLAUDE.md) and slash-command tools, I helped design teams across the business significantly speed up their prototyping process.</li>
+                    <li>Integrated an AI-driven workflow that allows designers to move directly from product manager notes to coded prototypes in Claude Code and Cursor. By utilising the system&rsquo;s existing context management (CLAUDE.md) and slash-command tools, I helped design teams across the business significantly speed up their prototyping process.</li>
                   </ul>
                 </div>
               </div>
@@ -352,7 +361,6 @@
             </div>
           </div>
 
-          <!-- Skills -->
           <div class="about-section">
             <h3 class="about-section-title">Skills</h3>
             <div class="skills-grid">
@@ -388,6 +396,7 @@
                 <div class="tag-container">
                   <div class="tag"><span>AI-Assisted Workflows</span></div>
                   <div class="tag"><span>Claude Code</span></div>
+                  <div class="tag"><span>Cursor</span></div>
                   <div class="tag"><span>GitHub Copilot</span></div>
                   <div class="tag"><span>Prompt Engineering</span></div>
                   <div class="tag"><span>Generative UI Concepts</span></div>
@@ -409,7 +418,6 @@
             </div>
           </div>
 
-          <!-- Education -->
           <div class="about-section">
             <h3 class="about-section-title">Education</h3>
             <div class="education-card">
@@ -430,7 +438,6 @@
             </div>
           </div>
 
-          <!-- Hobbies -->
           <div class="about-section">
             <h3 class="about-section-title">Hobbies</h3>
             <p style="margin:0;font-size:14px;line-height:1.6;color:#444;">Studied martial arts since 2007, with over 18 years of experience. Black belt in Jiu-Jitsu and several years of Judo practice. Also enjoy fishkeeping, karting, and have a real love for dogs, especially fluffy ones!</p>
@@ -453,5 +460,6 @@
         <p class="copyright">©2026, All Rights Reserved</p>
       </div>
     </footer>
+    <script src="nav.js"></script>
   </body>
 </html>

@@ -365,6 +365,67 @@ nav {
   text-transform: capitalize;
 }
 
+button.nav-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.nav-item-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
+.nav-item-with-icon .nav-item-icon {
+  font-size: 20px;
+}
+
+.nav-copy-toast {
+  position: fixed;
+  z-index: 1001;
+  left: max(16px, env(safe-area-inset-left, 0px));
+  bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  max-width: min(calc(100vw - 32px), 360px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid var(--ui-1000, #D6D6D6);
+  border-radius: 8px;
+  background: var(--ui-0, #FFF);
+  color: var(--ui-1000, #000);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  padding: 6px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.nav-copy-toast--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .nav-item:hover {
   color: black;
 }
@@ -829,6 +890,11 @@ figcaption {
   text-align: left;
   text-transform: none;
   cursor: pointer;
+}
+
+a.show-more-btn {
+  text-decoration: none;
+  color: #000;
 }
 
 .show-more-btn:hover {
