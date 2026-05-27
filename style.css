@@ -584,7 +584,8 @@ footer .contact-links {
   gap: 32px;
 }
 
-.project-grid > a {
+.project-grid > a,
+.project-grid > .project-grid-item {
   display: block;
   height: 100%;
   color: inherit;
@@ -640,6 +641,10 @@ footer .contact-links {
   object-fit: cover;
   background-color: black;
   border-bottom: 1px solid var(--ui-1000, #D6D6D6);
+}
+
+.project-grid-thumbnail--empty {
+  background-color: #f0f0f0;
 }
 
 .grid-item--coming-soon .view:disabled {
@@ -905,6 +910,12 @@ figcaption,
   max-width: 1408px;
   max-height: 720px;
   object-fit: cover;
+}
+
+.image-with-caption--contain,
+.content-image--contain .image-with-caption {
+  object-fit: contain;
+  max-height: none;
 }
 
 figcaption {
@@ -1215,24 +1226,24 @@ a.testimonial-avatar:hover {
 
   .partner-wrapper {
     gap: 16px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .partner-logo {
     min-height: 64px;
-    padding: 0 12px;
+    padding: 0 12px 0 0;
     box-sizing: border-box;
   }
 
   .partner-more {
     min-height: 64px;
-    padding: 0 12px;
+    padding: 0 12px 0 0;
     box-sizing: border-box;
   }
 
   .partner-content {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
