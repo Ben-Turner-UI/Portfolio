@@ -4,7 +4,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0 auto;
 }
 
@@ -19,10 +19,19 @@ button {
   letter-spacing: 0.1px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
 .project-paragraph h2,
 .project-paragraph h3,
 .project-paragraph-list-item h3 {
   font-family: 'Noto Sans', sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 main {
@@ -118,11 +127,11 @@ h1 {
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.35;
   margin: 0;
 }
@@ -148,12 +157,14 @@ button {
 }
 
 /* Project case study section labels */
-.project-header p.header-info-title,
+.project-header .header-info-title,
 .project-paragraph-list-item h3 {
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.6;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .project-paragraph h2 {
@@ -161,6 +172,8 @@ button {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.6;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .project-header .project-client-description > p:not(.header-info-title),
@@ -199,7 +212,7 @@ figcaption {
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.25;
   }
 
@@ -218,11 +231,10 @@ button {
   cursor: pointer;
   outline: inherit;
   text-align: center;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ui-0, #FFF);
   border-radius: 8px;
   background: var(--ui-1000, #000);
-  text-transform: capitalize;
 }
 
 .button-group {
@@ -419,9 +431,7 @@ nav {
 .nav-item {
   color: darkgray;
   padding: 12px 20px 12px 0;
-  font-weight: 600;
   text-decoration-line: none;
-  text-transform: capitalize;
 }
 
 button.nav-item {
@@ -474,7 +484,7 @@ button.nav-item {
   color: var(--ui-1000, #000);
   font-family: 'Noto Sans', sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.35;
   padding: 6px 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -885,14 +895,14 @@ figcaption,
 
 .project-paragraph h2 {
   font-weight: 600;
-  margin: 0 0 16px;
+  margin: 0 0 8px;
 }
 
 .project-paragraph h3,
 .project-paragraph-list-item h3 {
   font-size: 16px;
   font-weight: 600;
-  margin: 0 0 8px;
+  margin: 0 0 4px;
 }
 
 .project-paragraph > h2 + *,
@@ -906,16 +916,42 @@ figcaption,
 }
 
 .image-with-caption {
+  display: block;
   width: 100%;
-  max-width: 1408px;
+  max-width: 1200px;
   max-height: 720px;
+  margin-left: auto;
+  margin-right: auto;
   object-fit: cover;
+  border: 1px solid #D6D6D6;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .image-with-caption--contain,
 .content-image--contain .image-with-caption {
   object-fit: contain;
   max-height: none;
+}
+
+.content-image--crop-top .content-image-media {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #D6D6D6;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+  isolation: isolate;
+}
+
+.content-image--crop-top .content-image-media .image-with-caption {
+  transform: translateY(-2px);
+  margin-bottom: -2px;
+  border: none;
+  border-radius: 0;
 }
 
 figcaption {
@@ -1077,7 +1113,7 @@ a.show-more-btn {
 
 .testimonial-quote-mark {
   font-family: 'Big Shoulders', sans-serif;
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1;
   color: #ff4d00;
@@ -1146,13 +1182,15 @@ a.testimonial-avatar:hover {
 .testimonial-name {
   font-family: 'Big Shoulders', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 22px;
   color: #111;
   margin: 0;
 }
 
 .testimonial-role {
   font-size: 14px;
+  line-height: 20px;
   color: #595959;
   margin: 0;
 }
@@ -1288,6 +1326,7 @@ a.testimonial-avatar:hover {
     padding-right: 0;
     box-sizing: border-box;
   }
+
   .main-content .image-with-caption {
     width: 100%;
     max-width: 100%;
@@ -1299,5 +1338,8 @@ a.testimonial-avatar:hover {
 
 .main-content .content-image {
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
