@@ -9,45 +9,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="home-page">
 
+    <nav class="home-nav">
+        <a href="index.html">
+            <p class="brandmark">OLYMPUS</p>
+        </a>
+        <span class="nav_links">
+            <p><a href="#watch-faces">Watch Faces</a></p>
+
+            <p style="color: grey">|</p>
+
+            <p><a href="#mockup-kit">Mockup Kit</a></p>
+
+            <p style="color: grey">|</p>
+
+            <p> <a href="../../index.html">The Designer</a></p>
+
+        </span>
+    </nav>
+
     <main>
-        <nav>
-            <a href="index.html">
-                <p class="brandmark">OLYMPUS</p>
-            </a>
-            <span class="nav_links">
-                <p><a href="#watch-faces">Watch Faces</a></p>
-
-                <p style="color: grey">|</p>
-
-                <p><a href="#mockup-kit">Mockup Kit</a></p>
-
-                <p style="color: grey">|</p>
-
-                <p> <a href="../../index.html">The Designer</a></p>
-
-            </span>
-        </nav>
-
         <header class="home-header">
         <section class="landing">
-            <div class="landing_image_watch">
-                <img id="landing_image_watch" src="img/double.png" alt="">
-            </div>
             <div class="landing_text">
                 <h1>Premium, Fashionable and Usable Watch Faces</h1>
-                <span id="landing_list">
-                    <h4>Perfect for:</h4>
-                    <ul id="landing_text_list">
-                        <li>Sports lovers</li>
-                        <li>Wearable Enthusiasts</li>
-                        <li>Face Designers</li>
-                    </ul>
-                </span>
+                <div class="landing_badges">
+                    <span class="landing_badge">Sports lovers</span>
+                    <span class="landing_badge">Wearable Enthusiasts</span>
+                    <span class="landing_badge">Face Designers</span>
+                </div>
             </div>
         </section>
         </header>
@@ -59,27 +53,43 @@
 
         <div class="faces_grid">
             <article class="faces_grid_item">
-                <img class="faces_grid_img" src="img/Classic.png" alt="Classic watch face">
-                <h2>Classic</h2>
-                <p>A vintage dial with heartrate, battery, and date complications. Nautical, wartime-inspired styling — character and readability for the traditionalist.</p>
+                <div class="faces_grid_media">
+                    <img class="faces_grid_img" src="img/Classic.png" alt="Classic watch face">
+                </div>
+                <div class="faces_grid_content">
+                    <h2>Classic</h2>
+                    <p>A vintage dial with heartrate, battery, and date complications. Nautical, wartime-inspired styling with character and readability for the traditionalist.</p>
+                </div>
                 <a class="faces_grid_button" href="https://www.facer.io/watchface/n3EZQOr49p" target="_blank" rel="noopener noreferrer">Install on Facer</a>
             </article>
             <article class="faces_grid_item">
-                <img class="faces_grid_img" src="img/Olympus.png" alt="Olympus watch face">
-                <h2>Olympus</h2>
-                <p>Clean, minimal, and true to the Olympus brand. A white dial that keeps things simple — timeless, readable, and easy to wear every day.</p>
+                <div class="faces_grid_media">
+                    <img class="faces_grid_img" src="img/Olympus.png" alt="Olympus watch face">
+                </div>
+                <div class="faces_grid_content">
+                    <h2>Olympus</h2>
+                    <p>Clean, minimal, and true to the Olympus brand. A white dial that keeps things simple, timeless, readable, and easy to wear every day.</p>
+                </div>
                 <a class="faces_grid_button" href="https://www.facer.io/watchface/LWT4Nn1AQB" target="_blank" rel="noopener noreferrer">Install on Facer</a>
             </article>
             <article class="faces_grid_item">
-                <img class="faces_grid_img" src="img/Trinity.png" alt="Trinity watch face">
-                <h2>Trinity</h2>
-                <p>Bold, space-age styling with a tripolar layout. Battery, heartrate, and date sit among rotating particles that echo the sweep of a seconds hand.</p>
+                <div class="faces_grid_media">
+                    <img class="faces_grid_img" src="img/Trinity.png" alt="Trinity watch face">
+                </div>
+                <div class="faces_grid_content">
+                    <h2>Trinity</h2>
+                    <p>Bold, space-age styling with a tripolar layout. Battery, heartrate, and date sit among rotating particles that echo the sweep of a seconds hand.</p>
+                </div>
                 <a class="faces_grid_button" href="https://www.facer.io/watchface/PlCebnVFlx" target="_blank" rel="noopener noreferrer">Install on Facer</a>
             </article>
             <article class="faces_grid_item">
-                <img class="faces_grid_img" src="img/Trio.png" alt="Trio watch face">
-                <h2>Trio</h2>
-                <p>Designed with sport in mind, using three clear complications in a tripartite layout. Modern, purposeful, and easy to read when you&rsquo;re on the move.</p>
+                <div class="faces_grid_media">
+                    <img class="faces_grid_img" src="img/Trio.png" alt="Trio watch face">
+                </div>
+                <div class="faces_grid_content">
+                    <h2>Trio</h2>
+                    <p>Designed with sport in mind, using three clear complications in a tripartite layout. Modern, purposeful, and easy to read when you&rsquo;re on the move.</p>
+                </div>
                 <a class="faces_grid_button" href="https://www.facer.io/watchface/o0rGGL7VDD" target="_blank" rel="noopener noreferrer">Install on Facer</a>
             </article>
         </div>
@@ -88,36 +98,56 @@
             <section class="kit_download">
                 <h1>The Creators toolkit, built to help you design and present faces your way</h1>
                 <h4>Using Photoshop, you can edit smart objects and add your own watch faces onto over 10 different 3D mockups, additionally, you can use the pre-designed selection of complications to help you design your own faces.</h4>
-                <a href="https://gumroad.com/l/olympus" target="_blank" rel="noopener noreferrer"><button type="button">Buy the mockup kit!</button></a>
+                <a href="https://gumroad.com/l/olympus" target="_blank" rel="noopener noreferrer"><button type="button">Buy the Creators Toolkit, all proceeds go to the RNIB</button></a>
             </section>
 
             <div class="kit_grid">
                 <article class="kit_grid_3 kit_card">
-                    <img src="img/3d-mockup.png" class="kit_card_image" alt="3D watch face mockups">
-                    <h3>Bringing 3D to a new medium</h3>
-                    <p>Olympus wants creators to have the ability to showcase their watch faces in their best light, that is why Olympus has designed the creators toolkit.</p>
+                    <div class="kit_card_content">
+                        <h3>Showcase Your Designs in 3D</h3>
+                        <p>Olympus wants creators to be able to showcase their watch faces in the best possible light. That is why we designed the Creators Toolkit.</p>
+                    </div>
+                    <div class="kit_card_media">
+                        <img src="img/gear-sport-upwards.png" class="kit_card_image" alt="3D watch face mockups">
+                    </div>
                 </article>
                 <article class="kit_grid_4 kit_card">
-                    <img src="img/complications.png" class="kit_card_image" alt="Watch face complications">
-                    <h3>Making mockups easy</h3>
-                    <p>Using the built in Sketch file, designers can use the pre-made complications to lay-out their own faces, figuring out new ways to design and wireframe.</p>
+                    <div class="kit_card_content">
+                        <h3>Ready-to-Use UI Complications</h3>
+                        <p>The built-in Sketch file provides a comprehensive library of ready-to-use UI complications. Treating these pre-made elements like scalable components allows designers to rapidly wireframe and lay out their own custom watch faces.</p>
+                    </div>
+                    <div class="kit_card_media">
+                        <img src="img/complications.png" class="kit_card_image" alt="Watch face complications">
+                    </div>
                 </article>
                 <article class="kit_grid_5 kit_card kit_card_rnib">
-                    <img class="kit_card_rnib_logo" src="img/RNIB.JPG" alt="RNIB logo">
-                    <h3>Royal National Institute of Blind People</h3>
-                    <p>Olympus has decided to support the RNIB with 50% of revenue gained going towards the charity from the Creators Toolkit. The Royal National Institute of Blind People (RNIB), one of the UK&rsquo;s leading sight loss charities and the largest community of blind and partially sighted people. They&rsquo;re a catalyst for change, inspiring people with sight loss to transform their own personal experience, their community and, ultimately, society as a whole.</p>
+                    <div class="kit_card_content">
+                        <h3>Royal National Institute of Blind People</h3>
+                        <p>Olympus is proud to donate 100% of the proceeds from the Creators Toolkit to the Royal National Institute of Blind People (RNIB). Your purchase directly supports one of the UK&rsquo;s leading charities in empowering blind and partially sighted individuals to transform their lives.</p>
+                    </div>
+                    <div class="kit_card_media">
+                        <img class="kit_card_rnib_logo" src="img/RNIB.JPG" alt="RNIB logo">
+                    </div>
                 </article>
 
-                <div class="kit_grid_6">
-                    <img class="kit_grid_icon" src="img/ps.svg" alt="">
-                    <h3>3D Mockups with Photoshop</h3>
-                    <p>Using Photoshop designers can superimpose their face onto a 3D mock-up, giving them and their users a new perspective. Within this kit, you will find both the Galaxy Gear and Galaxy Active smartwatch mockups.</p>
-                </div>
-                <div class="kit_grid_7">
-                    <img class="kit_grid_icon" src="img/sketch.svg" alt="">
-                    <h3>UI Elements within Sketch</h3>
-                    <p>Using Sketch, designers can leverage the programs tools for creating circular interfaces. It&rsquo;s regarded as the best tool for creating vector watch faces to develop mock-ups and lay out their faces with pre-made elements.</p>
-                </div>
+                <article class="kit_grid_6 kit_card">
+                    <div class="kit_card_content">
+                        <h3>3D Mockups with Photoshop</h3>
+                        <p>Using Photoshop designers can superimpose their face onto a 3D mock-up, giving them and their users a new perspective. Within this kit, you will find both the Galaxy Gear and Galaxy Active smartwatch mockups.</p>
+                    </div>
+                    <div class="kit_card_media">
+                        <img class="kit_card_icon" src="img/ps.svg" alt="Adobe Photoshop">
+                    </div>
+                </article>
+                <article class="kit_grid_7 kit_card">
+                    <div class="kit_card_content">
+                        <h3>UI Elements within Sketch</h3>
+                        <p>Using Sketch, designers can leverage the programs tools for creating circular interfaces. It&rsquo;s regarded as the best tool for creating vector watch faces to develop mock-ups and lay out their faces with pre-made elements.</p>
+                    </div>
+                    <div class="kit_card_media">
+                        <img class="kit_card_icon" src="img/sketch.svg" alt="Sketch">
+                    </div>
+                </article>
             </div>
         </section>
     </main>
