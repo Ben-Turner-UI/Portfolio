@@ -17,17 +17,14 @@
 
     <nav class="home-nav">
         <div class="page-container home-nav_inner">
-            <a href="olympus.html">
-                <p class="brandmark">OLYMPUS</p>
-            </a>
-            <span class="nav_links">
-                <p><a href="#watch-faces">Watch Faces</a></p>
-
-                <p style="color: grey">|</p>
-
-                <p><a href="#mockup-kit">Mockup Kit</a></p>
-
-            </span>
+            <div class="home-nav_brand">
+                <a href="index.html" class="home-nav_back" aria-label="Back to portfolio">
+                    <span class="material-symbols-outlined olympus-icon olympus-icon--nav" aria-hidden="true">chevron_left</span>
+                </a>
+                <a href="olympus.html" class="home-nav_logo">
+                    <p class="brandmark">OLYMPUS</p>
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -49,7 +46,7 @@
                         <p class="landing_rnib_text">Proudly supporting RNIB</p>
                         <div class="landing_rnib_info_wrap">
                         <button type="button" class="landing_rnib_info" aria-describedby="landing-rnib-popover" aria-label="Learn about RNIB support">
-                            <span class="material-symbols-outlined olympus-btn-icon" aria-hidden="true">info</span>
+                            <span class="material-symbols-outlined olympus-icon olympus-icon--button" aria-hidden="true">info</span>
                         </button>
                         <div id="landing-rnib-popover" class="landing_rnib_popover" role="tooltip">
                             <p>Olympus is proud to donate 100% of the proceeds from the Creators Toolkit to the Royal National Institute of Blind People (RNIB). Your purchase directly supports one of the UK&rsquo;s leading charities in empowering blind and partially sighted individuals to transform their lives.</p>
@@ -66,6 +63,25 @@
         </header>
 
         <div class="page-container">
+        <section class="about" id="about">
+            <h1>About Olympus</h1>
+            <h4>Olympus is a premium wearable brand addressing a gap in the third-party watch face market: few options combine usability, function, and distinctive design. Every face is built to look good, last all day on battery, and stay readable outdoors.</h4>
+            <div class="about_highlights">
+                <article class="about_card">
+                    <h3>Circular-first design</h3>
+                    <p>Round displays need round workflows. Sketch&rsquo;s rotate copies tool and circular layouts made it possible to build precise, symmetric compositions for wearable screens.</p>
+                </article>
+                <article class="about_card">
+                    <h3>AMOLED-aware</h3>
+                    <p>On AMOLED screens, black pixels draw no power. Olympus faces maximise black space for all-day battery life and strong outdoor visibility when running or training.</p>
+                </article>
+                <article class="about_card">
+                    <h3>20+ devices</h3>
+                    <p>Compatible with more than 20 circular-display smartwatches via Facer. Designs draw on Swedish industrial design, German luxury watchmaking, and British heritage.</p>
+                </article>
+            </div>
+        </section>
+
         <section class="faces" id="watch-faces">
             <h1>Watch Faces</h1>
             <h4>Using Facer you can download and use Olympus watch faces.</h4>
@@ -80,7 +96,7 @@
                     <h2>Classic</h2>
                     <p>A vintage dial featuring heartrate, battery, and date complications. It offers nautical, wartime-inspired styling with rich character and high readability tailored for the modern traditionalist.</p>
                 </div>
-                <a class="faces_grid_button" href="https://www.facer.io/watchface/n3EZQOr49p" target="_blank" rel="noopener noreferrer">Install on Facer<span class="olympus-btn-icon material-symbols-outlined" aria-hidden="true">download</span></a>
+                <a class="faces_grid_button" href="https://www.facer.io/watchface/n3EZQOr49p" target="_blank" rel="noopener noreferrer">Install on Facer<span class="material-symbols-outlined olympus-icon olympus-icon--button" aria-hidden="true">download</span></a>
             </article>
             <article class="faces_grid_item">
                 <div class="faces_grid_media">
@@ -90,7 +106,7 @@
                     <h2>Olympus</h2>
                     <p>Clean, minimal, and entirely true to the Olympus brand. This bright white dial keeps things simple, offering a timeless, highly readable design for easy daily wear.</p>
                 </div>
-                <a class="faces_grid_button" href="https://www.facer.io/watchface/LWT4Nn1AQB" target="_blank" rel="noopener noreferrer">Install on Facer<span class="olympus-btn-icon material-symbols-outlined" aria-hidden="true">download</span></a>
+                <a class="faces_grid_button" href="https://www.facer.io/watchface/LWT4Nn1AQB" target="_blank" rel="noopener noreferrer">Install on Facer<span class="material-symbols-outlined olympus-icon olympus-icon--button" aria-hidden="true">download</span></a>
             </article>
             <article class="faces_grid_item">
                 <div class="faces_grid_media">
@@ -100,7 +116,7 @@
                     <h2>Trinity</h2>
                     <p>Bold, space-age styling featuring a highly distinct tripolar layout. Battery, heartrate, and date sit among rotating particles that perfectly echo the sweep of a seconds hand.</p>
                 </div>
-                <a class="faces_grid_button" href="https://www.facer.io/watchface/PlCebnVFlx" target="_blank" rel="noopener noreferrer">Install on Facer<span class="olympus-btn-icon material-symbols-outlined" aria-hidden="true">download</span></a>
+                <a class="faces_grid_button" href="https://www.facer.io/watchface/PlCebnVFlx" target="_blank" rel="noopener noreferrer">Install on Facer<span class="material-symbols-outlined olympus-icon olympus-icon--button" aria-hidden="true">download</span></a>
             </article>
             <article class="faces_grid_item">
                 <div class="faces_grid_media">
@@ -110,7 +126,7 @@
                     <h2>Trio</h2>
                     <p>Designed specifically with sport in mind, utilizing three clear complications within a tripartite layout. It remains modern, highly purposeful, and perfectly readable while on the move.</p>
                 </div>
-                <a class="faces_grid_button" href="https://www.facer.io/watchface/o0rGGL7VDD" target="_blank" rel="noopener noreferrer">Install on Facer<span class="olympus-btn-icon material-symbols-outlined" aria-hidden="true">download</span></a>
+                <a class="faces_grid_button" href="https://www.facer.io/watchface/o0rGGL7VDD" target="_blank" rel="noopener noreferrer">Install on Facer<span class="material-symbols-outlined olympus-icon olympus-icon--button" aria-hidden="true">download</span></a>
             </article>
             <article class="faces_grid_item">
                 <div class="faces_grid_media">
@@ -120,7 +136,7 @@
                     <h2>Foundations</h2>
                     <p>A core analog layout built for reliable everyday utility. Compass, calorie, and weather complications sit on a clean, high-contrast dial acting as the essential Olympus foundation.</p>
                 </div>
-                <button type="button" class="faces_grid_button" disabled>Install on Facer<span class="olympus-btn-icon material-symbols-outlined" aria-hidden="true">download</span></button>
+                <button type="button" class="faces_grid_button" disabled>Install on Facer<span class="material-symbols-outlined olympus-icon olympus-icon--button" aria-hidden="true">download</span></button>
             </article>
         </div>
 
@@ -128,7 +144,7 @@
             <section class="kit_download">
                 <h1>The Creator&rsquo;s Toolkit</h1>
                 <h4>Built specifically for creators, this toolkit gives you complete control over how you present your work. Effortlessly apply your designs to 10+ hyper-realistic 3D mockups using Photoshop and Sketch, and build custom faces faster with our ready-to-use collection of complications.</h4>
-                <a href="https://gumroad.com/l/olympus" target="_blank" rel="noopener noreferrer"><button type="button">Buy the Creator&rsquo;s Toolkit<span class="olympus-btn-icon material-symbols-outlined" aria-hidden="true">open_in_new</span></button></a>
+                <a href="https://gumroad.com/l/olympus" target="_blank" rel="noopener noreferrer"><button type="button">Buy the Creator&rsquo;s Toolkit<span class="material-symbols-outlined olympus-icon olympus-icon--button" aria-hidden="true">open_in_new</span></button></a>
             </section>
 
             <div class="kit_grid">
@@ -153,8 +169,8 @@
 
                 <article class="kit_grid_tools kit_card">
                     <div class="kit_card_media kit_card_media_icons">
-                        <img class="kit_card_icon" src="olympus/img/ps.svg" alt="Adobe Photoshop">
-                        <img class="kit_card_icon" src="olympus/img/sketch.svg" alt="Sketch">
+                        <span class="material-symbols-outlined olympus-icon olympus-icon--kit" aria-hidden="true">brush</span>
+                        <span class="material-symbols-outlined olympus-icon olympus-icon--kit" aria-hidden="true">layers</span>
                     </div>
                     <div class="kit_card_content">
                         <h3>Photoshop &amp; Sketch</h3>
@@ -162,6 +178,25 @@
                     </div>
                 </article>
             </div>
+
+            <section class="renders_gallery" aria-labelledby="renders-gallery-heading">
+                <h2 id="renders-gallery-heading" class="renders_gallery_heading">3D Renders</h2>
+                <p class="renders_gallery_lead">Hyper-realistic Galaxy Watch Active 2 mockups, modelled and rendered for the Creators Toolkit.</p>
+                <div class="renders_gallery_grid">
+                    <figure class="renders_gallery_item">
+                        <img src="olympus/img/renders/render-dual-angle.png" alt="Classic and Olympus watch faces on two Galaxy Watch Active 2 devices" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="renders_gallery_item">
+                        <img src="olympus/img/renders/render-classic-hero.png" alt="Classic Olympus watch face on Galaxy Watch Active 2" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="renders_gallery_item">
+                        <img src="olympus/img/renders/render-dual-dramatic.png" alt="Low-angle 3D render of two Olympus watch faces" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="renders_gallery_item">
+                        <img src="olympus/img/renders/render-hardware-blank.png" alt="Blank Galaxy Watch Active 2 hardware mockup from the Creators Toolkit" loading="lazy" decoding="async">
+                    </figure>
+                </div>
+            </section>
         </section>
         </div>
     </main>
@@ -171,10 +206,11 @@
             <a class="site_footer_logo" href="olympus.html">
                 <span class="brandmark site_footer_brandmark">OLYMPUS</span>
             </a>
-            <p class="site_footer_text">Every part of Olympus &mdash; the 3D mockups, watch faces, complications, and the Creators Toolkit &mdash; was created entirely without AI. This project showcases hands-on 3D modelling, product ownership, and end-to-end design craft.</p>
+            <p class="site_footer_copyright">&copy; <span data-copyright-year></span> Olympus. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="olympus/olympus.js"></script>
 </body>
 
 </html>

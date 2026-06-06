@@ -52,6 +52,7 @@
 
 <section class="projects" id="projects">
   <div class="width-container">
+    <h3>Significant projects I&rsquo;d like to highlight:</h3>
 
     <div class="project-grid">
 
@@ -178,30 +179,11 @@
         </div>
       </a>
 
-      <a href="mwl.html" class="project-grid-item--older is-hidden">
-        <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/mwl-thumbnail.jpg" alt="Case study: Mobile World Live redesign">
-          <div class="grid-item-content">
-            <div class="grid-item-content-wrapper">
-              <div class="grid-item-content-text">
-                <h4>Boosting Ad Revenue &amp; Engagement: The Mobile World Live Redesign</h4>
-                <div class="tag-container">
-                  <div class="tag"><span>Figma</span></div>
-                  <div class="tag"><span>WordPress</span></div>
-                  <div class="tag"><span>Google Analytics</span></div>
-                </div>
-                <p class="project-description">A full redesign of the Mobile World Live news platform for GSMA, with a focus on improving ad revenue and reader engagement.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-
     </div>
 
     <div class="show-more-container">
       <button class="show-more-btn" id="show-more-btn" type="button" aria-expanded="false">
-        <span id="show-more-label">Show older case studies</span>
+        <span id="show-more-label">Show more</span>
         <span class="material-symbols-outlined show-more-chevron" aria-hidden="true">expand_more</span>
       </button>
     </div>
@@ -223,7 +205,7 @@
         });
         btn.setAttribute('aria-expanded', String(willExpand));
         if (label) {
-          label.textContent = willExpand ? 'Show fewer case studies' : 'Show older case studies';
+          label.textContent = willExpand ? 'Show less' : 'Show more';
         }
         if (chevron) {
           chevron.classList.toggle('show-more-chevron--open', willExpand);
@@ -246,13 +228,29 @@
         </div>
       </a>
 
-      <div class="side-project-card side-project-card--disabled" aria-disabled="true">
-        <div class="side-project-thumbnail side-project-thumbnail--placeholder" aria-hidden="true"></div>
+      <a href="other.html" class="side-project-card">
+        <img class="side-project-thumbnail" src="img/project-image/other/other-1.jpg" alt="GSMA Foundry projected at Mobile World Congress Barcelona">
         <div class="side-project-content">
-          <h4>Coming soon</h4>
-          <p class="side-project-description">Another side project is on the way. Check back later for updates.</p>
+          <h4>Miscellaneous designs</h4>
+          <p class="side-project-description">A collection of one-off interface and experiential work, from large-scale event installations to touchscreen kiosks and product concepts.</p>
         </div>
-      </div>
+      </a>
+
+      <a href="sportswork.html" class="side-project-card">
+        <img class="side-project-thumbnail" src="img/project-image/sportswork/sportswork-1.jpg" alt="SportsWork website across desktop, tablet, and mobile">
+        <div class="side-project-content">
+          <h4>SportsWork</h4>
+          <p class="side-project-description">A sporting jobs marketplace with a dynamic design system, optimised listings, and brand consistency across web and social.</p>
+        </div>
+      </a>
+
+      <a href="mwl.html" class="side-project-card">
+        <img class="side-project-thumbnail" src="img/thumbnail/mwl-thumbnail.jpg" alt="Mobile World Live website across desktop, tablet, and mobile">
+        <div class="side-project-content">
+          <h4>Mobile World Live</h4>
+          <p class="side-project-description">A full GSMA news platform redesign focused on improving ad revenue, reader engagement, and information architecture.</p>
+        </div>
+      </a>
 
     </div>
   </div>

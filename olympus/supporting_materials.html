@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,18 +21,14 @@
     <main>
         <nav>
             <div class="page-container home-nav_inner">
-                <a href="../olympus.html">
-                    <p class="brandmark">OLYMPUS</p>
-                </a>
-                <span class="nav_links">
-
-                    <p> <a href="../olympus.html#watch-faces">Watch Faces </a></p>
-
-                    <p style="color: grey">|</p>
-
-                    <p><a href="../olympus.html#mockup-kit">Mockup Kit</a></p>
-
-                </span>
+                <div class="home-nav_brand">
+                    <a href="../olympus.html" class="home-nav_back" aria-label="Back to Olympus">
+                        <span class="material-symbols-outlined olympus-icon olympus-icon--nav" aria-hidden="true">chevron_left</span>
+                    </a>
+                    <a href="../olympus.html" class="home-nav_logo">
+                        <p class="brandmark">OLYMPUS</p>
+                    </a>
+                </div>
             </div>
         </nav>
 
@@ -65,8 +62,9 @@
             <a class="site_footer_logo" href="../olympus.html">
                 <span class="brandmark site_footer_brandmark">OLYMPUS</span>
             </a>
-            <p class="site_footer_text">Every part of Olympus &mdash; the 3D mockups, watch faces, complications, and the Creators Toolkit &mdash; was created entirely without AI. This project showcases hands-on 3D modelling, product ownership, and end-to-end design craft.</p>
+            <p class="site_footer_copyright">&copy; <span data-copyright-year></span> Olympus. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="olympus.js"></script>
 </body></html>
