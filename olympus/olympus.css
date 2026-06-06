@@ -166,6 +166,8 @@ main {
 .faces h1,
 .kit_download h1 {
     margin-bottom: 8px;
+    font-size: 28px;
+    line-height: 36px;
 }
 
 .faces h4,
@@ -1185,6 +1187,12 @@ body.home-page {
     h1 {
         font-size: 20px;
         line-height: 24px;
+    }
+
+    .faces h1,
+    .kit_download h1 {
+        font-size: 24px;
+        line-height: 32px;
     }
 
     nav .brandmark {
