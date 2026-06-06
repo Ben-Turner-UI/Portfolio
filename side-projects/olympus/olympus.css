@@ -196,11 +196,16 @@ main {
 }
 
 .faces h1,
-.kit_download h1,
 .about h1 {
     margin-bottom: 8px;
     font-size: 24px;
     line-height: 32px;
+}
+
+.kit_download h1 {
+    margin-bottom: 8px;
+    font-size: 28px;
+    line-height: 36px;
 }
 
 .faces h4,
@@ -903,8 +908,14 @@ body.home-page {
     max-height: 100%;
 }
 
-.kit_card_media_icons .olympus-icon--kit {
-    color: #A1A1A6;
+.kit_card_icon {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .kit_card_media_icons {
@@ -1154,8 +1165,21 @@ body.home-page {
     font-size: 28px;
 }
 
-.olympus-icon--kit {
-    font-size: 72px;
+.material-symbols-outlined.olympus-btn-icon {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    flex-shrink: 0;
 }
 
 
@@ -1298,11 +1322,15 @@ body.home-page {
     }
 
     .faces h1,
-    .kit_download h1,
     .about h1,
     .renders_gallery_heading {
         font-size: 20px;
         line-height: 28px;
+    }
+
+    .kit_download h1 {
+        font-size: 24px;
+        line-height: 32px;
     }
 
     .about_highlights {
