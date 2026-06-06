@@ -348,11 +348,11 @@ nav > a {
     display: inline-block;
     padding: 4px 12px;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
-    color: #A1A1A6;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #D8D8DE;
+    background-color: rgba(0, 255, 176, 0.12);
+    border: 1px solid rgba(0, 255, 176, 0.36);
     border-radius: 999px;
     white-space: nowrap;
 }
@@ -481,6 +481,7 @@ nav > a {
 body.home-page {
     --hero-bg: #030706;
     --hero-bg-mid: #051209;
+    --hero-green-fade: 140px;
     --hero-glow: #00FFB0;
     --section-bg: #0F1211;
     --section-surface: #161918;
@@ -518,9 +519,47 @@ body.home-page {
     box-sizing: border-box;
     padding: var(--home-nav-offset) 0 72px;
     background:
-        linear-gradient(to top, rgba(0, 80, 48, 0.35) 0px, transparent 140px),
+        linear-gradient(to top, rgba(0, 80, 48, 0.35) 0px, transparent var(--hero-green-fade)),
         linear-gradient(180deg, var(--hero-bg) 0%, var(--hero-bg-mid) 100%);
     position: relative;
+    isolation: isolate;
+}
+
+.home-page .home-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--hero-green-fade);
+    z-index: 3;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            transparent 0,
+            transparent 31px,
+            rgba(0, 255, 176, 0.14) 31px,
+            rgba(0, 255, 176, 0.14) 32px
+        ),
+        linear-gradient(to top, rgba(0, 80, 48, 0.35) 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(
+        to top,
+        #000 0%,
+        rgba(0, 0, 0, 0.55) 45%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to top,
+        #000 0%,
+        rgba(0, 0, 0, 0.55) 45%,
+        transparent 100%
+    );
+}
+
+.home-page .home-header > .page-container {
+    position: relative;
+    z-index: 2;
 }
 
 .home-page .home-header::after {
@@ -530,6 +569,7 @@ body.home-page {
     right: 0;
     bottom: 0;
     height: 1px;
+    z-index: 4;
     background: rgba(0, 255, 176, 0.28);
     box-shadow:
         0 0 8px rgba(0, 255, 176, 0.2),
@@ -556,23 +596,26 @@ body.home-page {
 .home-page .landing_text {
     grid-column: 1;
     grid-row: 1;
+    position: relative;
+    z-index: 4;
 }
 
 .home-page .landing_image_watch {
     grid-column: 2;
     grid-row: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     min-height: 0;
-    overflow: hidden;
+    overflow: visible;
+    margin-bottom: -32px;
 }
 
 .home-page #landing_image_watch {
     width: 100%;
     max-height: 520px;
     object-fit: contain;
-    object-position: center center;
+    object-position: center bottom;
 }
 
 .home-page .home-nav {
@@ -1116,10 +1159,13 @@ body.home-page {
     .home-page .landing_image_watch {
         grid-column: 1;
         grid-row: 1;
+        align-items: center;
+        margin-bottom: 0;
     }
 
     .home-page #landing_image_watch {
         max-height: 400px;
+        object-position: center center;
     }
 
 }
@@ -1189,7 +1235,7 @@ body.home-page {
     .faces_grid {
         --faces-column-gap: 24px;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: 24px;
+        row-gap: 32px;
         margin-bottom: 48px;
     }
 
@@ -1228,7 +1274,7 @@ body.home-page {
     .faces_grid {
         --faces-column-gap: 0;
         grid-template-columns: 1fr;
-        row-gap: 28px;
+        row-gap: 40px;
     }
 
     .faces_grid_item:last-child:nth-child(odd) {
@@ -1250,7 +1296,7 @@ body.home-page {
     }
 
     .faces_grid {
-        row-gap: 24px;
+        row-gap: 36px;
     }
 
     .home-page .home-nav .nav_links p,
@@ -1263,11 +1309,6 @@ body.home-page {
 
     .landing_badges {
         gap: 8px;
-    }
-
-    .landing_badge {
-        font-size: 13px;
-        line-height: 18px;
     }
 
     .landing_rnib {
