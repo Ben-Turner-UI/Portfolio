@@ -225,12 +225,16 @@ nav > a {
     text-decoration: none;
 }
 
-nav .brandmark {
-    font-size: 20px;
-    letter-spacing: 12px;
-    margin: 0;
+.home-nav_logo {
+    text-decoration: none;
+}
+
+.home-nav_logo:hover .site_footer_brandmark {
+    color: #fff;
+}
+
+.home-nav_logo .site_footer_brandmark {
     width: auto;
-    line-height: 24px;
 }
 
 .nav_links {
@@ -1161,12 +1165,6 @@ body.home-page {
         line-height: 24px;
     }
 
-    nav .brandmark {
-        font-size: 18px;
-        letter-spacing: 8px;
-        line-height: 24px;
-    }
-
     .kit_card h3,
     .faces_grid_item h2 {
         font-size: 20px;
@@ -1253,11 +1251,6 @@ body.home-page {
 
     .faces_grid {
         row-gap: 24px;
-    }
-
-    nav .brandmark {
-        font-size: 16px;
-        letter-spacing: 6px;
     }
 
     .home-page .home-nav .nav_links p,

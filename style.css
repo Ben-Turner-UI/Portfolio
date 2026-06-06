@@ -243,7 +243,7 @@ button {
 .button-group {
   display: flex;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -1452,7 +1452,7 @@ a.testimonial-avatar:hover {
   }
 
   .button-group {
-    gap: 16px;
+    gap: 8px;
   }
 
   .grid-item-content {
