@@ -1,4 +1,17 @@
 (function () {
+  function updateNavOffset() {
+    var nav = document.querySelector('.nav-container');
+    if (!nav) return;
+    document.documentElement.style.setProperty('--nav-offset', nav.offsetHeight + 'px');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateNavOffset);
+  } else {
+    updateNavOffset();
+  }
+  window.addEventListener('resize', updateNavOffset);
+
   var EMAIL = 'Benjamin.turner.design@gmail.com';
   var TOAST_HIDE_MS = 2200;
   var toast = null;

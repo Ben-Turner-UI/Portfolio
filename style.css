@@ -6,6 +6,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   margin: 0 auto;
+  padding-top: var(--nav-offset, 52px);
 }
 
 h1,
@@ -412,12 +413,14 @@ header h1 {
    ========================================================================== */
 
 .nav-container {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
   background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 nav {
@@ -1334,8 +1337,7 @@ a.testimonial-avatar:hover {
 }
 
 @media (max-width: 768px) {
-  html,
-  body {
+  main {
     overflow-x: hidden;
   }
 
