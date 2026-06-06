@@ -599,7 +599,7 @@ footer .contact-links {
 
 .side-project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -1427,6 +1427,10 @@ a.testimonial-avatar:hover {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+  }
+
+  .side-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
