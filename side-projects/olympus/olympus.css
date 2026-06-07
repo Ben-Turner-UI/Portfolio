@@ -14,7 +14,7 @@ body {
     --olympus-button-border: rgba(0, 255, 176, 0.38);
     --olympus-button-font-size: 16px;
     --olympus-button-line-height: var(--olympus-line-16);
-    --olympus-button-padding-y: 12px;
+    --olympus-button-padding-y: 10px;
     --olympus-button-padding-x: 16px;
     --olympus-button-gap: 8px;
     --olympus-button-icon-size: 16px;
@@ -278,7 +278,7 @@ nav .page-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 12px;
     padding-bottom: 12px;
 }
 
@@ -308,11 +308,21 @@ nav > a {
     margin-top: 0;
     margin-left: 0;
     flex-shrink: 0;
+    padding-top: var(--olympus-button-padding-y);
+    padding-bottom: var(--olympus-button-padding-y);
+    align-self: center;
+}
+
+.faces_grid_button.home-nav_designer .olympus-btn-label {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
 }
 
 .faces_grid_button.home-nav_designer .olympus-btn-icon,
 .faces_grid_button.home-nav_designer .olympus-icon--button {
     font-size: var(--olympus-button-icon-size);
+    line-height: 1;
 }
 
 .home-nav_inner > .faces_grid_button.home-nav_designer {
@@ -780,7 +790,7 @@ body.home-page {
 }
 
 .home-page .home-nav_inner {
-    padding-top: 16px;
+    padding-top: 12px;
     padding-bottom: 12px;
 }
 
@@ -1133,6 +1143,9 @@ body.home-page {
 
 .faces_grid_item .faces_grid_button {
     order: 4;
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: auto;
 }
 
 .faces_grid_button {
@@ -1156,12 +1169,6 @@ body.home-page {
     text-decoration: none;
     appearance: none;
     -webkit-appearance: none;
-}
-
-.faces_grid_button {
-    flex: 0 0 auto;
-    width: 100%;
-    margin-top: auto;
 }
 
 .faces_grid img,
