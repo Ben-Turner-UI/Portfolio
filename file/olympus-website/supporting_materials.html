@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,18 +21,23 @@
     <main>
         <nav>
             <div class="page-container home-nav_inner">
-                <a href="index.html" class="home-nav_logo">
-                    <span class="brandmark site_footer_brandmark">OLYMPUS</span>
-                </a>
-                <span class="nav_links">
+                <div class="home-nav_brand">
+                    <a href="index.html" class="home-nav_logo">
+                        <span class="brandmark site_footer_brandmark">OLYMPUS WATCH FACES</span>
+                    </a>
+                </div>
+                <div class="home-nav_actions">
+                    <span class="nav_links">
 
-                    <p> <a href="index.html#watch-faces">Watch Faces </a></p>
+                        <p> <a href="index.html#watch-faces">Watch Faces </a></p>
 
-                    <p style="color: grey">|</p>
+                        <p style="color: grey">|</p>
 
-                    <p><a href="index.html#mockup-kit">Mockup Kit</a></p>
+                        <p><a href="index.html#mockup-kit">Mockup Kit</a></p>
 
-                </span>
+                    </span>
+                    <a href="../../index.html" class="faces_grid_button faces_grid_button--secondary home-nav_designer"><span class="olympus-btn-label">The Designer</span><span class="olympus-btn-icon material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                </div>
             </div>
         </nav>
 
@@ -63,10 +69,11 @@
     <footer class="site_footer">
         <div class="page-container site_footer_inner">
             <a class="site_footer_logo" href="index.html">
-                <span class="brandmark site_footer_brandmark">OLYMPUS</span>
+                <span class="brandmark site_footer_brandmark">OLYMPUS WATCH FACES</span>
             </a>
             <p class="site_footer_text">Every part of Olympus &mdash; the 3D mockups, watch faces, complications, and the Creators Toolkit &mdash; was created entirely without AI. This project showcases hands-on 3D modelling, product ownership, and end-to-end design craft.</p>
         </div>
     </footer>
 
+    <script src="olympus.js"></script>
 </body></html>
