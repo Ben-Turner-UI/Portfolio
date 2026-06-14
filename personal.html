@@ -177,18 +177,23 @@
     <div class="personal-lightbox" id="personal-lightbox" hidden>
       <button type="button" class="personal-lightbox__backdrop" data-lightbox-close aria-label="Close photo"></button>
       <div class="personal-lightbox__panel" role="dialog" aria-modal="true" aria-label="Photo preview">
-        <button type="button" class="personal-lightbox__nav personal-lightbox__nav--prev" data-lightbox-prev aria-label="Previous photo">
-          <span class="material-symbols-outlined personal-lightbox__nav-icon" aria-hidden="true">chevron_left</span>
-        </button>
         <figure class="personal-lightbox__figure">
           <div class="personal-lightbox__stage">
             <img class="personal-lightbox__img" src="" alt="">
-            <figcaption class="personal-lightbox__counter" aria-live="polite"></figcaption>
           </div>
         </figure>
-        <button type="button" class="personal-lightbox__nav personal-lightbox__nav--next" data-lightbox-next aria-label="Next photo">
-          <span class="material-symbols-outlined personal-lightbox__nav-icon" aria-hidden="true">chevron_right</span>
-        </button>
+        <div class="personal-lightbox__controls">
+          <button type="button" class="personal-lightbox__nav personal-lightbox__nav--prev" data-lightbox-prev aria-label="Previous photo">
+            <span class="material-symbols-outlined personal-lightbox__nav-icon" aria-hidden="true">chevron_left</span>
+          </button>
+          <p class="personal-lightbox__counter" aria-live="polite"></p>
+          <button type="button" class="personal-lightbox__nav personal-lightbox__nav--next" data-lightbox-next aria-label="Next photo">
+            <span class="material-symbols-outlined personal-lightbox__nav-icon" aria-hidden="true">chevron_right</span>
+          </button>
+          <button type="button" class="personal-lightbox__close" data-lightbox-close aria-label="Close photo">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
       </div>
     </div>
 
