@@ -81,7 +81,7 @@
       if (copied) {
         showToast('Copied to clipboard');
       } else {
-        showToast('Could not copy — try again');
+        showToast('Could not copy. Try again');
       }
     });
   });

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owning the design direction of P4 DAM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF5100">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTRN14NFN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-THTRN14NFN');
+    </script>
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <nav>
+        <div class="nav-group">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="resume.html" class="nav-item">About</a>
+          <a href="personal.html" class="nav-item">Personal</a>
+        </div>
+      </nav>
+    </div>
+
+    <header class="project-header">
+      <div class="width-container">
+        <div class="header-content">
+          <h1>Owning the design direction of P4 DAM</h1>
+
+          <div class="client-info-group">
+            <div class="client-info client">
+              <span class="header-info-title">Company:</span>
+              <p>Perforce Software</p>
+            </div>
+            <div class="client-info industry">
+              <span class="header-info-title">Industry:</span>
+              <p>Enterprise Software (Games &amp; Film)</p>
+            </div>
+            <div class="client-info-website">
+              <span class="header-info-title">Website:</span>
+              <p><a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">perforce.com/products/p4-dam</a></p>
+            </div>
+          </div>
+          <div class="project-client-description">
+            <p class="header-info-title">Project context:</p>
+            <p>As Lead Product Designer for P4 DAM and P4 Plan at Perforce, I own the design direction of the product. P4 DAM is Perforce&rsquo;s digital asset manager for games and film studios. It helps teams find, organise, review, and manage large libraries of production assets, including 3D models, images, video, audio, and documents.</p>
+          </div>
+          <div class="project-overview">
+            <p class="header-info-title">Summary / TLDR:</p>
+            <p>P4 DAM could store anything, but finding it was broken. I redesigned discovery from the ground up so search, filters, navigation, and results work as one coherent system.</p>
+          </div>
+          <div class="project-claude-banner project-claude-banner--header" aria-label="Claude Code on this project">
+            <img src="img/tag-icons/claude-code.svg" alt="" class="project-claude-banner__icon">
+            <p class="project-claude-banner__text"><strong>Built with Claude Code</strong>. I use AI to move faster from research to shipped product. I synthesise insights, prototype in real code, and iterate with the team along the way.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="width-container">
+        <div class="content-container">
+          <div class="main-content">
+            <div class="project-details_text">
+
+              <div class="project-paragraph">
+                <h2>The challenge</h2>
+                <p>Research with staff, sales engineers, and customers showed the same problems across different workflows.</p>
+                <p>Users lost their place inside large asset libraries. Filters were difficult to discover and became invisible once applied. Active filters were trapped inside a collapsible menu, leaving users unsure what shaped their results. Search had no memory, so users repeated the same queries each session. Results were difficult to understand when the same asset appeared in more than one place.</p>
+                <p>These were not separate usability issues. They pointed to a larger product problem: P4 DAM did not have a coherent discovery system. For a digital asset manager, that matters: if users cannot find the right asset quickly, every workflow after that slows down.</p>
+                <p>Once I understood that, I set a clear direction for where to take the product. The design direction became simple:</p>
+                <p class="pull-quote">Help people get to the asset they need, then help them manage and work with it.</p>
+                <p>This case study covers the first part of that direction: making assets easier to find, reach, and understand.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>The approach</h2>
+                <p>The work focused on reducing effort, repetition, and uncertainty. That meant making search dependable, keeping filters visible, giving users a clear sense of where they were in the product, making recurring searches easy to pick back up, and showing results so people could identify an asset without comparing duplicates or guessing where to open it.</p>
+                <p>This foundation also matters for where P4 DAM goes next. AI-powered discovery and smarter workflows depend on a product that users already understand and trust.</p>
+              </div>
+
+              <div class="improvements-section">
+                <div class="project-paragraph">
+                  <h2>What changed</h2>
+                </div>
+
+                <div class="table-container table-container--wide">
+                <table class="improvements-table improvements-table--desktop">
+                  <thead>
+                    <tr><th>Area</th><th>Previous pattern</th><th>Design change</th><th>Current behaviour</th><th>Why it matters</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Search and filters</td><td>Filters were difficult to discover and became invisible once applied. Active filters were hidden inside a collapsible menu, leaving users unsure what shaped their results.</td><td>The filter system was redesigned so applied filters are visible, contextual, and easy to remove.</td><td>Users see active filters at a glance, understand the result context, and refine searches without reopening the filter panel.</td><td>Search feels more reliable because users understand why they are seeing each result set.</td></tr>
+                    <tr><td>Search history</td><td>Users repeated the same searches each session, even when returning to recent work.</td><td>Recent searches were added to the search experience.</td><td>Users return to previous searches in one click instead of rebuilding the same query.</td><td>P4 DAM now remembers short-term work and reduces repeated effort in common workflows.</td></tr>
+                    <tr><td>Saved searches</td><td>Recurring workflows had no persistent shortcut. Users rebuilt the same search and filter combinations every time.</td><td>Saved searches let users name, pin, reuse, and manage important searches. Filters can be included when needed.</td><td>Users keep frequent searches close at hand and apply them from a dropdown.</td><td>Repeat discovery work becomes reusable, which helps teams working with large and changing asset libraries.</td></tr>
+                    <tr><td>Navigation</td><td>Users lost context in deep folder structures and relied on the browser back button to recover.</td><td>Breadcrumbs were added to show where users are and provide a clear path back.</td><td>Users move through P4 DAM using the product&rsquo;s own navigation.</td><td>Users stay oriented, avoid dead ends, and rely less on workarounds outside the product.</td></tr>
+                    <tr><td>Result view</td><td>Search could show the same asset multiple times when it appeared in more than one place. This made results harder to scan and slowed users down.</td><td>Search now shows one result for the asset. After selecting it, users choose where to open it.</td><td>Users identify the asset first, then choose the right location.</td><td>Results are easier to understand, and users spend less time comparing duplicate entries.</td></tr>
+                  </tbody>
+                </table>
+
+                <div class="improvements-accordion" aria-label="What changed">
+                  <details class="improvements-accordion__item" open>
+                    <summary>Search and filters</summary>
+                    <div class="improvements-accordion__body">
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Previous pattern</p><p>Filters were difficult to discover and became invisible once applied. Active filters were hidden inside a collapsible menu, leaving users unsure what shaped their results.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Design change</p><p>The filter system was redesigned so applied filters are visible, contextual, and easy to remove.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Current behaviour</p><p>Users see active filters at a glance, understand the result context, and refine searches without reopening the filter panel.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Why it matters</p><p>Search feels more reliable because users understand why they are seeing each result set.</p></div>
+                    </div>
+                  </details>
+                  <details class="improvements-accordion__item">
+                    <summary>Search history</summary>
+                    <div class="improvements-accordion__body">
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Previous pattern</p><p>Users repeated the same searches each session, even when returning to recent work.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Design change</p><p>Recent searches were added to the search experience.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Current behaviour</p><p>Users return to previous searches in one click instead of rebuilding the same query.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Why it matters</p><p>P4 DAM now remembers short-term work and reduces repeated effort in common workflows.</p></div>
+                    </div>
+                  </details>
+                  <details class="improvements-accordion__item">
+                    <summary>Saved searches</summary>
+                    <div class="improvements-accordion__body">
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Previous pattern</p><p>Recurring workflows had no persistent shortcut. Users rebuilt the same search and filter combinations every time.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Design change</p><p>Saved searches let users name, pin, reuse, and manage important searches. Filters can be included when needed.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Current behaviour</p><p>Users keep frequent searches close at hand and apply them from a dropdown.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Why it matters</p><p>Repeat discovery work becomes reusable, which helps teams working with large and changing asset libraries.</p></div>
+                    </div>
+                  </details>
+                  <details class="improvements-accordion__item">
+                    <summary>Navigation</summary>
+                    <div class="improvements-accordion__body">
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Previous pattern</p><p>Users lost context in deep folder structures and relied on the browser back button to recover.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Design change</p><p>Breadcrumbs were added to show where users are and provide a clear path back.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Current behaviour</p><p>Users move through P4 DAM using the product&rsquo;s own navigation.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Why it matters</p><p>Users stay oriented, avoid dead ends, and rely less on workarounds outside the product.</p></div>
+                    </div>
+                  </details>
+                  <details class="improvements-accordion__item">
+                    <summary>Result view</summary>
+                    <div class="improvements-accordion__body">
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Previous pattern</p><p>Search could show the same asset multiple times when it appeared in more than one place. This made results harder to scan and slowed users down.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Design change</p><p>Search now shows one result for the asset. After selecting it, users choose where to open it.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Current behaviour</p><p>Users identify the asset first, then choose the right location.</p></div>
+                      <div class="improvements-accordion__field"><p class="improvements-accordion__label">Why it matters</p><p>Results are easier to understand, and users spend less time comparing duplicate entries.</p></div>
+                    </div>
+                  </details>
+                </div>
+                </div>
+              </div>
+
+              <div class="project-paragraph">
+                <p>The main change is behavioural. Users now rely on P4 DAM&rsquo;s search, filtering, and navigation instead of workarounds.</p>
+                <p>The product also has a clearer foundation. Search, filters, saved searches, breadcrumbs, and clearer results now work together as one discovery system rather than separate features.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>The path ahead</h2>
+                <p>P4 DAM&rsquo;s advantage is not just capability. It is capability that stays usable as the product grows. A stronger discovery foundation makes the product easier to use today and gives future AI-powered workflows something stable to build on. Smart discovery cannot sit on top of a broken discovery experience. It needs a strong one.</p>
+                <p>That is the direction for P4 DAM.</p>
+              </div>
+
+              <div class="button-group">
+                <a class="next-project-link" href="p4-hdri.html">
+                  <div class="next-project-card">
+                    <img class="next-project-card__thumb" src="img/thumbnail/p4-hdri.jpg" alt="">
+                    <div class="next-project-card__content">
+                      <p class="next-project-card__title">Shipping Perforce&rsquo;s first end-to-end AI feature: Realistic 3D lighting</p>
+                    </div>
+                    <span class="next-project-card__btn" aria-hidden="true"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="width-container">
+        <div class="footer-text-content">
+          <h3>Ben Turner, Designer and Creator</h3>
+          <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
+        </div>
+        <div class="contact-links">
+          <p><a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg" alt="">Benjamin.turner.design@gmail.com</a></p>
+          <p><a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg" alt="">LinkedIn</a></p>
+        </div>
+        <p class="copyright">&copy;2026, All Rights Reserved</p>
+      </div>
+    </footer>
+    <script src="nav.js"></script>
+  </body>
+</html>

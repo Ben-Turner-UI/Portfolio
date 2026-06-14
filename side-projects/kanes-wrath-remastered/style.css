@@ -118,7 +118,8 @@ a {
 }
 
 #zone_trooper_text,
-#command_and_online,
+#command_post_text,
+#cnc_online_text,
 #vram_text {
     text-align: left;
 }
@@ -298,7 +299,8 @@ iframe {
     width: 100%;
 }
 
-#comparison_img {
+#comparison_img_before,
+#comparison_img_after {
     width: 100%;
 }
 

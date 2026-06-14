@@ -620,6 +620,14 @@ nav > a {
     color: var(--olympus-text-muted);
 }
 
+@media only screen and (min-width: 801px) {
+    .landing_rnib_popover {
+        width: 400px;
+        max-width: calc(100vw - 48px);
+        padding: 10px 14px;
+    }
+}
+
 .landing ul li {
     line-height: var(--olympus-line-16);
     font-size: 16px;

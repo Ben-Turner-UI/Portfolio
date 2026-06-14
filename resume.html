@@ -28,7 +28,7 @@
         flex-direction: column;
         gap: 32px;
         width: 100%;
-        max-width: 600px;
+        max-width: var(--content-max-width);
         margin-left: auto;
         margin-right: auto;
       }
@@ -36,19 +36,19 @@
       .about-section {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 4px;
       }
 
       .about-section-title {
         font-family: 'Big Shoulders', sans-serif;
         font-size: 20px;
         font-weight: 700;
-        margin: 0 0 4px;
+        margin: 0;
         color: #111;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         border-bottom: 1px solid #D6D6D6;
-        padding-bottom: 8px;
+        padding-bottom: 4px;
       }
 
       .experience-list {
@@ -263,7 +263,7 @@
         <div class="nav-group">
           <a href="index.html" class="nav-item">Home</a>
           <a href="resume.html" id="nav-item-active" class="nav-item">About</a>
-          <a href="life.html" class="nav-item">Personal</a>        </div>
+          <a href="personal.html" class="nav-item">Personal</a>        </div>
       </nav>
     </div>
 
@@ -291,6 +291,83 @@
 
     <main>
       <div class="width-container">
+        <div class="about-partners">
+          <p class="about-partners-intro">Here&rsquo;s some of the companies I&rsquo;ve worked with or worked for over the years:</p>
+          <div class="table-container">
+            <table class="improvements-table">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>What they do</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer"><img src="img/partners/p4-plan.svg" class="partner partner-p4" alt="P4 Plan"></a>
+                  </td>
+                  <td>Industry-leading agile planning platform trusted by AAA game studios and high-performance software teams.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer"><img src="img/partners/p4-dam.svg" class="partner partner-p4" alt="P4 DAM"></a>
+                  </td>
+                  <td>Enterprise-grade digital asset management powering content pipelines for major games, film, and media studios.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://budibase.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/bb.svg" class="partner" alt="Budibase"></a>
+                  </td>
+                  <td>Open-source AI workflow platform for building agents, automations, and internal tools with your own data, LLMs, and APIs.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.gsma.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/gsma.svg" class="partner" alt="GSMA"></a>
+                  </td>
+                  <td>The global authority uniting mobile operators and shaping the standards behind modern connectivity.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.mwcbarcelona.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/mwc.svg" class="partner partner-mwc" alt="Mobile World Congress"></a>
+                  </td>
+                  <td>The world&rsquo;s flagship mobile connectivity event, drawing industry leaders from across the globe.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.mobileworldlive.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/mwl.svg" class="partner partner-mwl" alt="Mobile World Live"></a>
+                  </td>
+                  <td>The GSMA&rsquo;s flagship news and insights platform covering the global telecom and mobile ecosystem.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.cityfibre.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/cf.svg" class="partner" alt="CityFibre"></a>
+                  </td>
+                  <td>The UK&rsquo;s largest independent full-fibre network, transforming broadband infrastructure nationwide.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.gaa.ie" target="_blank" rel="noopener noreferrer"><img src="img/partners/gaa.svg" class="partner" alt="GAA"></a>
+                  </td>
+                  <td>Ireland&rsquo;s largest sporting organisation, governing Gaelic football, hurling, and community sport nationwide.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.visitbelfast.com/" target="_blank" rel="noopener noreferrer"><img src="img/partners/visit-belfast.svg" class="partner partner-visitbelfast" alt="Visit Belfast"></a>
+                  </td>
+                  <td>Northern Ireland&rsquo;s lead destination brand, driving tourism and economic growth for Belfast.</td>
+                </tr>
+                <tr>
+                  <td class="about-partners__logo-cell">
+                    <a class="about-partners__logo" href="https://www.sportswork.co" target="_blank" rel="noopener noreferrer"><img src="img/partners/sportswork.svg" class="partner partner-sportswork" alt="SportsWork"></a>
+                  </td>
+                  <td>A dedicated jobs and community platform connecting talent with opportunities across the sports industry.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="partner-more">And many more&hellip;</p>
+        </div>
+
         <div class="about-page-content">
 
           <div class="about-section">
@@ -427,7 +504,7 @@
               <div class="education-item">
                 <div>
                   <p class="education-qual">BDes (Hons) Interaction Design</p>
-                  <p class="education-school"><a href="https://www.ulster.ac.uk/" target="_blank" rel="noopener noreferrer">Ulster University</a> &mdash; 2017&ndash;2021</p>
+                  <p class="education-school"><a href="https://www.ulster.ac.uk/" target="_blank" rel="noopener noreferrer">Ulster University</a>, 2017&ndash;2021</p>
                 </div>
                 <span class="education-grade">First Class Honours</span>
               </div>
@@ -460,7 +537,7 @@
           <p><a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg" alt="">Benjamin.turner.design@gmail.com</a></p>
           <p><a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg" alt="">LinkedIn</a></p>
         </div>
-        <p class="copyright">©2026, All Rights Reserved</p>
+        <p class="copyright">&copy;2026, All Rights Reserved</p>
       </div>
     </footer>
     <script src="nav.js"></script>
