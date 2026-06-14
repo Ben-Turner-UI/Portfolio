@@ -1086,7 +1086,7 @@ a.side-project-card:hover {
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  gap: 4px;
+  gap: 6px;
   padding: 0 20px;
   border: none;
   border-radius: 0;
@@ -1112,8 +1112,8 @@ a.side-project-card:hover {
 
 .project-header .project-statistics-stat {
   font-family: 'Big Shoulders', sans-serif;
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 24px;
+  line-height: 1.2;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: #000;
@@ -1121,9 +1121,9 @@ a.side-project-card:hover {
 
 .project-header .project-statistics .stat-description {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 1.5;
   color: rgba(0, 0, 0, 0.6);
   margin: 0;
 }
@@ -1731,10 +1731,6 @@ body.personal-lightbox-open {
 }
 
 @media (max-width: 640px) {
-  .personal-story {
-    gap: 12px;
-  }
-
   .personal-post {
     --personal-post-pad: 14px;
     padding: var(--personal-post-pad) 0 0;
@@ -1901,8 +1897,11 @@ body.personal-lightbox-open {
   justify-content: space-between;
   gap: 12px;
   padding: 14px 16px;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
   cursor: pointer;
   list-style: none;
 }
@@ -1927,16 +1926,16 @@ body.personal-lightbox-open {
 }
 
 .improvements-accordion__body {
-  padding: 16px;
+  padding: 14px 16px 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .improvements-accordion__field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   margin: 0;
 }
 
@@ -1945,14 +1944,21 @@ body.personal-lightbox-open {
 }
 
 .improvements-accordion__label {
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.4;
   margin: 0;
+  color: #000;
 }
 
 .improvements-accordion__field p:not(.improvements-accordion__label) {
   margin: 0;
-  color: rgba(0, 0, 0, 0.85);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #000;
 }
 
 /* ==========================================================================
@@ -2188,14 +2194,6 @@ a.testimonial-avatar:hover {
   .project-statistics-group:not(:first-child) {
     border-left: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .project-header .project-statistics-stat {
-    font-size: 17px;
-  }
-
-  .project-header .project-statistics .stat-description {
-    font-size: 14px;
   }
 
   .home .header-content {
