@@ -50,7 +50,6 @@ body {
   --case-study-header-content-gap: var(--space-7);
   --case-study-header-block-gap: var(--space-4);
   --case-study-intro-block-gap: var(--space-2-5);
-  --next-project-extra-gap: var(--space-2);
   --project-card-grid-gap: 32px;
   --project-card-content-gap: 20px;
   font-family: 'Noto Sans', sans-serif;
@@ -88,7 +87,7 @@ h4 {
 
 main {
   background-color: white;
-  margin-bottom: 64px;
+  margin-bottom: var(--case-study-section-gap);
 }
 
 .main-content,
@@ -126,16 +125,10 @@ a {
 .home-header-content-text a,
 .project-meta a,
 .experience-description a,
-.education-school a {
-  color: #000;
-  font-weight: 400;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
+.education-school a,
 .experience-company a {
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -281,10 +274,6 @@ button {
   width: 100%;
 }
 
-.project-details_text > .button-group {
-  margin-top: var(--next-project-extra-gap);
-}
-
 .next-project-link {
   display: block;
   width: 100%;
@@ -428,7 +417,7 @@ header.project-header {
 .project-header-title-block {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1-5);
+  gap: var(--space-4);
   width: 100%;
 }
 
@@ -446,7 +435,7 @@ header.project-header {
 }
 
 .project-meta a {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .project-meta__sep {
@@ -961,6 +950,7 @@ a.side-project-card:hover {
 .side-project-card--disabled .side-project-description a {
   pointer-events: auto;
   color: #000;
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -1288,6 +1278,14 @@ a.side-project-card:hover {
 
 .project-statistics-accent {
   color: inherit;
+}
+
+.project-header .project-statistics-stat .project-statistics-icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: var(--case-study-stat-size);
+  font-weight: 400;
+  line-height: 1;
+  display: block;
 }
 
 #project-grid-arrow {
@@ -1857,7 +1855,7 @@ figcaption {
 
 .personal-post__content a {
   color: #000;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -2665,6 +2663,7 @@ a.testimonial-avatar:hover {
 
 .testimonial-reviewer-info a .testimonial-name:hover {
   text-decoration: underline;
+  font-weight: 700;
   color: #000;
 }
 
@@ -2707,6 +2706,17 @@ a.testimonial-avatar:hover {
 @media (max-width: 768px) {
   main {
     overflow-x: hidden;
+  }
+
+  .project-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .project-meta__sep {
+    display: none;
   }
 
   .side-project-grid {
@@ -2758,21 +2768,19 @@ a.testimonial-avatar:hover {
     padding: var(--case-study-stats-padding-y) 0;
   }
 
-  .project-statistics-group {
-    padding: var(--case-study-stats-padding-y) 0 0;
+  .project-header .project-statistics-group {
+    padding: 0;
   }
 
-  .project-statistics-group:first-child {
-    padding-top: 0;
-  }
-
-  .project-statistics-group:last-child {
-    padding-bottom: 0;
+  .project-header .project-statistics-group:not(:last-child) {
+    padding-bottom: var(--case-study-stats-padding-y);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--case-study-stats-padding-y);
   }
 
   .project-header .project-statistics-group:not(:first-child) {
     border-left: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
   }
 
   .home .header-content {
