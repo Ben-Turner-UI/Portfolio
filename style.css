@@ -435,7 +435,7 @@ header.project-header {
 }
 
 .project-meta a {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .project-meta__sep {
@@ -1132,6 +1132,7 @@ a.side-project-card:hover {
   display: block;
   height: 100%;
   color: inherit;
+  position: relative;
 }
 
 .project-grid > a .grid-item,
@@ -1146,8 +1147,30 @@ a.side-project-card:hover {
 }
 
 .project-grid-item--disabled {
-  opacity: 0.55;
   cursor: default;
+  pointer-events: none;
+}
+
+.project-grid-item--disabled .grid-item {
+  opacity: 0.55;
+}
+
+.project-grid-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 6px 12px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   pointer-events: none;
 }
 
@@ -2663,7 +2686,7 @@ a.testimonial-avatar:hover {
 
 .testimonial-reviewer-info a .testimonial-name:hover {
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: 600;
   color: #000;
 }
 
