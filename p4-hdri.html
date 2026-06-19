@@ -36,43 +36,34 @@
       <div class="width-container">
         <div class="header-content">
           <div class="project-header-title-block">
-          <h1>Shipping Perforce&rsquo;s first end-to-end AI feature: Realistic 3D lighting</h1>
+          <h1>Improving 3D model review with realistic lighting in P4 DAM</h1>
 
           <p class="project-meta">
             <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">Perforce Software</a>
             <span class="project-meta__sep" aria-hidden="true">·</span>
             <span>P4 DAM</span>
             <span class="project-meta__sep" aria-hidden="true">·</span>
-            <span>Enterprise Software (Games &amp; VFX)</span>
+            <span>Enterprise software for creative teams in games, film, and VFX</span>
           </p>
-          </div>
-          <div class="project-statistics">
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">1st</h3>
-              <p class="stat-description">End-to-end AI workflow at Perforce, from kickoff call to shipped code</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">+25%</h3>
-              <p class="stat-description">Clear uplift in complex features released through the new dev pipeline</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">1<span class="project-statistics-accent">:</span>1<span class="project-statistics-accent">:</span>1</h3>
-              <p class="stat-description">One designer, one developer, one PM from kickoff call to release</p>
-            </div>
           </div>
           <div class="project-header-intro">
           <div class="project-overview project-header-lead">
-            <h3>Summary</h3>
-            <p>Models in our 3D viewer looked flat on a grey background, so people kept exporting to other software to review them. I built in switchable lighting environments and used AI to take the feature from the first project meeting to working product code.</p>
+            <h3>Project context</h3>
+            <p>As Lead Product Designer for P4 DAM at Perforce, I design tools used by creative and technical teams in games, film, and VFX, including customers such as Xbox and Meta.</p>
+            <p>This project had two goals:</p>
+            <ol>
+              <li>Improve how users review detailed models in P4 DAM.</li>
+              <li>Test a faster way for design, product, and engineering to work together.</li>
+            </ol>
           </div>
           <div class="project-client-description">
-            <h3>Context</h3>
-            <p>As the lead product designer on P4 DAM, I design for studios like Xbox and Meta. I&rsquo;ve always been deeply process-inclined. Having built design systems for brands like CityFibre and MWC, my teams often call me the &ldquo;design systems wizard&rdquo;. I love building strategy behind a workflow, especially using AI. My goal here was to architect a fast, end-to-end design-to-code pipeline, using a new 3D lighting feature as the proof of concept.</p>
+            <h3>Summary</h3>
+            <p>I designed and helped ship realistic lighting options for the P4 DAM viewer, replacing a flat grey background that made models look dull or unfinished with switchable presets that help users review shape, detail, materials, and quality more confidently.</p>
           </div>
           </div>
           <div class="project-claude-banner project-claude-banner--header" aria-label="Claude Code on this project">
             <img src="img/tag-icons/claude-code.svg" alt="" class="project-claude-banner__icon">
-            <p class="project-claude-banner__text"><strong>Built with Claude Code</strong>. I use AI to move faster from research to working product code.</p>
+            <p class="project-claude-banner__text"><strong>Built with Claude Code</strong>. I use AI to move faster from research to shipped product.</p>
           </div>
         </div>
       </div>
@@ -90,43 +81,62 @@
               </div>
 
               <div class="project-paragraph">
-                <h2>Problem Statement</h2>
-                <p>Our platform lets users review 3D models in the browser, but the viewer only had a flat, solid-colour background. A detailed 3D asset looks great in a realistic environment but completely wrong in a flat grey void. To see it properly, reviewers had to export files into complex external software, which broke their workflow.</p>
+                <h2>Problem statement</h2>
+                <p>Users could review models in the browser, but the viewer did not always show the work clearly enough. Poor lighting made it harder to judge quality. Reviewers sometimes had to download files and open specialist software just to see them properly.</p>
+                <blockquote class="project-quote">
+                  <p>If users cannot trust the built-in viewer to show their work properly, they will review it somewhere else.</p>
+                </blockquote>
+                <p>The feature needed to improve confidence without making the product feel more complex. The main issues were:</p>
+                <ul>
+                  <li>Flat grey background</li>
+                  <li>Limited lighting</li>
+                  <li>Harder to judge materials and detail</li>
+                </ul>
               </div>
 
               <div class="project-paragraph">
-                <h2>The End-to-End Process</h2>
-                <p>I focus on building integrated pipelines rather than drawing static screens.</p>
+                <h2>The process</h2>
                 <div class="project-paragraph-list">
                   <div class="project-paragraph-list-item">
-                    <h3>Automated Requirements</h3>
-                    <p>Using Zoom MCP servers connected to AI tools, live project meetings were automatically transcribed and turned into structured developer tickets instantly.</p>
+                    <h3>Turning meetings into requirements</h3>
+                    <p>I used AI-supported tools to turn early project conversations into notes, requirements, and developer tickets. This gave design, product, and engineering a shared starting point faster.</p>
                   </div>
                   <div class="project-paragraph-list-item">
-                    <h3>Direct-to-Code Prototyping</h3>
-                    <p>I skipped drawing high-fidelity screens. Instead, I built a basic wireframe to give the AI a visual target, then used Claude Code to spin up a code branch. The feature was built using real components from our live design system.</p>
+                    <h3>Prototyping directly in the product</h3>
+                    <p>I started with a simple wireframe, then used Claude Code to help create a working prototype in the real codebase. This was important because a static design could show the controls, but not whether the lighting actually improved the review experience.</p>
                   </div>
                   <div class="project-paragraph-list-item">
-                    <h3>The Shared-Language Review Loop</h3>
-                    <p>I set up a tight three-person loop (Designer, Developer, Product Manager). Because the prototype was built in the actual codebase, we tested it live. Edits were made directly via AI during our calls, eliminating back-and-forth cycles entirely.</p>
+                    <h3>Keeping the review loop small</h3>
+                    <p>I kept the team focused:</p>
+                    <ul>
+                      <li>one designer</li>
+                      <li>one developer</li>
+                      <li>one product manager</li>
+                    </ul>
+                    <p>We reviewed the working prototype together, made decisions faster, and reduced handoff friction.</p>
                   </div>
                 </div>
               </div>
 
               <div class="project-paragraph">
                 <h2>What changed</h2>
-                <div class="table-container">
-                  <table class="improvements-table">
-                    <thead>
-                      <tr><th>Improvement</th><th>Change</th><th>Benefit</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>Curated Presets</td><td>Added a simple choice of pre-set realistic lighting environments (Studio &amp; Outdoor).</td><td>Solved the user problem instantly without making them upload heavy files.</td></tr>
-                      <tr><td>Segmented UI</td><td>Introduced a clean toggle switch between &ldquo;Color&rdquo; and &ldquo;Image&rdquo; modes.</td><td>Kept the original colour-picker for existing users while making space for future updates.</td></tr>
-                      <tr><td>Clear Terminology</td><td>Renamed the section from &ldquo;Environment&rdquo; to &ldquo;Background and grid&rdquo;.</td><td>Made the interface instantly understandable, removing technical jargon.</td></tr>
-                      <tr><td>The Handoff Bundle</td><td>Shipped a text-based spec, visual snapshots, and the working code branch.</td><td>Developers loved this format. It provided total clarity and removed visual guesswork.</td></tr>
-                    </tbody>
-                  </table>
+                <div class="project-paragraph-list">
+                  <div class="project-paragraph-list-item">
+                    <h3>Realistic lighting presets</h3>
+                    <p>I added ready-made lighting options, including studio-style and outdoor-style presets.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>A simpler settings experience</h3>
+                    <p>I added two clear background modes: Colour for the existing simple background, and Image for realistic lighting environments.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>Clearer language</h3>
+                    <p>I changed the label from Environment to Background and grid.</p>
+                  </div>
+                  <div class="project-paragraph-list-item">
+                    <h3>A better handoff to engineering</h3>
+                    <p>Instead of only sharing a design file, I handed over a short spec, visual snapshots, a working prototype branch, and behaviour notes.</p>
+                  </div>
                 </div>
               </div>
 
@@ -140,24 +150,21 @@
               </div>
 
               <div class="project-paragraph">
-                <h2>Impact &amp; Results</h2>
-                <div class="table-container">
-                  <table class="improvements-table">
-                    <thead>
-                      <tr><th>Area</th><th>Outcome</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>Better Handovers</td><td>The handover spec enabled us to produce features much faster. While other teams struggled to adopt code-led design, our pod was actively shipping.</td></tr>
-                      <tr><td>Faster Time to Market</td><td>This pipeline unlocked a ~25% increase in feature releases. More importantly, it allowed us to successfully publish end-to-end features that would&rsquo;ve normally taken much longer.</td></tr>
-                      <tr><td>Team Empowerment</td><td>The team felt completely empowered by having working prototypes. Product managers and developers could be directly involved in the design process because everyone finally spoke the same language: code.</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                <h2>Impact and results</h2>
+                <ul>
+                  <li><strong>Better handovers:</strong> Developers had more than static screens. They could see the intended behaviour in context.</li>
+                  <li><strong>Faster delivery:</strong> By the end of the quarter, I had delivered 20% more features through the new workflows I built.</li>
+                  <li><strong>Better collaboration:</strong> Product, design, and engineering reviewed the feature earlier and made decisions around the real experience.</li>
+                  <li><strong>Practical use of AI:</strong> AI helped with the slower parts of the process: notes, requirements, prototyping, and handoff. The value was simple: less translation between tools, more time improving the product.</li>
+                </ul>
               </div>
 
               <div class="project-paragraph">
-                <h2>Driving Innovation</h2>
-                <p>I genuinely enjoy finding and building workflows, making me uniquely skilled for AI-integrated roles. I don&rsquo;t gatekeep my findings - I actively share these processes with the wider team. By constantly investing time into pushing what AI can do, I ensure our team stays a step ahead while continuing to ship features quickly.</p>
+                <h2>Driving innovation</h2>
+                <p>This project showed how AI can support product delivery when it is used in practical, focused ways. It helped the team move from idea to working product faster, while keeping the focus on the user problem. The next step is to make this workflow easier for other teams to adopt through clearer specs, reusable prompts, and stronger handoff templates.</p>
+                <blockquote class="project-quote">
+                  <p>Less time translating work between tools. More time getting useful product into users&rsquo; hands.</p>
+                </blockquote>
               </div>
 
               <div class="button-group">

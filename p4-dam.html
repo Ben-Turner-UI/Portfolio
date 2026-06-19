@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Between Features and Foundations: P4 DAM</title>
+    <title>Case Study: Turning Claude Code into a Functional Product Delivery System</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
       <div class="width-container">
         <div class="header-content">
           <div class="project-header-title-block">
-          <h1>Between Features and Foundations</h1>
+          <h1>Case Study: Turning Claude Code into a Functional Product Delivery System</h1>
 
           <p class="project-meta">
             <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">Perforce Software</a>
@@ -50,18 +50,37 @@
           </p>
           </div>
 
+          <div class="project-statistics project-statistics--four">
+            <div class="project-statistics-group">
+              <h3 class="project-statistics-stat project-statistics-stat--inline">6<span class="material-symbols-outlined project-statistics-arrow" aria-hidden="true">arrow_forward</span>2</h3>
+              <p class="stat-description">Front-end capacity reduced from six developers to two</p>
+            </div>
+            <div class="project-statistics-group">
+              <h3 class="project-statistics-stat">+20%</h3>
+              <p class="stat-description">Feature output increased by at least 20%</p>
+            </div>
+            <div class="project-statistics-group">
+              <h3 class="project-statistics-stat">50<span class="project-statistics-accent">–</span>60%</h3>
+              <p class="stat-description">Reduced developer clarification by 50% to 60% per feature by providing a higher-quality handover through functional output rather than static designs</p>
+            </div>
+            <div class="project-statistics-group">
+              <h3 class="project-statistics-stat">+50%</h3>
+              <p class="stat-description">Expected capacity improvement of up to 50% for complex features over time</p>
+            </div>
+          </div>
+
           <div class="project-header-intro">
           <div class="project-overview project-header-lead">
             <h3>Summary</h3>
-            <p>P4 DAM could store plenty, but finding the right asset again was the bottleneck. While engineering built the platform for Search, APIs, MCP, and AI, I strengthened the discovery layer people used every day: search, filters, saved searches, breadcrumbs, and asset results.</p>
-            <p>The work made discovery clearer, easier to return to, and less dependent on memory. Search, filters, navigation, and saved workflows now behave more like one system, and the product is better prepared for smarter discovery later.</p>
+            <p>The core impact was that I transformed access to Claude Code into a real, functional product delivery system.</p>
+            <p>By moving from static design handoff to functional code handoff, I increased feature output by at least 20%, reduced developer clarification by 50% to 60%, created a faster feedback loop with users, and established a repeatable workflow that is now influencing how the wider design organisation approaches AI-assisted delivery.</p>
           </div>
           <div class="project-client-description">
             <h3>Context</h3>
-            <p>P4 DAM is Perforce&rsquo;s digital asset manager for games, film, and media production teams. It helps studios store, organise, review, and manage large libraries of production assets, including 3D models, images, video, audio, and documents.</p>
-            <p>The product could store a lot. That was not the hard part. The harder part was helping people find the right thing again when they needed it.</p>
-            <p>At the time, engineering was focused on backend and platform work for Search, APIs, MCP, AI, and future product capability. That work mattered. But users do not experience backend architecture. They experience the search box, filters, results, folder paths, and the moment where they wonder whether they are looking at the right asset.</p>
-            <p>That was the part of the product I focused on.</p>
+            <p>I work for an enterprise software company called Perforce, where I was responsible for designing two products within their ecosystem. For this case study, I want to focus specifically on an asset management platform called P4 DAM.</p>
+            <p>A major challenge we faced was that our delivery capacity was severely reduced. Due to internal redundancies, we went from a team of six front-end developers down to just two, and I was the sole designer supporting the product. Under our traditional workflow, designing static screens in Figma meant impossibly long lead times for implementation.</p>
+            <p>However, I was granted access to Claude Code with a generous token allowance. This is the story of how I transformed that access into a real, functional system. By handing off functional code instead of static designs, developers could simply review my work and merge it into the quarterly release.</p>
+            <p>This new process increased feature output by at least 20%, and we expect that capacity to improve by up to 50% for complex features over time.</p>
           </div>
           </div>
           <div class="project-claude-banner project-claude-banner--header" aria-label="Claude Code on this project">
@@ -78,53 +97,55 @@
           <div class="main-content">
             <div class="project-details_text">
 
-              <div class="project-paragraph">
-                <h2>The problem</h2>
-                <p>In P4 DAM, discovery is how people get value from the library. If users cannot find the right asset, the rest of the workflow slows down: review, reuse, collaboration, delivery, and production work.</p>
-                <p>Research and feedback showed the same friction across workflows. Filters were available, but became hard to track once applied. Search had no memory, so users repeated the same queries. Recurring searches had to be rebuilt from scratch. Users lost context in deeper folder structures. Results were harder to scan when the same asset appeared in more than one place.</p>
-                <p>None of this sounded dramatic on its own. A hidden filter, a repeated search, a missing breadcrumb, or a duplicate-looking result can seem small in isolation. But production work is repetitive, and repeated friction becomes part of how a product feels.</p>
-                <p>The roadmap was moving toward more capability. Search needed to improve. AI was on the horizon. Customers had real asks. Engineering had real platform work to do. The risk was that new capability would arrive on top of an experience that still made users work too hard.</p>
+              <div class="content-image content-image--contain">
+                <img src="img/project-image/p4-dam/Thumbnail (right click here and choose _Set as thumbnail_).jpg" alt="Diagram showing front-end capacity dropping from six developers to two" class="image-with-caption image-with-caption--contain">
+                <figcaption>The delivery challenge was immediate: the front-end team dropped from six developers to two, while the product still needed to keep moving.</figcaption>
               </div>
 
               <div class="project-paragraph">
-                <h2>Design focus</h2>
-                <p>I focused on the parts of discovery people touched every day: search, filters, saved searches, breadcrumbs, and asset results. These were not headline features. They were the parts people used while trying to get somewhere else.</p>
-                <p>If users cannot see active filters, they start guessing. If they rebuild the same search every week, the product feels forgetful. If they lose their place in a folder structure, they fall back to the browser. If results show the same asset more than once, they compare instead of deciding.</p>
-                <p>I wanted P4 DAM to carry more of that load. Not by adding a big new layer, but by making discovery clearer, easier to return to, and less dependent on memory.</p>
-                <p>This is also where the way I work mattered. Because I can work close to the front end, AI and vibe-coding workflows helped me move faster from design direction into working product ideas while engineering stayed focused on the deeper platform work underneath.</p>
+                <p>Initially, when I was introduced to Claude Code, it felt like a completely new ecosystem, as is common with the recent wave of AI innovation. However, I have always been a highly systematic and organised person.</p>
+                <p>In my personal life, I am the one who organises meetups, keeps everything in order, and plans holidays down to the last detail. This natural inclination benefits my career, as peers often refer to me as a “design systems wizard” or a technical designer.</p>
+                <p>While many people adopt these new AI tools out of necessity, I genuinely enjoy building systems from the ground up, having previously led and built large-scale design systems for brands like the GSMA and CityFibre. When I was given access to these tools and a strong budget, I found it extraordinarily interesting to explore and engineer entirely new workflows.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>What changed</h2>
-                <p>I redesigned filters so applied filters stayed visible, contextual, and easy to remove. Users could see what was shaping their results instead of digging through hidden controls.</p>
-                <p>I added recent searches so users could return to previous work without typing the same query again. That same thinking led to saved searches, where users could name, pin, reuse, and manage important searches instead of rebuilding the same search and filter combinations each time.</p>
-                <p>I added breadcrumbs so users could stay oriented in deeper folder structures instead of relying on the browser back button. I also simplified the asset result view. Search could previously show the same asset multiple times when it appeared in more than one place. The new approach showed the asset once, then let users choose where to open it.</p>
+                <h2>The approach</h2>
+                <p>Fortunately, I was able to install the P4 DAM product locally and start building with it immediately.</p>
+                <p>While other teams in the company struggled with this due to a lack of technical knowledge or other limitations, I got up and running quickly and began editing live product code. I was able to write the code for my designs and ship it directly to developers for review with a minimal bounce rate.</p>
+                <p>Developers still spent time reviewing the work, but the review process became much more focused and efficient. By providing a higher-quality handover through functional output rather than static designs, there was significantly less iteration overall, with 50% to 60% fewer clarification questions from developers per feature.</p>
+              </div>
+
+              <div class="content-image content-image--contain">
+                <img src="img/project-image/p4-dam/Thumbnail (right click here and choose _Set as thumbnail_)-1.jpg" alt="Comparison of Figma handoff and live product workflow steps" class="image-with-caption image-with-caption--contain">
+                <figcaption>The new workflow removed a layer of prototype mapping. I moved from research and direction into working product output, then used snapshots and review links to get feedback faster.</figcaption>
+              </div>
+
+              <div class="content-image content-image--contain">
+                <img src="img/project-image/p4-dam/Thumbnail (right click here and choose _Set as thumbnail_)-2.jpg" alt="Claude Code changes flowing into the P4 DAM product interface" class="image-with-caption image-with-caption--contain">
+                <figcaption>Working locally in P4 DAM meant the handoff was no longer just a design file. Developers could review functional front-end output in the product environment.</figcaption>
               </div>
 
               <div class="project-paragraph">
-                <h2>Why it mattered</h2>
-                <p>The work was less about making search look better and more about making discovery easier to trust.</p>
-                <p>Can I see what is active? Can I get back to what I just searched for? Can I save the thing I use every week? Do I know where I am? Is this the asset I need?</p>
-                <p>When the product answers those questions clearly, users do not have to hold as much in their heads. They need fewer workarounds. They can spend less time managing the interface and more time moving through the work.</p>
-                <p>That also matters when a product is moving toward AI. Natural language search, AI tagging, suggested filters, related assets, and generated shortcuts all depend on the experience underneath them. If search already feels unclear, AI does not automatically make it clearer. It can make the system feel harder to reason about.</p>
-                <p>Before P4 DAM could feel smarter, it needed to feel easier to understand.</p>
+                <h2>Workflow</h2>
+                <p>Consequently, I can manage the front end entirely, taking full responsibility for it while developers only need to review the final output.</p>
+                <p>With this increased responsibility, I also implemented an automated process to capture visual snapshots of the features as I build them. These snapshots are sent to users to establish a continuous, rapid feedback loop.</p>
+                <p>Because I can iterate much faster, release more features, and require less rework, the current process is far superior to what it was six months ago.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>Outcome</h2>
-                <p>After this work, users could rely more on P4 DAM&rsquo;s own search, filtering, navigation, and saved workflows instead of working around the product. Search, filters, saved searches, breadcrumbs, and clearer results started to behave more like one discovery system rather than separate pieces of UI.</p>
-                <p>Engineering was building what the product could do next. Design was strengthening the experience people had to use today. Both mattered. They solved different parts of the same problem.</p>
+                <h2>Wider impact</h2>
+                <p>These workflows and systems I have built are not common throughout the wider design organisation. Typically, most other teams are still working through issues such as how to QA vibe-coded designs or how to get reliable user feedback on AI-generated UI.</p>
+                <p>In contrast, I am further ahead in this area because I have already moved beyond experimentation and developed a workflow that I know works well for our team.</p>
+                <p>I am a strong believer that you should not gatekeep these tools or hide any procedural advantage. If something improves quality, speed, or confidence, you have to share it with the team. Things are incredibly competitive in the AI space right now, and to get ahead as a company, we need everyone on board.</p>
+                <p>Not everyone moves at the same speed or picks up AI as quickly, so working together is essential. I have already mentored several junior and senior designers on how to improve their workflows and AI systems, presenting multiple times over the last few months in quarterly meetings and more sporadically in smaller sessions. The main goal has been to improve the design organisation’s workflows, raise its collective AI skills, and help more people experience those lightbulb moments when a new tip, workflow, or piece of advice suddenly makes the tool feel more accessible and exciting.</p>
+                <p>As part of this, I recently integrated a workflow that allows designers to go directly from transcribing PM notes into a functional framework to begin prototyping in Claude. This gives designers a clearer starting point, helps them move from raw product thinking into something structured, and makes AI-assisted prototyping feel more practical and repeatable.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>What I learned</h2>
-                <ul>
-                  <li>A DAM product is only as useful as its ability to help people find the right asset quickly and confidently. Storage alone was not enough. The product became valuable when users could find the right thing, understand what they were seeing, and move into the next part of their workflow without losing context.</li>
-                  <li>Small UX gaps compound when users repeat the same workflow every day. A hidden filter, a missing breadcrumb, a repeated search, or a duplicate-looking result might not seem like much in isolation. But in production work, these moments repeat. Over time, they shape whether the product feels dependable or frustrating.</li>
-                  <li>Before P4 DAM could feel smarter, it needed to feel easier to understand. AI features would make discovery more capable, but they still depend on the same foundations: clear search behaviour, visible filters, understandable results, and reusable workflows.</li>
-                  <li>Design can create progress in parallel while engineering builds deeper platform capability. Because I could work close to the front end, and because AI and vibe-coding workflows helped me move faster from idea to working product, I could strengthen the experience layer while engineering focused on the platform layer.</li>
-                  <li>Engineering was building what the product could do next. Design was making the current experience clear enough for that future capability to matter. Design was not just responding to the roadmap. It was preparing the product for it.</li>
-                </ul>
+                <h2>Result</h2>
+                <p>The core impact was that I transformed access to Claude Code into a real, functional product delivery system.</p>
+                <p>By moving from static design handoff to functional code handoff, I increased feature output by at least 20%, reduced developer clarification by 50% to 60%, created a faster feedback loop with users, and established a repeatable workflow that is now influencing how the wider design organisation approaches AI-assisted delivery.</p>
+                <p>My success with these initiatives caught the attention of company directors, who subsequently appointed me to an exclusive task force. As one of six designers, alongside principals and seniors, I am now responsible for building out the product roadmaps and architecting massive agentic workflows for our entire 30-person design organisation.</p>
               </div>
 
               <div class="button-group">
@@ -132,7 +153,7 @@
                   <div class="next-project-card">
                     <img class="next-project-card__thumb" src="img/thumbnail/p4-hdri.jpg" alt="">
                     <div class="next-project-card__content">
-                      <p class="next-project-card__title">Shipping Perforce&rsquo;s first end&#8209;to&#8209;end AI feature: Realistic 3D lighting</p>
+                      <p class="next-project-card__title">Improving 3D model review with realistic lighting in P4 DAM</p>
                     </div>
                   </div>
                 </a>
