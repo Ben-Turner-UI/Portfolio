@@ -409,7 +409,7 @@ header {
   padding-bottom: 64px;
   margin-bottom: 64px;
   background:
-    linear-gradient(to top, rgba(255, 74, 0, 0.2) 0, transparent 100px),
+    linear-gradient(to top, rgba(255, 74, 0, 0.2) 0, transparent 200px),
     linear-gradient(180deg, #fff 0%, #eeedea 100%);
   overflow: hidden;
 }
@@ -489,6 +489,13 @@ header.project-header {
 
 .project-meta a {
   font-weight: 600;
+}
+
+.project-text-link {
+  color: #000;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .project-meta__sep {
@@ -1454,6 +1461,10 @@ a.side-project-card:hover {
   font-weight: 400;
   line-height: 1;
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
+.project-statistics-stat--inline .project-statistics-award-icon.material-symbols-outlined {
+  font-size: 18px;
 }
 
 .project-header .project-statistics-stat .project-statistics-icon {
