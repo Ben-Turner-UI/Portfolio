@@ -409,8 +409,11 @@ header {
   padding-bottom: 64px;
   margin-bottom: 64px;
   background:
-    linear-gradient(to top, rgba(255, 74, 0, 0.2) 0, transparent 200px),
+    linear-gradient(to top, rgba(255, 74, 0, 0.2) 0%, transparent 100%),
     linear-gradient(180deg, #fff 0%, #eeedea 100%);
+  background-repeat: no-repeat;
+  background-size: 100% min(100%, 200px), 100% 100%;
+  background-position: center bottom, center;
   overflow: hidden;
 }
 
@@ -423,7 +426,7 @@ header::after {
   height: 120px;
   pointer-events: none;
   z-index: 0;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.14) 0.6px, transparent 0.6px);
+  background-image: radial-gradient(circle, rgba(255, 74, 0, 0.22) 0.6px, transparent 0.6px);
   background-size: 4px 4px;
   background-position: center bottom;
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
@@ -817,7 +820,6 @@ header h1 {
   width: 100%;
   z-index: 1000;
   background-color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 nav {
