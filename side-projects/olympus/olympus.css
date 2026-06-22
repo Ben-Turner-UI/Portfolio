@@ -43,9 +43,10 @@ body {
     --olympus-line-16: 23.2px;
     --olympus-text-sm: 14px;
     --olympus-line-sm: 20px;
-    --olympus-line-20: 29px;
-    --olympus-line-24: 33px;
-    --olympus-line-36: 46px;
+    --olympus-line-20: 28px;
+    --olympus-line-24: 32px;
+    --olympus-line-36: 44px;
+    --olympus-h1-line-height: 1.25;
 }
 
 
@@ -84,8 +85,8 @@ h4 {
 
 
 h1 {
-    font-size: 23px;
-    line-height: var(--olympus-line-24);
+    font-size: 22px;
+    line-height: var(--olympus-h1-line-height);
     color: white;
     margin-bottom: 0;
 }
@@ -228,9 +229,9 @@ main {
 .section_heading {
     margin: 0;
     font-family: 'Big Shoulders', sans-serif;
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 600;
-    line-height: var(--olympus-line-24);
+    line-height: var(--olympus-h1-line-height);
     color: #fff;
 }
 
@@ -823,8 +824,8 @@ body.home-page {
 }
 
 .home-page .landing h1 {
-    font-size: 34px;
-    line-height: var(--olympus-line-36);
+    font-size: 32px;
+    line-height: var(--olympus-h1-line-height);
     margin: 0 0 calc(var(--landing-hero-stack-gap) - var(--landing-h1-stack-trim));
     text-align: left;
     font-weight: 800;
@@ -1265,7 +1266,7 @@ body.home-page {
     font-weight: 800;
     font-size: 20px;
     line-height: var(--olympus-line-20);
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     color: #fff;
     white-space: nowrap;
 }
@@ -1464,8 +1465,8 @@ body.home-page {
     }
 
     .section_heading {
-        font-size: 23px;
-        line-height: var(--olympus-line-24);
+        font-size: 22px;
+        line-height: var(--olympus-h1-line-height);
     }
 
     .about_highlights {
