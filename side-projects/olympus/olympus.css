@@ -1413,12 +1413,13 @@ body.home-page {
         grid-column: 1;
         grid-row: 1;
         align-items: center;
+        justify-content: flex-start;
         margin-bottom: 0;
     }
 
     .home-page #landing_image_watch {
         max-height: 400px;
-        object-position: center center;
+        object-position: left center;
     }
 
 }
