@@ -4,7 +4,7 @@
     if (!nav) return;
     var isDesktop = window.matchMedia('(min-width: 769px)').matches;
     if (isDesktop) {
-      document.documentElement.style.setProperty('--nav-top-offset', (nav.offsetHeight + 24) + 'px');
+      document.documentElement.style.setProperty('--nav-top-offset', nav.offsetHeight + 'px');
     } else {
       document.documentElement.style.setProperty('--nav-top-offset', '0px');
     }
