@@ -1,21 +1,4 @@
 (function () {
-  function updateNavOffset() {
-    var nav = document.querySelector('.nav-container');
-    if (!nav) return;
-    var navRect = nav.getBoundingClientRect();
-    var footerPad = 48;
-    var totalNeeded = window.innerHeight - navRect.top + 8;
-    var overlap = Math.max(0, totalNeeded - footerPad);
-    document.documentElement.style.setProperty('--nav-overlap', overlap + 'px');
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', updateNavOffset);
-  } else {
-    updateNavOffset();
-  }
-  window.addEventListener('resize', updateNavOffset);
-
   var EMAIL = 'Benjamin.turner.design@gmail.com';
   var TOAST_HIDE_MS = 2200;
   var toast = null;

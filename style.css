@@ -120,7 +120,7 @@ h4 {
 
 main {
   background-color: white;
-  margin-bottom: var(--case-study-section-gap);
+  margin-bottom: 0;
 }
 
 .main-content,
@@ -691,7 +691,7 @@ header.project-header {
   gap: 12px;
   width: 100%;
   max-width: var(--content-max-width);
-  margin: 0 auto 72px;
+  margin: 0 auto;
 }
 
 .about-partners p {
@@ -1011,24 +1011,37 @@ header h1 {
 /* ==========================================================================
    FOOTER STYLES
    ========================================================================== */
+main + footer,
+section + footer {
+  margin-top: 0;
+}
+
+main:last-of-type {
+  margin-bottom: 0;
+}
+
 footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
   background-color: black;
   color: white;
-  --footer-padding-y: 48px;
-  padding-top: var(--footer-padding-y);
-  padding-bottom: calc(var(--footer-padding-y) + var(--nav-overlap, 0px));
+  padding-top: 48px;
+  padding-bottom: 48px;
+  box-sizing: border-box;
+}
+
+footer .width-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 footer .contact-links {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .footer-title {
@@ -1055,7 +1068,13 @@ footer .contact-links {
 }
 
 .footer-text-content p {
-  margin-top: 6px;
+  margin: 0;
+}
+
+.footer-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .footer-text-content h3 {
@@ -1073,6 +1092,7 @@ footer .contact-links {
 }
 
 .copyright {
+  margin: 0;
   color: #949494;
 }
 
@@ -1090,7 +1110,7 @@ footer .contact-links {
    SIDE PROJECTS SECTION STYLES
    ========================================================================== */
 .side-projects {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   scroll-margin-top: 80px;
 }
 
@@ -1299,7 +1319,7 @@ a.side-project-card:hover {
    PROJECTS SECTION STYLES
    ========================================================================== */
 .projects {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   scroll-margin-top: 80px;
 }
 
@@ -2874,7 +2894,8 @@ a.show-more-btn {
    TESTIMONIALS SECTION STYLES
    ========================================================================== */
 .testimonials {
-  margin-bottom: 64px;
+  margin-bottom: 0;
+  padding-bottom: 48px;
 }
 
 .testimonials h3 {
@@ -3091,7 +3112,7 @@ a.testimonial-avatar:hover {
   }
 
   .about-partners {
-    margin-bottom: 56px;
+    margin-bottom: 0;
   }
 
   .about-partners .improvements-table thead th:first-child,
