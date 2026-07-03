@@ -875,7 +875,7 @@ header h1 {
   padding: 6px 16px;
   font-size: 13px;
   font-weight: 400;
-  color: #757575;
+  color: #595959;
   text-decoration: none;
   background: transparent;
   border: none;
@@ -971,8 +971,12 @@ header h1 {
     font-weight: 400;
   }
 
-  .nav-item .material-symbols-rounded.nav-item__icon {
+  .nav-item .nav-item__icon {
     font-size: 18px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24 !important;
+  }
+
+  #nav-item-active .nav-item__icon {
     font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 !important;
   }
 
@@ -1013,7 +1017,7 @@ header h1 {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
 }
 
-.nav-item .material-symbols-rounded.nav-item__icon {
+.nav-item .nav-item__icon {
   font-family: 'Material Symbols Rounded';
   font-size: 17px;
   line-height: 1;
@@ -1028,6 +1032,10 @@ header h1 {
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 22 !important;
+}
+
+#nav-item-active .nav-item__icon {
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 22 !important;
 }
 
