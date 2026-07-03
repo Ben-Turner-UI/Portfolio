@@ -1018,13 +1018,14 @@ footer {
   justify-content: space-between;
   background-color: black;
   color: white;
-  padding-top: 64px;
-  padding-bottom: calc(64px + var(--nav-offset, 0px));
+  --footer-padding-y: 48px;
+  padding-top: var(--footer-padding-y);
+  padding-bottom: calc(var(--footer-padding-y) + var(--nav-overlap, 0px));
 }
 
 footer .contact-links {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;

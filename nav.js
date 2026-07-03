@@ -2,7 +2,11 @@
   function updateNavOffset() {
     var nav = document.querySelector('.nav-container');
     if (!nav) return;
-    document.documentElement.style.setProperty('--nav-offset', (nav.offsetHeight + 32) + 'px');
+    var navRect = nav.getBoundingClientRect();
+    var footerPad = 48;
+    var totalNeeded = window.innerHeight - navRect.top + 8;
+    var overlap = Math.max(0, totalNeeded - footerPad);
+    document.documentElement.style.setProperty('--nav-overlap', overlap + 'px');
   }
 
   if (document.readyState === 'loading') {
