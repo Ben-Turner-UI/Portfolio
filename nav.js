@@ -2,14 +2,7 @@
   function updateNavOffset() {
     var nav = document.querySelector('.nav-container');
     if (!nav) return;
-    var isDesktop = window.matchMedia('(min-width: 769px)').matches;
-    if (isDesktop) {
-      document.documentElement.style.setProperty('--nav-offset', '0px');
-      document.documentElement.style.setProperty('--nav-top-offset', nav.offsetHeight + 'px');
-    } else {
-      document.documentElement.style.setProperty('--nav-top-offset', '0px');
-      document.documentElement.style.setProperty('--nav-offset', (nav.offsetHeight + 32) + 'px');
-    }
+    document.documentElement.style.setProperty('--nav-offset', (nav.offsetHeight + 32) + 'px');
   }
 
   if (document.readyState === 'loading') {

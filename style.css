@@ -75,12 +75,6 @@ body {
   padding-bottom: 0;
 }
 
-@media (min-width: 769px) {
-  body {
-    padding-top: var(--nav-top-offset, 44px);
-  }
-}
-
 h1,
 h2,
 h3,
@@ -887,59 +881,6 @@ header h1 {
   font-weight: 400;
   letter-spacing: normal;
   text-transform: none;
-}
-
-@media (min-width: 769px) {
-  .nav-container {
-    top: 0;
-    bottom: auto;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 12px 0;
-    padding-top: calc(12px + env(safe-area-inset-top, 0px));
-    justify-content: stretch;
-    pointer-events: auto;
-    background: #fff;
-  }
-
-  .nav-container nav {
-    width: 88%;
-    max-width: 1408px;
-    margin: 0 auto;
-    padding: 0;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    justify-content: flex-start;
-    min-height: 0;
-  }
-
-  .nav-group {
-    justify-content: flex-start;
-    align-items: center;
-    height: auto;
-    gap: 8px;
-  }
-
-  .nav-item {
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    min-width: 0;
-    min-height: 0;
-    padding: 10px 8px;
-    border-radius: 8px;
-  }
-
-  footer {
-    padding-bottom: 64px;
-  }
 }
 
 .nav-copy-email {
