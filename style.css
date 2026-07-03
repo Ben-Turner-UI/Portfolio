@@ -61,7 +61,7 @@ body {
   --case-study-stats-column-padding: var(--space-2);
   --case-study-content-section-gap: var(--space-7);
   --case-study-header-divider-gap: var(--space-4);
-  --case-study-header-content-gap: 40px;
+  --case-study-header-content-gap: 48px;
   --case-study-header-block-gap: var(--space-4);
   --case-study-intro-block-gap: var(--space-2-5);
   --project-card-grid-gap: 32px;
@@ -398,9 +398,9 @@ header {
   isolation: isolate;
   width: 100%;
   color: black;
-  padding-top: 40px;
+  padding-top: 48px;
   padding-bottom: 48px;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
   background:
     linear-gradient(to top, rgba(255, 74, 0, 0.2) 0%, transparent 100%),
     linear-gradient(180deg, #fff 0%, #eeedea 100%);
@@ -3092,7 +3092,7 @@ a.testimonial-avatar:hover {
 
   header.home {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
   }
 
   .about-partners {
