@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,1,0&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
@@ -30,10 +31,19 @@
     <div class="nav-container">
       <nav>
         <div class="nav-group">
-          <a href="index.html" class="nav-item">Home</a>
-          <a href="about.html" class="nav-item">About</a>
-          <a href="personal.html" id="nav-item-active" class="nav-item">Personal</a>
-        </div>
+      <a href="index.html" class="nav-item">
+        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">home</span>
+        <span class="nav-item__label">Home</span>
+      </a>
+      <a href="about.html" class="nav-item">
+        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
+        <span class="nav-item__label">About</span>
+      </a>
+      <a href="personal.html" class="nav-item" id="nav-item-active">
+        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">favorite</span>
+        <span class="nav-item__label">Personal</span>
+      </a>
+    </div>
       </nav>
     </div>
 

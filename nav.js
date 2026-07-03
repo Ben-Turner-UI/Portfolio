@@ -2,7 +2,7 @@
   function updateNavOffset() {
     var nav = document.querySelector('.nav-container');
     if (!nav) return;
-    document.documentElement.style.setProperty('--nav-offset', nav.offsetHeight + 'px');
+    document.documentElement.style.setProperty('--nav-offset', (nav.offsetHeight + 32) + 'px');
   }
 
   if (document.readyState === 'loading') {
