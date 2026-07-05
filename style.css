@@ -886,7 +886,7 @@ header h1 {
 }
 
 .nav-item + .nav-item {
-  margin-left: -9px;
+  margin-left: 0;
 }
 
 #nav-item-active {
@@ -1005,14 +1005,11 @@ header h1 {
 
   .nav-item {
     border-radius: 6px;
+    padding: 7px 14px;
   }
 
   .nav-group {
-    gap: 2px;
-  }
-
-  .nav-item + .nav-item {
-    margin-left: 0;
+    gap: 0;
   }
 }
 
