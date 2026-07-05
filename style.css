@@ -1008,7 +1008,7 @@ header h1 {
   }
 
   .nav-group {
-    gap: 4px;
+    gap: 2px;
   }
 
   .nav-item + .nav-item {
