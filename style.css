@@ -873,7 +873,7 @@ header h1 {
   gap: 0;
   min-width: 42px;
   padding: 7px 18px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #595959;
   text-decoration: none;
@@ -895,7 +895,7 @@ header h1 {
 
 .nav-item__label {
   font-family: 'Big Shoulders', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   font-weight: 400;
   letter-spacing: 0.1px;
@@ -996,10 +996,23 @@ header h1 {
 
 @media (max-width: 768px) {
   .nav-container nav {
+    border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow:
       0 8px 28px rgba(0, 0, 0, 0.14),
       0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-item {
+    border-radius: 6px;
+  }
+
+  .nav-group {
+    gap: 4px;
+  }
+
+  .nav-item + .nav-item {
+    margin-left: 0;
   }
 }
 
