@@ -2573,17 +2573,6 @@ a.testimonial-avatar:hover {
     overflow-x: hidden;
   }
 
-  .project-meta {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .project-meta__sep {
-    display: none;
-  }
-
   .side-project-grid {
     grid-template-columns: 1fr;
   }

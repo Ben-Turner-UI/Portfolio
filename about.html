@@ -253,9 +253,25 @@
 
       @media (max-width: 768px) {
         .experience-meta-row {
-          flex-direction: column;
-          gap: 2px;
+          display: block;
         }
+
+        .experience-company {
+          display: inline;
+        }
+
+        .experience-dates {
+          display: inline;
+          white-space: nowrap;
+        }
+
+        .experience-dates::before {
+          content: '|';
+          margin: 0 0.4em;
+          color: #d6d6d6;
+          font-weight: 400;
+        }
+
         .skills-grid {
           display: flex;
           flex-direction: column;
