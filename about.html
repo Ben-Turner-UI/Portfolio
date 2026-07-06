@@ -29,7 +29,7 @@
       .about-page-content {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: var(--case-study-content-section-gap);
         width: 100%;
         max-width: var(--content-max-width);
         margin-left: auto;
@@ -39,13 +39,13 @@
       .about-section {
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: var(--space-2);
       }
 
       .about-section-title {
         font-family: 'Source Sans 3', sans-serif;
-        font-size: var(--type-heading-3);
-        line-height: var(--type-heading-3-lh);
+        font-size: var(--type-heading-2);
+        line-height: var(--type-heading-2-lh);
         font-weight: 600;
         margin: 0;
         color: #111;
@@ -65,11 +65,11 @@
         border: none;
         border-bottom: 1px solid #D6D6D6;
         border-radius: 0;
-        padding: 16px 0;
+        padding: 20px 0;
         background: transparent;
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 10px;
       }
 
       .experience-card:first-child {
@@ -83,17 +83,15 @@
 
       .experience-card-header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
-        gap: 12px;
-        flex-wrap: wrap;
+        gap: 4px;
       }
 
       .experience-role {
         font-family: 'Source Sans 3', sans-serif;
         font-size: var(--type-body-lg);
-        line-height: 1.3;
+        line-height: var(--type-body-lg-lh);
         font-weight: 600;
         color: #111;
         margin: 0;
@@ -102,14 +100,15 @@
       .experience-company {
         font-family: 'Source Sans 3', sans-serif;
         font-size: var(--type-body-lg);
-        line-height: 1.3;
+        line-height: var(--type-body-lg-lh);
         font-weight: 400;
-        color: #000;
-        margin: 1px 0 0;
+        color: #595959;
+        margin: 0;
       }
 
       .experience-company a {
-        font-weight: 600;
+        font-weight: 500;
+        color: #333;
       }
 
       .experience-company-sep {
@@ -119,24 +118,28 @@
       }
 
       .experience-dates {
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-        font-weight: 600;
-        color: #595959;
+        font-size: var(--type-body-md);
+        line-height: var(--type-body-md-lh);
+        font-weight: 400;
+        color: #757575;
         white-space: nowrap;
-        padding-top: 2px;
+        margin: 0;
       }
 
-      .experience-meta {
+      .experience-meta-row {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 8px 16px;
+        width: 100%;
       }
 
       .experience-description {
         font-size: var(--type-body-lg);
         line-height: var(--type-body-lg-lh);
         color: #444;
-        margin: 0;
+        margin: 4px 0 0;
       }
 
       .experience-description p {
@@ -249,7 +252,7 @@
       }
 
       @media (max-width: 768px) {
-        .experience-card-header {
+        .experience-meta-row {
           flex-direction: column;
           gap: 2px;
         }
@@ -313,85 +316,6 @@
       </div>
     </header>
 
-    <div class="width-container">
-      <div class="about-partners">
-        <p class="about-partners-intro">Here&rsquo;s some of the companies I&rsquo;ve worked with or worked for over the years:</p>
-        <div class="table-container">
-          <table class="improvements-table">
-            <thead>
-              <tr>
-                <th>Company</th>
-                <th>What they do</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer"><img src="img/partners/p4-plan.svg" class="partner partner-p4" alt="P4 Plan"></a>
-                </td>
-                <td>Industry-leading agile planning platform trusted by AAA game studios and high-performance software teams.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer"><img src="img/partners/p4-dam.svg" class="partner partner-p4" alt="P4 DAM"></a>
-                </td>
-                <td>Enterprise-grade digital asset management powering content pipelines for major games, film, and media studios.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://budibase.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/bb.svg" class="partner" alt="Budibase"></a>
-                </td>
-                <td>Open-source AI workflow platform for building agents, automations, and internal tools with your own data, LLMs, and APIs.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.gsma.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/gsma.svg" class="partner" alt="GSMA"></a>
-                </td>
-                <td>The global authority uniting mobile operators and shaping the standards behind modern connectivity.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.mwcbarcelona.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/mwc.svg" class="partner partner-mwc" alt="Mobile World Congress"></a>
-                </td>
-                <td>The world&rsquo;s flagship mobile connectivity event, drawing industry leaders from across the globe.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.mobileworldlive.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/mwl.svg" class="partner partner-mwl" alt="Mobile World Live"></a>
-                </td>
-                <td>The GSMA&rsquo;s flagship news and insights platform covering the global telecom and mobile ecosystem.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.cityfibre.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/cf.svg" class="partner" alt="CityFibre"></a>
-                </td>
-                <td>The UK&rsquo;s largest independent full-fibre network, transforming broadband infrastructure nationwide.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.gaa.ie" target="_blank" rel="noopener noreferrer"><img src="img/partners/gaa.svg" class="partner" alt="GAA"></a>
-                </td>
-                <td>Ireland&rsquo;s largest sporting organisation, governing Gaelic football, hurling, and community sport nationwide.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.visitbelfast.com/" target="_blank" rel="noopener noreferrer"><img src="img/partners/visit-belfast.svg" class="partner partner-visitbelfast" alt="Visit Belfast"></a>
-                </td>
-                <td>Northern Ireland&rsquo;s lead destination brand, driving tourism and economic growth for Belfast.</td>
-              </tr>
-              <tr>
-                <td class="about-partners__logo-cell">
-                  <a class="about-partners__logo" href="https://www.sportswork.co" target="_blank" rel="noopener noreferrer"><img src="img/partners/sportswork.svg" class="partner partner-sportswork" alt="SportsWork"></a>
-                </td>
-                <td>A dedicated jobs and community platform connecting talent with opportunities across the sports industry.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="partner-more">And many more&hellip;</p>
-      </div>
-    </div>
-
     <main>
       <div class="width-container">
         <div class="about-page-content">
@@ -414,11 +338,11 @@
 
               <div class="experience-card">
                 <div class="experience-card-header">
-                  <div class="experience-meta">
-                    <p class="experience-role">Product Designer</p>
+                  <p class="experience-role">Product Designer</p>
+                  <div class="experience-meta-row">
                     <p class="experience-company"><a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a><span class="experience-company-sep" aria-hidden="true">|</span><a href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer">P4 Plan</a> &amp; <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">P4 DAM</a><span class="experience-company-sep" aria-hidden="true">|</span>Enterprise software</p>
+                    <span class="experience-dates">September 2025 &ndash; Present</span>
                   </div>
-                  <span class="experience-dates">September 2025 &ndash; Present</span>
                 </div>
                 <div class="experience-description">
                   <ul>
@@ -432,11 +356,11 @@
 
               <div class="experience-card">
                 <div class="experience-card-header">
-                  <div class="experience-meta">
-                    <p class="experience-role">Product Designer</p>
+                  <p class="experience-role">Product Designer</p>
+                  <div class="experience-meta-row">
                     <p class="experience-company"><a href="https://budibase.com/" target="_blank" rel="noopener noreferrer">Budibase</a><span class="experience-company-sep" aria-hidden="true">|</span>A low-code platform for agentic AI workflows and internal tools</p>
+                    <span class="experience-dates">Jul 2024 &ndash; Jul 2025</span>
                   </div>
-                  <span class="experience-dates">Jul 2024 &ndash; Jul 2025</span>
                 </div>
                 <div class="experience-description">
                   <ul>
@@ -449,11 +373,11 @@
 
               <div class="experience-card">
                 <div class="experience-card-header">
-                  <div class="experience-meta">
-                    <p class="experience-role">UX / Designer</p>
+                  <p class="experience-role">UX / Designer</p>
+                  <div class="experience-meta-row">
                     <p class="experience-company"><a href="https://www.dawsonandrews.com/" target="_blank" rel="noopener noreferrer">Dawson Andrews</a><span class="experience-company-sep" aria-hidden="true">|</span>Digital Product Agency</p>
+                    <span class="experience-dates">Jun 2021 &ndash; Jul 2024</span>
                   </div>
-                  <span class="experience-dates">Jun 2021 &ndash; Jul 2024</span>
                 </div>
                 <div class="experience-description">
                   <ul>
@@ -547,6 +471,84 @@
           <div class="about-section">
             <h3 class="about-section-title">Hobbies</h3>
             <p style="margin:0;font-size:var(--type-body-lg);line-height:var(--type-body-lg-lh);color:#444;">Studied martial arts since 2007, with over 18 years of experience. Black belt in Jiu-Jitsu and several years of Judo practice. Also enjoy fishkeeping, karting, and have a real love for dogs, especially fluffy ones!</p>
+          </div>
+
+          <div class="about-section about-partners">
+            <h3 class="about-section-title">Companies</h3>
+            <p class="about-partners-intro">Here&rsquo;s some of the companies I&rsquo;ve worked with or worked for over the years:</p>
+            <div class="table-container">
+              <table class="improvements-table">
+                <thead>
+                  <tr>
+                    <th>Company</th>
+                    <th>What they do</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer"><img src="img/partners/p4-plan.svg" class="partner partner-p4" alt="P4 Plan"></a>
+                    </td>
+                    <td>Industry-leading agile planning platform trusted by AAA game studios and high-performance software teams.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer"><img src="img/partners/p4-dam.svg" class="partner partner-p4" alt="P4 DAM"></a>
+                    </td>
+                    <td>Enterprise-grade digital asset management powering content pipelines for major games, film, and media studios.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://budibase.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/bb.svg" class="partner" alt="Budibase"></a>
+                    </td>
+                    <td>Open-source AI workflow platform for building agents, automations, and internal tools with your own data, LLMs, and APIs.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.gsma.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/gsma.svg" class="partner" alt="GSMA"></a>
+                    </td>
+                    <td>The global authority uniting mobile operators and shaping the standards behind modern connectivity.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.mwcbarcelona.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/mwc.svg" class="partner partner-mwc" alt="Mobile World Congress"></a>
+                    </td>
+                    <td>The world&rsquo;s flagship mobile connectivity event, drawing industry leaders from across the globe.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.mobileworldlive.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/mwl.svg" class="partner partner-mwl" alt="Mobile World Live"></a>
+                    </td>
+                    <td>The GSMA&rsquo;s flagship news and insights platform covering the global telecom and mobile ecosystem.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.cityfibre.com" target="_blank" rel="noopener noreferrer"><img src="img/partners/cf.svg" class="partner" alt="CityFibre"></a>
+                    </td>
+                    <td>The UK&rsquo;s largest independent full-fibre network, transforming broadband infrastructure nationwide.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.gaa.ie" target="_blank" rel="noopener noreferrer"><img src="img/partners/gaa.svg" class="partner" alt="GAA"></a>
+                    </td>
+                    <td>Ireland&rsquo;s largest sporting organisation, governing Gaelic football, hurling, and community sport nationwide.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.visitbelfast.com/" target="_blank" rel="noopener noreferrer"><img src="img/partners/visit-belfast.svg" class="partner partner-visitbelfast" alt="Visit Belfast"></a>
+                    </td>
+                    <td>Northern Ireland&rsquo;s lead destination brand, driving tourism and economic growth for Belfast.</td>
+                  </tr>
+                  <tr>
+                    <td class="about-partners__logo-cell">
+                      <a class="about-partners__logo" href="https://www.sportswork.co" target="_blank" rel="noopener noreferrer"><img src="img/partners/sportswork.svg" class="partner partner-sportswork" alt="SportsWork"></a>
+                    </td>
+                    <td>A dedicated jobs and community platform connecting talent with opportunities across the sports industry.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="partner-more">And many more&hellip;</p>
           </div>
 
         </div>
