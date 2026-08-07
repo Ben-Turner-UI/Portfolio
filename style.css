@@ -2756,7 +2756,6 @@ a.testimonial-avatar:hover {
   flex-direction: column;
   gap: 0;
   margin-top: var(--space-2);
-  border-top: 1px solid #D6D6D6;
   background: transparent;
   overflow: visible;
 }
@@ -2768,7 +2767,7 @@ a.testimonial-avatar:hover {
 }
 
 .change-list__item:last-child {
-  border-bottom: 1px solid #D6D6D6;
+  border-bottom: none;
 }
 
 .change-list__trigger {
@@ -2837,19 +2836,17 @@ a.testimonial-avatar:hover {
   grid-row: 1 / span 2;
   align-self: center;
   flex-shrink: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
   color: #9e9e9e;
   opacity: 0.7;
-  transform: none;
-  transition: opacity 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.15s ease, color 0.15s ease;
 }
 
 .change-list__trigger:hover .change-list__arrow,
 .change-list__trigger:focus-visible .change-list__arrow {
   opacity: 1;
   color: #757575;
-  transform: translateX(2px);
 }
 
 .change-modal {
@@ -2926,8 +2923,8 @@ a.testimonial-avatar:hover {
   flex: 1;
   min-width: 0;
   font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--type-heading-2);
-  line-height: var(--type-heading-2-lh);
+  font-size: var(--type-heading-3);
+  line-height: var(--type-heading-3-lh);
   font-weight: 600;
   text-align: left;
 }
@@ -2995,27 +2992,20 @@ a.testimonial-avatar:hover {
   }
 }
 
-.change-modal__subheading {
+.change-modal__subheading,
+.change-modal__content > p,
+.change-modal__outcome {
   margin: 0;
   font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--type-heading-3);
-  line-height: var(--type-heading-3-lh);
-  font-weight: 600;
-  text-transform: none;
-  letter-spacing: normal;
-}
-
-.change-modal__content > p {
-  margin: 0;
   font-size: var(--case-study-body-size);
   line-height: var(--case-study-body-line);
+  text-transform: none;
+  letter-spacing: normal;
   max-width: none;
 }
 
-.change-modal__outcome {
-  margin: 0;
-  font-size: var(--case-study-body-size);
-  line-height: var(--case-study-body-line);
+.change-modal__subheading {
+  font-weight: 600;
 }
 
 .change-modal__outcome strong {
