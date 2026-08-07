@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P4 DAM — Ben Turner</title>
+    <title>AI-Native DesignOps — Ben Turner</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,9 +51,9 @@
       <div class="width-container">
         <div class="header-content">
           <div class="project-header-title-block">
-          <h1>Building an AI workflow that saved our front-end team and helped us produce more features.</h1>
+          <h1>When front-end capacity dropped from six to two, I leaned into AI and we shipped 25% more features.</h1>
           <div class="project-summary">
-            <p>When our front-end capacity dropped sharply, I rebuilt the design handoff around working product code instead of static screens. What started as a way to keep delivery moving became a repeatable AI-assisted workflow that helped designers, developers, and users get closer to the product earlier.</p>
+            <p>What would normally be the death of a product&rsquo;s velocity, or at least a serious slowdown, became something else. With a generous Claude Code allowance, I rebuilt how we handed work to developers on P4 DAM. What started as a way to protect delivery ended up becoming DesignOps infrastructure.</p>
           </div>
 
           <p class="project-meta">
@@ -61,7 +61,7 @@
             <span class="project-meta__sep" aria-hidden="true">·</span>
             <span>P4 DAM</span>
             <span class="project-meta__sep" aria-hidden="true">·</span>
-            <span>Enterprise Software (Games &amp; Film)</span>
+            <span>AI-Native DesignOps &amp; Leadership</span>
           </p>
           </div>
 
@@ -72,19 +72,15 @@
             </div>
             <div class="project-statistics-group">
               <h3 class="project-statistics-stat">25%</h3>
-              <p class="stat-description">More features delivered per quarter</p>
+              <p class="stat-description">More features delivered per quarter, at the same quality as before</p>
             </div>
             <div class="project-statistics-group">
               <h3 class="project-statistics-stat">50<span class="project-statistics-accent">–</span>60%</h3>
-              <p class="stat-description">Fewer developer clarification questions per feature through higher-quality handover documents and specs</p>
+              <p class="stat-description">Fewer developer clarification questions per feature through higher-quality handovers</p>
             </div>
             <div class="project-statistics-group">
               <h3 class="project-statistics-stat project-statistics-stat--inline"><span class="material-symbols-outlined project-statistics-arrow project-statistics-award-icon" aria-hidden="true">emoji_events</span>1st</h3>
-              <p class="stat-description">Won Best Designed at the company-wide internal AI hackathon in 2026</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">4+</h3>
-              <p class="stat-description">Designers mentored individually to improve AI systems, workflows, and team productivity</p>
+              <p class="stat-description">Won Best Designed at the company&rsquo;s annual AI hackathon in 2026</p>
             </div>
           </div>
         </div>
@@ -97,57 +93,55 @@
           <div class="main-content">
             <div class="project-details_text"><div class="project-paragraph project-client-description">
                 <h2>Context</h2>
-                <p>I work for an enterprise software company called Perforce. At Perforce, I am responsible for designing two products within its ecosystem. For this case study, I want to focus specifically on an asset management platform called P4 DAM.</p>
-                <p>A major challenge emerged when, due to internal redundancies, we went from a team of six front-end developers down to two. Under our traditional workflow, designing static screens in Figma meant impossibly long lead times for implementation. This meant that without changing our method and building with new systems, we would fall behind.</p>
-                <p>However, I was granted access to Claude Code with a generous token allowance. This is the story of how I transformed that access into a real, functional system. By handing off functional code instead of static designs, developers could quickly review my work and merge it into the quarterly release with a low bounce rate.</p>
+                <p>At Perforce, I am the product design lead for two products in the ecosystem: P4 DAM, an asset management platform, and P4 Plan, which is a bit like Jira but built for Perforce products.</p>
+                <p>P4 itself is a version control system, much like GitHub. Game studios typically use Perforce because it handles huge, enterprise-scale projects, then layer on tools like DAM and Plan. That is the world this work sits in.</p>
+                <p>Like a lot of companies in this new AI world, we had internal redundancies. Front-end capacity on my product dropped from six developers to two. That is a 66.67% cut. You would expect product delivery to fall by about the same. Instead, we ended up releasing 25% more features per quarter, at the same quality as before.</p>
+                <p>Figma handoffs were simply taking too long to implement with the team we had left. I knew we needed to change how we worked. At the time we had been granted a generous Claude Code allowance, and I decided we really needed to lean into it.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>The Challenge</h2>
-                <p>Initially, when I was introduced to Claude Code, it felt like a completely new ecosystem, much like the recent wave of AI innovation more broadly. However, I have always been a highly systematic and organised person.</p>
-                <p>In my personal life, I am usually the one who organises meetups, keeps everything in order, and plans holidays down to the last detail. This natural inclination benefits my career, as peers often refer to me as a “design systems wizard” or a technical designer. People often describe me as organised and responsible.</p>
-                <p>While many people adopt these new AI tools out of necessity, I genuinely enjoy building systems from the ground up, having previously led and built large-scale design systems for brands such as the <a class="project-text-link" href="https://www.gsma.com/" target="_blank" rel="noopener noreferrer">GSMA</a> and <a class="project-text-link" href="https://cityfibre.com/" target="_blank" rel="noopener noreferrer">CityFibre</a>. When I was given access to these tools and a strong budget, I found it extraordinarily interesting to explore and engineer entirely new workflows.</p>
-              </div>
-
-
-              <div class="content-image content-image--contain">
-                <img src="img/project-image/p4-dam/p4-dam-1.jpg" alt="Diagram showing front-end capacity dropping from six developers to two" class="image-with-caption image-with-caption--contain">
+                <h2>The strategy</h2>
+                <p>I installed P4 DAM locally and worked like a real developer on real product code. Pushing code to branches, getting code reviewed and working in the same ways and standards as our senior developers.</p>
+                <p>We still needed the same quality of handover we used to get from Figma. So I generated spec files, handover documents, and other outputs through skills and agents I built. Developers reviewed code that worked in some areas and did not work fully in others. I do not think anyone has fully cracked designing working code yet. Even so, clarification questions dropped by an estimated 50% to 60% per feature.</p>
+                <p>Despite working in code, I took full responsibility for the front-end features I owned. Developers reviewed the final output rather than reconstructing it from Figma. The process was faster, produced more features, and needed less rework than the workflow we had six months earlier.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>The approach</h2>
-                <p>I was able to install the P4 DAM product locally and start building with it immediately. Other teams in the company struggled with this due to a lack of technical knowledge or other limitations.</p>
-                <p>Developers still spent time reviewing the work, but the review process became much more focused and efficient. By providing a higher-quality handover through generated spec files, handover documents, and other outputs created by skills and agents I built, I reduced iteration significantly. I would estimate around 50% to 60% fewer clarification questions from developers per feature.</p>
-                <p>I was able to manage the front end entirely, taking full responsibility for it while developers only needed to review the final output. Because I can iterate much faster, release more features, and require less rework, the current process is far superior to what it was six months ago.</p>
+                <h2>Proof point 1: Product execution</h2>
+                <p>One of the features we released was realistic lighting in P4 DAM. We replaced the flat grey background in the asset viewer, the one that made 3D models look dull, with switchable image-based environments, so users and reviewers could judge shape, materials, and quality in realistic lighting.</p>
+                <p>This was not a basic coding task. I prototyped it in the live product, handed it over as working code rather than static screens, and shipped it with minimal developer feedback. It was a concrete example of code-level handoff protecting delivery when front-end capacity was thin.</p>
               </div>
 
-              <div class="content-image content-image--contain">
-                <img src="img/project-image/p4-dam/p4-dam-2.jpg" alt="Comparison of Figma handoff and live product workflow steps" class="image-with-caption image-with-caption--contain">
+              <div class="content-image">
+                <img src="img/project-image/p4-dam/p4-dam-1.jpg" alt="Before and after of the P4 DAM 3D viewer: flat grey background versus realistic HDRI lighting with Background and grid controls" class="image-with-caption">
               </div>
 
-              <div class="content-image content-image--contain">
-                <img src="img/project-image/p4-dam/p4-dam-3.jpg" alt="Claude Code changes flowing into the P4 DAM product interface" class="image-with-caption image-with-caption--contain">
-              </div>
-
-              <div class="project-paragraph">
-                <h2>Wider impact</h2>
-                <p>I strongly believe you should not gatekeep these tools or hide any procedural advantage. If something improves quality, speed, or confidence, you have to share it with the team as soon as you can. Things are incredibly competitive in the AI space right now, and to get ahead as a company, we needed everyone on board.</p>
-                <p>Not everyone moves at the same speed or picks up AI as quickly, so working together is essential. I have already mentored several junior and senior designers on how to improve their workflows and AI systems, presenting multiple times over the last few months in quarterly meetings and more sporadically in smaller sessions. The main goal has been to improve the design organisation’s workflows, raise its collective AI skills, and help more people experience those lightbulb moments when a new tip, workflow, or piece of advice suddenly makes the tool feel more accessible and exciting.</p>
-                <p>I recently integrated a workflow that allows designers to go directly from transcribing PM notes into a functional system to begin prototyping in Claude. This gives designers a clearer starting point, helps them move from raw product thinking into something structured, and makes AI-assisted prototyping feel more practical and repeatable. This particular system won the Best Designed award during our company-wide internal AI hackathon in 2026.</p>
+              <div class="content-image content-image--contain content-image--crop-top">
+                <div class="content-image-media">
+                  <video class="image-with-caption image-with-caption--contain" src="img/project-image/p4-dam/p4-dam-elephant.mp4" autoplay loop muted playsinline>
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <figcaption>The lighting feature in action. Reviewers can cycle through curated presets to see models in different photorealistic environments.</figcaption>
               </div>
 
               <div class="project-paragraph">
-                <h2>Result</h2>
-                <p>I transformed access to Claude Code into a real, functional product delivery system. When the team size was reduced, I ensured that output stayed high and went beyond what was previously thought possible, producing more with less without compromise.</p>
-                <p>My work mentoring other designers and building award-winning systems and workflows caught the attention of company directors, who subsequently appointed me to an exclusive task force. As one of six designers, alongside principals and other senior design managers, I am now responsible for building out the product roadmaps and agentic workflows for Perforce's design organisation.</p>
+                <h2>Proof point 2: Process innovation</h2>
+                <p>Shipping features myself was only half the job. If the workflow stayed with me, the wider design organisation would not benefit. I did not want to gatekeep it. I wanted to share it across the company so others could move faster too.</p>
+                <p>So I turned the approach into reusable Claude skills. One of them, built to help me ship features quickly and efficiently, won Best Designed at the company&rsquo;s annual AI hackathon in 2026. Other teams across the business now use it.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>The outcome</h2>
+                <p>In the end, access to Claude Code became a functional delivery system. When the team shrank, output stayed high and went beyond what seemed possible: more features with less capacity, without compromising quality.</p>
               </div>
 
               <div class="button-group">
-                <a class="next-project-link" href="budibase-automations.html">
+                <a class="next-project-link" href="p4-product.html">
                   <div class="next-project-card">
-                    <img class="next-project-card__thumb" src="img/thumbnail/bb-automations-thumbnail.jpg" alt="">
+                    <img class="next-project-card__thumb" src="img/thumbnail/p4-product.png" alt="">
                     <div class="next-project-card__content">
-                      <p class="next-project-card__title">Paving the way for AI: Overhauling Budibase Automations</p>
+                      <p class="next-project-card__title">Owning the product: Redesigning how teams find, navigate, and review assets in P4 DAM</p>
                     </div>
                   </div>
                 </a>

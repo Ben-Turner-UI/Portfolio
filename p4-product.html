@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4 DAM Product Ownership — Ben Turner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="msapplication-navbutton-color" content="#FFFFFF">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTRN14NFN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-THTRN14NFN');
+    </script>
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <nav>
+        <div class="nav-group">
+      <a href="index.html" class="nav-item">
+        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">home</span>
+        <span class="nav-item__label">Home</span>
+      </a>
+      <a href="about.html" class="nav-item">
+        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
+        <span class="nav-item__label">About</span>
+      </a>
+      <a href="personal.html" class="nav-item">
+        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">favorite</span>
+        <span class="nav-item__label">Personal</span>
+      </a>
+    </div>
+      </nav>
+    </div>
+
+    <header class="project-header">
+      <div class="width-container">
+        <div class="header-content">
+          <div class="project-header-title-block">
+          <h1>Owning the product: Redesigning how teams find, navigate, and review assets in P4 DAM</h1>
+          <div class="project-summary">
+            <p>As lead product designer for P4 DAM, I owned the direction of core product areas from the ground up. Search history, advanced filtering, navigation, previewing assets, and the dashboard were rebuilt around how creative teams actually work, not how the old UI happened to be structured.</p>
+          </div>
+
+          <p class="project-meta">
+            <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">Perforce Software</a>
+            <span class="project-meta__sep" aria-hidden="true">·</span>
+            <span>P4 DAM</span>
+            <span class="project-meta__sep" aria-hidden="true">·</span>
+            <span>Product Ownership &amp; UX</span>
+          </p>
+          </div>
+
+          <div class="project-statistics">
+            <div class="project-statistics-group">
+              <h3 class="project-statistics-stat">XX%</h3>
+              <p class="stat-description">Placeholder metric description for this case study</p>
+            </div>
+            <div class="project-statistics-group">
+              <h3 class="project-statistics-stat">X.X</h3>
+              <p class="stat-description">Placeholder metric description for this case study</p>
+            </div>
+            <div class="project-statistics-group">
+              <h3 class="project-statistics-stat">XX</h3>
+              <p class="stat-description">Placeholder metric description for this case study</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="width-container">
+        <div class="content-container">
+          <div class="main-content">
+            <div class="project-details_text"><div class="project-paragraph project-client-description">
+                <h2>Context</h2>
+                <p>At Perforce, I am the product design lead for P4 DAM, a digital asset management platform used by creative and technical teams in games, film, and VFX, including customers such as Electronic Arts, Pinewood Studios, Xbox Game Studios, and Meta.</p>
+                <p>P4 DAM sits on top of Perforce version control. Studios store enormous libraries of 3D models, textures, and media, then need to find the right file, understand where they are in the hierarchy, preview it quickly, and decide whether it is ready for review. If any of those steps feel slow or unclear, people leave the product and open specialist tools instead.</p>
+                <p>My job was not to polish isolated screens. It was to own the product direction for the day-to-day experience: what users see first, how they search and filter, how they move through folders, and how they review assets with confidence.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>What I changed, and why</h2>
+                <p>Select a change to see the problem, the decision, and a before-and-after look at the interface.</p>
+
+                <div class="change-list">
+                  <div class="change-list__item">
+                    <button type="button" class="change-list__trigger" data-change-open="change-search">
+                      <span class="change-list__row">
+                        <span class="change-list__title">Search history</span>
+                        <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
+                      </span>
+                      <span class="change-list__teaser">Added search history so teams could return to recent queries instead of rebuilding the same searches from scratch.</span>
+                    </button>
+                    <template id="change-search">
+                      <h2 class="change-modal__heading">Search history</h2>
+                      <h3 class="change-modal__subheading">Return to recent queries without starting over</h3>
+                      <p>Search history was added so teams could jump back to recent queries by name, tag, or metadata without rebuilding the same search each time. The old patterns made people browse or retype when they should have been able to resume. Clearer recent-search access reduced empty hunting, cut unnecessary browsing load on the backend, and made demos feel faster for sales and onboarding.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> Users were able to find their assets quicker and without issue.</p>
+                      <div class="before-after before-after--single">
+                        <figure class="before-after__item">
+                          <div class="before-after__frame">
+                            <span class="before-after__tag">After</span>
+                            <img src="img/project-image/p4-product/search-after.png" alt="After: redesigned P4 DAM search history experience" class="image-with-caption">
+                          </div>
+                        </figure>
+                      </div>
+                    </template>
+                  </div>
+
+                  <div class="change-list__item">
+                    <button type="button" class="change-list__trigger" data-change-open="change-filters">
+                      <span class="change-list__row">
+                        <span class="change-list__title">Advanced filtering</span>
+                        <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
+                      </span>
+                      <span class="change-list__teaser">Made advanced filtering feel native, with active filters kept visible and easy to remove.</span>
+                    </button>
+                    <template id="change-filters">
+                      <h2 class="change-modal__heading">Advanced filtering</h2>
+                      <h3 class="change-modal__subheading">Narrow large libraries with visible, removable filters</h3>
+                      <p>Advanced filtering used to feel bolted on. I redesigned it so users could narrow large libraries by the attributes they actually care about, with active filters kept visible and easy to remove. The goal was fewer dead-end result sets and less time spent reopening the same folders.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> Users could narrow large libraries faster and reach the right assets with less trial and error.</p>
+                      <div class="before-after">
+                        <figure class="before-after__item">
+                          <div class="before-after__frame">
+                            <span class="before-after__tag">Before</span>
+                            <img src="img/project-image/p4-product/filters-before.png" alt="Before: previous P4 DAM filtering experience" class="image-with-caption">
+                          </div>
+                        </figure>
+                        <figure class="before-after__item">
+                          <div class="before-after__frame">
+                            <span class="before-after__tag">After</span>
+                            <img src="img/project-image/p4-product/filters-after.png" alt="After: redesigned P4 DAM advanced filtering experience" class="image-with-caption">
+                          </div>
+                        </figure>
+                      </div>
+                    </template>
+                  </div>
+
+                  <div class="change-list__item">
+                    <button type="button" class="change-list__trigger" data-change-open="change-breadcrumbs">
+                      <span class="change-list__row">
+                        <span class="change-list__title">Breadcrumbs</span>
+                        <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
+                      </span>
+                      <span class="change-list__teaser">Strengthened path orientation so users could move through deep hierarchies without losing context.</span>
+                    </button>
+                    <template id="change-breadcrumbs">
+                      <h2 class="change-modal__heading">Breadcrumbs</h2>
+                      <h3 class="change-modal__subheading">Stay oriented in deep folder hierarchies</h3>
+                      <p>Deep folder trees are normal in enterprise DAM work. Without strong breadcrumbs, users lose their place and jump back to the top too often. I made path orientation a first-class part of the review and browse experience so people could move up and across the hierarchy without resetting their context.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> Users stayed oriented in deep hierarchies and moved between folders without losing their place.</p>
+                      <div class="before-after">
+                        <figure class="before-after__item">
+                          <div class="before-after__frame">
+                            <span class="before-after__tag">Before</span>
+                            <img src="img/project-image/p4-product/breadcrumbs-before.png" alt="Before: previous P4 DAM breadcrumb navigation" class="image-with-caption">
+                          </div>
+                        </figure>
+                        <figure class="before-after__item">
+                          <div class="before-after__frame">
+                            <span class="before-after__tag">After</span>
+                            <img src="img/project-image/p4-product/breadcrumbs-after.png" alt="After: redesigned P4 DAM breadcrumb navigation" class="image-with-caption">
+                          </div>
+                        </figure>
+                      </div>
+                    </template>
+                  </div>
+
+                  <div class="change-list__item">
+                    <button type="button" class="change-list__trigger" data-change-open="change-preview">
+                      <span class="change-list__row">
+                        <span class="change-list__title">Previewing assets</span>
+                        <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
+                      </span>
+                      <span class="change-list__teaser">Added in-place asset previewing so people could inspect candidates without opening a full review every time.</span>
+                    </button>
+                    <template id="change-preview">
+                      <h2 class="change-modal__heading">Previewing assets</h2>
+                      <h3 class="change-modal__subheading">Inspect candidates without committing to a full review</h3>
+                      <p>Opening a full asset view for every quick check was too heavy. A dedicated preview experience let users inspect candidates in place, compare options faster, and only commit to a deeper review when the file warranted it. That reduced friction between find and decide.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> Users could preview assets quickly in place and decide with less friction.</p>
+                      <div class="before-after before-after--single">
+                        <figure class="before-after__item">
+                          <div class="before-after__frame">
+                            <img src="img/project-image/p4-product/previewing-assets.png" alt="P4 DAM asset previewing experience showing open asset in a project" class="image-with-caption">
+                          </div>
+                        </figure>
+                      </div>
+                    </template>
+                  </div>
+
+                  <div class="change-list__item">
+                    <button type="button" class="change-list__trigger" data-change-open="change-dashboard">
+                      <span class="change-list__row">
+                        <span class="change-list__title">Dashboard</span>
+                        <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
+                      </span>
+                      <span class="change-list__teaser">Redesigned the landing experience around recent work and clearer entry points for first-time users.</span>
+                    </button>
+                    <template id="change-dashboard">
+                      <h2 class="change-modal__heading">Dashboard</h2>
+                      <h3 class="change-modal__subheading">Give first-time and returning users a clearer starting point</h3>
+                      <p>The previous landing experience did not help first-time or returning users understand what mattered next. The new dashboard focused on recent work, useful entry points, and a clearer sense of place. First-time clarity improved, which mattered both for adoption and for sales conversations that depend on a confident first impression.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> New users understood the product faster, and returning users got back into work sooner.</p>
+                      <div class="before-after">
+                        <figure class="before-after__item">
+                          <div class="before-after__frame">
+                            <span class="before-after__tag">Before</span>
+                            <img src="img/project-image/p4-product/homepage-before.png" alt="Before: previous P4 DAM dashboard" class="image-with-caption">
+                          </div>
+                        </figure>
+                        <figure class="before-after__item">
+                          <div class="before-after__frame">
+                            <span class="before-after__tag">After</span>
+                            <img src="img/project-image/p4-product/homepage-after.png" alt="After: redesigned P4 DAM dashboard" class="image-with-caption">
+                          </div>
+                        </figure>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Conclusion</h2>
+                <p>Owning the product as lead designer meant deciding which frictions were structural, not cosmetic, and shipping changes that compounded: find faster, stay oriented, preview earlier, and move through libraries with more confidence. The result was a DAM experience that better matched how game, film, and VFX teams actually work.</p>
+              </div>
+
+              <div class="button-group">
+                <a class="next-project-link" href="budibase-automations.html">
+                  <div class="next-project-card">
+                    <img class="next-project-card__thumb" src="img/thumbnail/bb-automations-thumbnail.jpg" alt="">
+                    <div class="next-project-card__content">
+                      <p class="next-project-card__title">Paving the way for AI: Overhauling Budibase Automations</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <dialog class="change-modal" id="change-modal" aria-labelledby="change-modal-title">
+      <div class="change-modal__shell">
+        <div class="change-modal__header">
+          <h2 class="change-modal__title" id="change-modal-title"></h2>
+          <button type="button" class="change-modal__close" data-change-close aria-label="Close">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+        <div class="change-modal__content" id="change-modal-content"></div>
+      </div>
+    </dialog>
+
+    <footer>
+      <div class="width-container">
+        <div class="footer-text-content">
+          <h3>Ben Turner, Designer and Creator</h3>
+          <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
+        </div>
+        <div class="contact-links">
+          <p><a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg" alt="">Benjamin.turner.design@gmail.com</a></p>
+          <p><a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg" alt="">LinkedIn</a></p>
+        </div>
+        <p class="copyright">&copy;2026, All Rights Reserved</p>
+      </div>
+    </footer>
+    <script src="nav.js"></script>
+    <script src="change-modal.js"></script>
+  </body>
+</html>
