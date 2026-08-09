@@ -1764,7 +1764,7 @@ figcaption {
   color: #595959;
 }
 
-/* Project gallery media — capped width on desktop, full-bleed on mobile */
+/* Project gallery media — capped width on desktop, aligned with text on mobile */
 .main-content .content-image {
   width: 100%;
   max-width: 1200px;
@@ -2665,10 +2665,10 @@ a.testimonial-avatar:hover {
   }
 
   .main-content .content-image {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .main-content .content-image > .image-with-caption,
@@ -2681,9 +2681,6 @@ a.testimonial-avatar:hover {
     height: auto;
     margin-left: 0;
     margin-right: 0;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
   }
 
   .main-content .content-image--crop-top .content-image-media {
@@ -2691,16 +2688,13 @@ a.testimonial-avatar:hover {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
   }
 
   .main-content .content-image figcaption {
-    width: 88%;
-    max-width: var(--content-max-width);
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
@@ -3233,8 +3227,8 @@ a.testimonial-avatar:hover {
   }
 
   .change-modal {
-    width: calc(100vw - 16px);
-    max-width: calc(100vw - 16px);
+    width: 88%;
+    max-width: 88%;
     height: min(
       fit-content,
       calc(100vh - 24px)
