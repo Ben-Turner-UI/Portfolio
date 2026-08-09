@@ -172,10 +172,23 @@
     }
   }
 
+  function preloadChangeImages(templateId) {
+    var template = document.getElementById(templateId);
+    if (!template || template.dataset.imagesPreloaded === 'true') return;
+
+    template.dataset.imagesPreloaded = 'true';
+    var images = template.content.querySelectorAll('img[src]');
+    for (var i = 0; i < images.length; i++) {
+      var preload = new Image();
+      preload.src = images[i].src;
+    }
+  }
+
   function openChange(templateId, trigger) {
     var template = document.getElementById(templateId);
     if (!template) return;
 
+    preloadChangeImages(templateId);
     var fragment = template.content.cloneNode(true);
     var heading = fragment.querySelector('.change-modal__heading');
     var title = heading ? heading.textContent.trim() : 'Change detail';
@@ -224,6 +237,24 @@
       closeChange();
     }
   });
+
+  // Template images are otherwise invisible to the browser until the modal opens.
+  // Begin the download when a visitor approaches a change, without loading every
+  // before/after image upfront.
+  document.addEventListener('pointerover', function (event) {
+    var openBtn = event.target.closest('[data-change-open]');
+    if (openBtn) preloadChangeImages(openBtn.getAttribute('data-change-open'));
+  });
+
+  document.addEventListener('focusin', function (event) {
+    var openBtn = event.target.closest('[data-change-open]');
+    if (openBtn) preloadChangeImages(openBtn.getAttribute('data-change-open'));
+  });
+
+  document.addEventListener('touchstart', function (event) {
+    var openBtn = event.target.closest('[data-change-open]');
+    if (openBtn) preloadChangeImages(openBtn.getAttribute('data-change-open'));
+  }, { passive: true });
 
   modal.addEventListener('click', function (event) {
     if (event.target.closest('[data-compare-slider]')) return;
