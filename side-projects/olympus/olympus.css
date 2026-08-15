@@ -1429,6 +1429,21 @@ body.home-page {
         margin-right: 8px;
     }
 
+    .home-page .landing {
+        background:
+            radial-gradient(ellipse 72% 46% at 50% 100%, rgba(0, 255, 176, 0.2) 0%, transparent 64%),
+            radial-gradient(ellipse 48% 36% at 50% 100%, rgba(0, 230, 160, 0.1) 0%, transparent 72%),
+            linear-gradient(160deg, rgba(16, 22, 18, 0.72) 0%, rgba(10, 14, 12, 0.88) 100%);
+    }
+
+    .home-page .landing::before {
+        inset: auto 50% -22% auto;
+        width: 72%;
+        height: 58%;
+        transform: translateX(50%);
+        background: radial-gradient(circle at 50% 82%, rgba(0, 255, 176, 0.26) 0%, transparent 68%);
+    }
+
     .home-page .landing_inner {
         row-gap: 24px;
         padding: 28px 24px 24px;
@@ -1497,18 +1512,18 @@ body.home-page {
     .faces_featured_stage {
         grid-template-columns: 1fr;
         gap: 16px;
-        justify-items: center;
+        justify-items: start;
     }
 
     .faces_featured_media {
         width: min(280px, 78vw);
         max-width: 280px;
-        justify-self: center;
+        justify-self: start;
     }
 
     .faces_featured_copy {
-        align-items: stretch;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
         width: 100%;
         max-width: none;
     }
