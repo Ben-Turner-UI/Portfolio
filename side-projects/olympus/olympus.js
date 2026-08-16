@@ -4,8 +4,23 @@
     el.textContent = year;
   });
 
-  // In-page CTAs: smooth-scroll without leaving focus on the hero button
-  // (focused anchors + nested backdrop-filter caused the CTA to vanish on scroll back).
+  // In-page CTAs: smooth-scroll without leaving focus on the hero button.
+  // Chromium can fail to repaint backdrop-filter / blended layers after smooth scroll.
+  function refreshHeroPaint() {
+    var landing = document.querySelector('.home-page .landing');
+    if (!landing) {
+      return;
+    }
+    // Force a composite refresh without visible jump.
+    var prev = landing.style.transform;
+    landing.style.transform = 'translateZ(0)';
+    // eslint-disable-next-line no-unused-expressions
+    landing.offsetHeight;
+    requestAnimationFrame(function () {
+      landing.style.transform = prev;
+    });
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (event) {
       var id = anchor.getAttribute('href').slice(1);
@@ -17,6 +32,9 @@
         return;
       }
       event.preventDefault();
+      if (typeof anchor.blur === 'function') {
+        anchor.blur();
+      }
       if (typeof target.scrollIntoView === 'function') {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
@@ -25,11 +43,22 @@
       } else {
         location.hash = id;
       }
-      if (typeof anchor.blur === 'function') {
-        anchor.blur();
-      }
+      window.setTimeout(refreshHeroPaint, 450);
+      window.setTimeout(refreshHeroPaint, 900);
     });
   });
+
+  var heroPaintPending = false;
+  window.addEventListener('scroll', function () {
+    if (window.scrollY >= 48 || heroPaintPending) {
+      return;
+    }
+    heroPaintPending = true;
+    requestAnimationFrame(function () {
+      refreshHeroPaint();
+      heroPaintPending = false;
+    });
+  }, { passive: true });
 
   var navInner = document.querySelector('.home-nav_inner');
   var brand = document.querySelector('.home-nav_brand');
