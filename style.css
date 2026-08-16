@@ -131,10 +131,6 @@ body {
   background-color: #fff;
 }
 
-@view-transition {
-  navigation: none;
-}
-
 html,
 body,
 .agents-view,
@@ -826,7 +822,6 @@ header h1 {
   border-radius: 9999px;
   box-shadow: none;
   position: relative;
-  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .nav-item + .nav-item {

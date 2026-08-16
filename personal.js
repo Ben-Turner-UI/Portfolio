@@ -1,9 +1,4 @@
 (function () {
-  if (typeof window.__personalLightboxTeardown === 'function') {
-    window.__personalLightboxTeardown();
-    window.__personalLightboxTeardown = null;
-  }
-
   var lightbox = document.getElementById('personal-lightbox');
   if (!lightbox) return;
 
@@ -101,7 +96,7 @@
     });
   }
 
-  function onKeydown(event) {
+  document.addEventListener('keydown', function (event) {
     if (lightbox.hidden) return;
 
     if (event.key === 'Escape') {
@@ -119,12 +114,5 @@
       event.preventDefault();
       showSlide(currentIndex + 1);
     }
-  }
-
-  document.addEventListener('keydown', onKeydown);
-
-  window.__personalLightboxTeardown = function () {
-    document.removeEventListener('keydown', onKeydown);
-    document.body.classList.remove('personal-lightbox-open');
-  };
+  });
 })();
