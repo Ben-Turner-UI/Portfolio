@@ -256,7 +256,11 @@
     document.querySelectorAll('.nav-group .nav-item').forEach(function (link) {
       link.addEventListener('click', function () {
         if (!document.body.classList.contains('is-agents-view')) return;
-        setEnabled(ui, false, true);
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch (err) {}
+        // Clear persisted state only — don't unmount the view before navigation,
+        // or the designed site flashes underneath for a frame.
       });
     });
 
