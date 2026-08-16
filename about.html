@@ -25,269 +25,6 @@
       gtag('js', new Date());
       gtag('config', 'G-THTRN14NFN');
     </script>
-    <style>
-      .about-page-content {
-        display: flex;
-        flex-direction: column;
-        gap: var(--case-study-content-section-gap);
-        width: 100%;
-        max-width: var(--content-max-width);
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .about-section {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-2);
-      }
-
-      .about-section-title {
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: var(--type-heading-2);
-        line-height: var(--type-heading-2-lh);
-        font-weight: 600;
-        margin: 0;
-        color: #111;
-        text-transform: none;
-        letter-spacing: normal;
-        border-bottom: 1px solid #D6D6D6;
-        padding-bottom: var(--case-study-heading-divider-padding);
-      }
-
-      .experience-list {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-      }
-
-      .experience-card {
-        border: none;
-        border-bottom: 1px solid #D6D6D6;
-        border-radius: 0;
-        padding: 20px 0;
-        background: transparent;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .experience-card:first-child {
-        padding-top: 8px;
-      }
-
-      .experience-card:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-
-      .experience-card-header {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-
-      .experience-role {
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-        font-weight: 600;
-        color: #111;
-        margin: 0;
-      }
-
-      .experience-company {
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-        font-weight: 400;
-        color: #595959;
-        margin: 0;
-      }
-
-      .experience-company a {
-        font-weight: 500;
-        color: #333;
-      }
-
-      .experience-company-sep {
-        color: #d6d6d6;
-        margin: 0 0.4em;
-        font-weight: 400;
-      }
-
-      .experience-dates {
-        font-size: var(--type-body-md);
-        line-height: var(--type-body-md-lh);
-        font-weight: 400;
-        color: #757575;
-        white-space: nowrap;
-        margin: 0;
-      }
-
-      .experience-meta-row {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 8px 16px;
-        width: 100%;
-      }
-
-      .experience-description {
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-        color: #444;
-        margin: 4px 0 0;
-      }
-
-      .experience-description p {
-        margin: 0 0 4px;
-      }
-
-      .experience-description ul {
-        margin: 4px 0 0;
-        padding-left: 0;
-        list-style: none;
-      }
-
-      .experience-description ul li {
-        position: relative;
-        margin-bottom: 6px;
-        padding-left: 14px;
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-      }
-
-      .experience-description ul li::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0.62em;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background: #000;
-      }
-
-      .experience-description ul li:last-child {
-        margin-bottom: 0;
-      }
-
-      .skills-grid {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        column-gap: 12px;
-        row-gap: 24px;
-        margin-top: 8px;
-      }
-
-      .skills-card {
-        display: contents;
-      }
-
-      .skills-card-title {
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-        font-weight: 600;
-        color: #595959;
-        margin: 3px 0 0;
-      }
-
-      .education-card {
-        border: none;
-        border-radius: 0;
-        padding: 0;
-        background: transparent;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-      }
-
-      .education-item {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 12px;
-        flex-wrap: wrap;
-        padding: 10px 0;
-        border-bottom: 1px solid #D6D6D6;
-      }
-
-      .education-item:first-child {
-        padding-top: 8px;
-      }
-
-      .education-item:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-
-      .education-qual {
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-        font-weight: 600;
-        color: #111;
-        margin: 0;
-      }
-
-      .education-school {
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-        color: #595959;
-        margin: 2px 0 0;
-      }
-
-      .education-grade {
-        font-size: var(--type-body-lg);
-        line-height: var(--type-body-lg-lh);
-        font-weight: 600;
-        color: #000;
-        white-space: nowrap;
-        padding-top: 2px;
-      }
-
-      @media (max-width: 768px) {
-        .experience-meta-row {
-          display: block;
-        }
-
-        .experience-company {
-          display: inline;
-        }
-
-        .experience-dates {
-          display: inline;
-          white-space: nowrap;
-        }
-
-        .experience-dates::before {
-          content: '|';
-          margin: 0 0.4em;
-          color: #d6d6d6;
-          font-weight: 400;
-        }
-
-        .skills-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-        }
-        .skills-card {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-        }
-        .education-item {
-          flex-direction: column;
-          gap: 2px;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -310,159 +47,119 @@
       <div class="width-container">
         <div class="header-content">
           <h1>About</h1>
-          <div class="button-group">
-            <a href="file/Ben-Turner-CV.pdf" class="show-more-btn" download="Ben-Turner-CV.pdf" rel="nofollow">
-              <span>Download Resume</span>
-              <span class="material-symbols-outlined show-more-chevron" aria-hidden="true">download</span>
-            </a>
-            <a href="https://www.linkedin.com/in/benturnerwork" class="show-more-btn" target="_blank" rel="noopener noreferrer">
-              <span>LinkedIn</span>
-              <span class="material-symbols-outlined show-more-chevron" aria-hidden="true">open_in_new</span>
-            </a>
-            <button type="button" class="show-more-btn nav-copy-email" data-copy-email="Benjamin.turner.design@gmail.com" aria-label="Copy email address">
-              <span>Email</span>
-              <span class="material-symbols-outlined show-more-chevron" aria-hidden="true">mail</span>
-            </button>
-          </div>
         </div>
       </div>
     </header>
 
     <main>
       <div class="width-container">
-        <div class="about-page-content">
+        <div class="content-container">
+          <div class="main-content">
+            <article class="personal-newsletter">
 
-          <div class="about-section">
-            <h3 class="about-section-title">Experience</h3>
-            <div class="experience-list">
-
-              <div class="experience-card">
-                <div class="experience-card-header">
-                  <p class="experience-role">Product Designer</p>
-                  <div class="experience-meta-row">
-                    <p class="experience-company"><a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a><span class="experience-company-sep" aria-hidden="true">|</span><a href="https://www.perforce.com/products/hansoft" target="_blank" rel="noopener noreferrer">P4 Plan</a> &amp; <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">P4 DAM</a><span class="experience-company-sep" aria-hidden="true">|</span>Enterprise software</p>
-                    <span class="experience-dates">September 2025 &ndash; Present</span>
-                  </div>
-                </div>
-                <div class="experience-description">
-                  <ul>
-                    <li>Led product design for P4 Plan and P4 DAM, used by teams at Electronic Arts, Pinewood Studios, Xbox Game Studios, and Meta Games.</li>
-                    <li>Shipped 25% more features per quarter than the year before, at the same quality, after front-end capacity fell from six developers to two, by moving from Figma handoffs to working product code with Claude Code.</li>
-                    <li>Rebuilt search, filtering, breadcrumbs, preview, and the dashboard on P4 DAM around one idea: get people to the asset, then let them manage it.</li>
-                    <li>Prototype in the product itself, in React, Ember.js, and the Force UI design system.</li>
-                    <li>Built an AI workflow that takes designers from PM notes to coded prototypes in Claude Code and Cursor, now used by design teams beyond my own product.</li>
+              <section class="personal-entry">
+                <h2>Who am I</h2>
+                <p>I'm based in Carrickfergus, Northern Ireland, just up the coast from Belfast. Outside of work I'm usually blasting the gym, building Legos, out in the garden, karting, or deep into a game of Warhammer 30k. My interests are all over the place, so if we share any, I'd genuinely love to hear from you.</p>
+                <p>I love dogs (especially fluffy ones), I'm almost always the tallest person in the room, and I'm far too extraverted for my own good. I organise team socials, enjoy a proper conversation, and tend to work best with people who are curious and say what they actually think.</p>
+                <div class="personal-entry__media">
+                  <ul class="personal-entry__photos">
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/bangor-cafe-portrait.jpg" data-lightbox-alt="Portrait in a cafe">
+                        <img src="img/life/bangor-cafe-portrait.jpg" alt="Portrait in a cafe">
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/dog-on-sofa.jpg" data-lightbox-alt="Dog on the sofa">
+                        <img src="img/life/dog-on-sofa.jpg" alt="Dog on the sofa">
+                      </button>
+                    </li>
                   </ul>
                 </div>
-              </div>
+              </section>
 
-              <div class="experience-card">
-                <div class="experience-card-header">
-                  <p class="experience-role">Product Designer</p>
-                  <div class="experience-meta-row">
-                    <p class="experience-company"><a href="https://budibase.com/" target="_blank" rel="noopener noreferrer">Budibase</a><span class="experience-company-sep" aria-hidden="true">|</span>A low-code platform for agentic AI workflows and internal tools</p>
-                    <span class="experience-dates">Jul 2024 &ndash; Jul 2025</span>
-                  </div>
-                </div>
-                <div class="experience-description">
-                  <ul>
-                    <li>UI design for core database features on an enterprise low-code platform.</li>
-                    <li>End-to-end redesign of the workflow builder, grounded in a paid study of 25 users, later used as structural groundwork for the AI-first automations platform. Automation complaints on the community Discord fell from about eight to ten down to one or none.</li>
-                    <li>Concept-to-prototype on AI features including generative apps and smart workflows.</li>
+              <section class="personal-entry">
+                <h2>Brazilian Jiu-Jitsu</h2>
+                <p>I've trained Brazilian Jiu-Jitsu for five years, usually three times a week. I'm a black belt in Japanese Jiu-Jitsu, a BJJ purple belt, and a Judo green belt, and I've been training martial arts since 2007. Showing up consistently matters more than any single good round, and the mat has a way of reminding you of that pretty quickly.</p>
+                <p>Mention a gym ache and I'll probably try to diagnose it. Five years in, I've got the confidence of an amateur physical therapist and none of the qualifications.</p>
+                <div class="personal-entry__media">
+                  <ul class="personal-entry__photos">
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/bjj-purple-belt-grading.jpg" data-lightbox-alt="Purple belt grading photo">
+                        <img src="img/life/bjj-purple-belt-grading.jpg" alt="Purple belt grading photo">
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/bjj-training-roll.jpg" data-lightbox-alt="Brazilian Jiu-Jitsu sparring">
+                        <img src="img/life/bjj-training-roll.jpg" alt="Brazilian Jiu-Jitsu sparring">
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/bjj-class-handshake.jpg" data-lightbox-alt="Brazilian Jiu-Jitsu class handshake">
+                        <img src="img/life/bjj-class-handshake.jpg" alt="Brazilian Jiu-Jitsu class handshake">
+                      </button>
+                    </li>
                   </ul>
                 </div>
-              </div>
+              </section>
 
-              <div class="experience-card">
-                <div class="experience-card-header">
-                  <p class="experience-role">UX / Designer</p>
-                  <div class="experience-meta-row">
-                    <p class="experience-company"><a href="https://www.dawsonandrews.com/" target="_blank" rel="noopener noreferrer">Dawson Andrews</a><span class="experience-company-sep" aria-hidden="true">|</span>Digital Product Agency</p>
-                    <span class="experience-dates">Jun 2021 &ndash; Jul 2024</span>
-                  </div>
-                </div>
-                <div class="experience-description">
-                  <ul>
-                    <li>Redesigned CityFibre&rsquo;s homepage and key journeys; Check availability clicks rose 90% on three months prior, and the agency used the result to win Hyperoptic.</li>
-                    <li>Built and maintained the Figma design system used across the account.</li>
+              <section class="personal-entry">
+                <h2>Travel</h2>
+                <p>I like arriving somewhere unfamiliar without a fixed plan and seeing what happens. In 2026 I visited Latvia, Ireland, and Portugal. Hoping to keep exploring the world and meeting new people.</p>
+                <p>Back in Northern Ireland, a good day out is the MAC gallery, a coastal or forest walk, or an evening at the Cineworld IMAX!</p>
+                <div class="personal-entry__media">
+                  <ul class="personal-entry__photos">
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/riga-church-tower.jpg" data-lightbox-alt="Church tower in Riga">
+                        <img src="img/life/riga-church-tower.jpg" alt="Church tower in Riga">
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/riga-tv-tower.jpg" data-lightbox-alt="Riga TV tower">
+                        <img src="img/life/riga-tv-tower.jpg" alt="Riga TV tower">
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/gleno-waterfall-portrait.jpg" data-lightbox-alt="Portrait by a waterfall in Gleno">
+                        <img src="img/life/gleno-waterfall-portrait.jpg" alt="Portrait by a waterfall in Gleno">
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="personal-thumb" data-lightbox-src="img/life/gleno-forest-portrait.jpg" data-lightbox-alt="Portrait in a forest at Gleno">
+                        <img src="img/life/gleno-forest-portrait.jpg" alt="Portrait in a forest at Gleno">
+                      </button>
+                    </li>
                   </ul>
                 </div>
-              </div>
+              </section>
 
-            </div>
+            </article>
           </div>
-
-          <div class="about-section">
-            <h3 class="about-section-title">Skills</h3>
-            <div class="skills-grid">
-
-              <div class="skills-card">
-                <p class="skills-card-title">Design</p>
-                <div class="tag-container">
-                  <div class="tag"><span>Interaction Design</span></div>
-                  <div class="tag"><span>Prototyping</span></div>
-                  <div class="tag"><span>Design Systems</span></div>
-                  <div class="tag"><span>Usability Testing</span></div>
-                  <div class="tag"><span>Information Architecture</span></div>
-                  <div class="tag"><span>Accessibility</span></div>
-                </div>
-              </div>
-
-              <div class="skills-card">
-                <p class="skills-card-title">Code</p>
-                <div class="tag-container">
-                  <div class="tag"><span>React</span></div>
-                  <div class="tag"><span>Ember</span></div>
-                  <div class="tag"><span>TypeScript</span></div>
-                  <div class="tag"><span>HTML/CSS</span></div>
-                  <div class="tag"><span>Git</span></div>
-                </div>
-              </div>
-
-              <div class="skills-card">
-                <p class="skills-card-title">AI &amp; tools</p>
-                <div class="tag-container">
-                  <div class="tag"><span>Claude Code</span></div>
-                  <div class="tag"><span>Cursor</span></div>
-                  <div class="tag"><span>Figma</span></div>
-                  <div class="tag"><span>PostHog</span></div>
-                  <div class="tag"><span>Maze</span></div>
-                  <div class="tag"><span>Google Analytics</span></div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="about-section">
-            <h3 class="about-section-title">Education</h3>
-            <div class="education-card">
-              <div class="education-item">
-                <div>
-                  <p class="education-qual">BDes (Hons) Interaction Design</p>
-                  <p class="education-school"><a href="https://www.ulster.ac.uk/" target="_blank" rel="noopener noreferrer">Ulster University</a>, 2017&ndash;2021</p>
-                </div>
-                <span class="education-grade">First Class Honours</span>
-              </div>
-              <div class="education-item">
-                <div>
-                  <p class="education-qual">Extended Diploma in Interactive Media</p>
-                  <p class="education-school">2015&ndash;2017</p>
-                </div>
-                <span class="education-grade">Distinction*, Distinction*, Distinction</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-section">
-            <h3 class="about-section-title">Outside work</h3>
-            <div class="experience-description">
-              <p>Outside work I train BJJ a few times a week &mdash; Japanese Jiu-Jitsu black belt, BJJ purple belt, Judo green belt, training since 2007. Also the gym, karting, Warhammer, fishkeeping, and a dog. There are a few photos on the <a href="personal.html">outside-work page</a>.</p>
-            </div>
-          </div>
-
         </div>
       </div>
     </main>
+
+    <div class="personal-lightbox" id="personal-lightbox" hidden>
+      <button type="button" class="personal-lightbox__backdrop" data-lightbox-close aria-label="Close photo"></button>
+      <div class="personal-lightbox__panel" role="dialog" aria-modal="true" aria-label="Photo preview">
+        <figure class="personal-lightbox__figure">
+          <div class="personal-lightbox__stage">
+            <img class="personal-lightbox__img" src="" alt="">
+          </div>
+        </figure>
+        <div class="personal-lightbox__controls">
+          <button type="button" class="personal-lightbox__nav personal-lightbox__nav--prev" data-lightbox-prev aria-label="Previous photo">
+            <span class="material-symbols-outlined personal-lightbox__nav-icon" aria-hidden="true">chevron_left</span>
+          </button>
+          <p class="personal-lightbox__counter" aria-live="polite"></p>
+          <button type="button" class="personal-lightbox__nav personal-lightbox__nav--next" data-lightbox-next aria-label="Next photo">
+            <span class="material-symbols-outlined personal-lightbox__nav-icon" aria-hidden="true">chevron_right</span>
+          </button>
+          <button type="button" class="personal-lightbox__close" data-lightbox-close aria-label="Close photo">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="width-container">
@@ -478,5 +175,6 @@
       </div>
     </footer>
     <script src="nav.js"></script>
+    <script src="personal.js"></script>
   </body>
 </html>

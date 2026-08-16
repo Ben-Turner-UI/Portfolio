@@ -90,4 +90,9 @@
       }
     });
   });
+
+  var agentsScript = document.createElement('script');
+  var navSrc = document.currentScript && document.currentScript.src ? document.currentScript.src : 'nav.js';
+  agentsScript.src = navSrc.replace(/nav\.js(?:\?.*)?$/, 'agents-view.js');
+  document.body.appendChild(agentsScript);
 })();

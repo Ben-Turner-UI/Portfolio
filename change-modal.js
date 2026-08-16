@@ -1,7 +1,5 @@
 (function () {
   var modal = document.getElementById('change-modal');
-  if (!modal) return;
-
   var titleEl = document.getElementById('change-modal-title');
   var contentEl = document.getElementById('change-modal-content');
   var lastTrigger = null;
@@ -213,6 +211,8 @@
 
   // Init any sliders that live directly on the page (outside the modal).
   initCompareSliders(document);
+
+  if (!modal) return;
 
   document.addEventListener('click', function (event) {
     var openBtn = event.target.closest('[data-change-open]');
