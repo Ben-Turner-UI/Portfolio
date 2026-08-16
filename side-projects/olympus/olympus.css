@@ -1066,7 +1066,7 @@ body.home-page {
 }
 
 .faces_grid_button--primary {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04)), rgba(0, 230, 160, 0.22);
+    background: linear-gradient(180deg, #2A4A3E, #1A332C);
     border-color: var(--olympus-button-border);
     border-width: 1px;
     color: #fff;
@@ -1076,7 +1076,7 @@ body.home-page {
 }
 
 .faces_grid_button--primary:hover {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.06)), rgba(0, 230, 160, 0.3);
+    background: linear-gradient(180deg, #33584A, #214338);
     border-color: var(--olympus-button-border-hover);
     color: #fff;
     box-shadow:
