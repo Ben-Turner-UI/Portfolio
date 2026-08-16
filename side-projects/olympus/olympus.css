@@ -37,7 +37,8 @@ body {
     --landing-h1-stack-trim: 8px;
     --section-content-gap: 80px;
     --section-intro-gap: 40px;
-    --section-intro-stack-gap: 12px;
+    --title-body-gap: 8px;
+    --section-intro-stack-gap: var(--title-body-gap);
     --section-text-width: 58ch;
     --page-gutter: 24px;
     background-color: var(--olympus-bg);
@@ -244,7 +245,7 @@ main {
 }
 
 .about_card h3.section_heading {
-    margin: 0 0 8px;
+    margin: 0 0 var(--title-body-gap);
 }
 
 .about_card p {
@@ -259,7 +260,7 @@ main {
 }
 
 .section_heading {
-    margin: 0;
+    margin: 0 0 var(--title-body-gap);
     font-family: 'Big Shoulders', sans-serif;
     font-size: 22px;
     font-weight: 600;
@@ -272,7 +273,6 @@ main {
 .kit_download h1.section_heading,
 .about h1.section_heading,
 h2.section_heading {
-    margin-bottom: var(--section-intro-stack-gap);
     max-width: var(--section-text-width);
 }
 
@@ -688,7 +688,7 @@ body.home-page {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 20px;
+    gap: 0;
     padding: 0;
     box-sizing: border-box;
     position: relative;
@@ -749,7 +749,7 @@ body.home-page {
 .home-page .landing h1 {
     font-size: 28px;
     line-height: var(--olympus-h1-line-height);
-    margin: 0;
+    margin: 0 0 var(--title-body-gap);
     text-align: left;
     font-weight: 800;
     text-transform: uppercase;
@@ -758,7 +758,7 @@ body.home-page {
 
 .home-page .landing_lead {
     max-width: 44ch;
-    margin: 0;
+    margin: 0 0 16px;
     font-size: 16px;
     line-height: var(--olympus-line-16);
 }
@@ -768,7 +768,7 @@ body.home-page {
     flex-wrap: wrap;
     align-items: center;
     gap: 16px;
-    margin-top: 4px;
+    margin: 0 0 12px;
 }
 
 .home-page .landing_meta {
@@ -807,18 +807,12 @@ body.home-page {
 
 /*-----------HOME PAGE SECTIONS-----------*/
 
-.home-page .faces h1.section_heading {
-    font-size: 22px;
-    color: #fff;
-}
-
+.home-page .faces h1.section_heading,
 .home-page .about h1.section_heading,
-.home-page .kit_download h1.section_heading {
-    font-size: 22px;
-    color: #fff;
-}
-
+.home-page .kit_download h1.section_heading,
 .home-page .section_heading {
+    font-size: 22px;
+    font-weight: 600;
     color: #fff;
 }
 
@@ -912,7 +906,7 @@ body.home-page {
 
 .kit_card h3.section_heading {
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: var(--title-body-gap);
 }
 
 .kit_card p {
@@ -1010,7 +1004,7 @@ body.home-page {
 }
 
 .faces_featured_copy h2.section_heading {
-    margin: 0;
+    margin: 0 0 var(--title-body-gap);
     max-width: none;
 }
 
@@ -1132,14 +1126,14 @@ body.home-page {
 .faces_featured_copy {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 0;
     align-items: flex-start;
     justify-content: flex-start;
     align-self: center;
 }
 
 .faces_featured_copy [data-featured-cta] {
-    margin-top: 6px;
+    margin-top: 16px;
 }
 
 .faces_featured_copy .faces_grid_button {
@@ -1375,7 +1369,7 @@ body.home-page {
         --section-content-gap: 64px;
         --content-stack-inset: 48px;
         --section-intro-gap: 32px;
-        --section-intro-stack-gap: 10px;
+        --title-body-gap: 8px;
     }
 
     .home-page .home-header {
@@ -1434,10 +1428,6 @@ body.home-page {
     .home-page .landing_inner {
         row-gap: 24px;
         padding: 28px 24px 24px;
-    }
-
-    .home-page .landing_text {
-        gap: 16px;
     }
 
     .home-page #landing_image_watch {
@@ -1569,7 +1559,6 @@ body.home-page {
     }
 
     .home-page .landing_text {
-        gap: 14px;
         width: 100%;
     }
 
@@ -1578,7 +1567,6 @@ body.home-page {
         align-items: stretch;
         width: 100%;
         gap: 14px;
-        margin-top: 4px;
     }
 
     .home-page .landing_cta .faces_grid_button {
