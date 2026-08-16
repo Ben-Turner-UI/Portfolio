@@ -921,6 +921,13 @@ header h1 {
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
   .nav-container nav {
     --nav-bar-padding: 5px;
     align-items: stretch;
@@ -3437,29 +3444,26 @@ body.is-agents-view .nav-container {
   }
 
   .agents-toggle--in-nav {
-    position: relative;
+    position: static;
     right: auto;
     bottom: auto;
     z-index: auto;
     display: flex;
-    align-items: stretch;
-    align-self: stretch;
-    margin: 0 0 0 12px;
-    padding: 0 0 0 12px;
-    border-left: none;
+    align-items: center;
+    align-self: center;
+    margin: 0;
+    padding: 5px;
     height: auto;
     min-height: 0;
-  }
-
-  .agents-toggle--in-nav::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 1px;
-    height: 16px;
-    background: rgba(0, 0, 0, 0.12);
-    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow:
+      0 8px 28px rgba(0, 0, 0, 0.14),
+      0 2px 8px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    pointer-events: auto;
   }
 
   .agents-toggle--in-nav .agents-toggle__chip {
@@ -3471,13 +3475,13 @@ body.is-agents-view .nav-container {
     column-gap: 8px;
     box-sizing: border-box;
     height: auto;
-    min-height: 100%;
+    min-height: 0;
     margin: 0;
-    padding: 8px 14px 8px 0;
+    padding: 8px 14px;
     background: transparent;
     color: #595959;
     border: none;
-    border-radius: 0;
+    border-radius: 5px;
     box-shadow: none;
     font-family: 'Big Shoulders', sans-serif;
     font-size: 20px;

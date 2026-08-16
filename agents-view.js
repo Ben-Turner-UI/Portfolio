@@ -199,13 +199,13 @@
   }
 
   function mountToggle(ui) {
-    var navGroup = document.querySelector('.nav-group');
-    var inNav = isMobileNav() && navGroup;
+    var navContainer = document.querySelector('.nav-container');
+    var inNav = isMobileNav() && navContainer;
 
     ui.toggle.classList.toggle('agents-toggle--in-nav', inNav);
 
     if (inNav) {
-      if (ui.toggle.parentNode !== navGroup) navGroup.appendChild(ui.toggle);
+      if (ui.toggle.parentNode !== navContainer) navContainer.appendChild(ui.toggle);
     } else if (ui.toggle.parentNode !== document.body) {
       document.body.appendChild(ui.toggle);
     }
