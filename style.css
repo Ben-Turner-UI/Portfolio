@@ -130,10 +130,6 @@ body {
   background-color: #fff;
 }
 
-@view-transition {
-  navigation: auto;
-}
-
 html,
 body,
 .agents-view,
