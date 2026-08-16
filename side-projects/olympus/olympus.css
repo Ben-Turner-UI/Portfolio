@@ -1143,7 +1143,7 @@ body.home-page {
 
 .faces_featured_strip {
     display: flex;
-    gap: 10px;
+    gap: 4px;
     margin-top: 24px;
     overflow-x: auto;
     padding-bottom: 4px;
@@ -1161,7 +1161,7 @@ body.home-page {
     align-items: center;
     gap: 12px;
     width: 88px;
-    padding: 4px 8px 8px;
+    padding: 4px 4px 8px;
     border: 1px solid transparent;
     border-radius: 0;
     background: transparent;
@@ -1511,7 +1511,7 @@ body.home-page {
 
     .faces_featured_strip {
         margin-top: 20px;
-        gap: 8px;
+        gap: 2px;
         scroll-snap-type: x mandatory;
         scroll-padding-inline: 4px;
         -webkit-overflow-scrolling: touch;
@@ -1591,7 +1591,7 @@ body.home-page {
         margin-inline: calc(var(--page-gutter) * -1);
         padding-inline: var(--page-gutter);
         scroll-padding-inline: var(--page-gutter);
-        gap: 6px;
+        gap: 2px;
     }
 
     .faces_featured_thumb {
