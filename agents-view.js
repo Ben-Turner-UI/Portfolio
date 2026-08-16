@@ -154,7 +154,7 @@
     fontLoaded = true;
     var link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400&display=swap';
+    link.href = 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap';
     document.head.appendChild(link);
   }
 
@@ -236,6 +236,7 @@
 
   function init() {
     var ui = createUi();
+    loadFont();
     var saved = false;
     try {
       saved = localStorage.getItem(STORAGE_KEY) === '1';

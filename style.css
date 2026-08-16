@@ -3417,10 +3417,16 @@ a.testimonial-avatar:hover {
   font-family: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 14px;
   font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-optical-sizing: auto;
+  font-variation-settings: normal;
+  letter-spacing: 0;
   line-height: 1.65;
   color: #1a1a1a;
   white-space: pre-wrap;
   word-break: break-word;
+  overflow-wrap: anywhere;
   user-select: text;
   background: transparent;
 }
