@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P4 DAM Product Ownership — Ben Turner</title>
+    <title>Owning the product: P4 DAM — Ben Turner</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,10 +39,6 @@
         <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
         <span class="nav-item__label">About</span>
       </a>
-      <a href="personal.html" class="nav-item">
-        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">favorite</span>
-        <span class="nav-item__label">Personal</span>
-      </a>
     </div>
       </nav>
     </div>
@@ -53,7 +49,7 @@
           <div class="project-header-title-block">
           <h1>Owning the product: Redesigning how teams find, navigate, and review assets in P4 DAM</h1>
           <div class="project-summary">
-            <p>As lead product designer for P4 DAM, I owned the direction of core product areas from the ground up. Search history, advanced filtering, navigation, previewing assets, and the dashboard were rebuilt around how creative teams actually work, not how the old UI happened to be structured.</p>
+            <p>As lead product designer for P4 DAM, I owned the direction of core product areas from the ground up. Search history, advanced filtering, navigation, previewing assets, and the dashboard were all rebuilt around one idea: get people to the asset, then let them manage it.</p>
           </div>
 
           <p class="project-meta">
@@ -63,21 +59,6 @@
             <span class="project-meta__sep" aria-hidden="true">·</span>
             <span>Product Ownership &amp; UX</span>
           </p>
-          </div>
-
-          <div class="project-statistics">
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">XX%</h3>
-              <p class="stat-description">Placeholder metric description for this case study</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">X.X</h3>
-              <p class="stat-description">Placeholder metric description for this case study</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">XX</h3>
-              <p class="stat-description">Placeholder metric description for this case study</p>
-            </div>
           </div>
         </div>
       </div>
@@ -95,6 +76,12 @@
               </div>
 
               <div class="project-paragraph">
+                <h2>Why this work existed</h2>
+                <p>Sales, mostly. Our competitors&rsquo; UX was getting more current, and with AI-assisted building that is now the expected bar. At the same time I was watching our users on calls, watching developers and internal staff use the product, reading Slack messages from our own engineers, and using the product myself. The same pattern kept showing up: people used the browser back button, or bookmarked pages, instead of the built-in navigation. When users route around your product to get through your product, that is not a polish problem.</p>
+                <p>The old concept was an all-encompassing DAM that tried to do everything at once. I stripped that back: get people to the asset, and once they are there, let them manage it. Every change below exists to serve that. There is no single conversion number for this work. The evidence was watching people, and it was consistent.</p>
+              </div>
+
+              <div class="project-paragraph">
                 <h2>What I changed, and why</h2>
                 <p>Select a change to see the problem, the decision, and a before-and-after look at the interface.</p>
 
@@ -105,12 +92,12 @@
                         <span class="change-list__title">Search history</span>
                         <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
                       </span>
-                      <span class="change-list__teaser">Added search history so teams could return to recent queries instead of rebuilding the same searches from scratch.</span>
+                      <span class="change-list__teaser">People ran the same searches again and again, and the filters reset every time. History made a repeat search one click.</span>
                     </button>
                     <template id="change-search">
                       <h2 class="change-modal__heading">Search history</h2>
-                      <p>Search history was added so teams could jump back to recent queries by name, tag, or metadata without rebuilding the same search each time. The old patterns made people browse or retype when they should have been able to resume. Clearer recent-search access reduced empty hunting, cut unnecessary browsing load on the backend, and made demos feel faster for sales and onboarding.</p>
-                      <p class="change-modal__outcome"><strong>Result:</strong> Users were able to find their assets quicker and without issue.</p>
+                      <p>Users were searching for the same thing again and again, and every time they searched, the filters reset. That was one of the loudest complaints in our user feedback. Search history means a repeat search is a click, not a rebuild. This feature did not exist before, so there is no before shot, just what shipped.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> Repeat searches went from a rebuild job to one click.</p>
                       <div class="before-after before-after--single">
                         <figure class="before-after__item">
                           <div class="before-after__frame">
@@ -127,12 +114,12 @@
                         <span class="change-list__title">Advanced filtering</span>
                         <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
                       </span>
-                      <span class="change-list__teaser">Made advanced filtering feel native, with active filters kept visible and easy to remove.</span>
+                      <span class="change-list__teaser">The old filters did not show what type of filter you had applied, dates worst of all. Now they stay visible.</span>
                     </button>
                     <template id="change-filters">
                       <h2 class="change-modal__heading">Advanced filtering</h2>
-                      <p>Advanced filtering used to feel bolted on. I redesigned it so users could narrow large libraries by the attributes they actually care about, with active filters kept visible and easy to remove. The goal was fewer dead-end result sets and less time spent reopening the same folders.</p>
-                      <p class="change-modal__outcome"><strong>Result:</strong> Users could narrow large libraries faster and reach the right assets with less trial and error.</p>
+                      <p>The biggest problem with the old filtering was discoverability. When you applied a filter, the UI did not show what type of filter you had applied, and dates were the worst for it. You would change what you were looking at and then have no way to see what you had changed. I redesigned it so active filters stay visible on the results and are easy to remove.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> You can see what you have applied, and clear it, without guessing.</p>
                       <div class="compare-slider" data-compare-slider>
                         <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-product/filters-after.png" alt="After: redesigned P4 DAM advanced filtering experience">
                         <div class="compare-slider__before" style="width: 50%;">
@@ -153,12 +140,12 @@
                         <span class="change-list__title">Breadcrumbs</span>
                         <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
                       </span>
-                      <span class="change-list__teaser">Strengthened path orientation so users could move through deep hierarchies without losing context.</span>
+                      <span class="change-list__teaser">The trail was in the sidebar in some places and the top bar in others, so people used the browser&rsquo;s back button. One pattern now.</span>
                     </button>
                     <template id="change-breadcrumbs">
                       <h2 class="change-modal__heading">Breadcrumbs</h2>
-                      <p>Deep folder trees are normal in enterprise DAM work. Without strong breadcrumbs, users lose their place and jump back to the top too often. I made path orientation a first-class part of the review and browse experience so people could move up and across the hierarchy without resetting their context.</p>
-                      <p class="change-modal__outcome"><strong>Result:</strong> Users stayed oriented in deep hierarchies and moved between folders without losing their place.</p>
+                      <p>We lacked proper breadcrumbs. There was no central home to anchor the trail, and it was not consistent: sometimes it lived in the sidebar, sometimes in the top bar, and going back could land you somewhere different each time. People fell back on the browser&rsquo;s back button, which is a miserable way to move through a deep asset hierarchy. I made one consistent pattern for the whole product.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> One breadcrumb pattern everywhere, instead of the back button.</p>
                       <div class="compare-slider" data-compare-slider>
                         <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-product/breadcrumbs-after.png" alt="After: redesigned P4 DAM breadcrumb navigation">
                         <div class="compare-slider__before" style="width: 50%;">
@@ -179,12 +166,12 @@
                         <span class="change-list__title">Previewing assets</span>
                         <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
                       </span>
-                      <span class="change-list__teaser">Added in-place asset previewing so people could inspect candidates without opening a full review every time.</span>
+                      <span class="change-list__teaser">An asset can live in several projects. The preview lets you choose which project to open it in, so you know where you are going.</span>
                     </button>
                     <template id="change-preview">
                       <h2 class="change-modal__heading">Previewing assets</h2>
-                      <p>Opening a full asset view for every quick check was too heavy. A dedicated preview experience let users inspect candidates in place, compare options faster, and only commit to a deeper review when the file warranted it. That reduced friction between find and decide.</p>
-                      <p class="change-modal__outcome"><strong>Result:</strong> Users could preview assets quickly in place and decide with less friction.</p>
+                      <p>An asset can exist in multiple projects, and users were struggling to open the right one. The preview lets you pick the project you want to open the asset in, so you can see where you are going before you commit, and see where you are once you land. It is an information architecture fix as much as a UI one: show people where they are going, then show them where they are.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> Opening an asset in the right project stopped being a guess.</p>
                       <div class="before-after before-after--single">
                         <figure class="before-after__item">
                           <div class="before-after__frame">
@@ -201,12 +188,12 @@
                         <span class="change-list__title">Dashboard</span>
                         <span class="material-symbols-outlined change-list__arrow" aria-hidden="true">arrow_forward</span>
                       </span>
-                      <span class="change-list__teaser">Redesigned the landing experience around recent work and clearer entry points for first-time users.</span>
+                      <span class="change-list__teaser">Redesigned the landing screen so people get to the assets they came for faster.</span>
                     </button>
                     <template id="change-dashboard">
                       <h2 class="change-modal__heading">Dashboard</h2>
-                      <p>The previous landing experience did not help first-time or returning users understand what mattered next. The new dashboard focused on recent work, useful entry points, and a clearer sense of place. First-time clarity improved, which mattered both for adoption and for sales conversations that depend on a confident first impression.</p>
-                      <p class="change-modal__outcome"><strong>Result:</strong> New users understood the product faster, and returning users got back into work sooner.</p>
+                      <p>The old landing screen did not help anyone get to work. The redesign follows the same philosophy as everything else on this page: get people to the assets they want, faster. Recent work and clear entry points up front, less noise on the way in.</p>
+                      <p class="change-modal__outcome"><strong>Result:</strong> Fewer steps between opening the product and the asset you came for.</p>
                       <div class="compare-slider" data-compare-slider>
                         <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-product/homepage-after.png" alt="After: redesigned P4 DAM dashboard">
                         <div class="compare-slider__before" style="width: 50%;">
@@ -224,6 +211,22 @@
               </div>
 
               <div class="project-paragraph">
+                <h2>One example without the click: filtering</h2>
+                <p>The rest sit behind the list above. This one is worth showing on the page. The old model hid what you had applied; the redesign keeps it visible. Drag to compare.</p>
+                <div class="compare-slider" data-compare-slider>
+                  <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-product/filters-after.png" alt="After: redesigned P4 DAM advanced filtering with active filters kept visible">
+                  <div class="compare-slider__before" style="width: 50%;">
+                    <img class="compare-slider__img compare-slider__img--before" src="img/project-image/p4-product/filters-before.png" alt="Before: previous P4 DAM filtering with applied filters hidden">
+                  </div>
+                  <div class="compare-slider__handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                    <span class="compare-slider__knob" aria-hidden="true"><span class="material-symbols-outlined">chevron_left</span><span class="material-symbols-outlined">chevron_right</span></span>
+                  </div>
+                  <span class="compare-slider__label compare-slider__label--before">Before</span>
+                  <span class="compare-slider__label compare-slider__label--after">After</span>
+                </div>
+              </div>
+
+              <div class="project-paragraph">
                 <h2>Conclusion</h2>
                 <p>Owning the product as lead designer meant deciding which frictions were structural, not cosmetic, and shipping changes that compounded: find faster, stay oriented, preview earlier, and move through libraries with more confidence. The result was a DAM experience that better matched how game, film, and VFX teams actually work.</p>
               </div>
@@ -233,7 +236,7 @@
                   <div class="next-project-card">
                     <img class="next-project-card__thumb" src="img/thumbnail/bb-automations-thumbnail.jpg" alt="">
                     <div class="next-project-card__content">
-                      <p class="next-project-card__title">Paving the way for AI: Overhauling Budibase Automations</p>
+                      <p class="next-project-card__title">Overhauling Budibase Automations, later the foundation for its AI platform</p>
                     </div>
                   </div>
                 </a>
@@ -260,7 +263,7 @@
     <footer>
       <div class="width-container">
         <div class="footer-text-content">
-          <h3>Ben Turner, Designer and Creator</h3>
+          <h3>Ben Turner, Product Designer</h3>
           <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
         </div>
         <div class="contact-links">

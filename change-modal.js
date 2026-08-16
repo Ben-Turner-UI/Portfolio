@@ -211,6 +211,9 @@
     }
   }
 
+  // Init any sliders that live directly on the page (outside the modal).
+  initCompareSliders(document);
+
   document.addEventListener('click', function (event) {
     var openBtn = event.target.closest('[data-change-open]');
     if (openBtn) {

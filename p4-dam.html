@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Native DesignOps — Ben Turner</title>
+    <title>Shipping 25% more with AI — Ben Turner</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,10 +39,6 @@
         <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
         <span class="nav-item__label">About</span>
       </a>
-      <a href="personal.html" class="nav-item">
-        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">favorite</span>
-        <span class="nav-item__label">Personal</span>
-      </a>
     </div>
       </nav>
     </div>
@@ -51,7 +47,7 @@
       <div class="width-container">
         <div class="header-content">
           <div class="project-header-title-block">
-          <h1>When front-end capacity dropped from six to two, I leaned into AI and we shipped 25% more features.</h1>
+          <h1>When front-end capacity dropped from six to two, I leaned into AI. We shipped 25% more features than the year before.</h1>
           <div class="project-summary">
             <p>What would normally be the death of a product&rsquo;s velocity, or at least a serious slowdown, became something else. With a generous Claude Code allowance, I rebuilt how we handed work to developers on P4 DAM. What started as a way to protect delivery ended up becoming DesignOps infrastructure.</p>
           </div>
@@ -61,7 +57,7 @@
             <span class="project-meta__sep" aria-hidden="true">·</span>
             <span>P4 DAM</span>
             <span class="project-meta__sep" aria-hidden="true">·</span>
-            <span>AI-Native DesignOps &amp; Leadership</span>
+            <span>AI-Native DesignOps</span>
           </p>
           </div>
 
@@ -72,11 +68,11 @@
             </div>
             <div class="project-statistics-group">
               <h3 class="project-statistics-stat">25%</h3>
-              <p class="stat-description">More features delivered per quarter, at the same quality as before</p>
+              <p class="stat-description">More features per quarter than the same quarter a year earlier, at the same quality. My PM&rsquo;s numbers, not mine</p>
             </div>
             <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">50<span class="project-statistics-accent">–</span>60%</h3>
-              <p class="stat-description">Fewer developer clarification questions per feature through higher-quality handovers</p>
+              <h3 class="project-statistics-stat">50%</h3>
+              <p class="stat-description">Fewer clarification questions per feature: refinements went from about an hour to about 30 minutes</p>
             </div>
             <div class="project-statistics-group">
               <h3 class="project-statistics-stat project-statistics-stat--inline"><span class="material-symbols-outlined project-statistics-arrow project-statistics-award-icon" aria-hidden="true">emoji_events</span>1st</h3>
@@ -95,21 +91,22 @@
                 <h2>Context</h2>
                 <p>At Perforce, I am the product design lead for two products in the ecosystem: P4 DAM, an asset management platform, and P4 Plan, which is a bit like Jira but built for Perforce products.</p>
                 <p>P4 itself is a version control system, much like GitHub. Game studios typically use Perforce because it handles huge, enterprise-scale projects, then layer on tools like DAM and Plan. That is the world this work sits in.</p>
-                <p>Like a lot of companies in this new AI world, we had internal redundancies. Front-end capacity on my product dropped from six developers to two. That is a 66.67% cut. You would expect product delivery to fall by about the same. Instead, we ended up releasing 25% more features per quarter, at the same quality as before.</p>
+                <p>Like a lot of companies in this new AI world, we had internal redundancies. Front-end capacity on my product dropped from six developers to two. That is a 66.67% cut. You would expect product delivery to fall by about the same. Instead, we released 25% more features per quarter than the same quarter the year before, before I had joined the team and before any of this workflow existed. That number comes from my PM, and he says the quality held.</p>
                 <p>Figma handoffs were simply taking too long to implement with the team we had left. I knew we needed to change how we worked. At the time we had been granted a generous Claude Code allowance, and I decided we really needed to lean into it.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>The strategy</h2>
+                <p>Every feature still starts the same way, with a discovery pass I run with my PM: what problem we are solving, why now, how success will be measured, who the users are, the constraints, the timeline, and the risks. None of that changed. What changed was everything after it.</p>
                 <p>I installed P4 DAM locally and worked like a real developer on real product code. Pushing code to branches, getting code reviewed and working in the same ways and standards as our senior developers.</p>
-                <p>We still needed the same quality of handover we used to get from Figma. So I generated spec files, handover documents, and other outputs through skills and agents I built. Developers reviewed code that worked in some areas and did not work fully in others. I do not think anyone has fully cracked designing working code yet. Even so, clarification questions dropped by an estimated 50% to 60% per feature.</p>
+                <p>We still needed the same quality of handover we used to get from Figma. So I generated spec files, handover documents, and other outputs through skills and agents I built. Developers reviewed code that worked in some areas and did not work fully in others. I do not think anyone has fully cracked designing working code yet. Even so, clarification questions dropped by about 50% per feature. I measured that through our refinement sessions: they went from about an hour to about 30 minutes, so we could cover roughly twice the features in the same time.</p>
                 <p>Despite working in code, I took full responsibility for the front-end features I owned. Developers reviewed the final output rather than reconstructing it from Figma. The process was faster, produced more features, and needed less rework than the workflow we had six months earlier.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>Proof point 1: Product execution</h2>
                 <p>One of the features we released was realistic lighting in P4 DAM. We replaced the flat grey background in the asset viewer, the one that made 3D models look dull, with switchable image-based environments, so users and reviewers could judge shape, materials, and quality in realistic lighting.</p>
-                <p>This was not a basic coding task. I prototyped it in the live product, handed it over as working code rather than static screens, and shipped it with minimal developer feedback. It was a concrete example of code-level handoff protecting delivery when front-end capacity was thin.</p>
+                <p>It was not a hands-off job either. Claude generated lighting controls that compiled, but it ignored our existing Force UI tokens: the toggles looked right and were the wrong components. I rewrote that part by hand with the correct CSS so the developers got a clean handover, and I pushed the controls into the sidebar so the feature was actually visible rather than buried. That is the honest shape of this workflow. The AI covers the bulk, and I catch what it gets wrong.</p>
               </div>
 
               <div class="content-image">
@@ -127,13 +124,12 @@
 
               <div class="project-paragraph">
                 <h2>Proof point 2: Process innovation</h2>
-                <p>Shipping features myself was only half the job. If the workflow stayed with me, the wider design organisation would not benefit. I did not want to gatekeep it. I wanted to share it across the company so others could move faster too.</p>
-                <p>So I turned the approach into reusable Claude skills. One of them, built to help me ship features quickly and efficiently, won Best Designed at the company&rsquo;s annual AI hackathon in 2026. Other teams across the business now use it.</p>
+                <p>Shipping features myself was only half the job, so I turned the approach into reusable Claude skills and agents that generate the specs and handover notes. One of them won Best Designed at the company&rsquo;s annual AI hackathon in 2026, and other teams across the business now use it.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>The outcome</h2>
-                <p>In the end, access to Claude Code became a functional delivery system. When the team shrank, output stayed high and went beyond what seemed possible: more features with less capacity, without compromising quality.</p>
+                <p>In the end, access to Claude Code became a functional delivery system. When the team shrank, output stayed high and went beyond what seemed possible: more features with less capacity, at a quality my PM stands behind.</p>
               </div>
 
               <div class="button-group">
@@ -156,7 +152,7 @@
     <footer>
       <div class="width-container">
         <div class="footer-text-content">
-          <h3>Ben Turner, Designer and Creator</h3>
+          <h3>Ben Turner, Product Designer</h3>
           <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
         </div>
         <div class="contact-links">

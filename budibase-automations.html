@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budibase Automations — Ben Turner</title>
+    <title>Overhauling Budibase Automations — Ben Turner</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,10 +39,6 @@
         <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
         <span class="nav-item__label">About</span>
       </a>
-      <a href="personal.html" class="nav-item">
-        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">favorite</span>
-        <span class="nav-item__label">Personal</span>
-      </a>
     </div>
       </nav>
     </div>
@@ -51,9 +47,9 @@
       <div class="width-container">
         <div class="header-content">
           <div class="project-header-title-block">
-          <h1>Paving the way for AI: Overhauling Budibase Automations</h1>
+          <h1>Overhauling Budibase Automations, later the foundation for its AI platform</h1>
           <div class="project-summary">
-            <p>25 users told us the automation builder was confusing. I redesigned it end-to-end, and the result became the foundation for Budibase&rsquo;s pivot to an AI-first platform.</p>
+            <p>Before the redesign, the Budibase Discord saw maybe eight to ten complaints about automations at a time. After launch it was one, or none. The structure I built here is also what the agents feature later sat on.</p>
           </div>
 
           <p class="project-meta">
@@ -72,8 +68,8 @@
               <p class="stat-description">Workflow builder features shipped or updated</p>
             </div>
             <div class="project-statistics-group">
-              <h3 class="project-statistics-stat"><span class="sr-only">Decrease</span><span class="material-symbols-outlined project-statistics-icon" aria-hidden="true">arrow_downward</span></h3>
-              <p class="stat-description">Drop in automation-related support queries</p>
+              <h3 class="project-statistics-stat">~0</h3>
+              <p class="stat-description">Automation complaints on the community Discord after launch, down from about eight to ten</p>
             </div>
           </div>
         </div>
@@ -91,8 +87,8 @@
 
 
 <div class="project-paragraph">
-                <h2>Problem Statement</h2>
-                <p>The existing workflow builder was functional, but poor data visibility made it difficult for users to debug and test their automations. That friction was a barrier to adoption, increased support volume, and left the product unprepared for Budibase&rsquo;s planned shift to AI-first automations, which would depend on users clearly seeing data flowing through each step.</p>
+                <h2>The problem</h2>
+                <p>The builder worked, but you could not see your data. People could not tell what data was flowing into or out of a step, or even what they had selected in the tab they were in. Debugging was guesswork, errors did not explain themselves, and the complaints kept landing in the community Discord: about eight to ten at a time on automations alone. It also left the product unprepared for the planned shift to AI-first automations, which would depend on every step showing its data clearly.</p>
               </div>
 
               <div class="content-image">
@@ -101,21 +97,13 @@
               </div>
 
               <div class="project-paragraph">
-                <h2>Design Process</h2>
-                <div class="project-paragraph-list">
-                  <div class="project-paragraph-list-item">
-                    <h3>User-Centric Research</h3>
-                    <p>I used Maze to design and run a paid research study with 25 active users. By analysing their feedback and quantitative data, a clear pattern emerged: the main problems were poor data visibility and unclear error messages. Users consistently highlighted a need for a better debugging experience, more intuitive testing, and a cleaner overall interface. Those requirements shaped a scalable, highly visible data framework rather than one-off UI fixes.</p>
-                  </div>
-                  <div class="project-paragraph-list-item">
-                    <h3>Driving Executive Alignment</h3>
-                    <p>Armed with compelling data from the study, I presented my findings and a clear design vision to the company&rsquo;s leadership team. My proposed data framework and user-backed evidence secured their buy-in and helped shape the roadmap for both the immediate redesign and Budibase&rsquo;s longer-term pivot toward AI-first automations.</p>
-                  </div>
-                </div>
+                <h2>What the research said</h2>
+                <p>I designed and ran a paid Maze study with 25 active users. The task was blunt: go through the product and name the most frustrating part. The pattern was clear. Data visibility and unclear errors came up again and again, along with a need for better debugging and testing.</p>
+                <p>I put the findings into a PDF and presented it to the CEO, the CMO, and the CDO. That evidence set the roadmap for the redesign, and for the longer-term shift toward AI-first automations. The answer was not one-off UI fixes. It was a data framework: every step shows what goes in and what comes out.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>Solution</h2>
+                <h2>What shipped</h2>
                 <div class="table-container">
                   <table class="improvements-table">
                     <thead>
@@ -139,33 +127,27 @@
               </div>
 
               <div class="project-paragraph">
-                <h2>Impact & Results</h2>
-                 <div class="table-container">
-                  <table class="improvements-table">
-                    <thead>
-                      <tr><th>Area</th><th>Outcome</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>User Adoption</td><td>The redesign led to a significant drop in user complaints, indicating a sharp rise in satisfaction and adoption of the feature.</td></tr>
-                      <tr><td>Strategic Alignment</td><td>The data-driven roadmap secured executive buy-in and aligned the product with Budibase&rsquo;s pivot toward an AI-first automations platform.</td></tr>
-                      <tr><td>Support Overhead</td><td>Clearer error logging and an intuitive UI led to a marked decrease in related support queries from our user base.</td></tr>
-                      <tr><td>AI-first groundwork</td><td>The scalable, highly visible data framework laid the structural foundation needed for AI-powered automations to sit on top of workflows users could already understand and trust.</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                <h2>What happened</h2>
+                <p>The complaints stopped. Before launch, automations drew maybe eight to ten complaints and feedback requests on the Budibase Discord. After launch we had one, I believe, or none. Clearer errors meant fewer people needed help in the first place.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>What it led to</h2>
+                <p>Budibase later added an agents section, and it was built on top of automations. Agents work because every step now shows and confirms the data coming in and out, so an agent can read that data and understand the context of what is happening. A new email arrives, an agent classifies it, creates a Jira ticket, and assigns it to the right team. The data in and data out framework is what made that possible, and it is part of how Budibase now competes with AI workflow tools like n8n.</p>
+                <p>For clarity: this is not my AI tooling case, that is P4 DAM. At Budibase we worked with ChatGPT and whatever tools existed at the time.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>Conclusion</h2>
-                <p>By translating insights from 25 users into an end-to-end UX redesign, I established a scalable, highly visible data framework that solved immediate debugging and adoption problems while laying essential structural groundwork. That foundation positioned Budibase for its strategic pivot into an AI-first automations platform, so the next phase of growth could build on workflows users already understood, not start from scratch.</p>
+                <p>Twenty-five users told us where it hurt, the executive team backed the plan, and the redesign fixed the day-to-day problem: people could finally see their data. The same structure went on to carry the agents feature, so the AI platform Budibase became was built on workflows users already understood, not started from scratch.</p>
               </div>
 
               <div class="button-group">
-                <a class="next-project-link" href="budibase-ui.html">
+                <a class="next-project-link" href="cityfibre-rebrand.html">
                   <div class="next-project-card">
-                    <img class="next-project-card__thumb" src="img/thumbnail/bb-ui-showcase.jpg" alt="">
+                    <img class="next-project-card__thumb" src="img/thumbnail/rebrand-thumbnail.jpg" alt="">
                     <div class="next-project-card__content">
-                      <p class="next-project-card__title">Budibase UI showcase: A collection of interface designs</p>
+                      <p class="next-project-card__title">CityFibre rebrand: 90% more people clicking Check availability</p>
                     </div>
                   </div>
                 </a>
@@ -180,7 +162,7 @@
     <footer>
       <div class="width-container">
         <div class="footer-text-content">
-          <h3>Ben Turner, Designer and Creator</h3>
+          <h3>Ben Turner, Product Designer</h3>
           <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
         </div>
         <div class="contact-links">
