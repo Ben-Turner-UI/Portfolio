@@ -155,7 +155,10 @@
     toggle.className = 'agents-toggle';
     toggle.innerHTML =
       '<div class="agents-toggle__chip">' +
-        '<span class="agents-toggle__label" id="agents-toggle-label">For agents</span>' +
+        '<span class="agents-toggle__label" id="agents-toggle-label">' +
+          '<span class="agents-toggle__label-full">Agent view</span>' +
+          '<span class="agents-toggle__label-short">Agent view</span>' +
+        '</span>' +
         '<button type="button" class="agents-toggle__switch" role="switch" aria-checked="false" aria-labelledby="agents-toggle-label">' +
           '<span class="agents-toggle__knob" aria-hidden="true"></span>' +
         '</button>' +
@@ -173,7 +176,6 @@
       '</div>';
 
     document.body.appendChild(view);
-    document.body.appendChild(toggle);
 
     return {
       toggle: toggle,
@@ -182,6 +184,23 @@
       view: view,
       pre: view.querySelector('.agents-view__pre')
     };
+  }
+
+  function isMobileNav() {
+    return window.matchMedia('(max-width: 768px)').matches;
+  }
+
+  function mountToggle(ui) {
+    var navGroup = document.querySelector('.nav-group');
+    var inNav = isMobileNav() && navGroup;
+
+    ui.toggle.classList.toggle('agents-toggle--in-nav', inNav);
+
+    if (inNav) {
+      if (ui.toggle.parentNode !== navGroup) navGroup.appendChild(ui.toggle);
+    } else if (ui.toggle.parentNode !== document.body) {
+      document.body.appendChild(ui.toggle);
+    }
   }
 
   function setEnabled(ui, enabled, persist) {
@@ -196,6 +215,8 @@
     } else {
       ui.view.setAttribute('hidden', '');
     }
+
+    mountToggle(ui);
 
     if (persist) {
       try {
@@ -221,6 +242,17 @@
     ui.chip.addEventListener('click', function (event) {
       if (event.target.closest('.agents-toggle__switch')) return;
       ui.switchBtn.click();
+    });
+
+    document.querySelectorAll('.nav-group .nav-item').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (!document.body.classList.contains('is-agents-view')) return;
+        setEnabled(ui, false, true);
+      });
+    });
+
+    window.addEventListener('resize', function () {
+      mountToggle(ui);
     });
   }
 
