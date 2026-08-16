@@ -366,7 +366,7 @@ button {
   color: #000;
 }
 
-button:hover {
+button:hover:not(.agents-toggle__switch) {
   background: var(--industrial-orange, #474747);
 }
 
@@ -472,7 +472,7 @@ header.project-header.about-header {
   margin: 0;
   font-size: var(--case-study-body-size);
   line-height: var(--case-study-body-line);
-  font-weight: 500;
+  font-weight: 400;
   color: #000;
 }
 

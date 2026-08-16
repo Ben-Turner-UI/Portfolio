@@ -15,12 +15,12 @@ body {
     --olympus-button-bg-hover: rgba(255, 255, 255, 0.1);
     --olympus-button-border: rgba(0, 255, 176, 0.38);
     --olympus-button-border-hover: rgba(0, 255, 176, 0.5);
-    --olympus-button-font-size: 16px;
+    --olympus-button-font-size: 14px;
     --olympus-button-line-height: 1;
-    --olympus-button-padding-y: 12px;
-    --olympus-button-padding-x: 20px;
-    --olympus-button-gap: 8px;
-    --olympus-button-icon-size: 16px;
+    --olympus-button-padding-y: 8px;
+    --olympus-button-padding-x: 14px;
+    --olympus-button-gap: 6px;
+    --olympus-button-icon-size: 14px;
     --olympus-button-secondary-bg: rgba(255, 255, 255, 0.04);
     --olympus-button-secondary-bg-hover: rgba(255, 255, 255, 0.08);
     --olympus-button-secondary-border: var(--olympus-button-border);
