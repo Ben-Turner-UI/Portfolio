@@ -124,10 +124,15 @@ html {
   scrollbar-gutter: stable;
   overflow-y: scroll;
   background-color: #fff;
+  color-scheme: only light;
 }
 
 body {
   background-color: #fff;
+}
+
+@view-transition {
+  navigation: none;
 }
 
 html,
@@ -972,6 +977,7 @@ header h1 {
     align-self: stretch;
     justify-content: center;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .nav-item__label {
