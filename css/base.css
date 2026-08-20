@@ -1,0 +1,216 @@
+/* Base element styles, typography scale, links, scrollbars */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h1,
+.project-grid .grid-item h2,
+.side-project-content h4,
+.footer-text-content h3,
+.testimonial-name,
+.testimonial-quote-mark {
+  font-family: 'Big Shoulders', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+button {
+  font-family: 'Big Shoulders', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+h2,
+h3,
+h4 {
+  font-family: 'Source Sans 3', sans-serif;
+  letter-spacing: normal;
+}
+
+.project-paragraph h3,
+.project-paragraph-list-item h3 {
+  font-family: 'Source Sans 3', sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+main {
+  background-color: white;
+  margin-bottom: 48px;
+}
+
+.main-content,
+.project-details_text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--case-study-content-section-gap);
+}
+
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+  background-color: #fff;
+  color-scheme: only light;
+}
+
+body {
+  background-color: #fff;
+}
+
+html,
+body,
+.agents-view,
+.change-modal__content {
+  scrollbar-width: auto;
+  scrollbar-color: #d6d6d6 #ffffff;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.agents-view::-webkit-scrollbar,
+.change-modal__content::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+.agents-view::-webkit-scrollbar-track,
+.change-modal__content::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+.agents-view::-webkit-scrollbar-thumb,
+.change-modal__content::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border: 4px solid #ffffff;
+  border-radius: 8px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+.agents-view::-webkit-scrollbar-thumb:hover,
+.change-modal__content::-webkit-scrollbar-thumb:hover {
+  background: #c4c4c4;
+}
+
+html::-webkit-scrollbar-button,
+body::-webkit-scrollbar-button,
+.agents-view::-webkit-scrollbar-button,
+.change-modal__content::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #D6D6D6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-header-content-text a,
+.project-meta a,
+.personal-entry a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.home-header-content-text a:hover,
+.project-meta a:hover,
+.personal-entry a:hover {
+  color: #000;
+  text-decoration-thickness: 2px;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY STYLES
+   ========================================================================== */
+
+/* Unified reading text line-height */
+body,
+p,
+ul li,
+figcaption,
+.testimonial-text,
+.testimonial-role,
+.partner-more {
+  line-height: var(--type-body-lg-lh);
+}
+
+.stat-description {
+  line-height: var(--type-body-md-lh);
+}
+
+h1 {
+  font-size: var(--type-headline-lg);
+  line-height: var(--type-big-shoulders-lh);
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--type-heading-2);
+  line-height: var(--type-heading-2-lh);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--type-heading-3);
+  line-height: var(--type-heading-3-lh);
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--type-heading-4);
+  line-height: var(--type-heading-4-lh);
+  margin: 0;
+}
+
+p,
+ul li {
+  font-size: var(--type-body-lg);
+}
+
+button {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.grid-item p,
+.grid-item-content-text .project-description {
+  font-size: var(--type-body-lg);
+  line-height: var(--type-component-body-lh);
+}
+
+figcaption {
+  font-size: var(--type-body-lg);
+  line-height: 1.3;
+}
+
+.improvements-table thead th,
+.improvements-table tbody td {
+  font-size: var(--type-body-lg);
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+

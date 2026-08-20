@@ -1,0 +1,247 @@
+/* Case study content: banner, prose, images */
+/* ==========================================================================
+   PROJECT CLAUDE CODE BANNER
+   ========================================================================== */
+.project-claude-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 14px;
+  border: 1px solid #e8e8e8;
+  border-left: 3px solid #d97757;
+  border-radius: 8px;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.project-claude-banner--header {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: calc(var(--case-study-header-divider-gap) - var(--case-study-header-block-gap));
+  padding: 12px 20px;
+  border: 1px solid var(--ui-1000, #D6D6D6);
+  border-radius: 8px;
+  background: var(--ui-0, #FFF);
+  overflow: hidden;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+.grid-item-content-text .project-claude-banner {
+  margin-top: 12px;
+}
+
+.project-claude-banner__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.project-claude-banner--header .project-claude-banner__icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  align-self: flex-start;
+}
+
+.project-claude-banner__text {
+  margin: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #444;
+}
+
+.project-claude-banner--header .project-claude-banner__text {
+  font-size: var(--type-body-lg);
+  line-height: var(--type-component-body-lh);
+  color: #000;
+}
+
+.project-claude-banner__text strong {
+  color: #000;
+  font-weight: 600;
+}
+
+.project-claude-banner--header .project-claude-banner__text strong {
+  font-weight: 600;
+  color: #000;
+}
+
+/* ==========================================================================
+   CONTENT CONTAINER STYLES
+   ========================================================================== */
+.project-paragraph,
+.button-group,
+.project-header .header-content {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content figcaption,
+.main-content .content-image figcaption {
+  width: min(100%, var(--content-max-width));
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.project-item-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--case-study-body-gap);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.project-paragraph-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--prose-subsection-gap);
+}
+
+.project-paragraph > ul li,
+.project-paragraph > ol li,
+.project-paragraph-list ul li,
+.project-paragraph-list ol li {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.project-paragraph > ul li + li,
+.project-paragraph > ol li + li,
+.project-paragraph-list ul li + li,
+.project-paragraph-list ol li + li {
+  margin-top: var(--prose-list-item-gap);
+}
+
+.project-paragraph-list ul,
+.project-paragraph-list ol,
+.project-paragraph > ul,
+.project-paragraph > ol {
+  margin: 0 0 var(--case-study-block-margin);
+  padding-left: 24px;
+}
+
+.project-paragraph p + ul,
+.project-paragraph p + ol,
+.project-paragraph-list-item p + ul,
+.project-paragraph-list-item p + ol {
+  margin-top: -12px;
+}
+
+.project-paragraph > .project-paragraph-list,
+.project-paragraph > .table-container,
+.project-paragraph-list-item > .table-container {
+  margin: 0 0 var(--case-study-block-margin);
+}
+
+.project-paragraph > h2 + .project-paragraph-list {
+  margin-top: 4px;
+}
+
+.project-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-self: center;
+}
+
+.project-paragraph p {
+  margin: 0 0 var(--case-study-block-margin);
+}
+
+.project-paragraph-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+}
+
+.project-paragraph-list-item p {
+  margin: 0 0 var(--case-study-block-margin);
+  font-size: var(--case-study-body-size);
+  line-height: var(--case-study-body-line);
+}
+
+.project-paragraph > :first-child,
+.project-paragraph-list > :first-child,
+.project-paragraph-list-item > :first-child {
+  margin-top: 0;
+}
+
+.project-paragraph > :last-child,
+.project-paragraph-list > :last-child,
+.project-paragraph-list-item > :last-child {
+  margin-bottom: 0;
+}
+
+.image-with-caption {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  border: 1px solid #b3b3b3;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.image-with-caption--contain,
+.content-image--contain .image-with-caption {
+  object-fit: contain;
+  max-height: none;
+}
+
+.content-image--crop-top .content-image-media {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #b3b3b3;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+  isolation: isolate;
+}
+
+.content-image--crop-top .content-image-media .image-with-caption {
+  transform: translateY(-2px);
+  margin-bottom: -2px;
+  border: none;
+  border-radius: 0;
+}
+
+figcaption {
+  margin-top: 12px;
+  color: #595959;
+}
+
+/* Project gallery media — capped width on desktop, aligned with text on mobile */
+.main-content .content-image {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+

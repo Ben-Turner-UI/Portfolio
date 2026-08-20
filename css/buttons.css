@@ -1,0 +1,103 @@
+/* Buttons and next-project cards */
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+button {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  text-align: center;
+  font-weight: 700;
+  color: var(--ui-0, #FFF);
+  border-radius: 8px;
+  background: var(--ui-1000, #000);
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.next-project-link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.next-project-link:hover {
+  opacity: 1;
+}
+
+.next-project-card {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  min-height: 80px;
+  padding: 0;
+  border: 1px solid var(--ui-1000, #D6D6D6);
+  border-radius: 8px;
+  background: var(--ui-0, #FFF);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.next-project-link:focus-visible .next-project-card {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.next-project-card__thumb {
+  display: block;
+  flex: 0 0 148px;
+  width: 148px;
+  min-width: 148px;
+  max-width: 148px;
+  align-self: stretch;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  background-color: #f0f0f0;
+}
+
+.next-project-card__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  padding: 10px 20px;
+}
+
+.next-project-card__title {
+  margin: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #000;
+}
+
+button:hover:not(.agents-toggle__switch) {
+  background: var(--industrial-orange, #474747);
+}
+
+button a {
+  color: white;
+}
+
+button img {
+  width: 16px;
+  height: 16px;
+  top: 0;
+  position: relative;
+}
+
+/* Button icon sizing is defined after .material-symbols-outlined */
+

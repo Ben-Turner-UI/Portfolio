@@ -1,0 +1,74 @@
+/* Footer and contact links */
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: black;
+  color: white;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  box-sizing: border-box;
+}
+
+footer .width-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+footer .contact-links {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-links p {
+  margin: 0;
+}
+
+.contact-links p a {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.contact-links p img {
+  margin-right: 0;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.footer-text-content p {
+  margin: 0;
+}
+
+.footer-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-text-content h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: var(--type-big-shoulders-lh);
+}
+
+.copyright {
+  margin: 0;
+  color: #949494;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: 100px;
+  }
+}
+

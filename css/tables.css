@@ -1,0 +1,36 @@
+/* Improvements table and scrollable table container */
+.improvements-table thead th,
+.improvements-table tbody td {
+  vertical-align: top;
+}
+
+.improvements-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.improvements-table thead th {
+  text-align: left;
+  padding: 12px 12px;
+  border-bottom: 1px solid #000;
+  font-weight: 600;
+}
+
+.improvements-table tbody td {
+  padding: 12px 12px;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.improvements-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   TABLE CONTAINER STYLES
+   ========================================================================== */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+

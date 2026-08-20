@@ -1,0 +1,179 @@
+/* Site-wide responsive overrides. Kept as one file in original cascade position: these rules override many components and must load after all of them. */
+/* ==========================================================================
+   MEDIA QUERY STYLES
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--project-card-grid-gap);
+  }
+
+  .side-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    overflow-x: hidden;
+  }
+
+  .side-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-group {
+    gap: 8px;
+  }
+
+  .button-group .next-project-link .next-project-card__title {
+    font-size: 16px;
+  }
+
+  .grid-item-content {
+    padding: 24px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-statistics {
+    gap: 0;
+  }
+
+  .project-header .project-statistics {
+    padding: 0;
+  }
+
+  .project-header .project-statistics-group {
+    padding: 0;
+  }
+
+  .project-header .project-statistics-group:not(:last-child) {
+    padding-bottom: var(--space-2);
+    border-bottom: var(--case-study-heading-divider);
+    margin-bottom: 0;
+  }
+
+  .project-header .project-statistics-group:not(:first-child) {
+    padding-top: var(--space-2);
+  }
+
+  .home .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  header.home {
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+
+  .about-partners {
+    margin-bottom: 0;
+  }
+
+  .about-partners .improvements-table thead th:first-child,
+  .about-partners .about-partners__logo-cell {
+    width: 80px;
+  }
+
+  .about-partners__logo {
+    min-height: 20px;
+  }
+
+  .about-partners__logo img {
+    height: 18px;
+    max-width: 72px;
+  }
+
+  .partner-more {
+    padding: 0;
+  }
+
+  .main-content .content-image {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .main-content .content-image > .image-with-caption,
+  .main-content .content-image > video.image-with-caption,
+  .main-content .content-image-media,
+  .main-content .content-image-media > .image-with-caption,
+  .main-content .content-image-media > video.image-with-caption {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .main-content .content-image--crop-top .content-image-media {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .main-content .content-image figcaption {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  .button-group .next-project-link .next-project-card {
+    align-items: stretch;
+    gap: 0;
+    min-height: 72px;
+    padding: 0;
+  }
+
+  .button-group .next-project-link .next-project-card > .next-project-card__thumb {
+    flex: 0 0 120px;
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    align-self: stretch;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0;
+  }
+
+  .button-group .next-project-link .next-project-card__content {
+    padding: 12px 14px;
+    flex: 1;
+    min-width: 0;
+    align-self: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .improvements-table {
+    table-layout: fixed;
+  }
+
+  .improvements-table thead th,
+  .improvements-table tbody td {
+    font-size: var(--type-body-lg);
+    padding: 8px 4px;
+    word-break: break-word;
+    vertical-align: top;
+  }
+}

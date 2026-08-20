@@ -1,0 +1,11 @@
+/* Shared width container */
+/* ==========================================================================
+   WIDTH CONTAINER STYLES
+   ========================================================================== */
+.width-container {
+  width: 88%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
