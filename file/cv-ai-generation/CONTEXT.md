@@ -11,7 +11,7 @@ The A4 CV is `index.html` in this folder. Edit that file. Preview it locally; th
 | `index.html` | The designed A4 CV. Source of truth for layout and copy. |
 | `img/perforce.jpg`, `img/budibase.jpg`, `img/dawson-andrews.jpg` | Company logos. |
 | `img/cv-wash.jpg` | Peach wash + grain as **one image**. Used as the sheet background on screen and in print. |
-| `fonts/` | Local Source Sans 3 (TTF 400/600/700) and Big Shoulders 600 (woff2). Do not switch back to variable Google fonts for the CV. |
+| `fonts/` | Local Source Sans 3 (TTF 400/600/700), Big Shoulders 600, and Material Symbols Outlined (woff2). Do not switch body type back to variable Google fonts. |
 | `../Ben-Turner-CV.pdf` | Site download. Homepage button: `file/Ben-Turner-CV.pdf`. |
 | `original.pdf` | Reference only. Never overwrite. |
 
@@ -20,10 +20,13 @@ Site live URL for case studies: `https://benturner.work/`. Local preview is usua
 ## Design rules
 
 - One A4 page: `.cv` is `210mm × 297mm` with `overflow: hidden`. After layout or type changes, measure `scrollHeight` vs `clientHeight`. If it overflows, it clips.
-- Body is Source Sans 3 at **12px**, line-height **1.34**. **1.4 overflows A4.** Name is Big Shoulders; orange period `#ff4d00`.
-- Contact sits **top right** of the name: site, phone, email, LinkedIn. Outlined SVG icons (not filled). Links are underlined. More gap between icon and label than between clusters.
-- Each job: **Product Designer** bold, then a quiet company line with a short what-it-is, dates on the right. Case studies are **pills under the bullets**, circular company-logo thumbs, sentence case, no underline.
-- Current pills: Shipping in production, Owning P4 DAM, Automations overhaul, CityFibre rebrand. **No CityFibre portal pill.**
+- Body is Source Sans 3 at **11.5px**, line-height **1.36**. Sheet padding is tight (**5.5mm 6.5mm 6mm**) so Experience jobs can have real air between them. Name is Big Shoulders; orange period `#ff4d00`.
+- Contact sits **top right** of the name on **one line**, in the same 28px header row as the name, vertically centered with it: site, phone, email, LinkedIn. Do not wrap LinkedIn onto a second row. Header label is “LinkedIn”; the full URL lives in the experience note. Icons are **Material Symbols Outlined** (`language`, `call`, `mail`, `work`), locally hosted in `fonts/material-symbols-outlined.woff2`. Underline the **label text only**, never the icons. More gap between icon and label than between clusters.
+- Section `h2` underline needs air underneath (about 9px). Do not crush heading and body together.
+- Each job: **header row** is logo + Product Designer / company / scope / dates. **Bullets and pills sit under that header**, same left edge as Summary. Bullet *markers* indent like Summary (`padding-left` on the `ul`); do not indent the whole list under the title. DOM order is title → dates → company + scope → bullets → pills.
+- Job copy: **Product Designer** bold, dates on the right. Title, company, and scope are **#111**. Company logos are **27px** (about 25% smaller than the old 36px squares) so they sit with the two-line title block instead of taller than it. The header block is **vertically centered** with the logo. `img/budibase.jpg` has extra white inset so the mark sits between Perforce/DA weight and the old edge-to-edge file (~60% of the square). Next line is company name **not bold**, with the what-it-is beside it (Perforce + P4 Plan/DAM, Budibase + open-source, Dawson Andrews + product design agency). Tight gap under the title. No `Company · products` middot mashup.
+- Case studies are **tags under the bullets**, small rounded corners (not pills), matching rounded-rect thumbs, sentence case, no underline. No extra stroke on tag thumbs. Current tags: Shipping in production, Owning P4 DAM, Automations overhaul, CityFibre rebrand. **No CityFibre portal pill.**
+- Experience jobs need a clear gap between companies (**32px** between roles). Do not crush that to steal space for other sections.
 - No em-dashes. Company names in text, not only on logos.
 - Job title stays **Product Designer**. Do not claim Senior. “Lead” is a verb or “lead product designer for CityFibre”, not a job title of Lead.
 
