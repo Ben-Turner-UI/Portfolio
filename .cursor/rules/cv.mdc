@@ -1,0 +1,7 @@
+---
+description: How to edit Ben Turner’s HTML CV.
+globs: file/cv-ai-generation/**
+alwaysApply: false
+---
+
+Read `file/cv-ai-generation/CONTEXT.md`. Edit `index.html`. Do not overwrite `original.pdf`.

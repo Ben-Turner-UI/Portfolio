@@ -44,7 +44,7 @@
       '',
       '- [Home](' + home + '): selected case studies, CV, and testimonials',
       '- [About](' + about + '): outside work',
-      '- [CV](' + cv + '): PDF résumé',
+      '- [CV](' + cv + '): PDF résumé, A4',
       '',
       '## CV',
       '',

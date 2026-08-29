@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Turner CV</title>
+  <style>
+    @font-face {
+      font-family: "Source Sans 3";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("fonts/source-sans-3-400.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Source Sans 3";
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("fonts/source-sans-3-600.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Source Sans 3";
+      font-style: normal;
+      font-weight: 650;
+      font-display: swap;
+      src: url("fonts/source-sans-3-600.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Source Sans 3";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("fonts/source-sans-3-700.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Big Shoulders";
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("fonts/big-shoulders-600.woff2") format("woff2");
+    }
+    @page { size: A4; margin: 0; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f3f2ef;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 12px;
+    }
+    .cv {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-sizing: border-box;
+      width: 210mm;
+      height: 297mm;
+      padding: 6mm 8mm 5mm;
+      overflow: hidden;
+      color: #111;
+      border: 1px solid #111;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+      font-family: "Source Sans 3", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.34;
+      background-color: #fff;
+      background-image: url("img/cv-wash.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .cv > * {
+      position: relative;
+      z-index: 1;
+      flex: none;
+    }
+    .cv > :not(:first-child) {
+      margin-top: 0;
+    }
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+    }
+    .cv h1, .cv h2, .cv h3, .cv p, .cv ul, .cv li {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+    .cv h1 {
+      margin: 0;
+      font-family: "Big Shoulders", sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .cv h1 .accent { color: #ff4d00; }
+    .cv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 4px 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: #333;
+      font-size: 11.5px;
+      line-height: 1.2;
+    }
+    .cv-contact li { margin: 0; }
+    .cv-contact li::before { content: none; display: none; }
+    .cv-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .cv-contact svg {
+      display: block;
+      width: 16px;
+      height: 16px;
+      flex: none;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .cv a { color: #111; font-weight: 400; text-decoration: underline; text-underline-offset: 2px; }
+    .cv .cv-contact a { text-decoration: underline; }
+    .cv-section { margin: 0; }
+    .cv-section > h2 {
+      margin: 0 0 6px;
+      padding: 0 0 3px;
+      font-size: 13.5px;
+      font-weight: 650;
+      line-height: 1.2;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    }
+    .cv-section > p { margin: 0 0 3px; }
+    .cv-section > p:last-child { margin-bottom: 0; }
+    .cv-summary { margin: 0; padding-left: 1.1em; }
+    .cv-summary li, .cv li { margin: 0 0 3px; }
+    .cv-summary li:last-child, .cv li:last-child { margin-bottom: 0; }
+    .cv-role {
+      display: grid;
+      grid-template-columns: 36px minmax(0, 1fr);
+      gap: 0 12px;
+      margin: 0 0 18px;
+    }
+    .cv-role:last-child { margin-bottom: 0; }
+    .cv-logo {
+      box-sizing: border-box;
+      width: 36px;
+      height: 36px;
+      margin-top: 2px;
+      border: 1px solid #c4c4c4;
+      border-radius: 6px;
+      object-fit: cover;
+      background: #fff;
+    }
+    .cv-role h3 {
+      margin: 0;
+      font-weight: 700;
+    }
+    .cv-role__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 4px;
+    }
+    .cv-role__org {
+      margin: 0;
+      color: #444;
+    }
+    .cv-role__dates {
+      margin: 0;
+      color: #595959;
+      flex: none;
+    }
+    .cv-cases {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 6px 0 0;
+    }
+    .cv-case {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px 3px 3px;
+      border: 1px solid #d0d0d0;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      color: #444;
+      font-size: 11px;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+    .cv a.cv-case,
+    .cv a.cv-case:hover {
+      color: #444;
+      text-decoration: none;
+    }
+    .cv a.cv-case:hover { color: #111; }
+    .cv-case img {
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #eee;
+    }
+    .cv ul {
+      margin: 0;
+      padding-left: 1em;
+      list-style: none;
+    }
+    .cv li {
+      position: relative;
+    }
+    .cv li::before {
+      content: "";
+      position: absolute;
+      left: -0.85em;
+      top: 0.58em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #6e6e6e;
+    }
+    .cv-role__note { margin: 10px 0 0; }
+    .cv-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 16px;
+    }
+    html.cv-export,
+    html.cv-export body {
+      margin: 0;
+      padding: 0 !important;
+      min-height: 0;
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: #fff;
+    }
+    html.cv-export .cv,
+    html.cv-print .cv { box-shadow: none; }
+    html.cv-print,
+    html.cv-print body {
+      margin: 0;
+      padding: 0 !important;
+      min-height: 0;
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: #fff;
+    }
+    html.cv-print .cv {
+      isolation: auto;
+      background-color: #fff;
+      background-image: url("img/cv-wash.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    html.cv-print .cv-case { background: #fff; }
+    @media print {
+      html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #fff;
+      }
+      body { padding: 0; }
+      .cv {
+        isolation: auto;
+        box-shadow: none;
+        border-color: #111;
+        padding: 6mm 8mm 5mm;
+        background-color: #fff;
+        background-image: url("img/cv-wash.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .cv-case { background: #fff; }
+    }
+  </style>
+  <script>
+    if (/(?:^|[?&])export=1(?:&|$)/.test(location.search)) {
+      document.documentElement.classList.add("cv-export");
+    }
+    if (/(?:^|[?&])print=1(?:&|$)/.test(location.search)) {
+      document.documentElement.classList.add("cv-print");
+    }
+  </script>
+</head>
+<body>
+  <article class="cv" aria-label="Curriculum vitae">
+    <div class="cv-header">
+      <h1>Ben Turner<span class="accent">.</span></h1>
+      <ul class="cv-contact">
+        <li>
+          <a href="https://benturner.work/">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 3.8 6 3.8 9s-1.3 6-3.8 9M12 3c-2.5 3-3.8 6-3.8 9s1.3 6 3.8 9"/></svg>
+            benturner.work
+          </a>
+        </li>
+        <li>
+          <a href="tel:07546182198">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3.6h3l1.2 3-2.1 1.1a10.5 10.5 0 0 0 5.7 5.7l1.1-2.1 3 1.2v3.2c0 1-.8 1.8-1.8 1.8C9.2 17.5 4.5 12.8 4.5 5.4c0-1 .8-1.8 1.8-1.8H8z"/></svg>
+            07546182198
+          </a>
+        </li>
+        <li>
+          <a href="mailto:Benjamin.turner.design@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="5.2" width="17.6" height="13.6" rx="1.8"/><path d="M4.2 7.2 12 12.8l7.8-5.6"/></svg>
+            Benjamin.turner.design@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/benturnerwork">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="7.2" width="17.6" height="13.1" rx="1.8"/><path d="M8 7.2V5.1A2 2 0 0 1 10 3.2h4A2 2 0 0 1 16 5.1v2.1M3.2 12h17.6"/></svg>
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="cv-section">
+      <h2>Summary</h2>
+      <ul class="cv-summary">
+        <li><strong>Product Designer:</strong> Product and interaction design since 2015. I own the products I design at Perforce, Budibase and Dawson Andrews, and drive them as a hands-on IC.</li>
+        <li><strong>Shipped output:</strong> I design and ship in production front-end code. After a team cut from six to two, feature output was still 25% higher year on year. Homepage work that put 90% more people onto the buying journey.</li>
+        <li><strong>Growth Mindset:</strong> Highly coachable. Shaped by years of martial arts training and coaching.</li>
+        <li><strong>Witty &amp; Down-to-Earth:</strong> Extraverted culture builder who organises team socials and likes talking to real people.</li>
+      </ul>
+    </section>
+
+    <section class="cv-section">
+      <h2>Experience</h2>
+      <div class="cv-role">
+        <img class="cv-logo" src="img/perforce.jpg" alt="Perforce">
+        <div>
+          <div class="cv-role__head">
+            <div>
+              <h3>Product Designer</h3>
+              <p class="cv-role__org">Perforce · P4 Plan &amp; P4 DAM. Enterprise software for games and media.</p>
+            </div>
+            <p class="cv-role__dates">September 2025 - today</p>
+          </div>
+          <ul>
+            <li>I own product design for P4 DAM and P4 Plan and drive both products. Customers include Electronic Arts, Pinewood Studios, Xbox Game Studios and Meta. That work has directly helped sell multiple new customers onto Perforce systems.</li>
+            <li>Front-end capacity was cut from six developers to two. The product still shipped 25% more features per quarter. Clarification questions dropped about 50%. Refinements went from about an hour to about 30 minutes, so roughly twice the features in the same time.</li>
+            <li>I design and ship in production front-end code with Claude Code. Shipped multiple AI-enabled features, designed for how people and agents use the product. Built Claude skills other teams now use. Won Best Designed at the company AI hackathon in 2026.</li>
+          </ul>
+          <div class="cv-cases">
+            <a class="cv-case" href="https://benturner.work/p4-dam.html"><img src="img/perforce.jpg" alt="">Shipping in production</a>
+            <a class="cv-case" href="https://benturner.work/p4-product.html"><img src="img/perforce.jpg" alt="">Owning P4 DAM</a>
+          </div>
+        </div>
+      </div>
+      <div class="cv-role">
+        <img class="cv-logo" src="img/budibase.jpg" alt="Budibase">
+        <div>
+          <div class="cv-role__head">
+            <div>
+              <h3>Product Designer</h3>
+              <p class="cv-role__org">Budibase. Open-source low-code for internal apps and automations.</p>
+            </div>
+            <p class="cv-role__dates">July 2024 - July 2025</p>
+          </div>
+          <ul>
+            <li>I owned product design for Budibase as a whole, including how teams connect their own data, databases and APIs. Now also an agents and AI workflow toolkit.</li>
+            <li>I rebuilt the automations builder, created new filter systems, and set up key workflows. I ran a paid study with 25 users, changed the design, and support complaints dropped from about ten at a time to none.</li>
+            <li>That work became the foundation for Budibase&rsquo;s AI product: agents and automations on a platform people already used.</li>
+          </ul>
+          <div class="cv-cases">
+            <a class="cv-case" href="https://benturner.work/budibase-automations.html"><img src="img/budibase.jpg" alt="">Automations overhaul</a>
+          </div>
+        </div>
+      </div>
+      <div class="cv-role">
+        <img class="cv-logo" src="img/dawson-andrews.jpg" alt="Dawson Andrews">
+        <div>
+          <div class="cv-role__head">
+            <div>
+              <h3>Product Designer</h3>
+              <p class="cv-role__org">Dawson Andrews. Product design agency.</p>
+            </div>
+            <p class="cv-role__dates">June 2021 - July 2024</p>
+          </div>
+          <ul>
+            <li>Shipped work for GSMA, GAA, CityFibre, startups and public sector organisations.</li>
+            <li>Lead product designer for CityFibre (about 2,000 people). Designed the B2B portal ISPs use to book engineers for home fibre surveys. Ran a workshop with 40+ people from Vodafone, TalkTalk and Zen, captured 1,400+ data points, and user satisfaction doubled after.</li>
+            <li>Also designed the marketing website. 90% more people clicked through to the buying journey (Check availability) versus three months earlier. That product direction helped Dawson Andrews win Hyperoptic, hire five more people, and grow from a small startup agency into a medium-sized one.</li>
+          </ul>
+          <div class="cv-cases">
+            <a class="cv-case" href="https://benturner.work/cityfibre-rebrand.html"><img src="img/dawson-andrews.jpg" alt="">CityFibre rebrand</a>
+          </div>
+        </div>
+      </div>
+      <p class="cv-role__note">More experience on <a href="https://www.linkedin.com/in/benturnerwork">LinkedIn</a>.</p>
+    </section>
+
+    <section class="cv-section">
+      <h2>Skills</h2>
+      <p><strong>Product &amp; UX Design:</strong> Product ownership, End-to-end ownership, Interaction design, Design systems, Tokens, Information architecture, Usability testing, Accessibility (WCAG / AA), Systems thinking, First principles, Product sense, High agency, Data-driven UX.</p>
+      <p><strong>Frontend:</strong> Production code, First-layer frontend, Near-production prototypes, CSS, Tailwind CSS, HTML, Force UI, Git, Component-driven development.</p>
+      <p><strong>AI:</strong> Cursor, Claude Code, Claude skills, Figma Make, Agentic workflows, Designing for agents, Human-in-the-loop UI, Context and specs, Context windows, Model behaviour, Encoding design systems for AI, Research synthesis, AI-assisted prototyping and implementation, Orchestration.</p>
+      <p><strong>Tools:</strong> Figma, Maze, Jira, Local product environments.</p>
+    </section>
+
+    <div class="cv-split">
+      <section class="cv-section">
+        <h2>Hobbies</h2>
+        <p>Studied martial arts since 2007, with over 18 years of experience. Black belt in Jiu-Jitsu and several years of Judo practice. Also enjoy fishkeeping, karting, and have a real love for dogs, especially fluffy ones!</p>
+      </section>
+      <section class="cv-section">
+        <h2>Education</h2>
+        <p>BDes (Hons) Interaction Design, Ulster University, First Class Honours (2017 to 2021)</p>
+        <p>Extended Diploma in Interactive Media, Northern Regional College. Distinction*, Distinction*, Distinction (2015 to 2017)</p>
+      </section>
+    </div>
+  </article>
+</body>
+</html>
