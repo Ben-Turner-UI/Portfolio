@@ -3,6 +3,7 @@
   if (!lightbox) return;
 
   var lightboxImg = lightbox.querySelector('.personal-lightbox__img');
+  var captionEl = lightbox.querySelector('.personal-lightbox__caption');
   var counterEl = lightbox.querySelector('.personal-lightbox__counter');
   var thumbs = document.querySelectorAll('.personal-thumb[data-lightbox-src]');
   var closeTriggers = lightbox.querySelectorAll('[data-lightbox-close]');
@@ -31,6 +32,10 @@
     lightboxImg.alt = slide.alt;
     lightboxImg.classList.toggle('is-placeholder', isPlaceholderSlide(slide.src));
 
+    if (captionEl) {
+      captionEl.textContent = slide.alt || '';
+    }
+
     if (counterEl) {
       counterEl.textContent = slides.length > 1
         ? (currentIndex + 1) + ' / ' + slides.length
@@ -56,6 +61,7 @@
     lightboxImg.removeAttribute('src');
     lightboxImg.alt = '';
     lightboxImg.classList.remove('is-placeholder');
+    if (captionEl) captionEl.textContent = '';
     if (counterEl) counterEl.textContent = '';
     document.body.classList.remove('personal-lightbox-open');
     if (lastFocused && typeof lastFocused.focus === 'function') {
