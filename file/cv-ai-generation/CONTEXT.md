@@ -10,7 +10,7 @@ The A4 CV is `index.html` in this folder. Edit that file. Preview it locally; th
 | --- | --- |
 | `index.html` | The designed A4 CV. Source of truth for layout and copy. |
 | `img/perforce.jpg`, `img/budibase.jpg`, `img/dawson-andrews.jpg` | Company logos. |
-| `img/cv-wash.jpg` | Peach wash + grain as **one image**. Used as the sheet background on screen and in print. |
+| `img/cv-wash.jpg` | Short peach wash + orange dots at the foot of the sheet. Dithered JPEG so print does not band. Do not swap this for a CSS gradient. |
 | `fonts/` | Local Source Sans 3 (TTF 400/600/700), Big Shoulders 600, and Material Symbols Outlined (woff2). Do not switch body type back to variable Google fonts. |
 | `../Ben-Turner-CV.pdf` | Site download. Homepage button: `file/Ben-Turner-CV.pdf`. |
 | `original.pdf` | Reference only. Never overwrite. |
@@ -40,7 +40,7 @@ Site live URL for case studies: `https://benturner.work/`. Local preview is usua
 
 Do **not** use CSS `linear-gradient` or a `radial-gradient` grain on `.cv` for print. Chrome turns those into `/Shading` and `/Pattern` objects. A 75KB PDF then takes seconds to scroll.
 
-The wash and grain live in `img/cv-wash.jpg`. Point `.cv` at that image (`background-size: cover`). Keep `isolation: auto` in print. `?print=1` adds `html.cv-print` for a flat print sheet (no box-shadow).
+The wash and dots live in `img/cv-wash.jpg` (short footer bitmap, dithered, JPEG quality 92). Point `.cv` at that image with `background-size: 100% auto` and `background-position: center bottom`. Keep `isolation: auto` in print. `?print=1` adds `html.cv-print` for a flat print sheet (no box-shadow). A full-page CSS or JPEG gradient will band in the download PDF. Do not use CSS `linear-gradient` or `radial-gradient` grain.
 
 The download PDF **must stay real text** (ATS). Never replace it with a screenshot or flattened image of the page.
 
