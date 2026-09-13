@@ -14,13 +14,25 @@ header {
   padding-top: 48px;
   padding-bottom: 48px;
   margin-bottom: 48px;
-  background:
-    linear-gradient(to top, rgba(255, 74, 0, 0.2) 0%, transparent 100%),
-    linear-gradient(180deg, #fff 0%, #eeedea 100%);
+  background: linear-gradient(180deg, #fff 0%, #eeedea 100%);
   background-repeat: no-repeat;
-  background-size: 100% min(100%, 200px), 100% 100%;
-  background-position: center bottom, center;
   overflow: hidden;
+}
+
+/* Soft orange wash — CSS only, compositor-friendly */
+header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: min(100%, 220px);
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(to top, rgba(255, 74, 0, 0.24) 0%, transparent 100%);
+  transform-origin: center bottom;
+  will-change: opacity, transform;
+  animation: header-wash 14s ease-in-out infinite alternate;
 }
 
 header::after {
@@ -37,6 +49,37 @@ header::after {
   background-position: center bottom;
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
   mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
+  will-change: opacity;
+  animation: header-dots 14s ease-in-out infinite alternate;
+}
+
+@keyframes header-wash {
+  from {
+    opacity: 0.55;
+    transform: scaleY(0.9) translateY(8%);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1.12) translateY(0);
+  }
+}
+
+@keyframes header-dots {
+  from {
+    opacity: 0.45;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header::before,
+  header::after {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 header > * {
@@ -60,7 +103,7 @@ header.project-header {
 }
 
 .project-header .header-content {
-  gap: var(--case-study-header-block-gap);
+  gap: var(--space-3);
 }
 
 header.project-header.about-header {
@@ -76,6 +119,7 @@ header.project-header.about-header {
 
 .project-header-title-block h1 {
   margin: 0;
+  max-width: 500px;
 }
 
 .project-summary {
@@ -95,10 +139,10 @@ header.project-header.about-header {
 .project-meta {
   margin: 0;
   font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--type-body-lg);
+  font-size: var(--type-body-md);
   line-height: 1.3;
   font-weight: 400;
-  color: #000;
+  color: #595959;
 }
 
 .project-meta a {
@@ -165,8 +209,11 @@ header.project-header.about-header {
 
 .project-header .project-statistics-stat {
   margin: 0;
-  font-size: var(--case-study-stat-size);
-  line-height: var(--case-study-stat-line);
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
   font-variant-numeric: tabular-nums lining-nums;
 }
 
@@ -244,7 +291,7 @@ header.project-header.about-header {
   border-radius: 6px;
 }
 
-.home-header-content-text .home-contact__link .material-symbols-outlined {
+.home-header-content-text .home-contact__link .material-symbols-rounded {
   font-size: 16px;
   line-height: 1;
   color: #000;

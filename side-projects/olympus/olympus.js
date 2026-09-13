@@ -155,7 +155,7 @@
     if (!face.href) {
       return '<button type="button" class="faces_grid_button faces_grid_button--secondary" disabled><span class="olympus-btn-label">Coming soon</span></button>';
     }
-    var label = '<span class="olympus-btn-label">Install on Facer</span><span class="material-symbols-outlined olympus-icon olympus-icon--button" aria-hidden="true">download</span>';
+    var label = '<span class="olympus-btn-label">Install on Facer</span><span class="material-symbols-rounded olympus-icon olympus-icon--button" aria-hidden="true">download</span>';
     return '<a class="faces_grid_button faces_grid_button--primary" href="' + escapeHtml(face.href) + '" target="_blank" rel="noopener noreferrer">' + label + '</a>';
   }
 

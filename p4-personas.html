@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>html,body{background:#fff;color-scheme:only light}</style>
+    <title>Increasing sales opportunities for the product by building with generative AI — Ben Turner</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="msapplication-navbutton-color" content="#FFFFFF">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTRN14NFN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-THTRN14NFN');
+    </script>
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <nav>
+        <div class="nav-group">
+      <a href="index.html" class="nav-item">
+        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">home</span>
+        <span class="nav-item__label">Home</span>
+      </a>
+      <a href="about.html" class="nav-item">
+        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
+        <span class="nav-item__label">About</span>
+      </a>
+    </div>
+      </nav>
+    </div>
+
+    <header class="project-header">
+      <div class="width-container">
+        <div class="header-content">
+          <div class="project-header-title-block">
+          <p class="project-meta">
+            <a href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer">Perforce</a> (Puppet)
+          </p>
+          <h1>Increasing sales opportunities for the product by building with generative AI</h1>
+          </div>
+
+          <div class="project-statistics project-statistics--quote">
+            <div class="project-statistics-group">
+              <h3 class="project-statistics-stat project-statistics-stat--inline"><span class="material-symbols-rounded project-statistics-arrow" aria-hidden="true">trending_up</span>Increased sales</h3>
+              <p class="stat-description">Sales said it made their job a lot easier, and opened up avenues for a discussion that were not there before</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="width-container">
+        <div class="content-container">
+          <div class="main-content">
+            <div class="project-details_text">
+
+              <div class="project-paragraph project-client-description">
+                <h2>Context</h2>
+                <p>I work on a product called P4 DAM. It is a digital asset manager for game and film studios. For a long time the product work was about serving the customers we already had, and making the product easier to live with. Then the business shifted. In the AI era, bringing in new customers became the job. New acquisitions were the priority, because AI changed how quickly a decent competitor could improve their own product.</p>
+                <p>The obvious place to look was onboarding. That is where, to my eye, the product was lacking. And that is where the sales pipeline actually starts.</p>
+                <p>We already had the research: interviews, win/loss, customer notes, competitor work, and the old personas. I had already built an agentic system that could run against that material. Fable 5 coming out is what opened the door. Those research methods, plus the agents, plus that model, gave me a way to use it properly and build the right design for the job.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Persona</h2>
+                <p>The personas we had were not that useful. They were outdated, and they described people who might use the product. They did not describe the person who decides who buys it. In this case, that person is a studio manager.</p>
+                <p>I built an agentic research system around Fable 5, with multiple agents doing different jobs at once. It looked at internal evidence, web research, persona authors, the existing design, wireframes, a sample project, and the asset sourcing for that sample project. Each agent ran on a different model, Opus or Sonnet, depending on what the job needed and what the token spend was worth.</p>
+                <div class="table-container">
+                  <table class="improvements-table">
+                    <thead>
+                      <tr><th>Agent</th><th>Job</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Internal evidence</td><td>The company&rsquo;s own written record: competitive guide, customer notes, discovery scans, win/loss, sales material.</td></tr>
+                      <tr><td>Web research</td><td>Job postings, practitioner interviews, industry surveys, outsourcing and review-workflow guides.</td></tr>
+                      <tr><td>Persona author</td><td>Wrote a buying persona for a studio manager, with a citation on every claim.</td></tr>
+                      <tr><td>Existing design</td><td>Reviewed the live onboarding and the wireframes as that buyer, and listed what had to change.</td></tr>
+                      <tr><td>Sample project</td><td>Folder and bundle structure for a demo project a buyer could actually explore.</td></tr>
+                      <tr><td>Asset sourcing</td><td>Where the demo art comes from, and the licensing constraints on each route.</td></tr>
+                      <tr><td>Competitor analysis</td><td>A capability matrix across eight of the main competitors.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>The matrix itself I cannot share. It is confidential. The conclusion was that we needed a trial experience where someone could see the full capability of the product without sitting through the lengthy configuration that comes with a Perforce product.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Design</h2>
+                <p>The new design was built using a Claude plugin I designed, called the Unified Workflow Plugin. It pulls from a lot of sources. There is a design-system MCP server with the components, the layout rules, and the branding. It takes that, plus the evidence and the output from the Fable 5 workflow, and turns it into a generated UI.</p>
+                <p>It is expensive. But if the context is good enough, what comes out needs very few tweaks. Something that is almost ready to go once the workflow finishes.</p>
+                <blockquote class="project-quote">
+                  <p>&ldquo;It makes the self-serve impression far more meaningful, and it is needed.&rdquo;</p>
+                </blockquote>
+                <blockquote class="project-quote">
+                  <p>&ldquo;It made the job a lot easier, and opened up conversations we did not have a way into before.&rdquo;</p>
+                </blockquote>
+                <p>The quotes are paraphrased from a sales call and reviewed for accuracy.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Outcome</h2>
+                <p>Sales now has a persona-driven trial experience. Prospects see the product through the work they care about, and sellers have somewhere credible to send someone after a first demo call. Sales opportunities increased, and sales said it made their job a lot easier.</p>
+                <p>The bigger part of it is the workflow. A frontier model, agents, Claude Code, MCP servers, a design system, and a workflow plugin I designed, used together to generate UI that increased sales.</p>
+              </div>
+
+              <div class="button-group">
+                <a class="next-project-link" href="p4-product.html">
+                  <div class="next-project-card">
+                    <img class="next-project-card__thumb" src="img/thumbnail/p4-product.png" alt="">
+                    <div class="next-project-card__content">
+                      <p class="next-project-card__title">Owning P4 DAM: get people to the asset, then let them manage it</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="width-container">
+        <div class="footer-text-content">
+          <h3>Ben Turner, Product Designer</h3>
+          <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
+        </div>
+        <div class="contact-links">
+          <p><a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg" alt="">Benjamin.turner.design@gmail.com</a></p>
+          <p><a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg" alt="">LinkedIn</a></p>
+        </div>
+        <p class="copyright">&copy;2026, All Rights Reserved</p>
+      </div>
+    </footer>
+    <script src="nav.js"></script>
+  </body>
+</html>

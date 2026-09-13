@@ -35,7 +35,7 @@
   }
 
   .grid-item-content {
-    padding: 24px;
+    padding: 20px 24px 24px;
   }
 
   .project-grid {
@@ -47,21 +47,16 @@
   }
 
   .project-header .project-statistics {
-    padding: 0;
+    padding-top: var(--space-2);
   }
 
   .project-header .project-statistics-group {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .project-header .project-statistics-group:not(:last-child) {
-    padding-bottom: var(--space-2);
-    border-bottom: var(--case-study-heading-divider);
-    margin-bottom: 0;
-  }
-
-  .project-header .project-statistics-group:not(:first-child) {
-    padding-top: var(--space-2);
+  .project-header .project-statistics-group--quote {
+    padding-left: 16px;
   }
 
   .home .header-content {

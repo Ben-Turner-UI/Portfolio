@@ -1223,8 +1223,8 @@ body.home-page {
     color: var(--olympus-text-muted);
 }
 
-.material-symbols-outlined.olympus-icon {
-    font-family: 'Material Symbols Outlined';
+.material-symbols-rounded.olympus-icon {
+    font-family: 'Material Symbols Rounded';
     font-weight: normal;
     font-style: normal;
     line-height: 1;
@@ -1246,7 +1246,7 @@ body.home-page {
 
 .faces_grid_button .olympus-icon--button,
 .faces_grid_button .olympus-btn-icon {
-    font-family: 'Material Symbols Outlined';
+    font-family: 'Material Symbols Rounded';
     font-weight: normal;
     font-style: normal;
     font-size: 1em;
@@ -1263,7 +1263,7 @@ body.home-page {
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
     font-weight: 700;
-    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 20;
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 20;
     flex-shrink: 0;
 }
 
@@ -1274,7 +1274,7 @@ body.home-page {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 20;
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 20;
 }
 
 .olympus-icon--nav {

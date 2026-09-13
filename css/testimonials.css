@@ -108,3 +108,54 @@ a.testimonial-avatar:hover {
   margin: 0;
 }
 
+.project-testimonial-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin: 0 0 var(--case-study-block-margin);
+  gap: var(--space-2);
+}
+
+.project-testimonial-grid .testimonial-card {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 16px 18px 14px;
+  box-sizing: border-box;
+}
+
+.project-testimonial-grid .testimonial-quote-mark {
+  font-size: 40px;
+  margin-bottom: -16px;
+}
+
+.project-testimonial-grid .testimonial-text {
+  margin: 0 0 12px;
+  flex: 1;
+}
+
+.project-testimonial-grid .testimonial-reviewer {
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.project-testimonial-grid .testimonial-reviewer-info {
+  gap: 0;
+}
+
+.project-testimonial-grid .testimonial-name,
+.project-testimonial-grid .testimonial-role {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.project-testimonial-grid .testimonial-role {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .project-testimonial-grid {
+    flex-direction: column;
+  }
+}
+
