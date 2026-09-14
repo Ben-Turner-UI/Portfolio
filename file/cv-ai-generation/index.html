@@ -66,7 +66,7 @@
       isolation: isolate;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 14px;
       box-sizing: border-box;
       width: 210mm;
       height: 297mm;
@@ -187,15 +187,18 @@
     }
     .cv-section > p { margin: 0 0 3px; }
     .cv-section > p:last-child { margin-bottom: 0; }
+    .cv > .cv-role__note {
+      margin: 8px 0;
+    }
     .cv-summary { margin: 0; }
     .cv-summary li, .cv li { margin: 0 0 3px; }
     .cv-summary li:last-child, .cv li:last-child { margin-bottom: 0; }
     .cv-role {
       display: block;
-      margin: 0 0 32px;
+      margin: 0;
     }
-    .cv-role:last-of-type {
-      margin-bottom: 10px;
+    .cv-role + .cv-role {
+      margin-top: 32px;
     }
     .cv-role__header {
       display: flex;
@@ -304,7 +307,6 @@
     .cv-contact li::marker {
       content: none;
     }
-    .cv-role__note { margin: 2px 0 0; }
     .cv-split {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -413,10 +415,9 @@
     <section class="cv-section">
       <h2>Summary</h2>
       <ul class="cv-summary">
-        <li><strong>Product Designer:</strong> Product and interaction design since 2015. Hands-on designer. I own the products I work on at Perforce, and did the same at Budibase and Dawson Andrews.</li>
-        <li><strong>Shipped output:</strong> I design and ship production front-end code. At Perforce, feature output was still 25% higher after the front-end team was cut from six to two. At CityFibre, homepage work put 90% more people onto the buying journey.</li>
+        <li><strong>Product Designer:</strong> Product and interaction design since 2015. Hands-on designer. I build design systems and ship the products they serve, at <a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a>, <a href="https://budibase.com/" target="_blank" rel="noopener noreferrer">Budibase</a> and <a href="https://www.dawsonandrews.com/" target="_blank" rel="noopener noreferrer">DawsonAndrews</a>.</li>
+        <li><strong>Shipped output:</strong> I design and ship production front-end code. At <a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a>, feature output was still 25% higher after the front-end team was cut from six to two. At <a href="https://cityfibre.com/" target="_blank" rel="noopener noreferrer">CityFibre</a>, homepage work put 90% more people onto the buying journey.</li>
         <li><strong>Growth Mindset:</strong> Highly coachable. Shaped by years of martial arts training and coaching.</li>
-        <li><strong>Witty &amp; Down-to-Earth:</strong> Extraverted culture builder who organises team socials and likes talking to real people.</li>
       </ul>
     </section>
 
@@ -430,16 +431,18 @@
               <h3>Product Designer</h3>
               <p class="cv-role__dates">September 2025 - today</p>
             </div>
-            <p class="cv-role__org">Perforce (Puppet) <span class="cv-role__scope">P4 Plan and P4 DAM: planning and digital asset management software for games and media.</span></p>
+            <p class="cv-role__org"><a href="https://www.perforce.com/" target="_blank" rel="noopener noreferrer">Perforce</a> (<a href="https://www.puppet.com/" target="_blank" rel="noopener noreferrer">Puppet</a>) <span class="cv-role__scope">P4 Plan and P4 DAM: secure planning and digital asset management software for games and media.</span></p>
           </div>
         </div>
         <ul>
-          <li>I own product design for P4 DAM and P4 Plan. Customers include Electronic Arts, Pinewood Studios, Xbox Game Studios and Meta. That work has directly helped sell multiple new customers onto Perforce.</li>
-          <li>Front-end capacity was cut from six developers to two. The product still shipped 25% more features per quarter. Clarification questions dropped about 50%, and planning meetings went from about an hour to about 30 minutes.</li>
-          <li>I design and ship production front-end with Claude Code. Shipped multiple AI-enabled features, designed for how people and AI agents use the product. Built reusable Claude workflows other teams now use. Won Best Designed at the company AI hackathon in 2026.</li>
+          <li>I own product design for P4 DAM and P4 Plan, used by <a href="https://www.ea.com/" target="_blank" rel="noopener noreferrer">Electronic Arts</a>, <a href="https://www.pinewoodgroup.com/" target="_blank" rel="noopener noreferrer">Pinewood Studios</a>, <a href="https://www.xbox.com/en-GB/xbox-game-studios" target="_blank" rel="noopener noreferrer">Xbox Game Studios</a> and <a href="https://www.meta.com/" target="_blank" rel="noopener noreferrer">Meta</a>. The interfaces hold secure enterprise data. That work has helped sell multiple new customers onto Perforce.</li>
+          <li>I helped design and test a design system of written components, served through an MCP server so teams across Perforce can use it. Combined with a Claude plugin, it generates high-quality interfaces with AI. Claude systems I built won Best Designed at the company AI hackathon in 2026.</li>
+          <li>I used that system to rebuild P4 DAM onboarding around the studio manager who buys it. Sales got a persona-driven trial, opportunities went up, and they said it made their job a lot easier.</li>
+          <li>Front-end capacity was cut from six developers to two. The product still shipped 25% more features per quarter. I ship production front-end with Claude Code.</li>
         </ul>
         <div class="cv-cases">
           <a class="cv-case" href="https://benturner.work/p4-dam.html"><img src="img/perforce.jpg" alt=""><span>Shipping production code</span></a>
+          <a class="cv-case" href="https://benturner.work/p4-personas.html"><img src="img/perforce.jpg" alt=""><span>Increasing sales opportunities</span></a>
           <a class="cv-case" href="https://benturner.work/p4-product.html"><img src="img/perforce.jpg" alt=""><span>Owning P4 DAM</span></a>
         </div>
       </div>
@@ -451,11 +454,11 @@
               <h3>Product Designer</h3>
               <p class="cv-role__dates">July 2024 - July 2025</p>
             </div>
-            <p class="cv-role__org">Budibase <span class="cv-role__scope">Open-source low-code for internal apps, automations and AI agents.</span></p>
+            <p class="cv-role__org"><a href="https://budibase.com/" target="_blank" rel="noopener noreferrer">Budibase</a> <span class="cv-role__scope">Open-source low-code for internal apps, automations and AI agents.</span></p>
           </div>
         </div>
         <ul>
-          <li>I owned product design for Budibase as a whole, including how teams connect their own data, databases and APIs.</li>
+          <li>I owned product design for Budibase as a whole. Customers self-host, including in air-gapped and other secure environments, so their data stays on their own infrastructure.</li>
           <li>I rebuilt the automations builder, created new filter systems, and set up key workflows. I ran a paid study with 25 users, changed the design, and support complaints dropped from about ten at a time to none.</li>
           <li>That work became the foundation for Budibase&rsquo;s later AI product: agents and automations on a platform people already used.</li>
         </ul>
@@ -471,26 +474,28 @@
               <h3>Product Designer</h3>
               <p class="cv-role__dates">June 2021 - July 2024</p>
             </div>
-            <p class="cv-role__org">Dawson Andrews <span class="cv-role__scope">Product design agency.</span></p>
+            <p class="cv-role__org"><a href="https://www.dawsonandrews.com/" target="_blank" rel="noopener noreferrer">DawsonAndrews</a> <span class="cv-role__scope">Product design agency.</span></p>
           </div>
         </div>
         <ul>
-          <li>Shipped work for GSMA, GAA, CityFibre, startups and public sector organisations.</li>
-          <li>Lead product designer for CityFibre (about 2,000 people). Designed the B2B portal ISPs use to book engineers for home fibre surveys. Ran a workshop with 40+ people from Vodafone, TalkTalk and Zen, captured 1,400+ data points, and user satisfaction doubled after.</li>
-          <li>Also designed the CityFibre marketing website. 90% more people clicked through to check fibre availability versus three months earlier. That product direction helped Dawson Andrews win Hyperoptic, hire five more people, and grow from a small startup agency into a medium-sized one.</li>
+          <li>I led and created design systems for <a href="https://cityfibre.com/" target="_blank" rel="noopener noreferrer">CityFibre</a>, <a href="https://www.gsma.com/" target="_blank" rel="noopener noreferrer">GSMA</a>, and SportsWork. For SportsWork I took a startup from zero to one: brand, product, and the live site. It is now an independent, profitable startup.</li>
+          <li>Also worked with public sector, private, and corporate clients.</li>
+          <li>Lead product designer for <a href="https://cityfibre.com/" target="_blank" rel="noopener noreferrer">CityFibre</a> (about 2,000 people). Designed the B2B portal and the marketing website. 90% more people clicked to check fibre availability, and portal satisfaction doubled after a 40-person ISP workshop.</li>
         </ul>
         <div class="cv-cases">
           <a class="cv-case" href="https://benturner.work/cityfibre-rebrand.html"><img src="img/dawson-andrews.jpg" alt=""><span>CityFibre rebrand</span></a>
+          <a class="cv-case" href="https://benturner.work/sportswork.html"><img src="img/dawson-andrews.jpg" alt=""><span>SportsWork</span></a>
         </div>
       </div>
-      <p class="cv-role__note">More experience on <a href="https://www.linkedin.com/in/benturnerwork">linkedin.com/in/benturnerwork</a>.</p>
     </section>
+
+    <p class="cv-role__note">More experience on <a href="https://www.linkedin.com/in/benturnerwork">LinkedIn</a>.</p>
 
     <section class="cv-section">
       <h2>Skills</h2>
       <p><strong>Product &amp; UX Design:</strong> Product ownership, Interaction design, Design systems, Tokens, Information architecture, Usability testing, Accessibility (WCAG / AA), Systems thinking, First principles, Product sense, High agency, Data-driven UX.</p>
       <p><strong>Frontend:</strong> Production code, Near-production prototypes, CSS, Tailwind CSS, HTML, Git, Component-driven development.</p>
-      <p><strong>AI:</strong> Cursor, Claude Code, Claude skills, Figma Make, Agentic workflows, Designing for agents, Human-in-the-loop UI, Encoding design systems for AI, Research synthesis, AI-assisted prototyping and implementation.</p>
+      <p><strong>AI:</strong> Cursor, Claude Code, Claude skills, MCP servers, Figma Make, Agentic workflows, Designing for agents, Human-in-the-loop UI, Encoding design systems for AI, Research synthesis, AI-assisted prototyping and implementation.</p>
       <p><strong>Tools:</strong> Figma, Maze, Jira, Local development environments.</p>
     </section>
 
@@ -501,8 +506,8 @@
       </section>
       <section class="cv-section">
         <h2>Education</h2>
-        <p>BDes (Hons) Interaction Design, Ulster University, First Class Honours (2017 to 2021)</p>
-        <p>Extended Diploma in Interactive Media, Northern Regional College. Distinction*, Distinction*, Distinction (2015 to 2017)</p>
+        <p>BDes (Hons) Interaction Design, <a href="https://www.ulster.ac.uk/" target="_blank" rel="noopener noreferrer">Ulster University</a>, First Class Honours (2017 to 2021)</p>
+        <p>Extended Diploma in Interactive Media, <a href="https://www.nrc.ac.uk/" target="_blank" rel="noopener noreferrer">Northern Regional College</a>. Distinction*, Distinction*, Distinction (2015 to 2017)</p>
       </section>
     </div>
   </article>

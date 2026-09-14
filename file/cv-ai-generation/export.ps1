@@ -17,7 +17,7 @@ if (-not (Test-Path $chrome)) {
 try {
   $null = Invoke-WebRequest -Uri $url -UseBasicParsing -TimeoutSec 5
 } catch {
-  throw "Local server is not serving $url — start .\serve.ps1 first."
+  throw "Local server is not serving $url - start .\serve.ps1 first."
 }
 
 $profile = Join-Path $env:TEMP 'cv-print-export'
@@ -45,7 +45,7 @@ $toUnicode = ([regex]::Matches($ascii, '/ToUnicode')).Count
 $kb = [Math]::Round((Get-Item $pdfOut).Length / 1kb)
 Write-Host ("wrote {0} ({1} KB) Pattern={2} Shading={3} ToUnicode={4}" -f $pdfOut, $kb, $pattern, $shading, $toUnicode)
 if ($pattern -gt 0 -or $shading -gt 0) {
-  Write-Warning 'PDF has /Pattern or /Shading — CSS gradients or grain likely leaked in. Use img/cv-wash.jpg only.'
+  Write-Warning 'PDF has /Pattern or /Shading - CSS gradients or grain likely leaked in. Use img/cv-wash.jpg only.'
 }
 Write-Host 'Bump the ?v= query on the homepage CV button in /index.html'
 Write-Host 'Close cached PDF tabs before judging lag.'

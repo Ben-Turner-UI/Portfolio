@@ -115,7 +115,8 @@
   margin-bottom: var(--case-study-block-margin);
 }
 
-.header-content > .archive-notice {
+.header-content > .archive-notice,
+.header-content > .project-note {
   margin: 0;
   width: 100%;
 }
