@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>P4 product thumbnail — live layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background: #1f2330;
+      font-family: Inter, "Segoe UI", sans-serif;
+      color: #111827;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    .chrome {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px 16px;
+    }
+    .dock {
+      width: min(1280px, 100%);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      color: #e8eaf2;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .dock kbd {
+      display: inline-block;
+      padding: 1px 6px;
+      border: 1px solid #5b6173;
+      border-radius: 4px;
+      font-size: 11px;
+      color: #c9cedb;
+    }
+    .dock button {
+      appearance: none;
+      border: 1px solid #5b6173;
+      background: #2a3142;
+      color: #fff;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .dock button:hover { background: #343c51; }
+    .pos {
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 11px;
+      color: #b7bdd0;
+      white-space: pre;
+      min-width: 280px;
+    }
+    .frame-wrap {
+      position: relative;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .frame {
+      width: 1280px;
+      height: 720px;
+      transform-origin: top left;
+      box-shadow: 0 0 0 1px #3a4154;
+    }
+
+    .stage {
+      position: relative;
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: url("hdri-crop.jpg") center / cover no-repeat;
+    }
+    .mark {
+      position: absolute; left: 50%; top: 50%;
+      width: 164px; height: 164px;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .mark svg { width: 100%; height: 100%; display: block; }
+
+    .card {
+      position: absolute; z-index: 3;
+      background: #fff;
+      border: 1px solid #8a8e96;
+      border-radius: 16px;
+      box-shadow: none;
+      padding: 18px 20px 20px;
+      overflow: hidden;
+      cursor: grab;
+      user-select: none;
+    }
+    .card:active { cursor: grabbing; }
+    .card.is-active { outline: 2px solid #4018ff; outline-offset: 2px; }
+
+    .hd {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+      pointer-events: none;
+    }
+    .mini { width: 22px; height: 22px; flex: none; }
+    .mini svg { width: 22px; height: 22px; display: block; }
+
+    .bone {
+      display: block;
+      background: #d7dce5;
+      border-radius: 8px;
+      height: 14px;
+      pointer-events: none;
+    }
+    .bone.title { width: 112px; height: 16px; }
+    .bone.lg { height: 22px; border-radius: 10px; }
+    .bone.md { height: 14px; }
+    .bone.sm { height: 10px; }
+    .bone.round { border-radius: 999px; }
+    .bone.sq { width: 22px; height: 22px; border-radius: 7px; flex: none; }
+
+    #preview { left: 836px; top: 368px; width: 340px; }
+    #filters { left: 270px; top: 93px;  width: 430px; }
+    #search  { left: 125px; top: 281px; width: 310px; }
+    #crumbs  { left: 226px; top: 553px; width: 500px; }
+    #dash    { left: 826px; top: 115px; width: 380px; }
+
+    .preview-well {
+      height: 168px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #eef0f4;
+      margin-bottom: 14px;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+    }
+    .preview-well img {
+      width: 88%;
+      height: 88%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+    .fname-sk {
+      width: 96px;
+      height: 12px;
+      margin: 0 auto;
+      background: #d7dce5;
+      border-radius: 6px;
+      pointer-events: none;
+    }
+
+    .sk-list, .sk-row, .sk-chips, .sk-trail, .sk-proj {
+      pointer-events: none;
+    }
+    .sk-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 9px 0;
+    }
+    .sk-dot {
+      width: 18px; height: 18px; flex: none;
+      border-radius: 50%;
+      background: #d7dce5;
+    }
+
+    .sk-chips { display: flex; align-items: center; gap: 10px; width: 100%; min-width: 0; }
+    .sk-chip {
+      display: flex; align-items: center; gap: 8px;
+      flex: 1 1 0; min-width: 0;
+      background: #eef0f4;
+      border-radius: 12px;
+      padding: 12px 12px;
+      overflow: hidden;
+    }
+    .sk-chip .bone { flex: 0 1 auto; min-width: 0; }
+
+    .sk-trail { display: flex; align-items: center; gap: 10px; width: 100%; min-width: 0; overflow: hidden; }
+    .sk-trail .bone.seg { flex: 1 1 0; min-width: 0; width: auto; }
+    .sk-sep {
+      width: 8px; height: 8px;
+      background: #c5cad3;
+      transform: rotate(45deg);
+      flex: none;
+    }
+
+    .hello-sk { width: 220px; max-width: 100%; height: 22px; border-radius: 10px; background: #d7dce5; margin-bottom: 14px; }
+    .kicker-sk { width: 88px; height: 10px; border-radius: 6px; background: #d7dce5; margin-bottom: 12px; }
+    .sk-proj { display: flex; gap: 10px; width: 100%; min-width: 0; }
+    .sk-tile {
+      display: flex; align-items: center; gap: 10px;
+      flex: 1 1 0; min-width: 0;
+      background: #eef0f4;
+      border-radius: 12px;
+      padding: 12px 14px;
+      overflow: hidden;
+    }
+    .sk-tile .bone:not(.sq) { flex: 1 1 auto; min-width: 0; width: auto; }
+
+    html.capture,
+    html.capture body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: #e8eaf0;
+    }
+    html.capture .chrome { padding: 0; }
+    html.capture .dock { display: none; }
+    html.capture .frame,
+    html.capture .frame-wrap {
+      width: 1280px;
+      height: 720px;
+      transform: none !important;
+      box-shadow: none;
+    }
+    html.capture .card { cursor: default; }
+    html.capture .card.is-active { outline: none; }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="p4" viewBox="0 0 24 24">
+      <path fill="#4018FF" d="m7.386 14.957 2.279-1.316-.576-.333A1.48 1.48 0 0 1 8.334 12c0-.262.073-.915.755-1.308l10.31-5.953a1.49 1.49 0 0 1 1.51 0c.228.13.755.52.755 1.308v11.906c0 .788-.527 1.178-.754 1.308s-.828.393-1.51 0l-2.732-1.577-2.334 1.348 3.899 2.251a3.81 3.81 0 0 0 3.845 0A3.81 3.81 0 0 0 24 17.953V6.047a3.81 3.81 0 0 0-1.922-3.33 3.83 3.83 0 0 0-1.923-.52c.66 0-1.32.173-1.922.52L7.923 8.67A3.81 3.81 0 0 0 6 12c0 1.17.51 2.234 1.386 2.956zm9.228-5.913-2.279 1.316.576.333c.682.393.755 1.046.755 1.308 0 .263-.073.915-.755 1.308l-10.31 5.954a1.49 1.49 0 0 1-1.51 0 1.48 1.48 0 0 1-.755-1.308V6.047c0-.788.527-1.178.754-1.308s.828-.393 1.51 0l2.732 1.577 2.334-1.348-3.899-2.251a3.81 3.81 0 0 0-3.845 0A3.81 3.81 0 0 0 0 6.047v11.906c0 1.39.72 2.635 1.922 3.33a3.83 3.83 0 0 0 1.923.52c.66 0 1.32-.173 1.922-.52l10.31-5.953A3.81 3.81 0 0 0 18 12c0-1.17-.51-2.234-1.386-2.956"/>
+    </symbol>
+  </svg>
+
+  <div class="chrome">
+    <div class="dock">
+      <div>
+        Drag the five cards around the logo. <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> nudge 1px, Shift is 10px.
+        Positions save in this browser. When it looks right, tell me and I’ll turn this into the thumbnail.
+      </div>
+      <div style="display:flex;gap:8px;align-items:flex-start">
+        <button type="button" id="reset">Reset spread</button>
+        <pre class="pos" id="pos"></pre>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame" id="frame">
+        <div class="stage" id="stage">
+          <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#p4"/></svg></div>
+
+          <article class="card" id="preview">
+            <div class="hd"><span class="mini"><svg viewBox="0 0 24 24"><use href="#p4"/></svg></span><span class="bone title" style="width:88px"></span></div>
+            <div class="preview-well"><img src="ui-elephant-sil.png" alt=""></div>
+            <div class="fname-sk"></div>
+          </article>
+
+          <article class="card" id="filters">
+            <div class="hd"><span class="mini"><svg viewBox="0 0 24 24"><use href="#p4"/></svg></span><span class="bone title" style="width:72px"></span></div>
+            <div class="sk-chips">
+              <div class="sk-chip">
+                <span class="bone" style="width:48px;flex:0 0 48px"></span>
+                <span class="bone round" style="height:22px;flex:1 1 auto;background:#c9ced8"></span>
+              </div>
+              <div class="sk-chip">
+                <span class="bone" style="width:56px;flex:0 0 56px"></span>
+                <span class="bone round" style="height:22px;flex:1 1 auto;background:#c9ced8"></span>
+                <span class="bone round" style="height:22px;width:40px;flex:0 0 40px;background:#c9ced8"></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="search">
+            <div class="hd"><span class="mini"><svg viewBox="0 0 24 24"><use href="#p4"/></svg></span><span class="bone title" style="width:128px"></span></div>
+            <div class="sk-list">
+              <div class="sk-row"><span class="sk-dot"></span><span class="bone" style="width:58%"></span></div>
+              <div class="sk-row"><span class="sk-dot"></span><span class="bone" style="width:46%"></span></div>
+              <div class="sk-row"><span class="sk-dot"></span><span class="bone" style="width:64%"></span></div>
+              <div class="sk-row"><span class="sk-dot"></span><span class="bone" style="width:52%"></span></div>
+            </div>
+          </article>
+
+          <article class="card" id="crumbs">
+            <div class="hd"><span class="mini"><svg viewBox="0 0 24 24"><use href="#p4"/></svg></span><span class="bone title" style="width:132px"></span></div>
+            <div class="sk-trail">
+              <span class="bone sq"></span>
+              <span class="sk-sep"></span>
+              <span class="bone seg"></span>
+              <span class="sk-sep"></span>
+              <span class="bone seg"></span>
+              <span class="sk-sep"></span>
+              <span class="bone seg" style="background:#c5cad3"></span>
+            </div>
+          </article>
+
+          <article class="card" id="dash">
+            <div class="hd"><span class="mini"><svg viewBox="0 0 24 24"><use href="#p4"/></svg></span><span class="bone title" style="width:108px"></span></div>
+            <div class="hello-sk"></div>
+            <div class="kicker-sk"></div>
+            <div class="sk-proj">
+              <div class="sk-tile"><span class="bone sq"></span><span class="bone"></span></div>
+              <div class="sk-tile"><span class="bone sq"></span><span class="bone"></span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CAPTURE = new URLSearchParams(location.search).has("capture");
+    if (CAPTURE) document.documentElement.classList.add("capture");
+
+    const IDS = ["preview", "filters", "search", "crumbs", "dash"];
+    const KEY = "p4-product-compose-v6";
+    const DEFAULTS = {
+      preview: { left: 836, top: 368 },
+      filters: { left: 270, top: 93 },
+      search:  { left: 125, top: 281 },
+      crumbs:  { left: 226, top: 553 },
+      dash:    { left: 826, top: 115 }
+    };
+
+    const stage = document.getElementById("stage");
+    const frame = document.getElementById("frame");
+    const wrap = frame.parentElement;
+    const posEl = document.getElementById("pos");
+    const cards = Object.fromEntries(IDS.map((id) => [id, document.getElementById(id)]));
+
+    function apply(id, left, top) {
+      const el = cards[id];
+      const maxX = 1280 - el.offsetWidth;
+      const maxY = 720 - el.offsetHeight;
+      left = Math.round(Math.min(Math.max(0, left), maxX));
+      top = Math.round(Math.min(Math.max(0, top), maxY));
+      el.style.left = left + "px";
+      el.style.top = top + "px";
+      return { left, top };
+    }
+
+    function read() {
+      const out = {};
+      for (const id of IDS) {
+        out[id] = {
+          left: parseInt(cards[id].style.left || getComputedStyle(cards[id]).left, 10),
+          top: parseInt(cards[id].style.top || getComputedStyle(cards[id]).top, 10)
+        };
+      }
+      return out;
+    }
+
+    function paintPos() {
+      const p = read();
+      posEl.textContent = IDS.map((id) =>
+        `#${id} { left: ${p[id].left}px; top: ${p[id].top}px; }`
+      ).join("\n");
+    }
+
+    function save() {
+      localStorage.setItem(KEY, JSON.stringify(read()));
+      paintPos();
+    }
+
+    function load(map) {
+      for (const id of IDS) apply(id, map[id].left, map[id].top);
+      paintPos();
+    }
+
+    const saved = (() => {
+      try { return JSON.parse(localStorage.getItem(KEY) || "null"); }
+      catch { return null; }
+    })();
+    load(saved && saved.preview ? saved : DEFAULTS);
+
+    function viewport() {
+      const vv = window.visualViewport;
+      return {
+        w: vv ? vv.width : document.documentElement.clientWidth,
+        h: vv ? vv.height : document.documentElement.clientHeight
+      };
+    }
+
+    function fit() {
+      if (CAPTURE) {
+        frame.style.transform = "none";
+        wrap.style.width = "1280px";
+        wrap.style.height = "720px";
+        return;
+      }
+      const { w, h } = viewport();
+      const dockH = document.querySelector(".dock").getBoundingClientRect().height;
+      const s = Math.max(0.2, Math.min(1, (w - 32) / 1280, (h - dockH - 36) / 720));
+      frame.style.transform = `scale(${s})`;
+      wrap.style.width = `${1280 * s}px`;
+      wrap.style.height = `${720 * s}px`;
+    }
+    fit();
+    requestAnimationFrame(fit);
+    window.addEventListener("resize", fit);
+    if (window.visualViewport) visualViewport.addEventListener("resize", fit);
+
+    let active = cards.preview;
+    active.classList.add("is-active");
+
+    function select(el) {
+      if (active) active.classList.remove("is-active");
+      active = el;
+      active.classList.add("is-active");
+    }
+
+    function stagePoint(e) {
+      const rect = stage.getBoundingClientRect();
+      const sx = 1280 / rect.width;
+      return {
+        x: (e.clientX - rect.left) * sx,
+        y: (e.clientY - rect.top) * sx
+      };
+    }
+
+    let drag = null;
+    stage.addEventListener("pointerdown", (e) => {
+      if (CAPTURE) return;
+      const card = e.target.closest(".card");
+      if (!card) return;
+      select(card);
+      const p = stagePoint(e);
+      drag = {
+        id: card.id,
+        dx: p.x - parseInt(card.style.left, 10),
+        dy: p.y - parseInt(card.style.top, 10)
+      };
+      card.setPointerCapture(e.pointerId);
+      e.preventDefault();
+    });
+    stage.addEventListener("pointermove", (e) => {
+      if (!drag) return;
+      const p = stagePoint(e);
+      apply(drag.id, p.x - drag.dx, p.y - drag.dy);
+      paintPos();
+    });
+    stage.addEventListener("pointerup", () => {
+      if (!drag) return;
+      drag = null;
+      save();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (CAPTURE || !active) return;
+      const step = e.shiftKey ? 10 : 1;
+      const map = { ArrowLeft: [-step, 0], ArrowRight: [step, 0], ArrowUp: [0, -step], ArrowDown: [0, step] };
+      const d = map[e.key];
+      if (!d) return;
+      e.preventDefault();
+      apply(active.id, parseInt(active.style.left, 10) + d[0], parseInt(active.style.top, 10) + d[1]);
+      save();
+    });
+
+    document.getElementById("reset").addEventListener("click", () => {
+      localStorage.removeItem(KEY);
+      load(DEFAULTS);
+      save();
+    });
+  </script>
+</body>
+</html>

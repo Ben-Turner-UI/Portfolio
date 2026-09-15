@@ -42,7 +42,7 @@ Do not use `--disable-remote-fonts` on the Chrome print. Fonts are local files; 
 - Contact sits **top right** of the name on **one line**, in the same 28px header row as the name, vertically centered with it: site, phone, email, LinkedIn. Do not wrap LinkedIn onto a second row. Header label is “LinkedIn”. **More experience on LinkedIn** (linked) sits between Experience / DawsonAndrews and Skills, with air on both sides. Icons are **Material Symbols Outlined** (`language`, `call`, `mail`, `work`), locally hosted in `fonts/material-symbols-outlined.woff2`. Underline the **label text only**, never the icons. More gap between icon and label than between clusters.
 - Section `h2` underline needs air underneath (about 9px). Do not crush heading and body together.
 - Each job: **header row** is logo + Product Designer / company / scope / dates. **Bullets and pills sit under that header**, same left edge as Summary. Bullet *markers* indent like Summary (`padding-left` on the `ul`); do not indent the whole list under the title. DOM order is title → dates → company + scope → bullets → pills.
-- Employer and named-company text links to official sites (Perforce, Puppet, Budibase, DawsonAndrews, CityFibre, GSMA, EA, Pinewood, Xbox Game Studios, Meta, Ulster University, NRC). Write the agency as **DawsonAndrews**, not Dawson Andrews or dawsonandrews. Do not link SportsWork. Do not turn case-study tags into company homepages. Always write the Perforce employer line as **Perforce (Puppet)**.
+- Do not hyperlink company or education names in body copy. Underlined links stay only on the contact row, the LinkedIn note, and case-study tags. Always write the Perforce employer line as **Perforce**. Write the agency as **DawsonAndrews**.
 - Case studies are **tags under the bullets**, small rounded corners (not pills), matching rounded-rect thumbs, sentence case, no underline. No extra stroke on tag thumbs. Current tags: **Shipping production code**, Increasing sales opportunities, Owning P4 DAM, Automations overhaul, CityFibre rebrand, SportsWork. **No CityFibre portal pill.**
 - Experience jobs need a clear gap between companies (**32px** between roles). Do not crush that to steal space for other sections.
 - No em-dashes. Company names in text, not only on logos.
@@ -52,8 +52,10 @@ Do not use `--disable-remote-fonts` on the Chrome print. Fonts are local files; 
 
 Write for a recruiter at another company with **no** context on Perforce, Budibase, or DawsonAndrews.
 
-- Name the company when quoting a metric. Do not mash Perforce and CityFibre numbers into one unattributed summary bullet.
-- Say what the products are in the scope line: P4 Plan and P4 DAM are secure planning and digital asset management software for games and media. Budibase is open-source low-code for internal apps, automations and AI agents.
+- Name the company when quoting a metric. Do not mash Perforce and CityFibre numbers into one unattributed summary bullet. The Perforce 25% / six-to-two line must say Ben ships production front-end, or it reads as a headcount fact with no cause.
+- Say what the products are in the scope line: P4 Plan and P4 DAM are planning and digital asset management software for games and media (do not stack “secure” here; Summary covers regulated/air-gapped). Budibase is open-source low-code for internal apps, automations and AI agents.
+- The Perforce 25% line must name the baseline: feature output rose 25% **above the pre-cut rate** after six developers went to two, because Ben shipped production front-end.
+- Mentoring (at least 10 designers) lives in DawsonAndrews experience, not only Summary. Skills include Typography, Visual hierarchy, Micro-interactions for visual craft.
 - Do not use internal jargon: **Force UI**, “first-layer frontend”, “IC” as a job label, “refinements” as if everyone knows sprint jargon. Prefer “planning meetings”, “production front-end”, “hands-on designer”.
 - Do not list Force UI in Skills. Frontend is production HTML/CSS/Git, not a Perforce design-system name.
 - Homepage case studies are the public proof for metrics. Do not invent job numbers.
