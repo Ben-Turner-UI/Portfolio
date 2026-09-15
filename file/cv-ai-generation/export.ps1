@@ -1,13 +1,27 @@
 # Chrome headless print of the A4 CV → ../Ben-Turner-CV.pdf
 # Requires the local server: .\serve.ps1 (http://127.0.0.1:8765/)
-# Never overwrite original.pdf.
+# Optional: -Url and -Out for a different HTML/PDF. Never overwrite original.pdf.
+
+param(
+  [string]$Url = 'http://127.0.0.1:8765/file/cv-ai-generation/index.html?print=1',
+  [string]$Out
+)
 
 $ErrorActionPreference = 'Stop'
 $here = $PSScriptRoot
 $repo = Split-Path $here -Parent | Split-Path -Parent
-$pdfOut = Join-Path $repo 'file\Ben-Turner-CV.pdf'
+$isMaster = -not $Out
+if ($isMaster) {
+  $pdfOut = Join-Path $repo 'file\Ben-Turner-CV.pdf'
+} else {
+  if (-not [IO.Path]::IsPathRooted($Out)) { $Out = Join-Path $repo $Out }
+  $pdfOut = $Out
+}
+if ([IO.Path]::GetFileName($pdfOut) -eq 'original.pdf') {
+  throw 'Refusing to overwrite original.pdf'
+}
 $pdfTmp = Join-Path $env:TEMP 'Ben-Turner-CV-export.pdf'
-$url = 'http://127.0.0.1:8765/file/cv-ai-generation/index.html?print=1'
+$url = $Url
 $chrome = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 
 if (-not (Test-Path $chrome)) {
@@ -35,6 +49,7 @@ $chromeArgs = @(
 )
 Start-Process $chrome -ArgumentList $chromeArgs -Wait | Out-Null
 Start-Sleep -Seconds 1
+New-Item -ItemType Directory -Force -Path (Split-Path $pdfOut) | Out-Null
 Copy-Item $pdfTmp $pdfOut -Force
 
 $bytes = [IO.File]::ReadAllBytes($pdfOut)
@@ -47,5 +62,7 @@ Write-Host ("wrote {0} ({1} KB) Pattern={2} Shading={3} ToUnicode={4}" -f $pdfOu
 if ($pattern -gt 0 -or $shading -gt 0) {
   Write-Warning 'PDF has /Pattern or /Shading - CSS gradients or grain likely leaked in. Use img/cv-wash.jpg only.'
 }
-Write-Host 'Bump the ?v= query on the homepage CV button in /index.html'
+if ($isMaster) {
+  Write-Host 'Bump the ?v= query on the homepage CV button in /index.html'
+}
 Write-Host 'Close cached PDF tabs before judging lag.'

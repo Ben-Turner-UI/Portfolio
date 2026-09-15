@@ -77,6 +77,10 @@
   font-size: var(--type-body-md);
   line-height: var(--type-body-md-lh);
   color: #333;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .project-paragraph > .project-note {
@@ -119,6 +123,10 @@
 .header-content > .project-note {
   margin: 0;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  align-self: stretch;
+  box-sizing: border-box;
 }
 
 .archive-notice a {

@@ -109,6 +109,7 @@
   gap: 24px;
   align-items: flex-start;
   justify-content: flex-start;
+  min-width: 0;
 }
 
 .project-paragraph-list {

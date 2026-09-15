@@ -37,6 +37,11 @@ footer .contact-links {
   align-items: center;
   gap: 8px;
   color: white;
+  transition: opacity 0.18s ease;
+}
+
+.contact-links p a:hover {
+  opacity: 0.75;
 }
 
 .contact-links p img {

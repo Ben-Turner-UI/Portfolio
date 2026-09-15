@@ -23,6 +23,8 @@ Site live URL for case studies: `https://benturner.work/`. Local preview: `http:
 | `../Ben-Turner-CV.pdf` | Site download. Homepage button: `file/Ben-Turner-CV.pdf?v=...`. |
 | `original.pdf` | Reference only. Never overwrite. |
 
+Job-pack CVs live in `C:\Users\reape\My Drive\Career\Applications`. Do not export a job variant over this HTML, the site PDF, or `original.pdf`.
+
 ## How to run the system
 
 1. `.\serve.ps1` if nothing is already on port 8765.

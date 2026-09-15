@@ -33,7 +33,7 @@
   overflow: hidden;
   background: var(--ui-0, #FFF);
   color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 a.side-project-card:hover {
@@ -119,6 +119,7 @@ a.side-project-card:hover {
   object-fit: cover;
   object-position: center center;
   transform: translate(-50%, -50%);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .side-project-thumbnail--kw {
@@ -149,6 +150,7 @@ a.side-project-card:hover {
   height: 100%;
   object-fit: cover;
   object-position: center 35%;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .side-project-thumbnail-logo-wrap {
@@ -215,7 +217,7 @@ a.side-project-card:hover {
 
 .project-grid > a .grid-item,
 .next-project-link .next-project-card {
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .project-grid > a:hover .grid-item,
@@ -269,6 +271,7 @@ a.side-project-card:hover {
   display: block;
   background-color: #f5f5f5;
   border-bottom: 1px solid var(--ui-1000, #D6D6D6);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .grid-item-content-text {
