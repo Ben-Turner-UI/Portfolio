@@ -19,7 +19,7 @@ header {
   overflow: hidden;
 }
 
-/* Soft orange wash — CSS only, compositor-friendly */
+/* Soft orange wash */
 header::before {
   content: '';
   position: absolute;
@@ -30,9 +30,6 @@ header::before {
   pointer-events: none;
   z-index: 0;
   background: linear-gradient(to top, rgba(255, 74, 0, 0.24) 0%, transparent 100%);
-  transform-origin: center bottom;
-  will-change: opacity, transform;
-  animation: header-wash 14s ease-in-out infinite alternate;
 }
 
 header::after {
@@ -49,37 +46,6 @@ header::after {
   background-position: center bottom;
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
   mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
-  will-change: opacity;
-  animation: header-dots 14s ease-in-out infinite alternate;
-}
-
-@keyframes header-wash {
-  from {
-    opacity: 0.55;
-    transform: scaleY(0.9) translateY(8%);
-  }
-  to {
-    opacity: 1;
-    transform: scaleY(1.12) translateY(0);
-  }
-}
-
-@keyframes header-dots {
-  from {
-    opacity: 0.45;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  header::before,
-  header::after {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
 }
 
 header > * {
