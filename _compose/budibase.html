@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Budibase thumbnail</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 2560px; height: 1440px; overflow: hidden; background: #4F46C8; }
+    .stage {
+      width: 2560px;
+      height: 1440px;
+      position: relative;
+      background:
+        radial-gradient(1100px 820px at 8% 12%, rgba(242, 92, 84, 0.42), transparent 58%),
+        radial-gradient(980px 760px at 92% 18%, rgba(167, 139, 250, 0.38), transparent 55%),
+        radial-gradient(1100px 860px at 86% 96%, rgba(110, 168, 254, 0.28), transparent 58%),
+        radial-gradient(900px 700px at 12% 92%, rgba(139, 124, 246, 0.40), transparent 60%),
+        #5347D0;
+      overflow: hidden;
+    }
+    .iso {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(30deg, rgba(255,255,255,0.06) 1.5px, transparent 1.5px),
+        linear-gradient(150deg, rgba(255,255,255,0.05) 1.5px, transparent 1.5px);
+      background-size: 120px 208px, 120px 208px;
+      mask-image: radial-gradient(ellipse at center, black 40%, transparent 78%);
+      pointer-events: none;
+    }
+    .poly {
+      position: absolute;
+      z-index: 2;
+    }
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -52%);
+      display: flex;
+      align-items: center;
+      gap: 52px;
+      z-index: 5;
+    }
+    .lockup .mark { width: 268px; height: 268px; display: block; }
+    .lockup .word { width: 720px; height: 170px; display: block; }
+    .card {
+      position: absolute;
+      background: #fff;
+      border-radius: 44px;
+      box-shadow: 0 24px 50px rgba(28, 18, 72, 0.22);
+      z-index: 4;
+      overflow: hidden;
+    }
+    .card.left { left: 120px; top: 360px; width: 560px; height: 720px; padding: 48px 44px 44px; }
+    .card.tr { right: 120px; top: 96px; width: 560px; height: 560px; padding: 48px 44px 44px; }
+    .card.br { right: 120px; bottom: 96px; width: 560px; height: 560px; padding: 48px 44px 44px; }
+    .comp {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 36px;
+      display: block;
+    }
+    .flow {
+      position: relative;
+      height: 520px;
+    }
+    .node {
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      box-shadow: 0 10px 24px rgba(83, 71, 208, 0.16);
+    }
+    .node.a { left: 40px; top: 36px; background: #F25C54; }
+    .node.b { right: 48px; top: 176px; background: #8B7CF6; }
+    .node.c { left: 88px; bottom: 28px; background: #6EA8FE; }
+    .flow svg.wires {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .toggles { display: flex; flex-direction: column; gap: 48px; margin-top: 12px; }
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .pill {
+      height: 36px;
+      border-radius: 18px;
+      background: #E6E4F4;
+      flex: 1;
+    }
+    .pill.short { max-width: 58%; }
+    .sw {
+      width: 148px;
+      height: 80px;
+      border-radius: 40px;
+      background: #E6E4F4;
+      position: relative;
+      flex: none;
+    }
+    .sw.on { background: #8B7CF6; }
+    .sw i {
+      position: absolute;
+      top: 8px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 6px 16px rgba(28, 18, 72, 0.16);
+    }
+    .sw.on i { right: 8px; }
+    .sw:not(.on) i { left: 8px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 8px;
+    }
+    .cell {
+      height: 96px;
+      border-radius: 22px;
+      background: #EEEAF8;
+    }
+    .cell.c1 { background: #F25C54; }
+    .cell.c2 { background: #8B7CF6; }
+    .cell.c3 { background: #6EA8FE; }
+    .cell.c4 { background: #C4B5FD; }
+    .cell.mid { background: #F8A5A0; }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="iso"></div>
+
+    <!-- low-poly isometric tiles -->
+    <svg class="poly" style="left: 520px; top: 70px;" width="180" height="160" viewBox="0 0 100 90">
+      <polygon points="50,4 96,30 50,56 4,30" fill="#F25C54"/>
+      <polygon points="50,56 96,30 96,62 50,88" fill="#C44740"/>
+      <polygon points="50,56 4,30 4,62 50,88" fill="#D96A64"/>
+    </svg>
+    <svg class="poly" style="left: 1860px; top: 620px;" width="150" height="134" viewBox="0 0 100 90">
+      <polygon points="50,4 96,30 50,56 4,30" fill="#6EA8FE"/>
+      <polygon points="50,56 96,30 96,62 50,88" fill="#3D7BD6"/>
+      <polygon points="50,56 4,30 4,62 50,88" fill="#8BB7FF"/>
+    </svg>
+    <svg class="poly" style="left: 740px; top: 1180px;" width="130" height="116" viewBox="0 0 100 90">
+      <polygon points="50,4 96,30 50,56 4,30" fill="#C4B5FD"/>
+      <polygon points="50,56 96,30 96,62 50,88" fill="#8B7CF6"/>
+      <polygon points="50,56 4,30 4,62 50,88" fill="#A78BFA"/>
+    </svg>
+    <svg class="poly" style="left: 1680px; top: 40px;" width="110" height="100" viewBox="0 0 100 90">
+      <polygon points="50,4 96,30 50,56 4,30" fill="#8B7CF6"/>
+      <polygon points="50,56 96,30 96,62 50,88" fill="#5C50C9"/>
+      <polygon points="50,56 4,30 4,62 50,88" fill="#A78BFA"/>
+    </svg>
+    <svg class="poly" style="left: 980px; top: 80px;" width="90" height="82" viewBox="0 0 100 90">
+      <polygon points="50,4 96,30 50,56 4,30" fill="#F8A5A0"/>
+      <polygon points="50,56 96,30 96,62 50,88" fill="#F25C54"/>
+      <polygon points="50,56 4,30 4,62 50,88" fill="#F6B7B2"/>
+    </svg>
+
+    <div class="lockup">
+      <svg class="mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="#6EA8FE" d="M18.2373 1.03849V14.08C18.2373 14.6475 18.6648 15.1185 19.2048 15.1185H24.4923C24.9648 15.1185 25.4148 14.877 25.7073 14.4664L30.0161 8.32C30.3311 7.87321 30.3311 7.25736 30.0161 6.81057L25.7073 0.652075C25.4148 0.241509 24.9648 0 24.4923 0H19.2048C18.6648 0 18.2373 0.458868 18.2373 1.03849Z"/>
+        <path fill="#F25C54" d="M18.2373 17.9202V30.9617C18.2373 31.5293 18.6648 32.0002 19.2048 32.0002H24.4923C24.9648 32.0002 25.4148 31.7587 25.7073 31.3481L30.0161 25.2017C30.3311 24.7549 30.3311 24.1391 30.0161 23.6923L25.7073 17.5459C25.4261 17.1353 24.9761 16.8938 24.4923 16.8938H19.2048C18.6648 16.8817 18.2373 17.3526 18.2373 17.9202Z"/>
+        <path fill="#8B7CF6" d="M0.439453 1.03849V14.08C0.439453 14.6475 0.866953 15.1185 1.40695 15.1185H12.7695C13.242 15.1185 13.692 14.877 13.9845 14.4664L17.9782 8.75472C18.4732 8.04226 18.4732 7.06415 17.9782 6.3517L13.9732 0.652075C13.692 0.241509 13.242 0 12.7582 0H1.40695C0.866953 0 0.439453 0.458868 0.439453 1.03849Z"/>
+        <path fill="#C4B5FD" d="M0.439453 17.9202V30.9617C0.439453 31.5293 0.866953 32.0002 1.40695 32.0002H12.7695C13.242 32.0002 13.692 31.7587 13.9845 31.3481L17.9782 25.6364C18.4732 24.924 18.4732 23.9459 17.9782 23.2334L13.9845 17.5217C13.7032 17.1111 13.2532 16.8696 12.7695 16.8696H1.40695C0.866953 16.8817 0.439453 17.3526 0.439453 17.9202Z"/>
+      </svg>
+      <svg class="word" viewBox="40 0 96 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="#fff" d="M51.7512 16.918C51.2674 16.3746 50.6487 15.964 49.8837 15.6983C52.0999 14.7081 52.5612 11.7255 51.3687 9.74512C50.3224 8.15116 48.5224 7.75267 46.5987 7.72852C44.8774 7.72852 42.0874 7.72852 40.3887 7.72852V24.6342C41.0637 24.6342 42.7287 24.6342 43.3812 24.6342C45.2037 24.5859 48.6462 24.8757 50.2212 24.0908C52.9437 23.1247 53.6974 19.0795 51.7512 16.918ZM46.3512 10.4817C47.1049 10.4817 47.7124 10.6266 48.1849 10.9164C49.3099 11.6047 49.1074 14.1406 47.6787 14.4304C46.8687 14.7444 44.2812 14.5753 43.3812 14.6115V10.4817H46.3512ZM49.0062 21.3376C48.5112 21.6998 47.8474 21.881 47.0037 21.881H43.3812V17.1957H47.0037C47.8474 17.1957 48.5112 17.3768 49.0062 17.727C49.9962 18.3187 49.9962 20.7217 49.0062 21.3376Z"/>
+        <path fill="#fff" d="M59.7942 24.9119C56.948 24.9964 54.608 22.7745 54.7092 19.6228V12.2085H57.5442V19.4417C57.5105 21.1323 58.3317 22.1949 59.7942 22.2191C61.2567 22.1949 62.0667 21.1323 62.0442 19.4417V12.2206H64.8567V19.6349C64.958 22.7625 62.618 24.9964 59.7942 24.9119Z"/>
+        <path fill="#fff" d="M75.4324 8.36818V14.0436C74.2624 11.7252 71.1124 11.3146 69.1437 12.7636C67.4337 13.9953 66.6012 16.1206 66.6124 18.415C66.6012 20.6852 67.4449 22.8467 69.1437 24.0663C71.1012 25.5274 74.2512 25.1048 75.4324 22.7984V24.6338H78.2449V7.60742L75.4324 8.36818ZM74.6562 21.2286C73.6212 22.5448 71.3712 22.5448 70.3362 21.2286C69.2224 20.0331 69.2224 16.821 70.3362 15.6255C71.3712 14.3093 73.6212 14.3093 74.6562 15.6255C75.7587 16.8089 75.7587 20.0331 74.6562 21.2286Z"/>
+        <path fill="#fff" d="M82.6659 10.7232C80.2021 10.7835 80.2134 7.00391 82.6659 7.05222C85.0846 7.04014 85.0959 10.7473 82.6659 10.7232ZM84.0384 12.2205V24.6341H81.2259V12.2205H84.0384Z"/>
+        <path fill="#fff" d="M97.977 15.0821C96.582 11.6165 91.7108 10.6263 89.832 14.0557V7.60742L87.0195 8.36818V24.6338H89.832V22.8104C91.002 25.1169 94.1858 25.5395 96.132 24.0784C98.7195 22.2791 99.2933 17.9199 97.977 15.0821ZM94.9395 21.2286C93.9045 22.5448 91.6545 22.5448 90.6195 21.2286C89.5058 20.0331 89.5058 16.821 90.6195 15.6255C91.6545 14.3093 93.9045 14.3093 94.9395 15.6255C96.0533 16.8089 96.0533 20.0331 94.9395 21.2286Z"/>
+        <path fill="#fff" d="M109.947 14.0557C107.776 10.8919 101.949 11.2059 100.576 15.1063L102.95 16.181C103.681 14.3576 106.561 13.9953 107.551 15.698C107.934 16.2776 107.855 17.5335 107.855 18.2821C105.672 16.0603 100.002 17.1229 100.115 21.0474C99.9687 25.1772 105.999 26.095 108.035 23.4263V24.6218H110.667V16.821C110.667 15.698 110.42 14.7803 109.947 14.0557ZM107.225 22.255C106.381 22.8587 104.547 22.8467 103.704 22.267C102.792 21.7478 102.792 20.2746 103.704 19.7553C104.885 19.0308 107.844 19.0308 107.9 21.0112C107.9 21.5425 107.675 21.9531 107.225 22.255Z"/>
+        <path fill="#fff" d="M117.856 24.9116C115.437 24.9599 113.108 23.4988 112.591 20.8059L114.863 20.009C115.167 21.6392 116.393 22.4482 117.856 22.4482C118.812 22.4241 119.926 22.2309 120.016 21.2165C119.937 20.1539 118.947 20.1056 117.923 19.7433C116.562 19.4535 114.593 18.8256 113.896 17.9924C112.568 16.6761 112.715 14.0558 114.256 12.9327C116.798 10.9041 122.221 11.8701 122.581 15.9275L120.241 16.5795C120.005 15.0339 118.958 14.3939 117.608 14.3818C116.731 14.3939 115.741 14.6233 115.673 15.5652C115.786 16.6761 117.057 16.6882 117.923 17.0142C119.24 17.292 121.073 17.8595 121.805 18.729C122.907 19.8037 123.008 21.8324 122.108 23.0761C121.141 24.4286 119.532 24.9116 117.856 24.9116Z"/>
+        <path fill="#fff" d="M134.742 14.9977C133.448 11.9789 129.623 11.0974 127.08 12.7396C125.235 13.923 124.358 16.0362 124.369 18.4272C124.358 20.8061 125.269 22.9555 127.137 24.1147C129.848 25.8053 133.977 24.8393 135.214 21.4823L132.795 20.5525C132.064 22.243 130.006 22.7864 128.554 21.9049C127.711 21.3494 127.317 20.2385 127.227 19.1034H135.405C135.518 17.6664 135.293 16.1208 134.742 14.9977ZM129.994 14.3698C131.423 14.3698 132.345 15.4808 132.57 17.0023H127.317C127.564 15.4445 128.464 14.3577 129.994 14.3698Z"/>
+      </svg>
+    </div>
+
+    <article class="card left">
+      <svg class="comp" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#8B7CF6" d="M12 1.6 16.2 5.8 12 10 7.8 5.8 12 1.6Zm5.8 5.8 4.2 4.2-4.2 4.2L13.6 11.6 17.8 7.4ZM12 14l4.2 4.2L12 22.4 7.8 18.2 12 14ZM6.2 7.4 10.4 11.6 6.2 15.8 2 11.6 6.2 7.4Z"/>
+      </svg>
+      <div class="flow">
+        <svg class="wires" viewBox="0 0 472 520" fill="none">
+          <path d="M106 168 C 106 230, 330 180, 330 242" stroke="#D9D4EE" stroke-width="10" stroke-linecap="round"/>
+          <path d="M330 308 C 330 370, 154 330, 154 392" stroke="#D9D4EE" stroke-width="10" stroke-linecap="round"/>
+        </svg>
+        <div class="node a"></div>
+        <div class="node b"></div>
+        <div class="node c"></div>
+      </div>
+    </article>
+
+    <article class="card tr">
+      <svg class="comp" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#8B7CF6" d="M12 1.6 16.2 5.8 12 10 7.8 5.8 12 1.6Zm5.8 5.8 4.2 4.2-4.2 4.2L13.6 11.6 17.8 7.4ZM12 14l4.2 4.2L12 22.4 7.8 18.2 12 14ZM6.2 7.4 10.4 11.6 6.2 15.8 2 11.6 6.2 7.4Z"/>
+      </svg>
+      <div class="toggles">
+        <div class="row"><div class="pill"></div><div class="sw on"><i></i></div></div>
+        <div class="row"><div class="pill short"></div><div class="sw"><i></i></div></div>
+        <div class="row"><div class="pill"></div><div class="sw on"><i></i></div></div>
+      </div>
+    </article>
+
+    <article class="card br">
+      <svg class="comp" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#8B7CF6" d="M12 1.6 16.2 5.8 12 10 7.8 5.8 12 1.6Zm5.8 5.8 4.2 4.2-4.2 4.2L13.6 11.6 17.8 7.4ZM12 14l4.2 4.2L12 22.4 7.8 18.2 12 14ZM6.2 7.4 10.4 11.6 6.2 15.8 2 11.6 6.2 7.4Z"/>
+      </svg>
+      <div class="grid">
+        <div class="cell c1"></div>
+        <div class="cell"></div>
+        <div class="cell c2"></div>
+        <div class="cell"></div>
+        <div class="cell c3"></div>
+        <div class="cell"></div>
+        <div class="cell mid"></div>
+        <div class="cell"></div>
+        <div class="cell c4"></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

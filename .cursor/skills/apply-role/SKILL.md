@@ -5,7 +5,7 @@ description: Creates or revises a per-role application pack for Ben Turner (brie
 
 # Apply to a role
 
-Packs live at `C:\Users\reape\My Drive\Career\Applications`. Read `_master/CONTEXT.md` and `_master/claims.md` there first. Then `_cv/CONTEXT.md` for layout and copy law.
+Packs live at `C:\Users\reape\My Drive\Career\Applications\CVs\{Company} - {Role}`. Read `_master/CONTEXT.md` and `_master/claims.md` there first. Then `_cv/CONTEXT.md` for layout and copy law.
 
 Do not edit `file/cv-ai-generation/index.html` or overwrite `file/Ben-Turner-CV.pdf` for one employer. Voice follow-ups: append `notes.md` in the pack, patch that pack, re-export.
 
@@ -13,22 +13,22 @@ Do not edit `file/cv-ai-generation/index.html` or overwrite `file/Ben-Turner-CV.
 
 Working directory: `C:\Users\reape\My Drive\Career\Applications`
 
-1. Name the slug: `company-role`, lowercase hyphens.
+1. Name a slug for the script (`company-role`, lowercase hyphens) and pass company + role for the folder name.
 2. Scaffold:
 
 ```powershell
 .\_master\new-application.ps1 -Slug "company-role" -Company "Name" -Role "Title" -JdPath "C:\path\to\jd.pdf"
 ```
 
-If the JD was pasted, write `{slug}/jd.md` yourself. Put extra screenshots in `assets/`.
+The pack is created at `CVs\{Company} - {Role}`. If the JD was pasted, write `jd.md` in that folder yourself. Put extra screenshots in `assets/`.
 
 3. Fill `brief.md`. Classify archetypes. Score fit honestly. Lead / bury / do-not-claim must drive the CV, not the other way round.
-4. Reweight `{slug}/cv/index.html` only: reorder, relabel summary prefixes, trim off-target lines. Same jobs, dates, title (**Product Designer**), and numbers. No new facts.
+4. Reweight `CVs\{Company} - {Role}/cv/index.html` only: reorder, relabel summary prefixes, trim off-target lines. Same jobs, dates, title (**Product Designer**), and numbers. No new facts.
 5. Write `email.md` the user can send. Short paragraphs. Their language, not ours. Portfolio: https://benturner.work
-6. Export (needs `.\_cv\serve.ps1` on port **8766**):
+6. Export (needs `.\_cv\serve.ps1` on port **8766**). Encode spaces in the URL:
 
 ```powershell
-.\_cv\export.ps1 -Url "http://127.0.0.1:8766/{slug}/cv/index.html?print=1" -Out "{slug}\Ben-Turner-CV.pdf"
+.\_cv\export.ps1 -Url "http://127.0.0.1:8766/CVs/Bazaarvoice%20-%20Lead%20Product%20Designer/cv/index.html?print=1" -Out "CVs\Bazaarvoice - Lead Product Designer\Ben-Turner-CV.pdf"
 ```
 
 7. Confirm the sheet still fits one A4. Return the email, the fit line, and the folder path.

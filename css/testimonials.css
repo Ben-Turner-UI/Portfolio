@@ -25,6 +25,23 @@
   padding: 32px;
 }
 
+.testimonial-card--wide {
+  grid-column: 1 / -1;
+}
+
+.testimonial-avatar--initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #111;
+  background: #ececec;
+  text-decoration: none;
+}
+
 .testimonial-quote-mark {
   font-size: 60px;
   line-height: 1;
@@ -76,6 +93,12 @@ a.testimonial-avatar {
 
 a.testimonial-avatar:hover {
   opacity: 0.7;
+}
+
+a.testimonial-avatar.testimonial-avatar--initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .testimonial-reviewer-info a {

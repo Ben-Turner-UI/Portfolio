@@ -65,6 +65,8 @@ button {
   object-fit: cover;
   object-position: center center;
   background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
 }
 
 .next-project-card__content {
