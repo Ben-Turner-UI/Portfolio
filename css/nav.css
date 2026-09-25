@@ -191,11 +191,14 @@
   .nav-container nav {
     --nav-bar-padding: 5px;
     align-items: stretch;
+    background: #fff;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow:
       0 8px 28px rgba(0, 0, 0, 0.14),
       0 2px 8px rgba(0, 0, 0, 0.08);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .nav-group {

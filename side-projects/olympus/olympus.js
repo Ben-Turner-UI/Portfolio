@@ -125,7 +125,7 @@
       tone: 'trio',
       img: 'olympus/img/watch-face-trio.png',
       href: 'https://www.facer.io/watchface/o0rGGL7VDD',
-      blurb: 'Designed specifically with sport in mind, utilizing three clear complications within a tripartite layout. It remains modern, highly purposeful, and perfectly readable while on the move.'
+      blurb: 'Designed specifically with sport in mind, utilising three clear complications within a tripartite layout. It remains modern, highly purposeful, and perfectly readable while on the move.'
     },
     {
       id: 'foundations',
@@ -133,7 +133,7 @@
       tone: 'foundations',
       img: 'olympus/img/watch-face-foundations.png',
       href: '',
-      blurb: 'A core analog layout built for reliable everyday utility. Compass, calorie, and weather complications sit on a clean, high-contrast dial acting as the essential Olympus foundation.'
+      blurb: 'A core analogue layout built for reliable everyday utility. Compass, calorie, and weather complications sit on a clean, high-contrast dial acting as the essential Olympus foundation.'
     }
   ];
 

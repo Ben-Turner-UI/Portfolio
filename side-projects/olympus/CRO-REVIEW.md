@@ -52,7 +52,7 @@ Hero watch wins visually (good). Then eye drops into a wall of About prose. Then
 | C2 | **Wrong product is the loudest CTA** | Demote Toolkit buy. Promote face install. Toolkit is upsell for designers; faces are the product for wearers. |
 | C3 | **Hero doesn't name the product job** | Rewrite so the first 3 seconds answer: *premium circular watch faces for Wear OS / Facer.* Tagline can stay; product sentence cannot be optional. |
 | C4 | **Foundations Install is disabled with no explanation** | Either ship a link, mark "Coming soon" clearly, or remove it from the buyable set until live. A greyed Install button reads as broken. |
-| C5 | **Two audiences, one undifferentiated page** | Pick a primary visitor (wearer installing faces). Move creator/toolkit pitch below faces, labeled as such. Or split paths: "For your wrist" / "For designers." |
+| C5 | **Two audiences, one undifferentiated page** | Pick a primary visitor (wearer installing faces). Move creator/toolkit pitch below faces, labelled as such. Or split paths: "For your wrist" / "For designers." |
 
 ### 2. High Impact — clarity and polish
 

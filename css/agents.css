@@ -167,14 +167,14 @@ body.is-agents-view .nav-container {
     padding: 5px;
     height: auto;
     min-height: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     box-shadow:
       0 8px 28px rgba(0, 0, 0, 0.14),
       0 2px 8px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     pointer-events: auto;
   }
 

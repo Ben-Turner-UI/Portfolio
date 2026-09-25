@@ -127,7 +127,6 @@ a {
 }
 
 .home-header-content-text a,
-.project-meta a,
 .personal-entry a {
   color: #000;
   font-weight: 500;
@@ -137,7 +136,6 @@ a {
 }
 
 .home-header-content-text a:hover,
-.project-meta a:hover,
 .personal-entry a:hover {
   color: #000;
   text-decoration-thickness: 2px;
