@@ -59,6 +59,7 @@
       isolation: isolate;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 10px;
       box-sizing: border-box;
       width: 210mm;
@@ -92,10 +93,10 @@
     }
     .cv-header {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 4px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
       margin: 0;
       padding: 0;
       height: auto;
@@ -118,36 +119,42 @@
       line-height: 1;
     }
     .cv h1 .accent { color: #ff4d00; }
-    .cv-contact {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+    .cv ul.cv-contact {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      justify-content: end;
       align-items: center;
-      align-self: stretch;
-      gap: 4px 14px;
-      margin: 0;
+      align-self: center;
+      gap: 3px 16px;
+      margin: 0 0 0 auto;
       padding: 0;
       height: auto;
       list-style: none;
       color: #333;
-      font-size: 10.5px;
-      line-height: 1.2;
       flex: none;
       min-width: 0;
     }
     .cv-contact li {
       display: flex;
       align-items: center;
+      gap: 4px;
       margin: 0;
       height: auto;
+    }
+    .cv-contact__icon {
+      display: block;
+      width: 13px;
+      height: 13px;
+      flex: none;
     }
     .cv-contact li::before { content: none; display: none; }
     .cv-contact a {
       display: inline-flex;
       align-items: center;
       height: auto;
-      gap: 0;
+      gap: 4px;
       text-decoration: none;
+      white-space: nowrap;
     }
     .cv-contact__label {
       text-underline-offset: 2px;
@@ -368,26 +375,27 @@
       <ul class="cv-contact">
         <li>
           <a href="https://benturner.work/">
+            <svg class="cv-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"/></svg>
             <span class="cv-contact__label">benturner.work</span>
           </a>
         </li>
         <li>
           <a href="tel:+447546182198">
+            <svg class="cv-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 3h3l1.5 4-2 1.2a12 12 0 0 0 6.3 6.3L17 12.5 21 14v3a2 2 0 0 1-2 2A16 16 0 0 1 5 5a2 2 0 0 1 2-2z"/></svg>
             <span class="cv-contact__label">+44 7546 182198</span>
           </a>
         </li>
         <li>
           <a href="mailto:Benjamin.turner.design@gmail.com">
+            <svg class="cv-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 7l9 7 9-7"/></svg>
             <span class="cv-contact__label">Benjamin.turner.design@gmail.com</span>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/benturnerwork">
+            <svg class="cv-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.7 3.3a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4zM3 9h3.4V21H3V9zm6.2 0H12.5v1.6h.1c.4-.8 1.5-1.7 3.2-1.7 3.4 0 4 2.2 4 5.1V21H16.4v-6.4c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9.2V9z"/></svg>
             <span class="cv-contact__label">linkedin.com/in/benturnerwork</span>
           </a>
-        </li>
-        <li>
-          <span class="cv-contact__label">Carrickfergus, Northern Ireland</span>
         </li>
       </ul>
     </div>
@@ -395,9 +403,9 @@
     <section class="cv-section">
       <h2>Summary</h2>
       <ul class="cv-summary">
-        <li><strong>Product Designer:</strong> Designing digital products since 2015. I build design systems and ship the products they serve, at Perforce, Budibase and DawsonAndrews.</li>
-        <li><strong>Shipped output:</strong> I ship production front-end. At Perforce, feature output rose 25% above the pre-cut rate after the front-end team went from six to two. At CityFibre, homepage work put 90% more people onto the buying journey, which helped DawsonAndrews grow from a small to a medium-sized agency.</li>
-        <li><strong>Secure environments:</strong> I was one of the lead designers at the PSNI, with experience across public sector organisations and air-gapped, data-sensitive clients.</li>
+        <li><strong>Product Designer:</strong> I have worked in large enterprise software, an in-house startup, and an agency, across the public and private sectors.</li>
+        <li><strong>Company growth:</strong> I deliver features and designs that grow the companies I work for. At Perforce, I strategically changed the onboarding to help the sales team make more sales. At DawsonAndrews, the project I worked on helped the company grow from a small to a medium-sized agency and take on another 10 employees.</li>
+        <li><strong>How I work:</strong> I am highly coachable, I like bringing people together, and I organise the team socials. I am usually the one in the meetings making jokes, bringing the energy and bringing a spark to the quiet days. <a href="https://benturner.work/about.html">Read more</a>.</li>
       </ul>
     </section>
 
@@ -444,6 +452,7 @@
         </ul>
         <div class="cv-cases">
           <a class="cv-case" href="https://benturner.work/budibase-automations.html"><img src="img/budibase.jpg" alt=""><span>Automations overhaul</span></a>
+          <a class="cv-case" href="https://benturner.work/budibase-ui.html"><img src="img/budibase.jpg" alt=""><span>Branches, permissions, calculations</span></a>
         </div>
       </div>
       <div class="cv-role">
@@ -478,17 +487,15 @@
       <p><strong>Tools:</strong> Figma, Maze, Jira, Local development environments.</p>
     </section>
 
-    <div class="cv-split">
-      <section class="cv-section">
-        <h2>Education</h2>
-        <p>BDes (Hons) Interaction Design, Ulster University, First Class Honours (2017 to 2021)</p>
-        <p>Extended Diploma in Interactive Media, Northern Regional College. Distinction*, Distinction*, Distinction (2015 to 2017)</p>
-      </section>
-      <section class="cv-section">
-        <h2>Hobbies</h2>
-        <p>Martial arts since 2007: BJJ purple belt, Japanese Jiu-Jitsu black belt, and Judo green belt. Also Warhammer 30k, the gym, fishkeeping, karting, travel, and dogs, especially fluffy ones.</p>
-      </section>
-    </div>
+    <section class="cv-section">
+      <h2>Education</h2>
+      <p>BDes (Hons) Interaction Design, Ulster University, First Class Honours (2017 to 2021)</p>
+      <p>Extended Diploma in Interactive Media, Northern Regional College. Distinction*, Distinction*, Distinction (2015 to 2017)</p>
+    </section>
+    <section class="cv-section">
+      <h2>Hobbies</h2>
+      <p>Martial arts since 2007: BJJ purple belt, Japanese Jiu-Jitsu black belt, and Judo green belt. Also Warhammer 30k, the gym, fishkeeping, karting, travel, and dogs, especially fluffy ones.</p>
+    </section>
   </article>
 </body>
 </html>
