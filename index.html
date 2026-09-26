@@ -10,8 +10,8 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,ads_click,arrow_forward,arrow_upward,chevron_left,chevron_right,close,download,drag_indicator,emoji_events,grid_view,groups,home,lock,login,mail,open_in_new,palette,person,route,search,settings,smart_toy,trending_up,widgets&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="shortcut icon" href="favicon.ico">
@@ -49,7 +49,7 @@
   <div class="width-container">
     <div class="header-content">
       <div class="home-header-content">
-        <img class="portrait" src="img/portrait.jpg" alt="Portrait of Ben Turner">
+        <img class="portrait" src="img/portrait.jpg" alt="Portrait of Ben Turner" fetchpriority="high" decoding="async">
         <div class="home-header-content-text">
           <h1>Ben Turner, Product Designer<span class="home-accent">.</span></h1>
           <p>I lead design across multiple products at <a href="https://www.perforce.com/">Perforce</a>, shipping features end-to-end with Claude Code.</p>
@@ -79,7 +79,7 @@
 
       <a href="p4-dam.html">
         <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/p4-dam.png?v=2026-09-15y" alt="Case study: driving a 25% increase in feature delivery despite a 66% engineering cut">
+          <img class="project-grid-thumbnail" src="img/thumbnail/p4-dam.jpg?v=2026-09-26" alt="Case study: driving a 25% increase in feature delivery despite a 66% engineering cut" decoding="async">
           <div class="grid-item-content">
             <div class="grid-item-content-wrapper">
               <div class="grid-item-content-text">
@@ -107,7 +107,7 @@
 
       <a href="p4-personas.html">
         <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/p4-personas.png?v=2026-09-22h" alt="Case study: buying personas and generative AI increasing sales opportunities">
+          <img class="project-grid-thumbnail" src="img/thumbnail/p4-personas.jpg?v=2026-09-26" alt="Case study: buying personas and generative AI increasing sales opportunities" decoding="async">
           <div class="grid-item-content">
             <div class="grid-item-content-wrapper">
               <div class="grid-item-content-text">
@@ -135,7 +135,7 @@
 
       <a href="p4-product.html">
         <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/p4-product.png?v=2026-09-15w" alt="Case study: leading product design to fix key P4 DAM user flows">
+          <img class="project-grid-thumbnail" src="img/thumbnail/p4-product.png?v=2026-09-15w" alt="Case study: leading product design to fix key P4 DAM user flows" loading="lazy" decoding="async">
           <div class="grid-item-content">
             <div class="grid-item-content-wrapper">
               <div class="grid-item-content-text">
@@ -165,7 +165,7 @@
         <div class="grid-item">
           <div class="project-grid-thumbnail film-thumb" role="img" aria-label="Case study: Delivering core Budibase features">
             <div class="film-thumb__media">
-              <video class="film-thumb__video" src="img/thumbnail/bb-ui-roles-thumb.mp4" autoplay loop muted playsinline></video>
+              <video class="film-thumb__video" src="img/thumbnail/bb-ui-roles-thumb.mp4" data-autoplay loop muted playsinline preload="none"></video>
               <span class="film-thumb__grade" aria-hidden="true"></span>
               <span class="film-thumb__wash" aria-hidden="true"></span>
               <span class="film-thumb__grain" aria-hidden="true"></span>
@@ -199,7 +199,7 @@
 
       <a href="budibase-automations.html">
         <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/bb-automations-thumbnail.png?v=2026-09-22j" alt="Case study: Overhauling Budibase Automations for AI">
+          <img class="project-grid-thumbnail" src="img/thumbnail/bb-automations-thumbnail.png?v=2026-09-22j" alt="Case study: Overhauling Budibase Automations for AI" loading="lazy" decoding="async">
           <div class="grid-item-content">
             <div class="grid-item-content-wrapper">
               <div class="grid-item-content-text">
@@ -227,7 +227,7 @@
 
       <a href="cityfibre-rebrand.html">
         <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/rebrand-thumbnail.jpg" alt="Case study: Driving a 90% conversion boost through the CityFibre digital rebrand">
+          <img class="project-grid-thumbnail" src="img/thumbnail/rebrand-thumbnail.jpg" alt="Case study: Driving a 90% conversion boost through the CityFibre digital rebrand" loading="lazy" decoding="async">
           <div class="grid-item-content">
             <div class="grid-item-content-wrapper">
               <div class="grid-item-content-text">
@@ -265,7 +265,7 @@
 
       <a href="side-projects/olympus.html" class="side-project-card">
         <div class="side-project-thumbnail side-project-thumbnail--olympus">
-          <img class="side-project-thumbnail-olympus-img" src="img/thumbnail/olympus-thumbnail.png" alt="Olympus watch faces on Galaxy Gear">
+          <img class="side-project-thumbnail-olympus-img" src="img/thumbnail/olympus-thumbnail.png" alt="Olympus watch faces on Galaxy Gear" loading="lazy" decoding="async">
         </div>
         <div class="side-project-content">
           <h4>Olympus: Premium watch faces for smartwatches</h4>
@@ -275,7 +275,7 @@
 
       <a href="https://www.moddb.com/games/cc-kanes-wrath/addons/4k-add-on-installer" class="side-project-card" target="_blank" rel="noopener noreferrer">
         <div class="side-project-thumbnail side-project-thumbnail--kw">
-          <img class="side-project-thumbnail-bg" src="img/thumbnail/kanes-wrath-background.png" alt="">
+          <img class="side-project-thumbnail-bg" src="img/thumbnail/kanes-wrath-background.jpg?v=2026-09-26" alt="" loading="lazy" decoding="async">
           <div class="side-project-thumbnail-logo-wrap">
             <img class="side-project-thumbnail-logo" src="img/thumbnail/kanes-wrath-logo.svg" alt="Command &amp; Conquer: Kane's Wrath logo">
           </div>
@@ -313,7 +313,7 @@
         <p class="testimonial-text">Ben has a great eye for UX and isn&rsquo;t afraid to scrap an existing UI if there&rsquo;s a better way to do it. He uses AI to build out prototypes fast, which means we can get end-to-end features published much quicker than usual. He&rsquo;s also just a laid-back, approachable guy - design reviews with him were always easy and collaborative. I&rsquo;d definitely work with him again.</p>
         <div class="testimonial-reviewer">
           <a href="https://www.linkedin.com/in/daniel-robinson-content-creator/" target="_blank" rel="noopener noreferrer" class="testimonial-avatar">
-            <img src="img/testimonial/daniel-robinson.jpg" alt="Daniel Robinson">
+            <img src="img/testimonial/daniel-robinson.jpg?v=2026-09-26" alt="Daniel Robinson" loading="lazy" decoding="async">
           </a>
           <div class="testimonial-reviewer-info">
             <a href="https://www.linkedin.com/in/daniel-robinson-content-creator/" target="_blank" rel="noopener noreferrer">
@@ -329,7 +329,7 @@
         <p class="testimonial-text">Ben led a research project that completely changed how we approach development, giving us the insights we needed to actually back our strategy with data. He just has a really strong instinct for understanding what users need. He&rsquo;s meticulous, cares about the work, and brings a great attitude to the team.</p>
         <div class="testimonial-reviewer">
           <a href="https://www.linkedin.com/in/jamie-birss" target="_blank" rel="noopener noreferrer" class="testimonial-avatar">
-            <img src="img/testimonial/jamie-birss.jpg" alt="Jamie Birss">
+            <img src="img/testimonial/jamie-birss.jpg?v=2026-09-26" alt="Jamie Birss" loading="lazy" decoding="async">
           </a>
           <div class="testimonial-reviewer-info">
             <a href="https://www.linkedin.com/in/jamie-birss" target="_blank" rel="noopener noreferrer">
