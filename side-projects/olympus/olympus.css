@@ -1,11 +1,11 @@
 body {
-    --olympus-bg: #0C100E;
-    --olympus-surface: #141916;
-    --olympus-surface-inset: #090E0B;
-    --olympus-card-bg: #141916;
-    --olympus-media-bg: #070A08;
-    --olympus-border: #2B332F;
-    --olympus-border-muted: #38413C;
+    --olympus-bg: #080A09;
+    --olympus-surface: #060807;
+    --olympus-surface-inset: #030403;
+    --olympus-card-bg: #060807;
+    --olympus-media-bg: #030403;
+    --olympus-border: #1A211D;
+    --olympus-border-muted: #242B27;
     --olympus-text-muted: #9DA8A2;
     --olympus-divider: rgba(0, 255, 176, 0.1);
     --olympus-ui-surface: rgba(0, 255, 176, 0.08);
@@ -238,10 +238,10 @@ main {
 
 .about_card {
     padding: 28px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: var(--olympus-card-radius);
     background: var(--olympus-card-bg);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .about_card h3.section_heading {
@@ -618,9 +618,9 @@ body.home-page {
     z-index: 1;
     border-radius: var(--olympus-panel-radius);
     background:
-        radial-gradient(ellipse 55% 42% at 78% 100%, rgba(0, 255, 176, 0.14) 0%, transparent 68%),
-        radial-gradient(ellipse 36% 30% at 58% 92%, rgba(0, 230, 160, 0.08) 0%, transparent 70%),
-        linear-gradient(160deg, #101612 0%, #0A0E0C 100%);
+        radial-gradient(ellipse 55% 42% at 78% 100%, rgba(0, 255, 176, 0.12) 0%, transparent 68%),
+        radial-gradient(ellipse 36% 30% at 58% 92%, rgba(0, 230, 160, 0.07) 0%, transparent 70%),
+        linear-gradient(160deg, #0B0E0C 0%, #060807 100%);
     box-sizing: border-box;
 }
 
@@ -753,12 +753,12 @@ body.home-page {
     text-align: left;
     font-weight: 800;
     text-transform: uppercase;
-    max-width: 18ch;
+    max-width: 30ch;
 }
 
 .home-page .landing_lead {
     max-width: 44ch;
-    margin: 0 0 16px;
+    margin: 0;
     font-size: 16px;
     line-height: var(--olympus-line-16);
 }
@@ -769,13 +769,6 @@ body.home-page {
     align-items: center;
     gap: 16px;
     margin: 0 0 12px;
-}
-
-.home-page .landing_meta {
-    margin: 0;
-    font-size: var(--olympus-text-sm);
-    line-height: var(--olympus-line-sm);
-    color: var(--olympus-text-muted);
 }
 
 .home-page .about {
@@ -829,8 +822,6 @@ body.home-page {
 
 .home-page .site_footer {
     margin-top: 0;
-    background-color: var(--section-bg);
-    border-top: 1px solid var(--olympus-divider);
 }
 
 
@@ -891,10 +882,10 @@ body.home-page {
     min-width: 0;
     height: 100%;
     padding: 0;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: var(--olympus-card-radius);
     background: var(--olympus-card-bg);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -1258,6 +1249,7 @@ body.home-page {
     justify-content: center;
     width: 1em;
     height: 1em;
+    overflow: hidden;
     white-space: nowrap;
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
@@ -1409,9 +1401,9 @@ body.home-page {
 
     .home-page .landing {
         background:
-            radial-gradient(ellipse 70% 40% at 50% 100%, rgba(0, 255, 176, 0.14) 0%, transparent 68%),
-            radial-gradient(ellipse 42% 28% at 50% 94%, rgba(0, 230, 160, 0.08) 0%, transparent 70%),
-            linear-gradient(160deg, #101612 0%, #0A0E0C 100%);
+            radial-gradient(ellipse 70% 40% at 50% 100%, rgba(0, 255, 176, 0.12) 0%, transparent 68%),
+            radial-gradient(ellipse 42% 28% at 50% 94%, rgba(0, 230, 160, 0.07) 0%, transparent 70%),
+            linear-gradient(160deg, #0B0E0C 0%, #060807 100%);
     }
 
     .home-page .landing::before {
