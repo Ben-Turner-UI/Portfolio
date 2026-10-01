@@ -181,7 +181,7 @@
       '',
       'He is product design lead for P4 DAM, a digital asset management platform for games, film, and VFX, including Electronic Arts, Pinewood Studios, Xbox Game Studios, and Meta. It sits on Perforce version control. Studios need to find the right file, see where they are, preview it, and decide if it is ready for review.',
       '',
-      'Why the work existed: sales. Competitors\' UX was getting more current, and AI-assisted building raised that bar. On calls, in Slack, and in the product itself, people used the browser back button or bookmarks instead of the built-in navigation. No single conversion number. The old concept tried to do everything at once. The direction he set: get people to the asset, then let them manage it.',
+      'Why the work existed: sales. Competitors\' UX was getting more current, raising the expected standard. Observing users on calls, internal use, and engineer Slack channels showed people using the browser back button or bookmarks instead of built-in navigation. The original concept tried to do everything at once; he stripped that back to get people to the asset, then let them manage it.',
       '',
       'What shipped: search history, so a repeat search is one click (every search used to reset the filters); advanced filters that stay visible, including dates, and are easy to remove; one breadcrumb pattern for the whole product, instead of a trail that jumped between the sidebar and the top bar; an asset preview so you pick the right project before you open it; a dashboard with recent work and clear entry points up front.',
       '',

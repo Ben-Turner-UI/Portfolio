@@ -65,25 +65,25 @@
           <div class="main-content">
             <div class="project-details_text"><div class="project-paragraph project-client-description">
                 <h2>Context</h2>
-                <p>At Perforce, I am the product design lead for P4 DAM, a digital asset management platform used by creative and technical teams in games, film, and VFX, including customers such as Electronic Arts, Pinewood Studios, Xbox Game Studios, and Meta.</p>
-                <p>P4 DAM sits on top of Perforce version control. Studios store enormous libraries of 3D models, textures, and media, then need to find the right file, understand where they are in the hierarchy, preview it quickly, and decide whether it is ready for review. If any of those steps feel slow or unclear, people leave the product and open specialist tools instead.</p>
-                <p>My job was not to polish isolated screens. It was to own the product direction for the day-to-day experience: what users see first, how they search and filter, how they move through folders, and how they review assets with confidence.</p>
+                <p>At Perforce, I am the product design lead for P4 DAM, a digital asset management platform used by creative and technical teams in games, film, and VFX. Customers include Electronic Arts, Pinewood Studios, Xbox Game Studios, and Meta.</p>
+                <p>P4 DAM sits on top of Perforce version control. Studios store enormous libraries of 3D models, textures, and media. They need to find the right file, understand where they are in the hierarchy, preview it quickly, and decide whether it is ready for review. If any step is slow or unclear, users abandon the product for specialist tools.</p>
+                <p>My job was to own the product direction for the day-to-day experience: what users see first, how they search and filter, how they navigate folders, and how they review assets.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>Why this work existed</h2>
-                <p>Sales, mostly. Competitors&rsquo; UX was getting more current, and with AI-assisted building that is now the expected bar. At the same time I was watching users on calls, watching developers and internal staff use the product, reading Slack from the engineers, and using the product myself. The same pattern kept showing up: people used the browser back button, or bookmarked pages, instead of the built-in navigation. When users route around your product to get through your product, that is not a polish problem.</p>
-                <p>The old concept was an all-encompassing DAM that tried to do everything at once. I stripped that back: get people to the asset, and once they are there, let them manage it. Every change below exists to serve that. There is no single conversion number for this work. The evidence was watching people, and it was consistent.</p>
+                <p>Sales. Competitors&rsquo; UX was getting more current, raising the expected standard. At the same time, observing users on calls, watching internal staff use the product, and reading engineer Slack channels revealed a consistent pattern: people were using the browser back button or bookmarks instead of the built-in navigation.</p>
+                <p>The original concept was an all-encompassing DAM that tried to do everything at once. I stripped that back: get people to the asset, and once they are there, let them manage it.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>What I changed, and why</h2>
-                <p>Each change below is the problem, the decision, and the interface. Drag the sliders where there is a before and after.</p>
+                <p>Each change outlines the problem, the decision, and the interface. Drag the sliders to see the before and after.</p>
 
                 <div class="change-block">
                   <h3 class="change-block__title">Search history</h3>
-                  <p>Users were searching for the same thing again and again, and every time they searched, the filters reset. That was one of the loudest complaints in the user feedback. Search history means a repeat search is a click, not a rebuild. This feature did not exist before, so there is no before shot, just what I shipped.</p>
-                  <p><strong>Result:</strong> Repeat searches went from a rebuild job to one click.</p>
+                  <p>Users repeatedly searched for the same items, and the filters reset every time. Search history turns a repeat search into a single click instead of a rebuild.</p>
+                  <p><strong>Result:</strong> Repeat searches reduced to one click.</p>
                   <div class="before-after before-after--single">
                     <figure class="before-after__item">
                       <div class="before-after__frame">
@@ -95,8 +95,8 @@
 
                 <div class="change-block">
                   <h3 class="change-block__title">Advanced filtering</h3>
-                  <p>The biggest problem with the old filtering was discoverability. When you applied a filter, the UI did not show what type of filter you had applied, and dates were the worst for it. You would change what you were looking at and then have no way to see what you had changed. I redesigned it so active filters stay visible on the results and are easy to remove.</p>
-                  <p><strong>Result:</strong> You can see what you have applied, and clear it, without guessing.</p>
+                  <p>The old filtering lacked discoverability. When users applied a filter&mdash;especially dates&mdash;the UI failed to show what was active. You could change your view and have no way to verify what changed. I redesigned the system so active filters remain visible on the results and are easy to clear.</p>
+                  <p><strong>Result:</strong> Users can see and clear applied filters without guessing.</p>
                   <div class="compare-slider" data-compare-slider>
                     <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-product/filters-after.png" alt="After: redesigned P4 DAM advanced filtering experience">
                     <div class="compare-slider__before" style="width: 50%;">
@@ -112,8 +112,8 @@
 
                 <div class="change-block">
                   <h3 class="change-block__title">Breadcrumbs</h3>
-                  <p>The product lacked proper breadcrumbs. There was no central home to anchor the trail, and it was not consistent: sometimes it lived in the sidebar, sometimes in the top bar, and going back could land you somewhere different each time. People fell back on the browser&rsquo;s back button, which is a miserable way to move through a deep asset hierarchy. I made one consistent pattern for the whole product.</p>
-                  <p><strong>Result:</strong> One breadcrumb pattern everywhere, instead of the back button.</p>
+                  <p>The product lacked proper breadcrumbs. With no central home to anchor the trail and inconsistent placement between the sidebar and top bar, going back could land you somewhere different each time. People fell back on the browser&rsquo;s back button to navigate deep asset hierarchies. I built one consistent pattern for the entire product.</p>
+                  <p><strong>Result:</strong> One universal breadcrumb pattern replaced reliance on the back button.</p>
                   <div class="compare-slider" data-compare-slider>
                     <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-product/breadcrumbs-after.png" alt="After: redesigned P4 DAM breadcrumb navigation">
                     <div class="compare-slider__before" style="width: 50%;">
@@ -129,8 +129,8 @@
 
                 <div class="change-block">
                   <h3 class="change-block__title">Previewing assets</h3>
-                  <p>An asset can exist in multiple projects, and users were struggling to open the right one. The preview lets you pick the project you want to open the asset in, so you can see where you are going before you commit, and see where you are once you land. It is an information architecture fix as much as a UI one: show people where they are going, then show them where they are.</p>
-                  <p><strong>Result:</strong> Opening an asset in the right project stopped being a guess.</p>
+                  <p>Assets can exist in multiple projects, and users struggled to open them in the correct one. The new preview allows users to select their target project before opening the asset, showing them their destination before they commit.</p>
+                  <p><strong>Result:</strong> Opening an asset in the correct project is no longer a guess.</p>
                   <div class="before-after before-after--single">
                     <figure class="before-after__item">
                       <div class="before-after__frame">
@@ -142,8 +142,8 @@
 
                 <div class="change-block">
                   <h3 class="change-block__title">Dashboard</h3>
-                  <p>The old landing screen did not help anyone get to work. The redesign follows the same philosophy as everything else on this page: get people to the assets they want, faster. Recent work and clear entry points up front, less noise on the way in.</p>
-                  <p><strong>Result:</strong> Fewer steps between opening the product and the asset you came for.</p>
+                  <p>The old landing screen did not help anyone get to work. The redesign surfaces recent work and clear entry points up front, removing visual noise so people get to their assets faster.</p>
+                  <p><strong>Result:</strong> Fewer steps between opening the product and reaching the target asset.</p>
                   <div class="compare-slider" data-compare-slider>
                     <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-product/homepage-after.png" alt="After: redesigned P4 DAM dashboard">
                     <div class="compare-slider__before" style="width: 50%;">
@@ -160,7 +160,7 @@
 
               <div class="project-paragraph">
                 <h2>Conclusion</h2>
-                <p>I owned the product as lead designer. That meant deciding which frictions were structural, not cosmetic, and shipping changes that compounded: find faster, stay oriented, preview earlier, and move through libraries with more confidence. The result was a DAM experience that better matched how game, film, and VFX teams actually work.</p>
+                <p>As lead designer, I focused on structural friction rather than cosmetic polish. The shipped changes compound: users can find files faster, stay oriented, preview earlier, and navigate libraries with confidence. The result is a DAM experience that matches how game, film, and VFX teams actually work.</p>
               </div>
 
               <div class="button-group">
