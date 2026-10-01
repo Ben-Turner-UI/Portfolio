@@ -54,6 +54,11 @@
       align-items: flex-start;
       padding: 12px;
     }
+    .cv-doc {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
     .cv {
       position: relative;
       isolation: isolate;
@@ -64,15 +69,15 @@
       box-sizing: border-box;
       width: 210mm;
       height: 297mm;
-      padding: 5.5mm 6.5mm 5mm;
+      padding: 5mm 6.5mm 4.5mm;
       overflow: hidden;
       color: #111;
       border: none;
       box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
       font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 400;
-      line-height: 1.36;
+      line-height: 1.3;
       font-variant-ligatures: none;
       font-kerning: normal;
       background-color: #fff;
@@ -111,10 +116,10 @@
       display: flex;
       align-items: center;
       margin: 0;
-      height: 28px;
+      height: 32px;
       flex: none;
       font-family: "Big Shoulders", Arial, Helvetica, sans-serif;
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 600;
       line-height: 1;
     }
@@ -143,8 +148,8 @@
     }
     .cv-contact__icon {
       display: block;
-      width: 13px;
-      height: 13px;
+      width: 15px;
+      height: 15px;
       flex: none;
     }
     .cv-contact li::before { content: none; display: none; }
@@ -166,17 +171,21 @@
     .cv .cv-contact a { text-decoration: none; }
     .cv-section { margin: 0; }
     .cv-section > h2 {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       padding: 0 0 4px;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 700;
       line-height: 1.2;
       border-bottom: 1px solid rgba(0, 0, 0, 0.18);
     }
+    .cv-section > h2 + p,
+    .cv-section > h2 + .cv-role {
+      margin-top: 8px;
+    }
     .cv-section > p { margin: 0 0 3px; }
     .cv-section > p:last-child { margin-bottom: 0; }
     .cv > .cv-role__note {
-      margin: 12px 0 8px;
+      margin: 6px 0 4px;
     }
     .cv-summary { margin: 0; }
     .cv-summary li, .cv li { margin: 0 0 3px; }
@@ -186,7 +195,7 @@
       margin: 0;
     }
     .cv-role + .cv-role {
-      margin-top: 22px;
+      margin-top: 14px;
     }
     .cv-role__header {
       display: flex;
@@ -195,8 +204,8 @@
     }
     .cv-logo {
       box-sizing: border-box;
-      width: 27px;
-      height: 27px;
+      width: 32px;
+      height: 32px;
       margin: 0;
       border: 1px solid #c4c4c4;
       border-radius: 5px;
@@ -206,6 +215,7 @@
     }
     .cv-role h3 {
       margin: 0;
+      font-size: 12px;
       font-weight: 700;
       line-height: 1.2;
     }
@@ -242,8 +252,8 @@
     .cv-cases {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin: 6px 0 0;
+      gap: 4px;
+      margin: 4px 0 0;
     }
     .cv-case {
       display: inline-flex;
@@ -268,13 +278,13 @@
     .cv a.cv-case:hover { color: #111; }
     .cv-case span {
       display: block;
-      line-height: 16px;
+      line-height: 18px;
     }
     .cv-case img {
       display: block;
       box-sizing: border-box;
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       flex: none;
       border-radius: 3px;
       object-fit: cover;
@@ -285,8 +295,8 @@
       padding-left: 1.15em;
       list-style: disc;
     }
-    .cv-role ul {
-      margin: 7px 0 0;
+    .cv-role > ul {
+      margin-top: 11px;
     }
     .cv li::marker {
       color: #6e6e6e;
@@ -306,10 +316,12 @@
       padding: 0 !important;
       min-height: 0;
       width: 210mm;
-      height: 297mm;
-      overflow: hidden;
+      height: auto;
+      overflow: visible;
       background: #fff;
     }
+    html.cv-export .cv-doc,
+    html.cv-print .cv-doc { gap: 0; }
     html.cv-export .cv,
     html.cv-print .cv { box-shadow: none; }
     html.cv-print,
@@ -318,8 +330,8 @@
       padding: 0 !important;
       min-height: 0;
       width: 210mm;
-      height: 297mm;
-      overflow: hidden;
+      height: auto;
+      overflow: visible;
       background: #fff;
     }
     html.cv-print .cv {
@@ -336,18 +348,19 @@
     @media print {
       html, body {
         width: 210mm;
-        height: 297mm;
+        height: auto;
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        overflow: visible;
         background: #fff;
       }
       body { padding: 0; }
+      .cv-doc { gap: 0; }
       .cv {
         isolation: auto;
         box-shadow: none;
         border: none;
-        padding: 5.5mm 6.5mm 5mm;
+        padding: 5mm 6.5mm 4.5mm;
         background-color: #fff;
         background-image: url("img/cv-wash.jpg");
         background-repeat: no-repeat;
@@ -369,6 +382,7 @@
   </script>
 </head>
 <body>
+  <div class="cv-doc">
   <article class="cv" aria-label="Curriculum vitae">
     <div class="cv-header">
       <h1>Ben Turner<span class="accent">.</span></h1>
@@ -402,11 +416,11 @@
 
     <section class="cv-section">
       <h2>Summary</h2>
-      <p class="cv-summary">Product Designer with seven years of experience driving business growth across enterprise, startup, and agency sectors. Known for delivering high-impact interfaces that boost sales and scale operations, while bringing energy and a collaborative spark to team culture.</p>
+      <p class="cv-summary">Product Designer with over seven years of experience driving business growth across enterprise, startup, and agency sectors. Known for delivering high-impact interfaces that boost sales and scale operations, while bringing energy and a collaborative spark to team culture.</p>
     </section>
 
     <section class="cv-section">
-      <h2>Experience</h2>
+      <h2>Experience (7+ years)</h2>
       <div class="cv-role">
         <div class="cv-role__header">
           <img class="cv-logo" src="img/perforce.jpg" alt="">
@@ -419,17 +433,13 @@
           </div>
         </div>
         <ul>
-          <li>I lead design for P4 DAM and P4 Plan, handling enterprise customer data for clients like Electronic Arts, Xbox Game Studios and Meta, and contributing to new customer acquisition.</li>
-          <li>I own sections of the design system and develop Claude skills for context building and generative AI workflows, served through an MCP server and a plugin that generates high-quality interfaces.</li>
-          <li>I won Best Designed at the 2026 company AI Hackathon for these custom Claude systems.</li>
-          <li>I used this AI system to rebuild P4 DAM onboarding around the studio manager persona, delivering a targeted trial that increased sales opportunities and streamlined the sales process.</li>
-          <li>I wrote production front-end code and built workflows using Claude Code to bridge a 66% drop in engineering capacity, ultimately increasing feature output by 25%.</li>
+          <li>I'm the lead designer for P4 Plan and P4 DAM, handling digital asset management and project planning tools used by major studios including Electronic Arts, Xbox Game Studios, and Meta.</li>
+          <li>When front-end engineering capacity dropped by 66%, I wrote production front-end UI code using Claude Code to bridge the gap. This helped increase feature release output by 25% and cut review sessions in half.</li>
+          <li>Built custom Claude skills, MCP servers, and Figma plugins to automate design specifications and UI generation. The system won Best Designed at the 2026 company AI hackathon and was adopted by engineering teams across the business. As a result, I was appointed to the companies AI research group to develop new workflows and systems for the design organisation.</li>
+          <li>Rebuilt product trial onboarding. This allowed prospects to evaluate the software without complex setups, opening new enterprise sales opportunities. Reducing friction and helping improve the bottom line.</li>
+          <li>Redesigned search, navigation filters, and asset previews to resolve severe user bottlenecks caused by reliance on the browser back button.</li>
+          <li>Delivered a key feature on P4 Plan called Capacity Planning, which is a unique standout feature that no competitors have - this feature has drawn in high praise from our customers and makes the product standout in a crowded planning tool marketplace.</li>
         </ul>
-        <div class="cv-cases">
-          <a class="cv-case" href="https://benturner.work/p4-dam.html"><img src="img/perforce.jpg" alt=""><span>Shipping production code</span></a>
-          <a class="cv-case" href="https://benturner.work/p4-personas.html"><img src="img/perforce.jpg" alt=""><span>Increasing sales opportunities</span></a>
-          <a class="cv-case" href="https://benturner.work/p4-product.html"><img src="img/perforce.jpg" alt=""><span>Owning P4 DAM</span></a>
-        </div>
       </div>
       <div class="cv-role">
         <div class="cv-role__header">
@@ -443,36 +453,32 @@
           </div>
         </div>
         <ul>
-          <li>I owned end-to-end product design for a self-hosted, open-source low-code platform.</li>
-          <li>I rebuilt the automations builder based on a 25-user study, eliminating related user experience complaints.</li>
-          <li>This design became the foundation for Budibase's later AI product: agents and automations, and was pivotal as the company moved towards becoming an AI-focused startup.</li>
+          <li>I owned end-to-end product design for Budibase, an open-source, self-hosted platform for building internal apps, automations, and AI agents.</li>
+          <li>I overhauled the automations part of the product based on a 25-user qualitative UX research study. As a result I redesigned the step-by-step UI to clearly show data entering and exiting each action, eliminating community complaint threads on automations. This redesign became the foundation Budibase used to build and launch its AI agent product line, a key part of their current product.</li>
+          <li>Redesigned it's licensing system, which streamlined onboarding for cloud, self-hosted and air-gapped users.</li>
+          <li>Designed enterprise platform features including conditional branching, role-based permissions (read, write, execute), and spreadsheet-style formula calculations.</li>
+          <li>Today Budibase is a thriving startup close to profitability that combines workflows, apps, data tables and automations, I helped design the features that transformed into what it is today.</li>
         </ul>
-        <div class="cv-cases">
-          <a class="cv-case" href="https://benturner.work/budibase-automations.html"><img src="img/budibase.jpg" alt=""><span>Automations overhaul</span></a>
-          <a class="cv-case" href="https://benturner.work/budibase-ui.html"><img src="img/budibase.jpg" alt=""><span>Branches, permissions, calculations</span></a>
-        </div>
       </div>
       <div class="cv-role">
         <div class="cv-role__header">
           <img class="cv-logo" src="img/dawson-andrews.jpg" alt="">
           <div class="cv-role__copy">
             <div class="cv-role__head">
-              <h3>Product Designer</h3>
+              <h3>UX Designer</h3>
               <p class="cv-role__dates">June 2021 to July 2024</p>
             </div>
             <p class="cv-role__org">DawsonAndrews <span class="cv-role__scope">Product design agency.</span></p>
           </div>
         </div>
         <ul>
-          <li>I created and managed scalable design systems for major enterprise clients, including CityFibre and GSMA.</li>
-          <li>I took SportsWork from zero to one across brand and product, launching it into an independent, profitable company.</li>
-          <li>Project work I delivered played a key role in helping the agency scale from a small to medium-sized business and hire 10 new employees.</li>
-          <li>I mentored multiple designers throughout the agency.</li>
+          <li>At DawsonAndrews, I worked on so many different projects, some key highlights were leading design for CityFibre, a major UK telecom infrastructure provider competing with BT Openreach and Virgin Media. The project's success directly won new accounts like Hyperoptic, expanding agency revenue and enabling the team to hire 10 additional employees.</li>
+          <li>Worked with public sector clients like VisitBelfast and the GAA.</li>
+          <li>Redesigned the CityFibre homepage, B2B backend portal in record time with a measured 2x in user satisfaction increase after the redesign based on extensive user research studies.</li>
+          <li>Designed and helped launch a startup, SportsWork from scratch across branding and product design. It transitioned to become an independent, profitable business.</li>
+          <li>Created and managed enterprise design systems for clients including CityFibre and GSMA, establishing token structures and component libraries.</li>
+          <li>Proudly mentored junior and mid-level designers and helped grow the design team out from 2 to 6 designers.</li>
         </ul>
-        <div class="cv-cases">
-          <a class="cv-case" href="https://benturner.work/cityfibre-rebrand.html"><img src="img/dawson-andrews.jpg" alt=""><span>CityFibre rebrand</span></a>
-          <a class="cv-case" href="https://benturner.work/sportswork.html"><img src="img/dawson-andrews.jpg" alt=""><span>SportsWork</span></a>
-        </div>
       </div>
     </section>
 
@@ -493,8 +499,9 @@
     </section>
     <section class="cv-section">
       <h2>Hobbies</h2>
-      <p>Martial arts since 2007: BJJ purple belt, Japanese Jiu-Jitsu black belt, and Judo green belt. Also Warhammer 30k, the gym, fishkeeping, karting, travel, and dogs, especially fluffy ones.</p>
+      <p>Martial arts since 2007 (BJJ purple belt, Japanese Jiu-Jitsu black belt, Judo green belt). Warhammer 30k, gym, fishkeeping, karting, travel, and dogs.</p>
     </section>
   </article>
+  </div>
 </body>
 </html>

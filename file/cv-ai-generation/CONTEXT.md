@@ -1,6 +1,6 @@
 # CV
 
-This folder is the agentic CV system for Ben Turner. `index.html` is the designed A4 source. The homepage download is a generated PDF, not this HTML.
+This folder is the agentic CV system for Ben Turner. `index.html` is the designed A4 source (**one page**). The homepage download is a generated PDF, not this HTML.
 
 Read this file before any CV change. After copy, layout, or wash edits, reprint the PDF.
 
@@ -17,7 +17,7 @@ Site live URL for case studies: `https://benturner.work/`. Local preview: `http:
 | `generate-wash.ps1` | Builds `img/cv-wash.jpg`. Tunables are the script’s `param` defaults. |
 | `export.ps1` | Chrome headless print → `../Ben-Turner-CV.pdf`. Needs `serve.ps1` running. |
 | `serve.ps1` | Local static server at `http://127.0.0.1:8765/` (TTF/WOFF2 MIME included). |
-| `img/perforce.jpg`, `img/budibase.jpg`, `img/dawson-andrews.jpg`, `img/ni-civil-service.jpg` | Company logos. |
+| `img/perforce.jpg`, `img/budibase.jpg`, `img/dawson-andrews.jpg` | Company logos on the public CV. |
 | `img/cv-wash.jpg` | Peach wash + quiet orange dots, **bottom 50%** of the sheet, dithered JPEG. |
 | `fonts/` | Local Source Sans 3 (TTF 400/600/700), Big Shoulders 600, Material Symbols Outlined (woff2). Do not switch body type back to variable Google fonts. |
 | `../Ben-Turner-CV.pdf` | Site download. Homepage button: `file/Ben-Turner-CV.pdf?v=...`. |
@@ -38,9 +38,9 @@ Do not use `--disable-remote-fonts` on the Chrome print. Fonts are local files; 
 
 ## Design rules
 
-- One A4 page: `.cv` is `210mm × 297mm` with `overflow: hidden`. After layout or type changes, measure fit. If it overflows, it clips.
+- One A4 sheet: `.cv` is `210mm × 297mm` with `overflow: hidden`. Use `justify-content: space-between` and a **10px** minimum gap so Hobbies sits on the bottom padding. Peach wash `img/cv-wash.jpg` on the bottom 50%. Public experience: Perforce, Budibase, DawsonAndrews only; earlier roles via the LinkedIn note. Measure `scrollHeight` vs `clientHeight` after layout changes.
 - **No sheet border.** `.cv` is `border: none` on screen and in print. On-screen only: a light `box-shadow` so the sheet reads on the grey page. `?print=1` / `@media print` drop the shadow. Do not put a 1px frame around the PDF.
-- Body is Source Sans 3 at **11.5px**, line-height **1.36**, **`font-variant-ligatures: none`** so ATS does not split words (`software`, `after`, `Summary`). Sheet padding is tight (**5.5mm 6.5mm 5mm**). Name is Big Shoulders with Arial fallback; orange period `#ff4d00`.
+- Body is Source Sans 3 at **11px** on the one-page CV (line-height **1.3**), **`font-variant-ligatures: none`** so ATS does not split words. Section `h2` is **13.5px** (including **Experience (7+ years)**); job `h3` is **12px**. **11px** gap from each role header block to its bullets (`.cv-role > ul`). Logos **32px**. Sheet padding **5mm 6.5mm 4.5mm**. Name is Big Shoulders **30px** with Arial fallback; orange period `#ff4d00`. Full LinkedIn copy for Perforce, Budibase, and DawsonAndrews fits one sheet; case-study tags are omitted on the one-pager (homepage case studies remain the proof links).
 - Contact sits **to the right of the name**, same type size as the body, in a 2×2 grid: site and phone on the first row, email and LinkedIn on the second. All four are links. No location in this block. Each item has an inline SVG icon (not an icon font; icon fonts extract as `?` in ATS). Underline link labels only. **More experience on linkedin.com/in/benturnerwork** sits between Experience / DawsonAndrews and Skills.
 - `.cv` is a column with `justify-content: space-between` and a 10px minimum gap. Leftover sheet space goes between the sections so Hobbies sits on the bottom padding. Education and Hobbies are separate sections, still single column. Do not leave a band of empty sheet under Hobbies.
 - Section `h2` underline needs air underneath (about 9px). Do not crush heading and body together.

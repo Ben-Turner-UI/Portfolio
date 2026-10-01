@@ -16,6 +16,7 @@ try {
 }
 Write-Host "Serving $root on http://127.0.0.1:$port/"
 Write-Host "CV: http://127.0.0.1:$port/file/cv-ai-generation/index.html"
+Write-Host "Cover letter: http://127.0.0.1:$port/file/cover-letter-generation/index.html"
 $mime = @{
   '.html' = 'text/html; charset=utf-8'
   '.css'  = 'text/css; charset=utf-8'

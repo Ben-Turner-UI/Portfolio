@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Turner Cover Letter</title>
+  <style>
+    @font-face {
+      font-family: "Source Sans 3";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("../cv-ai-generation/fonts/source-sans-3-400.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Source Sans 3";
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("../cv-ai-generation/fonts/source-sans-3-600.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Source Sans 3";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("../cv-ai-generation/fonts/source-sans-3-700.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Big Shoulders";
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("../cv-ai-generation/fonts/big-shoulders-600.woff2") format("woff2");
+    }
+    @page { size: A4; margin: 0; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f3f2ef;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 12px;
+    }
+    .letter-doc {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .letter-sheet {
+      position: relative;
+      isolation: isolate;
+      box-sizing: border-box;
+      width: 210mm;
+      height: 297mm;
+      padding: 5mm 6.5mm 4.5mm;
+      overflow: hidden;
+      color: #111;
+      border: none;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+      font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.48;
+      font-variant-ligatures: none;
+      font-kerning: normal;
+      background-color: #fff;
+      background-image: url("../cv-ai-generation/img/cv-wash.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 50%;
+      background-position: center bottom;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .letter-sheet > * {
+      position: relative;
+      z-index: 1;
+    }
+    .letter-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin: 0 0 14px;
+    }
+    .letter-sheet h1,
+    .letter-sheet p {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+    .letter-sheet h1 {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      height: 32px;
+      flex: none;
+      font-family: "Big Shoulders", Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1;
+    }
+    .letter-sheet h1 .accent { color: #ff4d00; }
+    .letter-contact {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      justify-content: end;
+      align-items: center;
+      gap: 3px 16px;
+      margin: 0 0 0 auto;
+      padding: 0;
+      list-style: none;
+      color: #333;
+      flex: none;
+    }
+    .letter-contact li {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 0;
+    }
+    .letter-contact__icon {
+      display: block;
+      width: 15px;
+      height: 15px;
+      flex: none;
+    }
+    .letter-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      white-space: nowrap;
+      color: #111;
+    }
+    .letter-contact a .letter-contact__label {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .letter-body {
+      margin: 0;
+    }
+    .letter-body p {
+      margin: 0 0 14px;
+    }
+    .letter-body p:last-child {
+      margin-bottom: 0;
+    }
+    .letter-meta {
+      color: #333;
+    }
+    .letter-body a {
+      color: #111;
+      font-weight: 400;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    html.letter-export,
+    html.letter-export body {
+      margin: 0;
+      padding: 0 !important;
+      min-height: 0;
+      width: 210mm;
+      height: auto;
+      overflow: visible;
+      background: #fff;
+    }
+    html.letter-export .letter-doc,
+    html.letter-print .letter-doc { gap: 0; }
+    html.letter-export .letter-sheet,
+    html.letter-print .letter-sheet { box-shadow: none; }
+    html.letter-print,
+    html.letter-print body {
+      margin: 0;
+      padding: 0 !important;
+      min-height: 0;
+      width: 210mm;
+      height: auto;
+      overflow: visible;
+      background: #fff;
+    }
+    html.letter-print .letter-sheet {
+      isolation: auto;
+      background-color: #fff;
+      background-image: url("../cv-ai-generation/img/cv-wash.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 50%;
+      background-position: center bottom;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    @media print {
+      html, body {
+        width: 210mm;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        background: #fff;
+      }
+      body { padding: 0; }
+      .letter-doc { gap: 0; }
+      .letter-sheet {
+        isolation: auto;
+        box-shadow: none;
+        border: none;
+        padding: 5mm 6.5mm 4.5mm;
+        background-color: #fff;
+        background-image: url("../cv-ai-generation/img/cv-wash.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        background-position: center bottom;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+  <script>
+    if (/(?:^|[?&])export=1(?:&|$)/.test(location.search)) {
+      document.documentElement.classList.add("letter-export");
+    }
+    if (/(?:^|[?&])print=1(?:&|$)/.test(location.search)) {
+      document.documentElement.classList.add("letter-print");
+    }
+  </script>
+</head>
+<body>
+  <div class="letter-doc">
+    <article class="letter-sheet" aria-label="Cover letter">
+      <div class="letter-header">
+        <h1>Ben Turner<span class="accent">.</span></h1>
+        <ul class="letter-contact">
+          <li>
+            <a href="https://benturner.work/">
+              <svg class="letter-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"/></svg>
+              <span class="letter-contact__label">benturner.work</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+447546182198">
+              <svg class="letter-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 3h3l1.5 4-2 1.2a12 12 0 0 0 6.3 6.3L17 12.5 21 14v3a2 2 0 0 1-2 2A16 16 0 0 1 5 5a2 2 0 0 1 2-2z"/></svg>
+              <span class="letter-contact__label">+44 7546 182198</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Benjamin.turner.design@gmail.com">
+              <svg class="letter-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 7l9 7 9-7"/></svg>
+              <span class="letter-contact__label">Benjamin.turner.design@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/benturnerwork">
+              <svg class="letter-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.7 3.3a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4zM3 9h3.4V21H3V9zm6.2 0H12.5v1.6h.1c.4-.8 1.5-1.7 3.2-1.7 3.4 0 4 2.2 4 5.1V21H16.4v-6.4c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9.2V9z"/></svg>
+              <span class="letter-contact__label">linkedin.com/in/benturnerwork</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="letter-body">
+        <p>Dear Hiring Team at Donorbox,</p>
+
+        <p>I am writing to apply for the Senior Product Designer role. As someone who coaches jiu-jitsu and volunteers at my local running club, Donorbox's mission to help nonprofits and the inclusion of paid volunteer days stand out to me.</p>
+
+        <p>My background is in designing complex B2B SaaS platforms and using data to guide my decisions. Here are the facts from my past roles:</p>
+
+        <p>Led a UX workshop for 40+ participants from Vodafone, TalkTalk, and Zen to improve CityFibre's B2B portal. The testing captured over 1,400 data points, doubled user satisfaction scores, and drove a 25% increase in feature delivery despite a 66% engineering cut.</p>
+
+        <p>Designed interfaces and complex tables for Perforce's enterprise-level secure data system, simplifying dense workflows and contributing to increased B2B sales.</p>
+
+        <p>Test and integrate generative AI design tools (including Figma and Claude) into daily workflows as a member of my current company's AI specialist group.</p>
+
+        <p>I am based in the UK and fully comfortable working remotely in an independent capacity. I would appreciate the opportunity to interview with you and discuss how my enterprise design experience fits the Donorbox platform.</p>
+
+        <p>Best regards,</p>
+
+        <p>Ben Turner</p>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
