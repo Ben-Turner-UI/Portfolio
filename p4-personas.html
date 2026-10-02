@@ -59,7 +59,7 @@
           <div class="project-statistics project-statistics--quote">
             <div class="project-statistics-group">
               <h3 class="project-statistics-stat project-statistics-stat--inline"><span class="material-symbols-rounded project-statistics-arrow" aria-hidden="true">trending_up</span>Increased sales</h3>
-              <p class="stat-description">Sales said it made their job a lot easier, and opened up avenues for a discussion that were not there before</p>
+              <p class="stat-description">Sales said it made their job a lot easier, and opened up avenues for a discussion that were not there before.</p>
             </div>
           </div>
 
@@ -76,38 +76,32 @@
 
               <div class="project-paragraph project-client-description">
                 <h2>Context</h2>
-                <p>I work on a product called P4 DAM. It is a digital asset manager for game and film studios. For a long time the product work was about serving the customers we already had, and making the product easier to live with. Then the business shifted. In the AI era, bringing in new customers became the job. New acquisitions were the priority, because AI changed how quickly a decent competitor could improve their own product.</p>
-                <p>The obvious place to look was onboarding. That is where, to my eye, the product was lacking. And that is where the sales pipeline actually starts.</p>
-                <p>We already had the research: interviews, win/loss, customer notes, competitor work, and the old personas. I had already built an agentic system that could run against that material. Fable 5 coming out is what opened the door. Those research methods, plus the agents, plus that model, gave me a way to use it properly and build the right design for the job.</p>
+                <p>I work on an enterprise digital asset management product. For a long time, the product work focused on serving the customers we already had, making the product easier to live with. Then the business shifted. In the AI era, bringing in new customers became the primary job. New acquisitions were the priority, because AI changed how quickly a decent competitor could improve their own product.</p>
+                <p>The obvious place to look was onboarding, as that is where the product was lacking, and that is where the sales pipeline actually starts.</p>
+                <p>We already had the research: interviews, win/loss data, customer notes, competitor work, and the old personas. I had already built an agentic system that could run against that material. A new frontier model opened the door, giving me a way to combine those research methods and agents to build the right design for the job.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>Persona</h2>
-                <p>The personas we had were not that useful. They were outdated, and they described people who might use the product. They did not describe the person who decides who buys it. In this case, that person is a studio manager.</p>
-                <p>I built an agentic research system around Fable 5, with multiple agents doing different jobs at once. It looked at internal evidence, web research, persona authors, the existing design, wireframes, a sample project, and the asset sourcing for that sample project. Each agent ran on a different model, Opus or Sonnet, depending on what the job needed and what the token spend was worth.</p>
-                <div class="table-container">
-                  <table class="improvements-table">
-                    <thead>
-                      <tr><th>Agent</th><th>Job</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>Internal evidence</td><td>The company&rsquo;s own written record: competitive guide, customer notes, discovery scans, win/loss, sales material.</td></tr>
-                      <tr><td>Web research</td><td>Job postings, practitioner interviews, industry surveys, outsourcing and review-workflow guides.</td></tr>
-                      <tr><td>Persona author</td><td>Wrote a buying persona for a studio manager, with a citation on every claim.</td></tr>
-                      <tr><td>Existing design</td><td>Reviewed the live onboarding and the wireframes as that buyer, and listed what had to change.</td></tr>
-                      <tr><td>Sample project</td><td>Folder and bundle structure for a demo project a buyer could actually explore.</td></tr>
-                      <tr><td>Asset sourcing</td><td>Where the demo art comes from, and the licensing constraints on each route.</td></tr>
-                      <tr><td>Competitor analysis</td><td>A capability matrix across eight of the main competitors.</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p>The matrix itself I cannot share. It is confidential. The conclusion was that we needed a trial experience where someone could see the full capability of the product without sitting through the lengthy configuration that comes with a Perforce product.</p>
+                <p>The personas we had were outdated, describing people who might use the product rather than the person who decides to buy it. In this case, the decision-maker is a senior technical buyer.</p>
+                <p>I built an agentic research system around a frontier model, utilizing multiple agents to handle different jobs at once. It looked at internal evidence, web research, persona authors, the existing design, wireframes, a sample project, and the asset sourcing for that sample project. Each agent ran on a different model tier, scaled to what the specific job needed and what the token spend was worth.</p>
+                <h3 class="change-block__title">Agent jobs</h3>
+                <ul>
+                  <li><strong>Internal evidence:</strong> The company&rsquo;s own written record, including competitive guides, customer notes, discovery scans, win/loss data, and sales material.</li>
+                  <li><strong>Web research:</strong> Job postings, practitioner interviews, industry surveys, outsourcing, and review-workflow guides.</li>
+                  <li><strong>Persona author:</strong> Wrote a buying persona for the decision-maker, including a citation on every claim.</li>
+                  <li><strong>Existing design:</strong> Reviewed the live onboarding and the wireframes from the perspective of that buyer, listing what had to change.</li>
+                  <li><strong>Sample project:</strong> Folder and bundle structure for a demo project a buyer could actually explore.</li>
+                  <li><strong>Asset sourcing:</strong> Where the demo art comes from, along with the licensing constraints on each route.</li>
+                  <li><strong>Competitor analysis:</strong> A capability matrix across major competitors.</li>
+                </ul>
+                <p>The matrix itself is confidential. The takeaway was that we needed a trial experience where someone could see the full capability of the product, bypassing the lengthy configuration that typically comes with legacy enterprise software in this sector.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>Design</h2>
-                <p>The new design was built using a Claude plugin I designed, called the Unified Workflow Plugin. It pulls from a lot of sources. There is a design-system MCP server with the components, the layout rules, and the branding. It takes that, plus the evidence and the output from the Fable 5 workflow, and turns it into a generated UI.</p>
-                <p>It is expensive. But if the context is good enough, what comes out needs very few tweaks. Something that is almost ready to go once the workflow finishes.</p>
+                <p>The new design was built using a custom AI workflow plugin I designed. It pulls from a lot of sources, including a design-system integration with the components, the layout rules, and the branding. It takes that context, combined with the evidence and the output from the AI workflow, and turns it into a generated UI.</p>
+                <p>It is expensive to run, but if the context is good enough, the output needs very few tweaks and is almost ready to go once the workflow finishes.</p>
                 <blockquote class="project-quote">
                   <p>&ldquo;It makes the self-serve impression far more meaningful, and it is needed.&rdquo;</p>
                 </blockquote>
@@ -119,8 +113,8 @@
 
               <div class="project-paragraph">
                 <h2>Outcome</h2>
-                <p>Sales now has a persona-driven trial experience. Prospects see the product through the work they care about, and sellers have somewhere credible to send someone after a first demo call. Sales opportunities increased, and sales said it made their job a lot easier.</p>
-                <p>The bigger part of it is the workflow. A frontier model, agents, Claude Code, MCP servers, a design system, and a workflow plugin I designed, used together to generate UI that increased sales.</p>
+                <p>Sales now has a persona-driven trial experience. Prospects see the product through the work they care about, giving sellers a credible place to send someone after a first demo call. Sales opportunities increased, and the sales team reported that it made their job a lot easier.</p>
+                <p>The bigger part of it is the workflow itself. A frontier model, agents, AI coding tools, server integrations, a design system, and a custom workflow plugin were used together to generate UI that directly increased sales.</p>
               </div>
 
               <div class="button-group">
