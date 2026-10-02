@@ -1,4 +1,4 @@
-# Generates img/cv-wash.jpg — peach wash + orange dots for the A4 CV.
+# Generates img/cv-wash.jpg: peach wash + orange dots for the A4 CV.
 # Edit the param defaults below (they are the live design). Then:
 #   .\generate-wash.ps1
 #   .\export.ps1

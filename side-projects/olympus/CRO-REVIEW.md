@@ -1,4 +1,4 @@
-# Olympus — CRO & Design Critique
+# Olympus: CRO & Design Critique
 
 **Subject:** `side-projects/olympus.html` (full landing page)  
 **Lens:** Visual/structural design + first-time-user friction  
@@ -6,32 +6,32 @@
 
 ---
 
-## PASS 1 — Visual & Structural
+## PASS 1: Visual & Structural
 
 ### What's broken at a glance
-- **No primary CTA in the hero.** Linear, Superhuman, Vercel, Raycast — every one of them puts the money action in the first viewport. Olympus puts a headline, a paragraph, and a pretty watch. That is a brochure, not a product page.
-- **The only buy CTA is buried under the fold** in the Creator's Toolkit section — and it sells a secondary product (design toolkit), not the watch faces. Your core product (faces → Facer install) has no hero presence.
+- **No primary CTA in the hero.** Linear, Superhuman, Vercel, Raycast, every one of them puts the money action in the first viewport. Olympus puts a headline, a paragraph, and a pretty watch. That is a brochure, not a product page.
+- **The only buy CTA is buried under the fold** in the Creator's Toolkit section, and it sells a secondary product (design toolkit), not the watch faces. Your core product (faces → Facer install) has no hero presence.
 - **Brand is weak in the hero.** Nav says "OLYMPUS WATCH FACES." Headline says "Designed to be worn. Engineered to endure." Remove the nav and this could be any premium wearable brand. The report sells *Olympus as a brand*; the hero sells a tagline.
-- **Typography hierarchy is flat.** Section titles (`About Olympus`, `Watch Faces`, `The Creator's Toolkit`) are styled like the hero — same weight family, similar scale — so the page reads as three equally loud chapters instead of one conversion path.
+- **Typography hierarchy is flat.** Section titles (`About Olympus`, `Watch Faces`, `The Creator's Toolkit`) are styled like the hero, same weight family, similar scale, so the page reads as three equally loud chapters instead of one conversion path.
 - **Card grid is decorative, not decisive.** Three equal kit cards with similar paragraph density. Eye has nowhere to land. No card is the "do this next" card.
 - **Green diagonal stripe + neon bottom glow** compete with the product. Atmosphere is fine; right now it reads as the main visual idea. The watch should own the frame.
-- **Kit card copy is AI-slop adjacent.** "ultimate presentation," "stunning realism," "streamline your entire design process" — empty intensifiers. Linear would never ship that.
+- **Kit card copy is AI-slop adjacent.** "ultimate presentation," "stunning realism," "streamline your entire design process": empty intensifiers. Linear would never ship that.
 
 ### Spacing / consistency
-- Hero content is constrained to 1000px while the panel is full-bleed — good. Internal padding and gap rhythm are mostly coherent.
-- About cards and kit cards share radius (good). But about cards are text-only surfaces while kit cards are media+text — same chrome, different jobs. Looks like one system doing two things poorly.
+- Hero content is constrained to 1000px while the panel is full-bleed, good. Internal padding and gap rhythm are mostly coherent.
+- About cards and kit cards share radius (good). But about cards are text-only surfaces while kit cards are media+text, same chrome, different jobs. Looks like one system doing two things poorly.
 - Buttons (`Install on Facer`, `Buy the Creator's Toolkit`) share style, so primary install and secondary purchase are visually identical. That's a conversion crime.
 
 ---
 
-## PASS 2 — Friction & Cognitive Load (First-Time User)
+## PASS 2: Friction & Cognitive Load (First-Time User)
 
 ### Mental model failure
 User lands. Asks: *What is this? What do I do?*
 
 1. **What is Olympus?** A brand? A face pack? A Facer listing? A student project? The page never commits in one sentence before the fold.
 2. **Am I the buyer?** Sports user? Designer? Both? Hero says heritage + battery. Toolkit section suddenly pitches Photoshop/Sketch creators. Two audiences, one funnel, zero segmentation → both bounce.
-3. **Where do I get a face?** Scroll past About (process essay), arrive at Watch Faces, pick a dial, click Install → external Facer. Fine — but that path is not announced up top. First CTA they *see* may be "Buy the Creator's Toolkit" if they skim. Wrong product sold first.
+3. **Where do I get a face?** Scroll past About (process essay), arrive at Watch Faces, pick a dial, click Install → external Facer. Fine, but that path is not announced up top. First CTA they *see* may be "Buy the Creator's Toolkit" if they skim. Wrong product sold first.
 4. **Foundations has a disabled Install button.** Dead end in the product grid. Looks broken. Trust dies.
 5. **About section is process memoir** ("Sketch's rotate copies tool"). First-time buyers don't care about your toolchain. They care: does it look good on *my* watch, and how do I get it.
 6. **No price, no social proof, no "works with [watch]" badge near CTA.** Compatibility is buried in body copy. CRO death: claim without confirmation next to the action.
@@ -44,7 +44,7 @@ Hero watch wins visually (good). Then eye drops into a wall of About prose. Then
 
 ## Priority backlog
 
-### 1. Critical — fix immediately (breaks flow or kills conversion)
+### 1. Critical: fix immediately (breaks flow or kills conversion)
 
 | # | Issue | Fix |
 |---|--------|-----|
@@ -54,7 +54,7 @@ Hero watch wins visually (good). Then eye drops into a wall of About prose. Then
 | C4 | **Foundations Install is disabled with no explanation** | Either ship a link, mark "Coming soon" clearly, or remove it from the buyable set until live. A greyed Install button reads as broken. |
 | C5 | **Two audiences, one undifferentiated page** | Pick a primary visitor (wearer installing faces). Move creator/toolkit pitch below faces, labelled as such. Or split paths: "For your wrist" / "For designers." |
 
-### 2. High Impact — clarity and polish
+### 2. High Impact: clarity and polish
 
 | # | Issue | Fix |
 |---|--------|-----|
@@ -65,9 +65,9 @@ Hero watch wins visually (good). Then eye drops into a wall of About prose. Then
 | H5 | **Kit card copy is fluff** | Rewrite each card to one concrete outcome + one proof (e.g. "10+ mockups · PS + Sketch"). Kill "ultimate / stunning / immersive." |
 | H6 | **Featured faces: make the default CTA obvious** | Ensure the featured stage always shows one clear Install button above the fold of that section; thumbnails are secondary. |
 | H7 | **Brand missing from hero headline** | Either lead with Olympus or put the wordmark at hero scale. Right now brand lives only in a 16px nav lockup. |
-| H8 | **Page title is just "Olympus"** | Use something searchable/clear: `Olympus — Premium watch faces for Wear OS`. |
+| H8 | **Page title is just "Olympus"** | Use something searchable/clear: `Olympus | Premium watch faces for Wear OS`. |
 
-### 3. Nice to Have — subtle refinements
+### 3. Nice to Have: subtle refinements
 
 | # | Issue | Fix |
 |---|--------|-----|
@@ -78,7 +78,7 @@ Hero watch wins visually (good). Then eye drops into a wall of About prose. Then
 | N5 | Footer is a dead end | Add Faces + Toolkit + Facer profile links. |
 | N6 | `noindex` on the page | Fine for WIP; remove before any real traffic or Gumroad push. |
 | N7 | jQuery from Google CDN for almost nothing | Drop if unused; fewer moving parts. |
-| N8 | Mobile: confirm Install buttons are full-width and thumb-reachable | Already partially handled — verify featured Install isn't trapped beside the dial on small screens. |
+| N8 | Mobile: confirm Install buttons are full-width and thumb-reachable | Already partially handled; verify featured Install isn't trapped beside the dial on small screens. |
 
 ---
 
@@ -95,4 +95,4 @@ Olympus should convert **wearers** to **Install on Facer**, and secondarily conv
 **Primary CTA:** Browse faces  
 **Secondary:** Creator's Toolkit  
 
-If you want the poetic line, use it as an eyebrow or second line — never as a substitute for the product sentence.
+If you want the poetic line, use it as an eyebrow or second line, never as a substitute for the product sentence.

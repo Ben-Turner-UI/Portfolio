@@ -2,7 +2,7 @@
 body {
   --content-max-width: 640px;
 
-  /* Portfolio type scale (Source Sans 3) — aligned with Adobe Spectrum body sizing */
+  /* Portfolio type scale (Source Sans 3), aligned with Adobe Spectrum body sizing */
   --type-headline-lg: 28px;
   --type-headline-lg-lh: 1.3;
   --type-heading-2: 20px;

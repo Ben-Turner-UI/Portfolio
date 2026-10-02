@@ -1,5 +1,5 @@
 /* Main stylesheet entry. Pages load only this file.
-   Import order mirrors the original single-file cascade — do not reorder:
+   Import order mirrors the original single-file cascade; do not reorder:
    later files intentionally override earlier ones (e.g. responsive.css
    must come after every component it adjusts). */
 

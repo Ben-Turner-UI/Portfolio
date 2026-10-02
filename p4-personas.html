@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>html,body{background:#fff;color-scheme:only light}</style>
-    <title>Increasing sales opportunities with a generative AI onboarding experience — Ben Turner</title>
+    <title>Increasing sales opportunities with a generative AI onboarding experience | Ben Turner</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,16 +85,22 @@
                 <h2>Persona</h2>
                 <p>The personas we had were outdated, describing people who might use the product rather than the person who decides to buy it. In this case, the decision-maker is a senior technical buyer.</p>
                 <p>I built an agentic research system around a frontier model, utilizing multiple agents to handle different jobs at once. It looked at internal evidence, web research, persona authors, the existing design, wireframes, a sample project, and the asset sourcing for that sample project. Each agent ran on a different model tier, scaled to what the specific job needed and what the token spend was worth.</p>
-                <h3 class="change-block__title">Agent jobs</h3>
-                <ul>
-                  <li><strong>Internal evidence:</strong> The company&rsquo;s own written record, including competitive guides, customer notes, discovery scans, win/loss data, and sales material.</li>
-                  <li><strong>Web research:</strong> Job postings, practitioner interviews, industry surveys, outsourcing, and review-workflow guides.</li>
-                  <li><strong>Persona author:</strong> Wrote a buying persona for the decision-maker, including a citation on every claim.</li>
-                  <li><strong>Existing design:</strong> Reviewed the live onboarding and the wireframes from the perspective of that buyer, listing what had to change.</li>
-                  <li><strong>Sample project:</strong> Folder and bundle structure for a demo project a buyer could actually explore.</li>
-                  <li><strong>Asset sourcing:</strong> Where the demo art comes from, along with the licensing constraints on each route.</li>
-                  <li><strong>Competitor analysis:</strong> A capability matrix across major competitors.</li>
-                </ul>
+                <div class="table-container">
+                  <table class="improvements-table">
+                    <thead>
+                      <tr><th>Agent</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Internal evidence</td><td>Read the company&rsquo;s own written record: competitive guides, customer notes, discovery scans, win/loss data, and sales material.</td></tr>
+                      <tr><td>Web research</td><td>Job postings, practitioner interviews, industry surveys, outsourcing, and review-workflow guides.</td></tr>
+                      <tr><td>Persona author</td><td>Wrote a buying persona for the decision-maker, with a citation on every claim.</td></tr>
+                      <tr><td>Existing design</td><td>Reviewed the live onboarding and wireframes from the buyer&rsquo;s perspective, listing what had to change.</td></tr>
+                      <tr><td>Sample project</td><td>Folder and bundle structure for a demo project a buyer could explore.</td></tr>
+                      <tr><td>Asset sourcing</td><td>Where demo art comes from, and the licensing constraints on each route.</td></tr>
+                      <tr><td>Competitor analysis</td><td>A capability matrix across major competitors.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
                 <p>The matrix itself is confidential. The takeaway was that we needed a trial experience where someone could see the full capability of the product, bypassing the lengthy configuration that typically comes with legacy enterprise software in this sector.</p>
               </div>
 

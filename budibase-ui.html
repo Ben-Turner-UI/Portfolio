@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>html,body{background:#fff;color-scheme:only light}</style>
-    <title>Delivering core Budibase features — Ben Turner</title>
+    <title>Delivering core Budibase features: branches, permissions, and calculations | Ben Turner</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,9 +62,34 @@
       <div class="width-container">
         <div class="content-container">
           <div class="main-content">
-            <div class="project-details_text"><div class="project-item-group">
+            <div class="project-details_text">
+
+              <div class="project-paragraph project-client-description">
+                <h2>Context</h2>
+                <p>As an in-house Product Designer at Budibase, I designed UI across many parts of the low-code platform, not only the automations builder (which has its own case study). Builders and admins need to wire workflows, lock down data, and work with live tables without leaving the product. My job was to turn those capabilities into interfaces that feel approachable on first use and still hold up for enterprise teams on self-hosted installs.</p>
+                <p>This page focuses on four elements I designed: conditional branches in automations, role-based permissions, calculated fields in views, and licensing flows for cloud, self-hosted, and air-gapped customers.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>What I designed</h2>
+                <div class="table-container">
+                  <table class="improvements-table">
+                    <thead>
+                      <tr><th>Element</th><th>Design focus</th><th>Outcome</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Automation branches</td><td>Conditional steps in the workflow canvas so users can see where a run splits and which path executes.</td><td>Non-technical builders can model if/then logic without writing code.</td></tr>
+                      <tr><td>Role permissions</td><td>Read, Write, and Execute levels per custom role, with clear assignment in admin settings.</td><td>Sensitive data stays scoped; teams only see and change what their role allows.</td></tr>
+                      <tr><td>View calculations</td><td>Spreadsheet-style formulas in the view builder, including JavaScript-based calculated fields.</td><td>Totals, averages, and counts live in the app instead of exports to external tools.</td></tr>
+                      <tr><td>Licensing &amp; onboarding</td><td>Paths for cloud, self-hosted, and air-gapped deployments with consistent language and fewer dead ends.</td><td>Smoother setup regardless of how a customer runs Budibase.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="project-item-group">
                 <div class="project-paragraph">
-                  <h2>Automation Branches</h2>
+                  <h2>Automation branches</h2>
                   <p>This feature allows you to create smart, automated workflows that can handle different situations. Think of it like setting up "if this, then that" rules. For example, "If an invoice is over £500, automatically notify a manager for approval. If not, mark it as paid." My design makes it easy to see and manage these rules in a simple flowchart, so you can build powerful automations without any code.</p>
                 </div>
                 <div class="content-image">
@@ -77,7 +102,7 @@
 
               <div class="project-item-group">
                 <div class="project-paragraph">
-                  <h2>Permissions</h2>
+                  <h2>Role permissions</h2>
                   <p>This shows how we allow administrators to control exactly who can see and do what inside their applications. It works like setting keycard access in an office: a manager might have a master key, while an employee's key only opens specific doors. My design provides a simple and clear way to manage these permission levels, ensuring that sensitive information is protected and team members only have access to what they need for their role. This prevents mistakes and keeps data secure.</p>
                 </div>
                 <div class="content-image">
@@ -90,7 +115,7 @@
 
               <div class="project-item-group">
                 <div class="project-paragraph">
-                  <h2>View Calculations</h2>
+                  <h2>View calculations</h2>
                   <p>This is like having a smart spreadsheet built directly into your application. It lets you instantly perform calculations on your data, such as totalling up sales, finding an average score, or counting inventory, without having to export anything to a separate application. The interface I designed feels familiar and easy to use, allowing you to get quick insights and make faster, data-driven decisions right where you work.</p>
                 </div>
                 <div class="content-image">
@@ -101,15 +126,9 @@
                 </div>
               </div>
 
-              <div class="button-group">
-                <a class="next-project-link" href="cityfibre-rebrand.html">
-                  <div class="next-project-card">
-                    <img class="next-project-card__thumb" src="img/thumbnail/rebrand-thumbnail.jpg" alt="" loading="lazy" decoding="async">
-                    <div class="next-project-card__content">
-                      <p class="next-project-card__title">Driving a 90% conversion boost through the CityFibre digital rebrand</p>
-                    </div>
-                  </div>
-                </a>
+              <div class="project-paragraph">
+                <h2>Licensing and onboarding</h2>
+                <p>Budibase ships as cloud-hosted, self-hosted, and air-gapped software. Each path has different constraints and expectations, but the product language had drifted apart. I redesigned the licensing and onboarding flows so customers could pick a deployment model, understand what they were activating, and get to a working app without opening a support thread. That work is mostly configuration UI rather than a single demo screen, so it is summarized in the table above rather than shown as a walkthrough here.</p>
               </div>
 
             </div>

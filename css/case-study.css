@@ -238,7 +238,7 @@ figcaption {
   color: #595959;
 }
 
-/* Project gallery media — capped width on desktop, aligned with text on mobile */
+/* Project gallery media: capped width on desktop, aligned with text on mobile */
 .main-content .content-image {
   width: 100%;
   max-width: 1000px;
