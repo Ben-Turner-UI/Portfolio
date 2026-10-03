@@ -237,7 +237,7 @@
       '### [Olympus](' + olympus + ')',
       'Premium watch faces. Professional design tools.',
       '',
-      'Olympus creates high-contrast smartwatch faces built for all-day battery life, alongside professional design assets and 3D mockups for watch UI creators.',
+      'Olympus is a smartwatch brand focused on clean product design and user experience. Watch faces are built for at-a-glance readability, all-day battery, and a wide variety of smartwatches via Facer, plus professional design assets and 3D mockups for watch UI creators.',
       '',
       '### [Remastering a 2008 EA strategy game for 2026](' + kane + ')',
       'Ben collaborated on a fan project that used AI to upgrade a 2008 game\'s graphics for modern, high-resolution screens. His role focused on patching, testing, and launching the final release to ensure it worked flawlessly in competitive online multiplayer.',

@@ -101,7 +101,7 @@
       tone: 'trinity',
       img: 'olympus/img/watch-face-trinity.png',
       href: 'https://www.facer.io/watchface/PlCebnVFlx',
-      blurb: 'Bold, space-age styling featuring a highly distinct tripolar layout. Battery, heartrate, and date sit among rotating particles that perfectly echo the sweep of a seconds hand.'
+      blurb: 'Bold, space-age styling featuring a distinct tripolar layout. Battery, heart rate, and date sit among rotating particles that echo the sweep of a seconds hand.'
     },
     {
       id: 'olympus',
