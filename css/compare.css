@@ -87,23 +87,35 @@
   margin: 0 0 var(--case-study-block-margin);
 }
 
+.project-quote-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  margin: 0 0 var(--case-study-block-margin);
+}
+
 .project-quote {
-  margin: 0 0 16px;
-  padding: 4px 0 4px 16px;
-  border: none;
-  border-left: 3px solid #ff4d00;
-  border-radius: 0;
-  background: transparent;
+  margin: 0;
+  padding: 16px 18px 14px;
+  border: 1px solid #D6D6D6;
+  border-radius: 8px;
+  background: #FFF;
   quotes: none;
+  box-sizing: border-box;
+}
+
+.project-quote .testimonial-quote-mark {
+  font-size: 40px;
+  margin-bottom: -16px;
 }
 
 .project-quote p {
-  margin: 0 0 6px;
+  margin: 0;
   font-size: var(--type-body-lg);
-  line-height: var(--type-body-lg-lh);
+  line-height: var(--type-component-body-lh);
   color: #111;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .project-quote__attr {
@@ -115,8 +127,10 @@
   font-weight: 400;
 }
 
-.project-paragraph > .project-quote:last-of-type {
-  margin-bottom: var(--case-study-block-margin);
+@media (max-width: 768px) {
+  .project-quote-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .header-content > .archive-notice,
