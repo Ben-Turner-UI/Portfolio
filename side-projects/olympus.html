@@ -4,84 +4,75 @@
 <head>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympus | Premium Watch Faces &amp; Creator Tools</title>
+    <title>Olympus | Watch faces and creator tools</title>
     <link rel="stylesheet" href="olympus/olympus.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Bowlby+One+SC&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..24,400..700,0,0&icon_names=arrow_back,arrow_downward,download,open_in_new&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..24,400..700,0,0&icon_names=arrow_back,download,open_in_new&display=swap" rel="stylesheet">
 </head>
 
 <body class="home-page">
 
-    <nav class="home-nav">
+    <nav class="home-nav" aria-label="Site">
         <div class="page-container home-nav_inner">
-            <div class="home-nav_brand">
-                <a href="../index.html" class="home-nav_back" aria-label="Back to portfolio">
-                    <span class="material-symbols-rounded olympus-icon olympus-icon--nav" aria-hidden="true">arrow_back</span>
-                </a>
-                <span class="home-nav_title">OLYMPUS</span>
-            </div>
+            <a href="../index.html" class="home-nav_back">
+                <span class="material-symbols-rounded olympus-icon olympus-icon--nav" aria-hidden="true">arrow_back</span>
+                <span class="home-nav_back_label">Main site</span>
+            </a>
         </div>
     </nav>
 
     <main>
         <header class="home-header">
-        <div class="page-container">
         <section class="landing">
             <div class="landing_inner">
                 <div class="landing_text">
-                    <h1 class="landing_title">Premium Watch Faces<br><span class="landing_title_suffix">&amp;&nbsp;Creator Tools</span></h1>
-                    <p class="landing_intro">Olympus is a smartwatch brand focused on clean product design and user experience, ensuring its watch faces look good while functioning perfectly.</p>
-                    <ul class="landing_features" aria-label="Key features">
-                        <li>At-a-glance readability</li>
-                        <li>All-day battery life</li>
-                        <li>Wide smartwatch support</li>
-                        <li>Design assets and 3D mockups for creators</li>
-                    </ul>
+                    <h1 class="landing_title">Watch faces<span class="landing_title_suffix">and creator tools</span></h1>
+                    <p class="landing_intro">Olympus builds circular watch faces for Facer. The designs are readable at a glance and preserve AMOLED battery life. Installation is quick.</p>
                 </div>
                 <div class="landing_image_watch">
                     <img id="landing_image_watch" src="olympus/img/hero-dual-watch-mockup.png" alt="Olympus watch faces on Galaxy Gear">
                 </div>
             </div>
         </section>
-        </div>
         </header>
 
         <div class="page-container">
         <section class="faces" id="watch-faces" data-faces-root>
-            <h1 class="section_heading">Watch Faces</h1>
-            <p class="section_lead">Five signature faces, from clean minimalism to full sports instrumentation. Install any of them on your watch in seconds through Facer.</p>
+            <div class="faces_intro">
+                <h1 class="section_heading">Available designs</h1>
+                <p class="section_lead">Five circular faces on Facer. Browse the set, then install the one that fits your watch.</p>
+            </div>
             <div class="faces_layouts">
-                <div class="faces_layout is-active" data-faces-layout="featured"></div>
+                <div class="faces_layout is-active" data-faces-layout="carousel"></div>
             </div>
         </section>
 
         <section class="about" id="about">
-            <h1 class="section_heading">Why Olympus</h1>
-            <p class="section_lead">Many third-party watch faces look good or work well, but rarely both. Olympus combines both. Every face is built on tested usability: sharp on the wrist, all-day battery, and legible in direct sunlight.</p>
+            <h1 class="section_heading">Performance standards</h1>
+            <p class="section_lead">Every face undergoes checks for outdoor contrast, AMOLED battery consumption, and instant legibility.</p>
             <div class="about_highlights">
                 <article class="about_card">
-                    <h3 class="section_heading">Readable at a glance</h3>
-                    <p>High-contrast dials tested outdoors. Time, heart rate, and battery stay legible mid-run in direct sunlight, with no squinting and no backlight hunting.</p>
+                    <h3 class="section_heading">Readable outdoors</h3>
+                    <p>High-contrast dials maintain the visibility of time, heart rate, and battery in direct sunlight without requiring the backlight.</p>
                 </article>
                 <article class="about_card">
-                    <h3 class="section_heading">All-day battery</h3>
-                    <p>On AMOLED screens, black pixels draw no power. Every Olympus face maximises black space, so your watch lasts from a morning run to midnight.</p>
+                    <h3 class="section_heading">AMOLED battery life</h3>
+                    <p>Black pixels draw no power on AMOLED displays. Olympus faces incorporate large black areas to extend the time between charges.</p>
                 </article>
                 <article class="about_card">
-                    <h3 class="section_heading">20+ watches supported</h3>
-                    <p>Works on more than 20 circular-display smartwatches through Facer. Install once and wear the same face across Galaxy, Pixel, and more.</p>
+                    <h3 class="section_heading">Broad compatibility</h3>
+                    <p>Install once through Facer and use the design on multiple circular-display watches, including Galaxy and Pixel models.</p>
                 </article>
             </div>
         </section>
 
         <section class="kit" id="mockup-kit">
             <section class="kit_download">
-                <h1 class="section_heading">The Creator&rsquo;s Toolkit</h1>
-                <p class="section_lead">See your faces on a watch, not a flat artboard. Apply your designs to 10+ 3D mockups in Photoshop and Sketch, and build faces faster with a ready-to-use library of complications.</p>
-                <a class="faces_grid_button faces_grid_button--secondary" href="https://gumroad.com/l/olympus" target="_blank" rel="noopener noreferrer"><span class="olympus-btn-label">Buy the Creator&rsquo;s Toolkit</span><span class="material-symbols-rounded olympus-icon olympus-icon--button" aria-hidden="true">open_in_new</span></a>
+                <h1 class="section_heading">The Creator's Toolkit</h1>
+                <p class="section_lead">Photoshop and Sketch files for placing face art on 3D watch mockups. Includes a library of battery, heart rate, weather, and date complications.</p>
+                <a class="faces_grid_button faces_grid_button--secondary" href="https://gumroad.com/l/olympus" target="_blank" rel="noopener noreferrer"><span class="olympus-btn-label">Buy the creator's toolkit</span><span class="material-symbols-rounded olympus-icon olympus-icon--button" aria-hidden="true">open_in_new</span></a>
             </section>
 
             <div class="kit_grid">
@@ -90,8 +81,8 @@
                         <img src="olympus/img/kit-3d-watch-mockup.png" class="kit_card_image" alt="3D watch face mockups">
                     </div>
                     <div class="kit_card_content">
-                        <h3 class="section_heading">Present faces in 3D</h3>
-                        <p>Drop your design onto 10+ 3D watch mockups and export presentation-ready renders for portfolios, listings, and client reviews.</p>
+                        <h3 class="section_heading">3D watch mockups</h3>
+                        <p>Place face art onto 3D watch mockups and export stills for portfolios, store listings, and client reviews.</p>
                     </div>
                 </article>
                 <article class="kit_grid_4 kit_card">
@@ -99,19 +90,19 @@
                         <img src="olympus/img/kit-complications-grid.png" class="kit_card_image" alt="Watch face complications">
                     </div>
                     <div class="kit_card_content">
-                        <h3 class="section_heading">Ready-made complications</h3>
-                        <p>A built-in library of battery, heart rate, weather, and date elements: scalable components for wireframing and laying out faces fast.</p>
+                        <h3 class="section_heading">Complication library</h3>
+                        <p>Battery, heart rate, weather, and date elements function as scalable components for wireframes and finished layouts.</p>
                     </div>
                 </article>
 
                 <article class="kit_grid_tools kit_card">
                     <div class="kit_card_media kit_card_media_icons">
-                        <img class="kit_card_icon" src="olympus/img/ps.svg" width="100" height="100" alt="Adobe Photoshop">
-                        <img class="kit_card_icon" src="olympus/img/sketch.png" width="100" height="100" alt="Sketch">
+                        <img class="kit_card_icon" src="olympus/img/ps.svg" width="56" height="56" alt="Adobe Photoshop">
+                        <img class="kit_card_icon" src="olympus/img/sketch.png" width="56" height="56" alt="Sketch">
                     </div>
                     <div class="kit_card_content">
-                        <h3 class="section_heading">Photoshop &amp; Sketch native</h3>
-                        <p>Smart-object mockups in Photoshop; vector components and circular layout tools in Sketch. Open, edit, and export without conversion steps.</p>
+                        <h3 class="section_heading">Photoshop and Sketch</h3>
+                        <p>Smart-object mockups in Photoshop. Vector components and circular layout tools in Sketch. Both formats require no conversion step.</p>
                     </div>
                 </article>
             </div>
@@ -121,12 +112,12 @@
 
     <footer class="site_footer">
         <div class="page-container site_footer_inner">
-            <p class="site_footer_back"><a href="../index.html">Back to portfolio</a></p>
             <p class="site_footer_copyright">&copy; <span data-copyright-year></span> Olympus</p>
         </div>
     </footer>
 
     <script src="olympus/olympus.js"></script>
+    <script src="olympus/olympus-experience.js"></script>
 </body>
 
 </html>
