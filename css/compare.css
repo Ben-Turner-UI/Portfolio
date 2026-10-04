@@ -34,6 +34,36 @@
   margin-top: 56px;
 }
 
+.change-block__table {
+  margin: 0;
+}
+
+.change-block__table tbody th {
+  width: 28%;
+  max-width: 140px;
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid #D6D6D6;
+  font-weight: 600;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.change-block__table tbody td {
+  padding: 10px 0;
+  border-bottom: 1px solid #D6D6D6;
+  vertical-align: top;
+}
+
+.change-block__table tbody tr:last-child th,
+.change-block__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.change-block .table-container {
+  margin: 0;
+}
+
 .project-paragraph .change-block__title,
 .change-block__title {
   margin: 0 0 8px;
@@ -65,6 +95,108 @@
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
+}
+
+.change-block .device-stage {
+  margin-top: 12px;
+  width: min(1000px, 88vw);
+  max-width: 1000px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.device-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 40px;
+  border-radius: 16px;
+  background: #eef0f4;
+  box-sizing: border-box;
+}
+
+.device-frame {
+  width: 100%;
+  max-width: 640px;
+  padding: 2px;
+  border-radius: 16px;
+  background: #1a1a1a;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 14px 32px rgba(0, 0, 0, 0.16),
+    0 3px 10px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.device-frame__screen {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  background: #fff;
+  line-height: 0;
+}
+
+.device-frame__screen .compare-slider,
+.device-frame__screen .before-after {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  left: auto;
+  transform: none;
+  border: none;
+  border-radius: 0;
+  background: #fff;
+}
+
+.device-frame__screen .before-after,
+.device-frame__screen .before-after__item,
+.device-frame__screen .before-after__frame {
+  height: 100%;
+}
+
+.device-frame__screen .before-after__frame,
+.device-frame__screen .before-after__item .image-with-caption {
+  border-radius: 0;
+}
+
+.device-frame__screen .compare-slider__img--after,
+.device-frame__screen .before-after__item .image-with-caption {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.device-frame__screen .compare-slider__img--before {
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.device-frame__screen .compare-slider__label {
+  bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .change-block .device-stage {
+    width: min(100%, 92vw);
+    padding: 24px 18px;
+  }
+
+  .device-frame {
+    padding: 2px;
+    border-radius: 12px;
+    max-width: min(640px, 100%);
+  }
+
+  .device-frame__screen {
+    border-radius: 10px;
+  }
 }
 
 .archive-notice,
