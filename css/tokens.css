@@ -55,6 +55,19 @@ body {
   --case-study-header-block-gap: var(--space-4);
   --project-card-grid-gap: 32px;
   --project-card-content-gap: 20px;
+
+  /* Project case-study media chrome — change these to restyle all project images/videos */
+  --project-media-radius: 8px;
+  --project-media-border: 1px solid #b3b3b3;
+  --project-media-max-width: 1000px;
+  --project-media-max-height: 720px;
+
+  /* Tablet device chrome for in-product mockups */
+  --project-device-radius: 20px;
+  --project-device-screen-radius: 14px;
+  --project-device-bezel: #1a1a1a;
+  --project-device-bezel-width: 6px;
+  --project-device-stage: #eef0f4;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;
   font-size: var(--type-body-lg);

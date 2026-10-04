@@ -194,17 +194,27 @@
   margin-bottom: 0;
 }
 
+/* ==========================================================================
+   PROJECT MEDIA
+   Single control for case-study image/video chrome (border, radius, sizing).
+   Tokens live in tokens.css: --project-media-*.
+   ========================================================================== */
+.image-with-caption,
+.content-image--crop-top .content-image-media,
+.compare-slider {
+  border: var(--project-media-border);
+  border-radius: var(--project-media-radius);
+  box-sizing: border-box;
+}
+
 .image-with-caption {
   display: block;
   width: 100%;
-  max-width: 1000px;
-  max-height: 720px;
+  max-width: var(--project-media-max-width);
+  max-height: var(--project-media-max-height);
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
-  border: 1px solid #b3b3b3;
-  border-radius: 8px;
-  box-sizing: border-box;
 }
 
 .image-with-caption--contain,
@@ -216,9 +226,7 @@
 .content-image--crop-top .content-image-media {
   position: relative;
   overflow: hidden;
-  border: 1px solid #b3b3b3;
-  border-radius: 8px;
-  max-width: 1000px;
+  max-width: var(--project-media-max-width);
   margin-left: auto;
   margin-right: auto;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
@@ -233,6 +241,12 @@
   border-radius: 0;
 }
 
+.before-after__item .image-with-caption {
+  max-height: none;
+  width: 100%;
+  display: block;
+}
+
 figcaption {
   margin-top: 12px;
   color: #595959;
@@ -241,7 +255,7 @@ figcaption {
 /* Project gallery media: capped width on desktop, aligned with text on mobile */
 .main-content .content-image {
   width: 100%;
-  max-width: 1000px;
+  max-width: var(--project-media-max-width);
   margin-left: auto;
   margin-right: auto;
 }
