@@ -200,7 +200,7 @@
       '',
       'Automation branches: conditional steps on a flowchart, e.g. if an invoice is over 500 pounds, notify a manager; otherwise mark it paid. Permissions: admins assign Read, Write, or Execute per custom role. View calculations: JavaScript formulas for calculated fields in the app, so totals and averages do not need an export to a spreadsheet.',
       '',
-      '### [Overhauling Budibase Automations to Lay the Groundwork for AI Agents](' + automations + ')',
+      '### [Overhauling Budibase Automations to lay the groundwork for AI agents](' + automations + ')',
       'Budibase / 2024-2025',
       '',
       'Tags on homepage: User research, Automations, AI agents.',
