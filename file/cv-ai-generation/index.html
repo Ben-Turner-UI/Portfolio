@@ -107,13 +107,11 @@
     }
     .cv-header {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
       margin: 0;
       padding: 0;
-      height: auto;
     }
     .cv h1, .cv h2, .cv h3, .cv p, .cv ul, .cv li {
       font-family: inherit;
@@ -133,48 +131,29 @@
       line-height: 1;
     }
     .cv h1 .accent { color: #ff4d00; }
-    .cv ul.cv-contact {
-      display: grid;
-      grid-template-columns: max-content max-content;
-      justify-content: end;
-      align-items: center;
-      align-self: center;
-      gap: 3px 16px;
-      margin: 0 0 0 auto;
-      padding: 0;
-      height: auto;
-      list-style: none;
-      color: #333;
-      flex: none;
-      min-width: 0;
-    }
-    .cv-contact li {
+    .cv-contact {
       display: flex;
-      align-items: center;
-      gap: 4px;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0 0.35em;
       margin: 0;
-      height: auto;
+      padding: 0;
+      color: #333;
+      line-height: 1.35;
     }
-    .cv-contact__icon {
-      display: block;
-      width: 15px;
-      height: 15px;
-      flex: none;
+    .cv-contact__loc {
+      color: #111;
     }
-    .cv-contact li::before { content: none; display: none; }
+    .cv-contact__sep {
+      color: #999;
+      user-select: none;
+    }
     .cv-contact a {
-      display: inline-flex;
-      align-items: center;
-      height: auto;
-      gap: 4px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    .cv-contact__label {
-      text-underline-offset: 2px;
-    }
-    .cv-contact a .cv-contact__label {
+      color: #111;
+      font-weight: 400;
       text-decoration: underline;
+      text-underline-offset: 2px;
+      white-space: nowrap;
     }
     .cv a { color: #111; font-weight: 400; text-decoration: underline; text-underline-offset: 2px; }
     .cv a.cv-logo-link {
@@ -184,7 +163,6 @@
       text-decoration: none;
     }
     .cv a.cv-logo-link:hover { opacity: 0.88; }
-    .cv .cv-contact a { text-decoration: none; }
     .cv-section { margin: 0; }
     .cv-section > h2 {
       margin: 0 0 6px;
@@ -326,9 +304,6 @@
       color: #6e6e6e;
       font-size: 0.7em;
     }
-    .cv-contact li::marker {
-      content: none;
-    }
     .cv-split {
       display: flex;
       flex-direction: column;
@@ -416,32 +391,17 @@
   <article class="cv" aria-label="Curriculum vitae">
     <div class="cv-header">
       <h1>Ben Turner<span class="accent">.</span></h1>
-      <ul class="cv-contact">
-        <li>
-          <a href="https://benturner.work/">
-            <svg class="cv-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"/></svg>
-            <span class="cv-contact__label">benturner.work</span>
-          </a>
-        </li>
-        <li>
-          <a href="tel:+447546182198">
-            <svg class="cv-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 3h3l1.5 4-2 1.2a12 12 0 0 0 6.3 6.3L17 12.5 21 14v3a2 2 0 0 1-2 2A16 16 0 0 1 5 5a2 2 0 0 1 2-2z"/></svg>
-            <span class="cv-contact__label">+44 7546 182198</span>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:Benjamin.turner.design@gmail.com">
-            <svg class="cv-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 7l9 7 9-7"/></svg>
-            <span class="cv-contact__label">Benjamin.turner.design@gmail.com</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/benturnerwork">
-            <svg class="cv-contact__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.7 3.3a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4zM3 9h3.4V21H3V9zm6.2 0H12.5v1.6h.1c.4-.8 1.5-1.7 3.2-1.7 3.4 0 4 2.2 4 5.1V21H16.4v-6.4c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9.2V9z"/></svg>
-            <span class="cv-contact__label">linkedin.com/in/benturnerwork</span>
-          </a>
-        </li>
-      </ul>
+      <p class="cv-contact">
+        <span class="cv-contact__loc">Belfast, UK · Remote / hybrid</span>
+        <span class="cv-contact__sep" aria-hidden="true">·</span>
+        <a href="https://benturner.work/">benturner.work</a>
+        <span class="cv-contact__sep" aria-hidden="true">·</span>
+        <a href="tel:+447546182198">+44 7546 182198</a>
+        <span class="cv-contact__sep" aria-hidden="true">·</span>
+        <a href="mailto:Benjamin.turner.design@gmail.com">Benjamin.turner.design@gmail.com</a>
+        <span class="cv-contact__sep" aria-hidden="true">·</span>
+        <a href="https://www.linkedin.com/in/benturnerwork">linkedin.com/in/benturnerwork</a>
+      </p>
     </div>
 
     <section class="cv-section">
@@ -466,7 +426,7 @@
           <li><strong>Lead designer</strong> for planning and DAM tools used by major studios, including Electronic Arts, Xbox Game Studios, and Meta.</li>
           <li><strong>Bridged engineering gaps:</strong> When front-end capacity dropped by 66%, I wrote and shipped production UI code using Claude Code. This maintained momentum, increased feature output by 25%, and cut review times in half.</li>
           <li><strong>AI innovation:</strong> Built custom Claude skills, MCP servers, and Figma plugins to automate UI generation and design specs. Won Best Designed at the 2026 company hackathon. As a result, I was invited into the company's high-level AI task group to develop new AI features for the design organisation.</li>
-          <li><strong>Driven enterprise sales:</strong> Rebuilt product trial onboarding, removing complex setups so prospects could easily evaluate the software, directly opening new sales opportunities.</li>
+          <li><strong>Driven enterprise sales:</strong> Rebuilt product trial onboarding, removing complex setups so prospects could easily evaluate the software. Sales representatives said it made their job easier and offered more sales opportunities.</li>
           <li><strong>Resolved user bottlenecks:</strong> Redesigned search, navigation filters, and asset previews to fix severe friction points that previously forced users to rely on the browser back button.</li>
           <li><strong>Shipped standout features:</strong> Designed Capacity Planning, a highly praised feature that differentiated the product in a crowded marketplace and drew in new customers.</li>
         </ul>
@@ -536,8 +496,7 @@
 
     <section class="cv-section">
       <h2>Education</h2>
-      <p><strong>BDes (Hons) Interaction Design</strong>, Ulster University | First Class Honours (2017 to 2021)</p>
-      <p><strong>Extended Diploma in Interactive Media</strong>, Northern Regional College | Distinction*, Distinction*, Distinction (2015 to 2017)</p>
+      <p>BDes (Hons) Interaction Design (First Class) - Ulster University (2017 to 2021)</p>
     </section>
     <section class="cv-section">
       <h2>Hobbies</h2>
