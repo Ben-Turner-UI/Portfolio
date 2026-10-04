@@ -101,8 +101,22 @@
                 <p>Claude is not perfect. It includes the wrong components sometimes. Because I have worked in front-end development before, with Tailwind, CSS, and React, I could rewrite the CSS by hand and give the developer a clean handover. Claude missed some of the component details. I still fixed the problem, and I took responsibility for the output.</p>
               </div>
 
-              <div class="content-image">
-                <img src="img/project-image/p4-dam/p4-dam-1.jpg?v=2026-09-26" alt="Before and after of the P4 DAM 3D viewer: flat grey background versus realistic HDRI lighting with Background and grid controls" class="image-with-caption" loading="lazy" decoding="async">
+              <div class="device-stage">
+                <div class="device-frame">
+                  <div class="device-frame__screen">
+                    <div class="compare-slider" data-compare-slider>
+                      <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-dam/lighting-after.png" alt="After: P4 DAM 3D viewer with realistic HDRI lighting">
+                      <div class="compare-slider__before" style="width: 50%;">
+                        <img class="compare-slider__img compare-slider__img--before" src="img/project-image/p4-dam/lighting-before.png" alt="Before: P4 DAM 3D viewer with flat grey background">
+                      </div>
+                      <div class="compare-slider__handle" style="left: 50%;" role="slider" tabindex="0" aria-label="Compare before and after lighting" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                        <span class="compare-slider__knob" aria-hidden="true"><span class="material-symbols-rounded">drag_indicator</span></span>
+                      </div>
+                      <span class="compare-slider__label compare-slider__label--before">Before</span>
+                      <span class="compare-slider__label compare-slider__label--after">After</span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="device-stage">
@@ -157,5 +171,6 @@
       </div>
     </footer>
     <script src="nav.js"></script>
+    <script src="change-modal.js"></script>
   </body>
 </html>

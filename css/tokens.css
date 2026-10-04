@@ -63,11 +63,12 @@ body {
   --project-media-max-height: 720px;
 
   /* Tablet device chrome for in-product mockups */
-  --project-device-radius: 20px;
-  --project-device-screen-radius: 14px;
+  --project-device-radius: 12px;
+  --project-device-screen-radius: 10px;
   --project-device-bezel: #1a1a1a;
-  --project-device-bezel-width: 6px;
-  --project-device-stage: #eef0f4;
+  --project-device-bezel-width: 2px;
+  --project-device-stage: rgba(0, 0, 0, 0.04);
+  --project-device-max-width: 640px;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;
   font-size: var(--type-body-lg);
