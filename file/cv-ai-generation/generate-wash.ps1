@@ -58,8 +58,9 @@ public static class CvWashGenerator {
 
     for (int y = 0; y < sh; y++) {
       double gy = y / (double)(sh - 1);
-      double wash = washOpacity * gy;
-      double mask = gy;
+      double washMask = gy * gy * (3.0 - 2.0 * gy);
+      double wash = washOpacity * washMask;
+      double mask = washMask;
 
       double br = 255 * (1.0 - wash) + 255 * wash;
       double bg = 255 * (1.0 - wash) + 74 * wash;

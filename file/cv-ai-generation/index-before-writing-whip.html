@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="robots" content="noindex">
@@ -64,8 +64,8 @@
       isolation: isolate;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      gap: 16px;
+      justify-content: space-between;
+      gap: 10px;
       box-sizing: border-box;
       width: 210mm;
       height: 297mm;
@@ -81,19 +81,10 @@
       font-variant-ligatures: none;
       font-kerning: normal;
       background-color: #fff;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-    .cv::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 50%;
-      z-index: 0;
-      pointer-events: none;
-      background: url("img/cv-wash.jpg") center bottom / 100% 100% no-repeat;
+      background-image: url("img/cv-wash.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 50%;
+      background-position: center bottom;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -177,13 +168,6 @@
       text-decoration: underline;
     }
     .cv a { color: #111; font-weight: 400; text-decoration: underline; text-underline-offset: 2px; }
-    .cv a.cv-logo-link {
-      flex: none;
-      display: block;
-      line-height: 0;
-      text-decoration: none;
-    }
-    .cv a.cv-logo-link:hover { opacity: 0.88; }
     .cv .cv-contact a { text-decoration: none; }
     .cv-section { margin: 0; }
     .cv-section > h2 {
@@ -216,23 +200,18 @@
     .cv-role__header {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
     .cv-logo {
       box-sizing: border-box;
-      width: 24px;
-      height: 24px;
+      width: 32px;
+      height: 32px;
       margin: 0;
-      border: none;
-      border-radius: 4px;
+      border: 1px solid #c4c4c4;
+      border-radius: 5px;
       object-fit: cover;
-      background: transparent;
+      background: #fff;
       flex: none;
-    }
-    .cv-logo--budibase,
-    .cv-logo--nics {
-      object-fit: cover;
-      padding: 0;
     }
     .cv-role h3 {
       margin: 0;
@@ -250,7 +229,7 @@
     .cv-role__copy {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       flex: 1;
       min-width: 0;
     }
@@ -319,9 +298,6 @@
     .cv-role > ul {
       margin-top: 11px;
     }
-    .cv-role > ul strong {
-      font-weight: 600;
-    }
     .cv li::marker {
       color: #6e6e6e;
       font-size: 0.7em;
@@ -361,14 +337,12 @@
     html.cv-print .cv {
       isolation: auto;
       background-color: #fff;
-      height: auto;
-      overflow: visible;
-    }
-    html.cv-print .cv::before {
-      position: fixed;
-      left: 0;
-      width: 210mm;
-      height: 148.5mm;
+      background-image: url("img/cv-wash.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 50%;
+      background-position: center bottom;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
     html.cv-print .cv-case { background: #fff; }
     @media print {
@@ -388,16 +362,12 @@
         border: none;
         padding: 5mm 6.5mm 4.5mm;
         background-color: #fff;
-        height: auto;
-        overflow: visible;
+        background-image: url("img/cv-wash.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        background-position: center bottom;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-      }
-      .cv::before {
-        position: fixed;
-        left: 0;
-        width: 210mm;
-        height: 148.5mm;
       }
       .cv-case { background: #fff; }
     }
@@ -446,102 +416,90 @@
 
     <section class="cv-section">
       <h2>Summary</h2>
-      <p class="cv-summary">Product Designer with over seven years of experience driving business growth across enterprise, startup, and agency sectors. Known for bridging the gap between design and engineering, leveraging AI workflows and shipping production front-end code to accelerate feature delivery. Proven track record of delivering user-centred interfaces that resolve complex bottlenecks, scale operations, and directly boost enterprise sales.</p>
+      <p class="cv-summary">Product Designer with over seven years of experience driving business growth across enterprise, startup, and agency sectors. Known for delivering high-impact interfaces that boost sales and scale operations, while bringing energy and a collaborative spark to team culture.</p>
     </section>
 
     <section class="cv-section">
       <h2>Experience (7+ years)</h2>
       <div class="cv-role">
         <div class="cv-role__header">
-          <a class="cv-logo-link" href="https://www.perforce.com/" rel="noopener noreferrer"><img class="cv-logo" src="img/perforce.jpg" alt="Perforce"></a>
+          <img class="cv-logo" src="img/perforce.jpg" alt="">
           <div class="cv-role__copy">
             <div class="cv-role__head">
               <h3>Product Designer</h3>
-              <p class="cv-role__dates">September 2025 to present</p>
+              <p class="cv-role__dates">September 2025 to Present</p>
             </div>
-            <p class="cv-role__org">Perforce <span class="cv-role__scope">Enterprise planning and digital asset management (DAM) software for games and media.</span></p>
+            <p class="cv-role__org">Perforce <span class="cv-role__scope">P4 Plan and P4 DAM: planning and digital asset management software for games and media.</span></p>
           </div>
         </div>
         <ul>
-          <li><strong>Lead designer</strong> for planning and DAM tools used by major studios, including Electronic Arts, Xbox Game Studios, and Meta.</li>
-          <li><strong>Bridged engineering gaps:</strong> When front-end capacity dropped by 66%, I wrote and shipped production UI code using Claude Code. This maintained momentum, increased feature output by 25%, and cut review times in half.</li>
-          <li><strong>AI innovation:</strong> Built custom Claude skills, MCP servers, and Figma plugins to automate UI generation and design specs. Won Best Designed at the 2026 company hackathon. As a result, I was invited into the company's high-level AI task group to develop new AI features for the design organisation.</li>
-          <li><strong>Driven enterprise sales:</strong> Rebuilt product trial onboarding, removing complex setups so prospects could easily evaluate the software, directly opening new sales opportunities.</li>
-          <li><strong>Resolved user bottlenecks:</strong> Redesigned search, navigation filters, and asset previews to fix severe friction points that previously forced users to rely on the browser back button.</li>
-          <li><strong>Shipped standout features:</strong> Designed Capacity Planning, a highly praised feature that differentiated the product in a crowded marketplace and drew in new customers.</li>
+          <li>I'm the lead designer for P4 Plan and P4 DAM, handling digital asset management and project planning tools used by major studios including Electronic Arts, Xbox Game Studios, and Meta.</li>
+          <li>When front-end engineering capacity dropped by 66%, I wrote production front-end UI code using Claude Code to bridge the gap. This helped increase feature release output by 25% and cut review sessions in half.</li>
+          <li>Built custom Claude skills, MCP servers, and Figma plugins to automate design specifications and UI generation. The system won Best Designed at the 2026 company AI hackathon and was adopted by engineering teams across the business. As a result, I was appointed to the companies AI research group to develop new workflows and systems for the design organisation.</li>
+          <li>Rebuilt product trial onboarding. This allowed prospects to evaluate the software without complex setups, opening new enterprise sales opportunities. Reducing friction and helping improve the bottom line.</li>
+          <li>Redesigned search, navigation filters, and asset previews to resolve severe user bottlenecks caused by reliance on the browser back button.</li>
+          <li>Delivered a key feature on P4 Plan called Capacity Planning, which is a unique standout feature that no competitors have - this feature has drawn in high praise from our customers and makes the product standout in a crowded planning tool marketplace.</li>
         </ul>
       </div>
       <div class="cv-role">
         <div class="cv-role__header">
-          <a class="cv-logo-link" href="https://budibase.com/" rel="noopener noreferrer"><img class="cv-logo cv-logo--budibase" src="img/budibase.jpg" alt="Budibase"></a>
+          <img class="cv-logo" src="img/budibase.jpg" alt="">
           <div class="cv-role__copy">
             <div class="cv-role__head">
               <h3>Product Designer</h3>
               <p class="cv-role__dates">July 2024 to July 2025</p>
             </div>
-            <p class="cv-role__org">Budibase <span class="cv-role__scope">Open-source, low-code platform for internal apps, automations, and AI agents.</span></p>
+            <p class="cv-role__org">Budibase <span class="cv-role__scope">Open-source low-code for internal apps, automations and AI agents.</span></p>
           </div>
         </div>
         <ul>
-          <li><strong>End-to-end ownership:</strong> Owned product design for the platform, helping design the core features that transformed the startup into a near-profitable business.</li>
-          <li><strong>UX overhaul:</strong> Redesigned the automation builder after a 25-user research study. Visualised how data entered and exited each action, reducing community complaints to zero. This redesign became the foundation for Budibase's new AI agent product line.</li>
-          <li><strong>Enterprise features:</strong> Designed complex platform capabilities including conditional branching, role-based permissions, and spreadsheet-style formula calculations.</li>
-          <li><strong>Streamlined onboarding:</strong> Redesigned the licensing system to simplify onboarding across cloud, self-hosted, and air-gapped enterprise environments.</li>
+          <li>I owned end-to-end product design for Budibase, an open-source, self-hosted platform for building internal apps, automations, and AI agents.</li>
+          <li>I overhauled the automations part of the product based on a 25-user qualitative UX research study. As a result I redesigned the step-by-step UI to clearly show data entering and exiting each action, eliminating community complaint threads on automations. This redesign became the foundation Budibase used to build and launch its AI agent product line, a key part of their current product.</li>
+          <li>Redesigned it's licensing system, which streamlined onboarding for cloud, self-hosted and air-gapped users.</li>
+          <li>Designed enterprise platform features including conditional branching, role-based permissions (read, write, execute), and spreadsheet-style formula calculations.</li>
+          <li>Today Budibase is a thriving startup close to profitability that combines workflows, apps, data tables and automations, I helped design the features that transformed into what it is today.</li>
         </ul>
       </div>
       <div class="cv-role">
         <div class="cv-role__header">
-          <a class="cv-logo-link" href="https://www.dawsonandrews.com/" rel="noopener noreferrer"><img class="cv-logo" src="img/dawson-andrews.jpg" alt="DawsonAndrews"></a>
+          <img class="cv-logo" src="img/dawson-andrews.jpg" alt="">
           <div class="cv-role__copy">
             <div class="cv-role__head">
               <h3>UX Designer</h3>
               <p class="cv-role__dates">June 2021 to July 2024</p>
             </div>
-            <p class="cv-role__org">DawsonAndrews <span class="cv-role__scope">Digital product design agency.</span></p>
+            <p class="cv-role__org">DawsonAndrews <span class="cv-role__scope">Product design agency.</span></p>
           </div>
         </div>
         <ul>
-          <li><strong>Major client success:</strong> Led design for CityFibre (a major UK telecom). Redesigned their B2B portal and homepage based on extensive user research, doubling user satisfaction. This success helped win new accounts and funded 10 additional agency hires.</li>
-          <li><strong>0-to-1 product launch:</strong> Designed and launched a startup, SportsWork, from scratch across branding and product design. It successfully transitioned into an independent, profitable business.</li>
-          <li><strong>Design systems:</strong> Created and managed enterprise design systems, establishing token structures and component libraries for global clients like CityFibre and GSMA.</li>
-          <li><strong>Team leadership:</strong> Mentored junior and mid-level designers, helping scale the internal design team from 2 to 6 members.</li>
-        </ul>
-      </div>
-      <div class="cv-role">
-        <div class="cv-role__header">
-          <a class="cv-logo-link" href="https://www.nics.gov.uk/" rel="noopener noreferrer"><img class="cv-logo cv-logo--nics" src="img/uk-civil-service.jpg" alt="Northern Ireland Civil Service"></a>
-          <div class="cv-role__copy">
-            <div class="cv-role__head">
-              <h3>Product Designer</h3>
-              <p class="cv-role__dates">August 2019 to July 2020</p>
-            </div>
-            <p class="cv-role__org">Northern Ireland Civil Service <span class="cv-role__scope">Public sector digital services.</span></p>
-          </div>
-        </div>
-        <ul>
-          <li><strong>Secure environments:</strong> Served as a lead designer on confidential digital products utilised by the Police Service and the Department of Justice.</li>
-          <li><strong>Public-facing platforms:</strong> Designed digital recruitment and employment experiences used across towns and cities in Northern Ireland.</li>
-          <li><strong>Recognition:</strong> Received a departmental head award for outstanding work in digital service design.</li>
+          <li>At DawsonAndrews, I worked on so many different projects, some key highlights were leading design for CityFibre, a major UK telecom infrastructure provider competing with BT Openreach and Virgin Media. The project's success directly won new accounts like Hyperoptic, expanding agency revenue and enabling the team to hire 10 additional employees.</li>
+          <li>Worked with public sector clients like VisitBelfast and the GAA.</li>
+          <li>Redesigned the CityFibre homepage, B2B backend portal in record time with a measured 2x in user satisfaction increase after the redesign based on extensive user research studies.</li>
+          <li>Designed and helped launch a startup, SportsWork from scratch across branding and product design. It transitioned to become an independent, profitable business.</li>
+          <li>Created and managed enterprise design systems for clients including CityFibre and GSMA, establishing token structures and component libraries.</li>
+          <li>Proudly mentored junior and mid-level designers and helped grow the design team out from 2 to 6 designers.</li>
         </ul>
       </div>
     </section>
 
+    <p class="cv-role__note">More experience on <a href="https://www.linkedin.com/in/benturnerwork">linkedin.com/in/benturnerwork</a>.</p>
+
     <section class="cv-section">
       <h2>Skills</h2>
-      <p><strong>Product &amp; UX Design:</strong> Product ownership, Interaction design, Design systems, Tokens, Typography, Visual hierarchy, Information architecture, Usability testing, Accessibility (WCAG AA), Systems thinking, Data-driven UX.</p>
-      <p><strong>Front-end:</strong> Production code, Near-production prototypes, CSS, Tailwind CSS, HTML, Git, Component-driven development.</p>
-      <p><strong>AI &amp; Workflows:</strong> Cursor, Claude Code, Claude skills, MCP servers, Figma Make, Agentic workflows, Human-in-the-loop UI, Encoding design systems for AI, AI-assisted prototyping.</p>
+      <p><strong>Product &amp; UX Design:</strong> Product ownership, Interaction design, Design systems, Tokens, Typography, Visual hierarchy, Micro-interactions, Information architecture, Usability testing, Accessibility (WCAG / AA), Systems thinking, First principles, Product sense, High agency, Data-driven UX.</p>
+      <p><strong>Frontend:</strong> Production code, Near-production prototypes, CSS, Tailwind CSS, HTML, Git, Component-driven development.</p>
+      <p><strong>AI:</strong> Cursor, Claude Code, Claude skills, MCP servers, Figma Make, Agentic workflows, Designing for agents, Human-in-the-loop UI, Encoding design systems for AI, Research synthesis, AI-assisted prototyping and implementation.</p>
       <p><strong>Tools:</strong> Figma, Maze, Jira, Local development environments.</p>
     </section>
 
     <section class="cv-section">
       <h2>Education</h2>
-      <p><strong>BDes (Hons) Interaction Design</strong>, Ulster University | First Class Honours (2017 to 2021)</p>
-      <p><strong>Extended Diploma in Interactive Media</strong>, Northern Regional College | Distinction*, Distinction*, Distinction (2015 to 2017)</p>
+      <p>BDes (Hons) Interaction Design, Ulster University, First Class Honours (2017 to 2021)</p>
+      <p>Extended Diploma in Interactive Media, Northern Regional College. Distinction*, Distinction*, Distinction (2015 to 2017)</p>
     </section>
     <section class="cv-section">
       <h2>Hobbies</h2>
-      <p>Martial arts since 2007 (BJJ purple belt, Japanese Jiu-Jitsu black belt, Judo green belt), Warhammer 30k, gym, fishkeeping, karting, travel, and dogs.</p>
+      <p>Martial arts since 2007 (BJJ purple belt, Japanese Jiu-Jitsu black belt, Judo green belt). Warhammer 30k, gym, fishkeeping, karting, travel, and dogs.</p>
     </section>
   </article>
   </div>
