@@ -334,8 +334,8 @@ body.home-page::before {
     z-index: 0;
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(0, 255, 176, 0.075) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 176, 0.075) 1px, transparent 1px);
+        linear-gradient(rgba(0, 255, 176, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 176, 0.12) 1px, transparent 1px);
     background-size: 56px 56px;
     background-position: center top;
     -webkit-mask-image: radial-gradient(ellipse 95% 80% at 50% 35%, #000 0%, rgba(0, 0, 0, 0.75) 60%, transparent 92%);
