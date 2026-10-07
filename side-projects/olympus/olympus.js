@@ -14,8 +14,7 @@
       features: [
         'A tripolar layout separates zones for time, status, and motion.',
         'A rotating particle ring acts as a seconds hand.',
-        'Battery, heart rate, and date remain in fixed positions to maintain visibility outdoors or during runs.',
-        'High-contrast typography works well on circular AMOLED screens, while black-heavy art reduces battery use and stays readable in sunlight.'
+        'Battery, heart rate, and date stay fixed for outdoor visibility, with high-contrast AMOLED art that saves battery and stays readable in sunlight.'
       ]
     },
     {
@@ -138,6 +137,26 @@
   var slides = Array.prototype.slice.call(panel.querySelectorAll('[data-faces-slide]'));
   var activeIndex = 0;
 
+  function isHorizontalFaces() {
+    return isStackedFaces();
+  }
+
+  function slideExtent() {
+    return isHorizontalFaces() ? (rail.clientWidth || 1) : (rail.clientHeight || 1);
+  }
+
+  function getRailScroll() {
+    return isHorizontalFaces() ? rail.scrollLeft : rail.scrollTop;
+  }
+
+  function setRailScroll(value) {
+    if (isHorizontalFaces()) {
+      rail.scrollLeft = value;
+    } else {
+      rail.scrollTop = value;
+    }
+  }
+
   function syncRailHeight() {
     var stacked = isStackedFaces();
     var maxHeight = 0;
@@ -156,7 +175,7 @@
     }
     var next = Math.ceil(maxHeight);
     rail.style.setProperty('--faces-rail-height', next + 'px');
-    rail.scrollTop = activeIndex * next;
+    setRailScroll(activeIndex * slideExtent());
   }
   var audioCtx = null;
   var audioUnlocked = false;
@@ -215,7 +234,7 @@
 
     var noiseGain = ctx.createGain();
     noiseGain.gain.setValueAtTime(0.0001, now);
-    noiseGain.gain.exponentialRampToValueAtTime(0.05, now + 0.001);
+    noiseGain.gain.exponentialRampToValueAtTime(0.14, now + 0.001);
     noiseGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.016);
 
     noise.connect(highpass);
@@ -231,7 +250,7 @@
     osc.type = 'sine';
     osc.frequency.setValueAtTime(4800, now);
     oscGain.gain.setValueAtTime(0.0001, now);
-    oscGain.gain.exponentialRampToValueAtTime(0.028, now + 0.0007);
+    oscGain.gain.exponentialRampToValueAtTime(0.08, now + 0.0007);
     oscGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.01);
     osc.connect(oscGain);
     oscGain.connect(ctx.destination);
@@ -308,8 +327,8 @@
   }
 
   function updateSlideMotion() {
-    var height = rail.clientHeight || 1;
-    var progress = rail.scrollTop / height;
+    var extent = slideExtent();
+    var progress = getRailScroll() / extent;
     slides.forEach(function (slide, i) {
       var abs = Math.abs(progress - i);
       // Gentle crossfade only; no drift / 3D motion.
@@ -320,8 +339,7 @@
   }
 
   function indexFromScroll() {
-    var height = rail.clientHeight || 1;
-    return Math.round(rail.scrollTop / height);
+    return Math.round(getRailScroll() / slideExtent());
   }
 
   function easeInOutCubic(t) {
@@ -332,12 +350,12 @@
     rail.style.scrollSnapType = enabled ? '' : 'none';
   }
 
-  function animateRailTo(top, duration) {
-    var start = rail.scrollTop;
-    var delta = top - start;
+  function animateRailTo(pos, duration) {
+    var start = getRailScroll();
+    var delta = pos - start;
     if (Math.abs(delta) < 1 || reducedMotion || duration <= 0) {
       setRailSnap(false);
-      rail.scrollTop = top;
+      setRailScroll(pos);
       updateSlideMotion();
       setActive(indexFromScroll(), { sound: false });
       setRailSnap(true);
@@ -352,12 +370,12 @@
 
     function frame(now) {
       var t = Math.min(1, (now - t0) / duration);
-      rail.scrollTop = start + delta * easeInOutCubic(t);
+      setRailScroll(start + delta * easeInOutCubic(t));
       updateSlideMotion();
       if (t < 1) {
         requestAnimationFrame(frame);
       } else {
-        rail.scrollTop = top;
+        setRailScroll(pos);
         updateSlideMotion();
         setRailSnap(true);
         programScroll = false;
@@ -370,7 +388,7 @@
 
   function goToFace(index, behavior) {
     var next = Math.max(0, Math.min(FACES.length - 1, index));
-    var top = next * rail.clientHeight;
+    var pos = next * slideExtent();
     // Ticker jumps land on the chosen face directly, not every face in between
     // (scroll-snap makes that feel like a cycle).
     var instant = behavior === 'auto' || behavior === 'direct' || reducedMotion;
@@ -379,14 +397,14 @@
     if (instant) {
       programScroll = true;
       setRailSnap(false);
-      rail.scrollTop = top;
+      setRailScroll(pos);
       updateSlideMotion();
       programScrollTimer = window.setTimeout(function () {
         setRailSnap(true);
         programScroll = false;
       }, 40);
     } else {
-      animateRailTo(top, 640);
+      animateRailTo(pos, 640);
     }
   }
 
@@ -457,7 +475,7 @@
 
   window.addEventListener('resize', function () {
     syncRailHeight();
-    rail.scrollTop = activeIndex * rail.clientHeight;
+    setRailScroll(activeIndex * slideExtent());
     if (tickerThumb) {
       tickerThumb.style.transition = 'none';
     }
