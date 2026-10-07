@@ -973,10 +973,12 @@ body.home-page > * {
     .faces_rail {
         flex-direction: row;
         width: 100%;
+        height: auto;
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: visible;
         scroll-snap-type: x mandatory;
         overscroll-behavior-x: contain;
+        overscroll-behavior-y: auto;
         touch-action: pan-x pan-y;
         cursor: grab;
         -webkit-overflow-scrolling: touch;
@@ -986,6 +988,8 @@ body.home-page > * {
         flex: 0 0 100%;
         width: 100%;
         max-width: 100%;
+        height: auto;
+        min-height: 0;
         grid-template-columns: 1fr;
         gap: 16px;
         align-items: start;
