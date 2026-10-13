@@ -11,18 +11,9 @@
   .side-project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .more-work__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 768px) {
-  .project-header-title-block h1,
-  .project-header-stack h1 {
-    max-width: 100%;
-  }
-
   main {
     overflow-x: hidden;
   }
@@ -32,10 +23,6 @@
   }
 
   .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .more-work__grid {
     grid-template-columns: 1fr;
   }
 
@@ -81,28 +68,6 @@
   header.home {
     margin-top: 0;
     margin-bottom: 48px;
-  }
-
-  .about-partners {
-    margin-bottom: 0;
-  }
-
-  .about-partners .improvements-table thead th:first-child,
-  .about-partners .about-partners__logo-cell {
-    width: 80px;
-  }
-
-  .about-partners__logo {
-    min-height: 20px;
-  }
-
-  .about-partners__logo img {
-    height: 18px;
-    max-width: 72px;
-  }
-
-  .partner-more {
-    padding: 0;
   }
 
   .main-content .content-image {

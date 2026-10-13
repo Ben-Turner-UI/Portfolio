@@ -78,8 +78,8 @@ body {
   --diagram-neutral-fill: rgba(0, 0, 0, 0.035);
   --diagram-neutral-stroke: rgba(0, 0, 0, 0.16);
   --diagram-header-fill: rgba(0, 0, 0, 0.055);
-  --diagram-accent-fill: #5ce1e6;
-  --diagram-accent-stroke: rgba(0, 0, 0, 0.12);
+  --diagram-accent-fill: rgba(92, 225, 230, 0.22);
+  --diagram-accent-stroke: #5ce1e6;
   --diagram-warm-fill: rgba(255, 176, 72, 0.22);
   --diagram-warm-stroke: #d48806;
   --diagram-frame-stroke: rgba(0, 0, 0, 0.14);

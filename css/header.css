@@ -1,4 +1,4 @@
-/* Page and case-study headers, about-partners table */
+/* Page and case-study headers */
 /* ==========================================================================
    HEADER STYLES
    ========================================================================== */
@@ -107,8 +107,8 @@ header.project-header.about-header {
 .project-header-stack h1 {
   margin: 0;
   width: 100%;
-  max-width: 75%;
-  text-wrap: balance;
+  max-width: none;
+  text-wrap: wrap;
   hyphens: manual;
   overflow-wrap: normal;
   word-break: normal;
@@ -401,97 +401,8 @@ header.project-header.about-header {
   width: 100%;
 }
 
-.about-partners {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: var(--space-2);
-  width: 100%;
-  max-width: var(--content-max-width);
-  margin: 0;
-}
-
-.about-partners p {
-  margin: 0;
-}
-
-.about-partners-intro {
-  margin: 0;
-  font-size: var(--type-body-md);
-  line-height: var(--type-body-md-lh);
-  color: #000;
-}
-
-.about-partners .improvements-table {
-  margin: 0;
-}
-
-.about-partners .improvements-table thead th {
-  padding: 6px 8px;
-  font-size: var(--type-body-md);
-  line-height: var(--type-body-md-lh);
-}
-
-.about-partners .improvements-table tbody td {
-  padding: 8px 8px;
-  font-size: var(--type-body-md);
-  line-height: var(--type-body-md-lh);
-  vertical-align: middle;
-}
-
-.about-partners .improvements-table thead th:first-child,
-.about-partners .about-partners__logo-cell {
-  width: 96px;
-}
-
-.about-partners .about-partners__logo-cell {
-  vertical-align: middle;
-  padding-right: 12px;
-}
-
-.about-partners__logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  min-height: 24px;
-  text-decoration: none;
-  opacity: 0.9;
-  transition: opacity 0.2s ease;
-}
-
-.about-partners__logo:hover {
-  opacity: 0.6;
-}
-
-.about-partners__logo img {
-  box-sizing: border-box;
-  width: auto;
-  height: 22px;
-  max-width: 88px;
-  padding: 4px 8px;
-  object-fit: contain;
-  object-position: left center;
-  display: block;
-  background-color: #fff;
-  border: 1px solid var(--ui-200, #d6d6d6);
-  border-radius: 6px;
-}
-
-.about-partners .partner-more {
-  margin: 0;
-  font-size: var(--type-body-md);
-  line-height: var(--type-body-md-lh);
-  color: #000;
-}
-
 .header-content > p {
   margin-top: 2px;
-  margin-bottom: 0;
-}
-
-.project-header .header-content .project-claude-banner p {
-  margin-top: 0;
   margin-bottom: 0;
 }
 

@@ -1,80 +1,4 @@
-/* Case study content: banner, prose, images */
-/* ==========================================================================
-   PROJECT CLAUDE CODE BANNER
-   ========================================================================== */
-.project-claude-banner {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 12px 14px;
-  border: 1px solid #e8e8e8;
-  border-left: 3px solid #d97757;
-  border-radius: 8px;
-  background: #fafafa;
-  box-sizing: border-box;
-}
-
-.project-claude-banner--header {
-  width: 100%;
-  max-width: var(--content-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  align-items: flex-start;
-  gap: 18px;
-  margin-top: calc(var(--case-study-header-divider-gap) - var(--case-study-header-block-gap));
-  padding: 12px 20px;
-  border: 1px solid var(--ui-1000, #D6D6D6);
-  border-radius: 8px;
-  background: var(--ui-0, #FFF);
-  overflow: hidden;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  box-sizing: border-box;
-  box-shadow: none;
-}
-
-.grid-item-content-text .project-claude-banner {
-  margin-top: 12px;
-}
-
-.project-claude-banner__icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  object-fit: contain;
-}
-
-.project-claude-banner--header .project-claude-banner__icon {
-  width: 20px;
-  height: 20px;
-  margin-top: 3px;
-  align-self: flex-start;
-}
-
-.project-claude-banner__text {
-  margin: 0;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 16px;
-  line-height: 1.3;
-  color: #444;
-}
-
-.project-claude-banner--header .project-claude-banner__text {
-  font-size: var(--type-body-lg);
-  line-height: var(--type-component-body-lh);
-  color: #000;
-}
-
-.project-claude-banner__text strong {
-  color: #000;
-  font-weight: 600;
-}
-
-.project-claude-banner--header .project-claude-banner__text strong {
-  font-weight: 600;
-  color: #000;
-}
-
+/* Case study content: prose, images */
 /* ==========================================================================
    CONTENT CONTAINER STYLES
    ========================================================================== */
@@ -316,8 +240,29 @@ figcaption {
   margin: 0 0 20px;
 }
 
-.project-header-stack:not(:has(.project-statistics)) h1 {
+.project-header-stack:has(.project-header-description) h1 {
+  margin-bottom: 16px;
+}
+
+.project-header-stack:not(:has(.project-statistics)):not(:has(.project-header-description)) h1 {
   margin-bottom: 0;
+}
+
+.project-header-stack .project-header-description {
+  margin: 0 0 20px;
+  width: 100%;
+  max-width: none;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--case-study-body-size);
+  font-weight: 400;
+  line-height: var(--case-study-body-line);
+  color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+  text-wrap: wrap;
+}
+
+[data-color-scheme="dark"] .project-header-stack .project-header-description {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .project-header-meta-row .project-meta {
@@ -495,7 +440,8 @@ body[data-color-scheme="dark"] .cf-homepage-diagram {
   --diagram-neutral-fill: rgba(255, 255, 255, 0.08);
   --diagram-neutral-stroke: rgba(255, 255, 255, 0.22);
   --diagram-header-fill: rgba(255, 255, 255, 0.12);
-  --diagram-accent-stroke: rgba(255, 255, 255, 0.25);
+  --diagram-accent-fill: rgba(92, 225, 230, 0.28);
+  --diagram-accent-stroke: #5ce1e6;
   --diagram-warm-fill: rgba(255, 180, 60, 0.28);
   --diagram-text: #fff;
   --diagram-text-muted: rgba(255, 255, 255, 0.72);
