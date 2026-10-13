@@ -4,7 +4,7 @@ body {
     --olympus-bg: #040705;
     --olympus-surface: #070B09;
     --olympus-card-bg: #080C0A;
-    --olympus-media-bg: #060908;
+    --olympus-media-bg: #000;
     --olympus-border: #1A221E;
     --olympus-text-muted: #8A968F;
     --olympus-divider: rgba(0, 255, 176, 0.06);
@@ -334,8 +334,8 @@ body.home-page::before {
     z-index: 0;
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(0, 255, 176, 0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 176, 0.12) 1px, transparent 1px);
+        linear-gradient(rgba(0, 255, 176, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 176, 0.07) 1px, transparent 1px);
     background-size: 56px 56px;
     background-position: center top;
     -webkit-mask-image: radial-gradient(ellipse 95% 80% at 50% 35%, #000 0%, rgba(0, 0, 0, 0.75) 60%, transparent 92%);
