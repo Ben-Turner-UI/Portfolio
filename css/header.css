@@ -356,7 +356,7 @@ header.project-header.about-header {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin-top: 4px;
+  margin-top: 12px;
 }
 
 .home-header-content-text .home-contact__link {

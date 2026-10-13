@@ -253,7 +253,7 @@ a.side-project-card:hover {
   flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
-  padding: 20px 24px 24px;
+  padding: 20px 24px 16px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -344,7 +344,7 @@ a.side-project-card:hover {
   font-weight: 400;
   line-height: var(--case-study-body-line);
   color: #000;
-  min-height: calc(16px + (1em * var(--case-study-body-line) * 3));
+  min-height: calc(16px + (1em * var(--case-study-body-line) * 2));
 }
 
 .project-card-highlight .project-card-highlight__icon {

@@ -35,7 +35,11 @@
   }
 
   .grid-item-content {
-    padding: 20px 24px 24px;
+    padding: 20px 24px 16px;
+  }
+
+  .project-card-highlight {
+    min-height: 0;
   }
 
   .project-grid {
