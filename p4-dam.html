@@ -5,8 +5,15 @@
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Front-end capacity on P4 DAM fell from six developers to two. I shipped production front end alongside them and built Claude skills that write specs and handovers, which cut planning meetings from an hour to 30 minutes. One skill won Best Designed at the company’s 2026 AI hackathon.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shipped 25% more features with a third of the front-end team by designing in production code and automating handover with AI agents | Ben Turner">
+    <meta property="og:description" content="Front-end capacity on P4 DAM fell from six developers to two. I shipped production front end alongside them and built Claude skills that write specs and handovers, which cut planning meetings from an hour to 30 minutes. One skill won Best Designed at the company’s 2026 AI hackathon.">
+    <meta property="og:image" content="https://benturner.work/img/thumbnail/p4-product.png">
+    <meta property="og:url" content="https://benturner.work/p4-dam.html">
+    <meta name="twitter:card" content="summary_large_image">
     <style>html,body{background:#fff;color-scheme:only light}</style>
-    <title>Driving a 25% increase in feature delivery despite a 66% engineering cut | Ben Turner</title>
+    <title>Shipped 25% more features with a third of the front-end team by designing in production code and automating handover with AI agents | Ben Turner</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +45,7 @@
       </a>
       <a href="about.html" class="nav-item">
         <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
-        <span class="nav-item__label">About</span>
+        <span class="nav-item__label">Life</span>
       </a>
     </div>
       </nav>
@@ -48,30 +55,34 @@
       <div class="width-container">
         <div class="header-content">
           <div class="project-header-title-block">
-          <p class="project-meta">
-            <a class="project-meta-badge" href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer" aria-label="Perforce">
-              <img class="project-meta-badge__logo project-meta-badge__logo--wide" src="img/partners/perforce-nav.svg" alt="">
-            </a>
-          </p>
-          <h1>Driving a 25% increase in feature delivery despite a 66% engineering cut</h1>
-          </div>
-
-          <div class="project-statistics">
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat project-statistics-stat--inline">6<span class="material-symbols-rounded project-statistics-arrow" aria-hidden="true">arrow_forward</span>2</h3>
-              <p class="stat-description">Front-end team cut from six developers to two</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">25%</h3>
-              <p class="stat-description">More features than the same quarter a year earlier</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">50%</h3>
-              <p class="stat-description">Fewer questions per feature, refinements down to 30 minutes</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat project-statistics-stat--inline"><span class="material-symbols-rounded project-statistics-arrow project-statistics-award-icon" aria-hidden="true">emoji_events</span>1st</h3>
-              <p class="stat-description">Best Designed at the company&rsquo;s 2026 AI hackathon</p>
+            <div class="project-header-stack">
+              <div class="project-header-meta-row">
+                <p class="project-meta">
+                  <a class="project-meta-badge" href="https://www.perforce.com/products/helix-dam" target="_blank" rel="noopener noreferrer" aria-label="Perforce">
+                    <img class="project-meta-badge__logo project-meta-badge__logo--wide" src="img/partners/perforce-nav.svg" alt="">
+                  </a>
+                </p>
+                <p class="project-summary-meta">P4 DAM · August 2026</p>
+              </div>
+              <h1>Shipped 25% more features with a third of the <span class="project-header-title-nowrap">front-end</span> team by designing in production code and automating handover with AI agents</h1>
+              <div class="project-statistics">
+                <div class="project-statistics-group">
+                  <h3 class="project-statistics-stat project-statistics-stat--text">6 to 2</h3>
+                  <p class="stat-description">Front-end developers on the product</p>
+                </div>
+                <div class="project-statistics-group">
+                  <h3 class="project-statistics-stat">25%</h3>
+                  <p class="stat-description">More features than six months earlier, per my PM&rsquo;s tracking</p>
+                </div>
+                <div class="project-statistics-group">
+                  <h3 class="project-statistics-stat project-statistics-stat--text">1 hr to 30 min</h3>
+                  <p class="stat-description">Planning meeting per feature</p>
+                </div>
+                <div class="project-statistics-group">
+                  <h3 class="project-statistics-stat project-statistics-stat--text">Winner</h3>
+                  <p class="stat-description">Best Designed at the company&rsquo;s 2026 AI hackathon, for a skill other teams now use</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -82,28 +93,43 @@
       <div class="width-container">
         <div class="content-container">
           <div class="main-content">
-            <div class="project-details_text"><div class="project-paragraph project-client-description">
-                <h2>Context</h2>
-                <p>Front-end developer capacity on my product dropped from six developers to two. You would expect product delivery to fall significantly, because we had fewer front-end developers. Thanks to Claude Code and the workflows I designed around generative AI, we still released 25% more features per quarter than the same quarter the year before, before I had joined the team. That number comes from my PM, and he says the quality held.</p>
+            <div class="project-details_text">
+
+              <div class="project-paragraph project-client-description">
+                <h2>The problem</h2>
+                <p>Front-end developer capacity on my product dropped from six to two. Competitors were growing and hiring, and we still had to deliver as many features without lowering quality.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>The strategy</h2>
-                <p>Every feature still starts the same way. I go through a discovery phase with my PM. I ask: the problem, why now, how success is measured, who the users are, the constraints, the timeline, and the risks.</p>
-                <p>I work in the product locally, in the real product code: pushing to branches, taking code review, matching the same standards as our senior developers. Developers review the code after, of course, but they do not get a stack of screens and have to figure out how to implement them. I handle the front end.</p>
-                <p>I built skills and agents to generate spec files, handover documents, and other outputs like a snapshot file, which captures the UI in every state. That is useful for curating the product.</p>
-                <p>As a result of the quality of those outputs, handover questions dropped by roughly 50% per feature. I measured that through refinement sessions. We used to spend about an hour going through a feature, every Tuesday and Thursday. Now it takes about 30 minutes. We can cover roughly twice as many features in the same time, thanks to the handover documentation I provide.</p>
+                <h2>Role and team</h2>
+                <p>I designed features and shipped production front end. My PM set priorities and tracked feature output, using his own agentic system to pull feedback from the repository. The two front-end developers reviewed my code and built the rest. I built the skills and agents that write the specs and handovers.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>Example feature</h2>
+                <h2>Key decisions</h2>
+                <h4>I gathered context first, then wrote a spec an AI could use</h4>
+                <p>For each feature I work with my PM and his agentic system, which pulls feedback from the repository. I ask a fixed set of questions and capture the answers in note-taking apps, then build a spec file an AI can use. More context up front means I deliver features faster.</p>
+
+                <h4>I worked in the real product code instead of screens</h4>
+                <p>I push to branches, take code review and match the same standards as our senior developers.</p>
+                <p>I decided against the old way of designing in Figma and handing screens over. With two developers left, that handover would have become a bottleneck, and we could not hire or bring in other teams. We had to work with the people we had.</p>
+                <!-- TODO(case-study): What did you give up by not working in Figma first? -->
+                <div class="todo-marker" data-todo="What did you give up by not working in Figma first?"></div>
+
+                <h4>I built skills and agents to write the handover</h4>
+                <p>They generate spec files, handover documents and a snapshot file that captures the UI in every state. The developers&rsquo; own AI tools can build from those, and the developers can see exactly what the design looks like on my screen, so they know what to expect.</p>
+                <p>Planning meetings for a feature now take about 30 minutes. They used to take about an hour, every Tuesday and Thursday. Fewer handover questions is why.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Shipped</h2>
                 <p>One of the features I released was realistic lighting in P4 DAM. I replaced the flat grey background in the asset viewer with switchable image-based environments, so 3D assets actually pop, and users and reviewers can judge shape, materials, and quality in realistic lighting.</p>
-                <p>Claude is not perfect. It includes the wrong components sometimes. Because I have worked in front-end development before, with Tailwind, CSS, and React, I could rewrite the CSS by hand and give the developer a clean handover. Claude missed some of the component details. I still fixed the problem, and I took responsibility for the output.</p>
-              </div>
+                <!-- TODO(case-study): Why curated lighting presets, how many, and what is the default? -->
+                <div class="todo-marker" data-todo="Why curated lighting presets, how many, and what is the default?"></div>
 
               <div class="device-stage">
                 <div class="device-frame">
-                  <div class="device-frame__screen">
+                  <div class="device-frame__screen device-frame__screen--app-capture">
                     <div class="compare-slider" data-compare-slider>
                       <img class="compare-slider__img compare-slider__img--after" src="img/project-image/p4-dam/lighting-after.png" alt="After: P4 DAM 3D viewer with realistic HDRI lighting">
                       <div class="compare-slider__before" style="width: 50%;">
@@ -122,7 +148,7 @@
               <div class="content-image">
                 <div class="device-stage">
                   <div class="device-frame">
-                    <div class="device-frame__screen">
+                    <div class="device-frame__screen device-frame__screen--app-capture">
                       <video src="img/project-image/p4-dam/p4-dam-elephant.mp4" data-autoplay loop muted playsinline preload="none" aria-label="Lighting feature demo with a 3D elephant model">
                         Your browser does not support the video tag.
                       </video>
@@ -131,23 +157,31 @@
                 </div>
                 <figcaption>The lighting feature in action. Reviewers can cycle through curated presets to see models in different photorealistic environments.</figcaption>
               </div>
-
-              <div class="project-paragraph">
-                <h2>Sharing the success</h2>
-                <p>I turned the system I created into reusable Claude skills and agents that generate specs and handover documents, so other people could run the same pipeline. One of those systems won Best Designed at the company&rsquo;s annual AI hackathon, and I got a prize for it. Other teams across the business now use it.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>The outcome</h2>
-                <p>When the team shrank, output went up because I had built the foundation: the spec files and the workflows we needed to keep working at scale and at speed, despite losing front-end capacity. The team delivered the features on time. I took responsibility for the front end, and I drove it further than I could before.</p>
+                <h2>The result</h2>
+                <p>We released 25% more features than six months earlier. The figure comes from my PM&rsquo;s tracking.</p>
+                <p>The work produced several skills and workflows. One has me ask my PM specific questions on a live call and turns the transcript into structured data. It became a Claude skill, which we presented at the company hackathon. It won Best Designed, and I got a prize. Other teams and designers in the business now use it.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>How I used AI</h2>
+                <p>Before, I worked from Figma files, documentation and a design system, and spent a lot of time with developers in planning meetings. Now the specs and the handover I built cut that time down. Claude gets things wrong: on the lighting feature it used the wrong components, and I rewrote the CSS by hand.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Looking back</h2>
+                <p>I would talk to the developers more. I built many of the tools they needed on assumptions. It worked well, but I later found gaps in the new spec files that a conversation at the time would have resolved on the spot.</p>
               </div>
 
               <div class="button-group">
-                <a class="next-project-link" href="p4-personas.html">
+                <a class="next-project-link" href="budibase-automations.html">
                   <div class="next-project-card">
-                    <img class="next-project-card__thumb" src="img/thumbnail/p4-personas.jpg?v=2026-09-26" alt="" loading="lazy" decoding="async">
+                    <img class="next-project-card__thumb" src="img/thumbnail/bb-automations-thumbnail.png?v=2026-10-13" alt="" loading="lazy" decoding="async">
                     <div class="next-project-card__content">
-                      <p class="next-project-card__title">Increasing sales opportunities with a generative AI onboarding experience</p>
+                      <p class="next-project-card__title">Cut automation complaints from 8 to 10 a month to zero by redesigning an open-source workflow builder around a 25-user study</p>
+                      <p class="next-project-card__desc">I ran a paid study with 25 users, presented the findings to the CEO, CMO and Head of Engineering, and redesigned the automation builder so every step shows its data and errors. Budibase later built its AI agents feature on top of it.</p>
                     </div>
                   </div>
                 </a>

@@ -719,10 +719,11 @@ body.home-page > * {
 
 .faces_slide_title {
     margin: 0;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 24px;
+    font-family: 'Big Shoulders', sans-serif;
+    font-size: 22px;
     font-weight: 600;
-    line-height: 1.2;
+    letter-spacing: 0.02em;
+    line-height: var(--olympus-h1-line-height);
     color: #fff;
     text-align: left;
 }

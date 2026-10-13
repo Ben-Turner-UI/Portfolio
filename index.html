@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="color-scheme" content="light">
+  <!-- noindex is intentional: keep the portfolio out of search results -->
   <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ben Turner is a product designer at Perforce who ships production UI with Claude Code. Case studies on enterprise asset management, AI-assisted workflows and low-code automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ben Turner, Product Designer">
+  <meta property="og:description" content="Case studies on enterprise asset management, AI-assisted workflows and low-code automation.">
+  <meta property="og:image" content="https://benturner.work/img/thumbnail/p4-dam.jpg">
+  <meta property="og:url" content="https://benturner.work/">
+  <meta name="twitter:card" content="summary_large_image">
   <style>html,body{background:#fff;color-scheme:only light}</style>
-  <title>Ben Turner, Product Designer, Belfast</title>
+  <title>Ben Turner, Product Designer, Northern Ireland</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,ads_click,arrow_forward,arrow_upward,chevron_left,chevron_right,close,download,drag_indicator,emoji_events,grid_view,groups,home,lock,login,mail,open_in_new,palette,person,route,search,settings,smart_toy,trending_up,widgets&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,ads_click,arrow_forward,arrow_upward,business,chevron_left,chevron_right,close,download,drag_indicator,emoji_events,flag,grid_view,groups,home,language,lock,login,mail,open_in_new,palette,person,route,search,settings,smart_toy,trending_up,widgets&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="shortcut icon" href="favicon.ico">
@@ -39,7 +47,7 @@
       </a>
       <a href="about.html" class="nav-item">
         <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
-        <span class="nav-item__label">About</span>
+        <span class="nav-item__label">Life</span>
       </a>
     </div>
   </nav>
@@ -52,9 +60,9 @@
         <img class="portrait" src="img/portrait.jpg" alt="Portrait of Ben Turner" fetchpriority="high" decoding="async">
         <div class="home-header-content-text">
           <h1>Ben Turner, Product Designer<span class="home-accent">.</span></h1>
-          <p>I lead design across multiple products at <a href="https://www.perforce.com/">Perforce</a>, shipping features end-to-end with Claude Code.</p>
+          <p>I lead design on P4 DAM and P4 Plan at <a href="https://www.perforce.com/">Perforce</a>, the asset management and planning tools used by studios including Electronic Arts and Xbox Game Studios. I ship features with Claude Code.</p>
           <div class="home-contact">
-            <a href="file/Ben-Turner-CV.pdf?v=2026-10-04-nics-link-crown" class="home-contact__link" download="Ben-Turner-CV.pdf" rel="nofollow">
+            <a href="file/Ben-Turner-CV.pdf?v=2026-10-11-pd-title" class="home-contact__link" download="Ben-Turner-CV.pdf" rel="nofollow">
               <span class="material-symbols-rounded" aria-hidden="true">download</span>
               <span>CV</span>
             </a>
@@ -77,140 +85,76 @@
   <div class="width-container">
     <div class="project-grid">
 
-      <a href="p4-dam.html">
+      <a href="p4-dam.html" class="project-card-link">
         <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/p4-dam.jpg?v=2026-09-26" alt="Case study: driving a 25% increase in feature delivery despite a 66% engineering cut" decoding="async">
+          <span class="project-card-badge"><span class="material-symbols-rounded" aria-hidden="true">flag</span>Start here</span>
+          <img class="project-grid-thumbnail" src="img/thumbnail/p4-product.png?v=2026-10-13" alt="Case study: Shipped 25% more features with a third of the front-end team by designing in production code and automating handover with AI agents" decoding="async">
           <div class="grid-item-content">
             <div class="grid-item-content-wrapper">
               <div class="grid-item-content-text">
-                <h2>Driving a 25% increase in feature delivery despite a 66% engineering cut</h2>
-                <div class="tag-container">
-                  <div class="tag tag--claude-code">
-                    <img src="img/tag-icons/claude-code.svg" alt="" class="tag-icon">
-                    <span>Claude Code</span>
+                <div class="project-card-body">
+                  <h2>Shipped 25% more features with a third of the front-end team by designing in production code and automating handover with AI agents</h2>
+                  <div class="tag-container project-card-meta">
+                    <span class="tag">P4 DAM</span>
+                    <span class="tag">Enterprise web app</span>
+                    <span class="tag">2026</span>
                   </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">grid_view</span>
-                    <span>Design system</span>
-                  </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">settings</span>
-                    <span>DesignOps</span>
-                  </div>
+                  <p class="project-description">Front-end capacity on P4 DAM fell from six developers to two. I shipped production front end alongside them and built Claude skills that write specs and handovers, which cut planning meetings from an hour to 30 minutes. One skill won Best Designed at the company&rsquo;s 2026 AI hackathon.</p>
                 </div>
-                <p class="project-description">At Perforce, front-end headcount on my product fell from six to two. I shipped production UI with Claude Code workflows I built. Feature release rate still rose 25% versus the same quarter a year earlier.</p>
+                <p class="project-card-highlight">
+                  <span class="material-symbols-rounded project-card-highlight__icon" aria-hidden="true">emoji_events</span>
+                  <span>Best Designed at the company's 2026 AI hackathon</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </a>
 
-      <a href="p4-personas.html">
+      <a href="budibase-automations.html" class="project-card-link">
         <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/p4-personas.jpg?v=2026-09-26" alt="Case study: buying personas and generative AI increasing sales opportunities" decoding="async">
+          <img class="project-grid-thumbnail" src="img/thumbnail/bb-automations-thumbnail.png?v=2026-10-13" alt="Case study: Cut automation complaints from 8 to 10 a month to zero by redesigning an open-source workflow builder around a 25-user study" loading="lazy" decoding="async">
           <div class="grid-item-content">
             <div class="grid-item-content-wrapper">
               <div class="grid-item-content-text">
-                <h2>Increasing sales opportunities with a generative AI onboarding experience</h2>
-                <div class="tag-container">
-                  <div class="tag tag--claude-code">
-                    <img src="img/tag-icons/claude-code.svg" alt="" class="tag-icon">
-                    <span>Claude Code</span>
+                <div class="project-card-body">
+                  <h2>Cut automation complaints from 8 to 10 a month to zero by redesigning an open-source workflow builder around a 25-user study</h2>
+                  <div class="tag-container project-card-meta">
+                    <span class="tag">Automation builder</span>
+                    <span class="tag">Low-code platform</span>
+                    <span class="tag">2025</span>
                   </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">person</span>
-                    <span>Buying persona</span>
-                  </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">login</span>
-                    <span>Onboarding</span>
-                  </div>
+                  <p class="project-description">I ran a paid study with 25 users, presented the findings to the CEO, CMO and Head of Engineering, and redesigned the automation builder so every step shows its data and errors. Budibase later built its AI agents feature on top of it.</p>
                 </div>
-                <p class="project-description">Perforce needed new customers for its digital asset manager. I rebuilt the sales trial around the buyer, using AI agents and a generative UI workflow. Sales said demos got easier and they could open conversations that were closed before.</p>
+                <p class="project-card-highlight">
+                  <span class="material-symbols-rounded project-card-highlight__icon" aria-hidden="true">smart_toy</span>
+                  <span>Budibase later built its AI agents feature on this structure</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </a>
 
-      <a href="p4-product.html">
+      <a href="cityfibre.html" class="project-card-link">
         <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/p4-product.png?v=2026-09-15w" alt="Case study: leading product design to improve the experience and increase conversions" loading="lazy" decoding="async">
+          <img class="project-grid-thumbnail" src="img/thumbnail/rebrand-thumbnail.jpg?v=2026-10-13" alt="Case study: Raised B2B portal satisfaction from 4/10 to 8/10 and postcode checks by 90% by redesigning a UK fibre provider’s website and partner portal" loading="lazy" decoding="async">
           <div class="grid-item-content">
             <div class="grid-item-content-wrapper">
               <div class="grid-item-content-text">
-                <h2>Leading product design to improve the experience and increase conversions</h2>
-                <div class="tag-container">
-                  <div class="tag tag--claude-code">
-                    <img src="img/tag-icons/claude-code.svg" alt="" class="tag-icon">
-                    <span>Claude Code</span>
+                <div class="project-card-body">
+                  <h2>Raised B2B portal satisfaction from 4/10 to 8/10 and postcode checks by 90% by redesigning a UK fibre provider&rsquo;s website and partner portal</h2>
+                  <div class="tag-container project-card-meta">
+                    <span class="tag">CityFibre</span>
+                    <span class="tag">Marketing site &amp; B2B portal</span>
+                    <span class="tag">2024</span>
                   </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">search</span>
-                    <span>Search</span>
-                  </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">route</span>
-                    <span>Navigation</span>
-                  </div>
+                  <p class="project-description">As lead designer at DawsonAndrews, I redesigned CityFibre&rsquo;s marketing site and the portal Vodafone, TalkTalk and Zen use to book engineers, after a research day with 40 portal users. The work helped win Hyperoptic and fund nine hires.</p>
                 </div>
-                <p class="project-description">P4 DAM is the Perforce asset library used by game and film studios. Artists were getting lost in deep folders and using the browser back button. I redesigned search, filters, breadcrumbs, previews, and the home screen so they can find files and open them in the right project.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a href="budibase-automations.html">
-        <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/bb-automations-thumbnail.png?v=2026-09-22j" alt="Case study: Overhauling Budibase Automations for AI" loading="lazy" decoding="async">
-          <div class="grid-item-content">
-            <div class="grid-item-content-wrapper">
-              <div class="grid-item-content-text">
-                <h2>Overhauling Budibase Automations to lay the groundwork for AI agents</h2>
-                <div class="tag-container">
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">groups</span>
-                    <span>User research</span>
-                  </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">account_tree</span>
-                    <span>Automations</span>
-                  </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">smart_toy</span>
-                    <span>AI agents</span>
-                  </div>
-                </div>
-                <p class="project-description">Budibase is an open-source low-code tool for internal apps. After a paid study with 25 users, I redesigned the automation builder so every step shows the data going in and out. Community complaints on automations fell to near zero.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a href="budibase-ui.html">
-        <div class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/bb-ui-thumb.jpg?v=2026-10-04g" alt="Case study: Delivering core Budibase features: branches, permissions, and calculations" loading="lazy" decoding="async">
-          <div class="grid-item-content">
-            <div class="grid-item-content-wrapper">
-              <div class="grid-item-content-text">
-                <h2>Delivering core Budibase features: branches, permissions, and calculations</h2>
-                <div class="tag-container">
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">widgets</span>
-                    <span>Low-code</span>
-                  </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">lock</span>
-                    <span>Permissions</span>
-                  </div>
-                  <div class="tag">
-                    <span class="material-symbols-rounded tag-icon-font" aria-hidden="true">account_tree</span>
-                    <span>Automations</span>
-                  </div>
-                </div>
-                <p class="project-description">At Budibase I designed conditional automation branches, role permissions, calculated fields in views, and licensing for cloud, self-hosted, and air-gapped installs.</p>
+                <p class="project-card-highlight">
+                  <span class="material-symbols-rounded project-card-highlight__icon" aria-hidden="true">trending_up</span>
+                  <span>Helped DawsonAndrews win Hyperoptic and hire nine more people</span>
+                </p>
               </div>
             </div>
           </div>
@@ -233,7 +177,7 @@
         </div>
         <div class="side-project-content">
           <h4>Olympus</h4>
-          <p class="side-project-description">Premium watch faces and creator tools. Olympus focuses on clean product design and UX so faces look good and work well, with at-a-glance readability, all-day battery, wide smartwatch support, and assets for watch UI creators.</p>
+          <p class="side-project-description">Watch faces and creator tools for Galaxy Gear and other smartwatches. The faces are designed for at-a-glance readability and all-day battery, and the assets are available to other watch UI creators.</p>
         </div>
       </a>
 
@@ -246,7 +190,7 @@
         </div>
         <div class="side-project-content">
           <h4>Remastering a 2008 EA strategy game for 2026</h4>
-          <p class="side-project-description">I collaborated on a fan project that used AI to upgrade a 2008 game&rsquo;s graphics for modern, high-resolution screens. My role focused on patching, testing, and launching the final release to ensure it worked flawlessly in competitive online multiplayer.</p>
+          <p class="side-project-description">A fan project that used AI to upgrade the graphics of a 2008 strategy game for modern high-resolution screens. I patched, tested and launched the final release, and checked it worked in competitive online multiplayer.</p>
         </div>
       </a>
 
@@ -261,7 +205,6 @@
 
       <div class="testimonial-card testimonial-card--wide">
         <span class="testimonial-quote-mark">&ldquo;</span>
-        <p class="testimonial-text">Ben is a model employee and a standout contributor within the Product Design organisation. His commitment, passion, positive attitude, and ability to consistently deliver results set a high standard for others to aspire to. He approaches every challenge with energy and professionalism, embraces new opportunities, and continuously looks for ways to improve his work and that of those around him.</p>
         <p class="testimonial-text">What makes Ben particularly valuable is not just the quality of his output, but the example he sets through his ownership, collaboration, innovation, and willingness to share knowledge. Whether building AI-enabled workflows, supporting teammates, or presenting to the broader organisation, Ben consistently demonstrates the qualities of a highly engaged and impactful team member.</p>
         <div class="testimonial-reviewer">
           <div class="testimonial-avatar testimonial-avatar--initials" aria-hidden="true">BD</div>

@@ -4,16 +4,25 @@
    ========================================================================== */
 @media (max-width: 1200px) {
   .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--project-card-grid-gap);
   }
 
   .side-project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .more-work__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
+  .project-header-title-block h1,
+  .project-header-stack h1 {
+    max-width: 100%;
+  }
+
   main {
     overflow-x: hidden;
   }
@@ -23,6 +32,10 @@
   }
 
   .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .more-work__grid {
     grid-template-columns: 1fr;
   }
 
@@ -44,10 +57,6 @@
 
   .project-statistics {
     gap: 0;
-  }
-
-  .project-header .project-statistics {
-    padding-top: var(--space-2);
   }
 
   .project-header .project-statistics-group {
@@ -155,7 +164,11 @@
     padding: 12px 14px;
     flex: 1;
     min-width: 0;
-    align-self: center;
+    align-self: stretch;
+  }
+
+  .button-group .next-project-link .next-project-card__desc {
+    font-size: 13px;
   }
 }
 

@@ -159,15 +159,20 @@
 
   function syncRailHeight() {
     var stacked = isStackedFaces();
+    // On mobile the rail is height:auto so the page can scroll vertically
+    // while the carousel still swipes horizontally.
+    if (stacked) {
+      rail.style.removeProperty('--faces-rail-height');
+      setRailScroll(activeIndex * slideExtent());
+      return;
+    }
     var maxHeight = 0;
     slides.forEach(function (slide) {
       var card = slide.querySelector('.faces_watch_card');
       var body = slide.querySelector('.faces_slide_body');
       var cardH = card ? card.offsetHeight : 0;
       var bodyH = body ? body.offsetHeight : 0;
-      var styles = window.getComputedStyle(slide);
-      var gap = parseFloat(styles.rowGap || styles.gap) || 0;
-      var height = stacked ? cardH + gap + bodyH : Math.max(cardH, bodyH);
+      var height = Math.max(cardH, bodyH);
       maxHeight = Math.max(maxHeight, height);
     });
     if (maxHeight < 1) {

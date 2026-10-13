@@ -19,8 +19,9 @@ header {
   overflow: hidden;
 }
 
-/* Soft orange wash */
-header::before {
+/* Soft orange wash and texture (home + case study headers) */
+header.home::before,
+header.project-header::before {
   content: '';
   position: absolute;
   left: 0;
@@ -32,7 +33,8 @@ header::before {
   background: linear-gradient(to top, rgba(255, 74, 0, 0.24) 0%, transparent 100%);
 }
 
-header::after {
+header.home::after,
+header.project-header::after {
   content: '';
   position: absolute;
   left: 0;
@@ -64,12 +66,30 @@ header.home {
   box-sizing: border-box;
 }
 
-header.project-header {
+header.project-header:not(.about-header) {
+  align-items: stretch;
+  border-top: none;
   margin-bottom: var(--case-study-header-content-gap);
+  padding-top: 32px;
+  padding-bottom: 48px;
+  background: linear-gradient(180deg, #fff 0%, #eeedea 100%);
+}
+
+header.project-header.about-header {
+  background: linear-gradient(180deg, #fff 0%, #eeedea 100%);
+}
+
+[data-color-scheme="dark"] header.project-header:not(.about-header) {
+  color: #fff;
+}
+
+[data-color-scheme="dark"] header.project-header:not(.about-header) .project-summary-meta,
+[data-color-scheme="dark"] header.project-header:not(.about-header) .project-meta {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .project-header .header-content {
-  gap: var(--space-3);
+  gap: 0;
 }
 
 header.project-header.about-header {
@@ -83,9 +103,19 @@ header.project-header.about-header {
   width: 100%;
 }
 
-.project-header-title-block h1 {
+.project-header-title-block h1,
+.project-header-stack h1 {
   margin: 0;
-  max-width: 500px;
+  width: 100%;
+  max-width: 75%;
+  text-wrap: balance;
+  hyphens: manual;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.project-header-title-nowrap {
+  white-space: nowrap;
 }
 
 .project-summary {
@@ -102,13 +132,13 @@ header.project-header.about-header {
   color: #000;
 }
 
-/* Case study header only (above h1). Homepage project cards are unchanged. */
+/* Case study header meta (linked partner logo). Homepage project cards are unchanged. */
 .project-header .project-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin: 0 0 12px;
+  margin: 0;
   font-family: 'Source Sans 3', sans-serif;
   font-size: var(--type-body-md);
   line-height: 1;
@@ -119,34 +149,25 @@ header.project-header.about-header {
 .project-header .project-meta-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0;
   line-height: 0;
-  padding: 8px 13px;
-  border: 1px solid var(--ui-200, #d6d6d6);
-  border-radius: 8px;
-  background: #fff;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 1px 2px rgba(0, 0, 0, 0.05);
-  font-family: 'Big Shoulders', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #111;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   text-decoration: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.15s ease;
 }
 
 .project-header a.project-meta-badge:hover {
-  border-color: #c8c8c8;
-  background: #fff;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 3px 10px rgba(0, 0, 0, 0.08);
-  transform: translateY(-1px);
-  color: #111;
+  opacity: 0.78;
   text-decoration: none;
+}
+
+.project-header a.project-meta-badge:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .project-header .project-meta-badge--label {
@@ -169,7 +190,8 @@ header.project-header.about-header {
   display: block;
   padding: 0;
   object-fit: contain;
-  background-color: #fff;
+  object-position: left center;
+  background: transparent;
   border: none;
   border-radius: 0;
 }
@@ -181,8 +203,8 @@ header.project-header.about-header {
   padding: 0;
   display: block;
   object-fit: contain;
-  object-position: center center;
-  background-color: #fff;
+  object-position: left center;
+  background: transparent;
 }
 
 .project-header .project-meta-badge__logo--wide[src*="bb.svg"] {
@@ -228,7 +250,7 @@ header.project-header.about-header {
   margin-bottom: var(--case-study-h2-bottom-margin);
 }
 
-.project-header h3,
+.project-header h3:not(.project-statistics-stat),
 .project-paragraph h3,
 .project-paragraph-list-item h3 {
   margin: 0 0 var(--case-study-h3-gap);
@@ -248,7 +270,7 @@ header.project-header.about-header {
 
 .project-paragraph h4,
 .project-paragraph-list-item h4 {
-  margin: var(--prose-h4-margin-top) 0 var(--case-study-heading-bottom-margin);
+  margin: var(--prose-h4-margin-top) 0 var(--prose-h3-margin-bottom);
   font-family: 'Source Sans 3', sans-serif;
   font-size: var(--type-heading-4);
   font-weight: 600;
@@ -258,14 +280,25 @@ header.project-header.about-header {
   letter-spacing: normal;
 }
 
-.project-header .project-statistics-stat {
+.project-header .project-statistics-stat,
+.project-header .project-statistics-stat--text,
+.project-header .project-statistics-stat--inline {
   margin: 0;
+  flex-shrink: 0;
   font-family: 'Big Shoulders', sans-serif;
-  font-size: 20px;
+  font-size: var(--case-study-header-stat-size, 28px);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: 0.1px;
   font-variant-numeric: tabular-nums lining-nums;
+  white-space: nowrap;
+  color: #000;
+}
+
+[data-color-scheme="dark"] .project-header .project-statistics-stat,
+[data-color-scheme="dark"] .project-header .project-statistics-stat--text,
+[data-color-scheme="dark"] .project-header .project-statistics-stat--inline {
+  color: #fff;
 }
 
 .project-paragraph p,

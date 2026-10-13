@@ -79,7 +79,13 @@
    CONTENT CONTAINER STYLES
    ========================================================================== */
 .project-paragraph,
-.button-group,
+.button-group {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .project-header .header-content {
   width: 100%;
   max-width: var(--content-max-width);
@@ -169,6 +175,10 @@
   margin: 0 0 var(--case-study-block-margin);
 }
 
+.project-paragraph > p:has(+ p) {
+  margin-bottom: 8px;
+}
+
 .project-paragraph-list-item {
   display: flex;
   flex-direction: column;
@@ -200,6 +210,7 @@
    Tokens live in tokens.css: --project-media-*.
    ========================================================================== */
 .image-with-caption,
+.content-image--diagram .cf-homepage-diagram,
 .content-image--crop-top .content-image-media,
 .compare-slider {
   border: var(--project-media-border);
@@ -259,4 +270,245 @@ figcaption {
   margin-left: auto;
   margin-right: auto;
 }
+
+.project-paragraph > .device-stage + .content-image {
+  margin-top: var(--space-4);
+}
+
+/* Section eyebrow — matches muted meta / stat description tone */
+.section-label {
+  margin: 0 0 4px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--type-body-md);
+  font-weight: 600;
+  line-height: var(--type-body-md-lh);
+  letter-spacing: normal;
+  text-transform: none;
+  color: #595959;
+}
+
+.project-paragraph > .section-label + h2 {
+  margin-top: 0;
+}
+
+/* Eyebrow (logo + meta) → title → stats */
+.project-header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.project-header-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  border: 0;
+}
+
+.project-header-stack h1 {
+  margin: 0 0 20px;
+}
+
+.project-header-stack:not(:has(.project-statistics)) h1 {
+  margin-bottom: 0;
+}
+
+.project-header-meta-row .project-meta {
+  margin: 0;
+}
+
+.project-header-stack .project-summary-meta {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--type-body-md);
+  font-weight: 400;
+  line-height: var(--type-body-md-lh);
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.project-header-stack .project-summary-lede {
+  margin: 0;
+  font-size: var(--case-study-body-size);
+  line-height: var(--case-study-body-line);
+  font-weight: 400;
+  color: #000;
+}
+
+.project-header-stack .project-statistics {
+  margin-top: 0;
+  padding-top: 0;
+  border: 0;
+}
+
+.todo-marker {
+  display: none;
+}
+
+html.show-todos .todo-marker {
+  display: block;
+  margin: 12px 0;
+  padding: 12px 16px;
+  border: 1px dashed #d97757;
+  border-radius: 8px;
+  background: #fafafa;
+  box-sizing: border-box;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--type-body-md);
+  line-height: var(--type-body-md-lh);
+  color: #333;
+}
+
+html.show-todos .todo-marker::before {
+  content: "TODO: " attr(data-todo);
+}
+
+.project-paragraph .project-statistics--result {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+  gap: var(--space-3);
+}
+
+.project-paragraph .project-statistics--result .project-statistics-stat {
+  margin: 0;
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.project-paragraph .project-statistics--result .stat-description {
+  margin: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--case-study-body-size);
+  line-height: var(--case-study-body-line);
+  color: rgba(0, 0, 0, 0.72);
+  min-height: calc(1em * var(--case-study-body-line) * 2);
+}
+
+@media (min-width: 769px) {
+  .project-paragraph .project-statistics--result {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 12px;
+    row-gap: var(--space-3);
+  }
+}
+
+.content-image--diagram {
+  max-width: 100%;
+  overflow: visible;
+}
+
+.cf-homepage-diagram {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  color-scheme: only light;
+  background: #fff;
+  overflow: hidden;
+  --diagram-canvas-bg: #fff;
+  --diagram-frame-fill: #fff;
+  --diagram-warm-pattern: var(--diagram-warm-stroke);
+  --diagram-label-on-accent: var(--diagram-text);
+  --diagram-label-on-warm: var(--diagram-text);
+  --diagram-warm-subtitle: var(--diagram-warm-stroke);
+  --diagram-arrow-fill: var(--diagram-warm-stroke);
+  --diagram-bone-fill: var(--diagram-neutral-stroke);
+}
+
+.cf-homepage-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: inherit;
+  vertical-align: top;
+}
+
+.cf-homepage-diagram svg .diagram-frame {
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.07));
+}
+
+.cf-homepage-diagram .diagram-col-title {
+  font-family: var(--diagram-font);
+  font-size: 14px;
+  font-weight: 500;
+  fill: var(--diagram-text);
+}
+
+.cf-homepage-diagram .diagram-col-subtitle {
+  font-family: var(--diagram-font);
+  font-size: 12px;
+  font-weight: 400;
+  fill: var(--diagram-text-muted);
+}
+
+.cf-homepage-diagram .diagram-block-label {
+  font-family: var(--diagram-font);
+  font-size: 11px;
+  font-weight: 500;
+  fill: var(--diagram-label-on-warm);
+}
+
+.cf-homepage-diagram .diagram-block-label--warm {
+  fill: var(--diagram-label-on-warm);
+}
+
+.cf-homepage-diagram .diagram-block-sub {
+  font-family: var(--diagram-font);
+  font-size: 11px;
+  font-weight: 400;
+  fill: var(--diagram-warm-subtitle);
+}
+
+.cf-homepage-diagram .diagram-accent-label {
+  font-family: var(--diagram-font);
+  font-size: 11px;
+  font-weight: 500;
+  fill: var(--diagram-label-on-accent);
+}
+
+.cf-homepage-diagram .diagram-scroll-label {
+  font-family: var(--diagram-font);
+  font-size: 11px;
+  font-weight: 500;
+  fill: var(--diagram-arrow-fill);
+}
+
+html[data-color-scheme="dark"] .cf-homepage-diagram,
+body[data-color-scheme="dark"] .cf-homepage-diagram {
+  color-scheme: dark;
+  --diagram-neutral-fill: rgba(255, 255, 255, 0.08);
+  --diagram-neutral-stroke: rgba(255, 255, 255, 0.22);
+  --diagram-header-fill: rgba(255, 255, 255, 0.12);
+  --diagram-accent-stroke: rgba(255, 255, 255, 0.25);
+  --diagram-warm-fill: rgba(255, 180, 60, 0.28);
+  --diagram-text: #fff;
+  --diagram-text-muted: rgba(255, 255, 255, 0.72);
+  --diagram-label-on-accent: var(--diagram-text);
+  --diagram-label-on-warm: var(--diagram-text);
+  --diagram-canvas-bg: #000;
+  --diagram-frame-fill: #000;
+  --diagram-frame-stroke: #d6d6d6;
+  --diagram-bone-fill: rgba(255, 255, 255, 0.28);
+  --diagram-arrow-fill: var(--diagram-warm-stroke);
+  --diagram-warm-subtitle: var(--diagram-warm-stroke);
+  background: #000;
+  border-color: #d6d6d6;
+}
+
 

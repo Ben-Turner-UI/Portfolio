@@ -4,7 +4,8 @@
 @media (prefers-reduced-motion: no-preference) {
   .project-grid > a:hover .grid-item,
   .side-project-card:hover,
-  .next-project-link:hover .next-project-card {
+  .next-project-link:hover .next-project-card,
+  .more-work-card:hover {
     transform: translateY(-3px);
   }
 

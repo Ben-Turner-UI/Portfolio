@@ -128,20 +128,24 @@
 }
 
 .device-stage--dark {
-  background: #2a2a2a;
+  background: var(--project-device-stage);
+  padding: 32px;
 }
 
 .device-stage--dark .device-frame {
-  box-shadow: 0 0 0 calc(var(--project-device-bezel-width) / 2) #000;
+  max-width: 100%;
+  box-shadow:
+    0 0 0 var(--project-device-bezel-width) var(--project-device-bezel),
+    0 0 0 calc(var(--project-device-bezel-width) + var(--project-device-bezel-outer-width)) var(--project-device-bezel-outer);
 }
 
 .device-stage--dark .device-frame__screen {
-  aspect-ratio: 1024 / 471;
+  aspect-ratio: 5650 / 2600;
   background: #111;
 }
 
 .device-stage--dark .device-frame__screen::after {
-  box-shadow: inset 0 0 0 calc(var(--project-device-bezel-width) / 2) #000;
+  box-shadow: inset 0 0 0 var(--project-device-bezel-width) var(--project-device-bezel);
 }
 
 .device-stage--dark .device-frame__screen .compare-slider {
@@ -163,7 +167,9 @@
   border: none;
   border-radius: var(--project-device-radius);
   background: #fff;
-  box-shadow: 0 0 0 calc(var(--project-device-bezel-width) / 2) var(--project-device-bezel);
+  box-shadow:
+    0 0 0 var(--project-device-bezel-width) var(--project-device-bezel),
+    0 0 0 calc(var(--project-device-bezel-width) + var(--project-device-bezel-outer-width)) var(--project-device-bezel-outer);
   box-sizing: border-box;
   overflow: visible;
 }
@@ -184,7 +190,7 @@
   inset: 0;
   z-index: 5;
   border-radius: inherit;
-  box-shadow: inset 0 0 0 calc(var(--project-device-bezel-width) / 2) var(--project-device-bezel);
+  box-shadow: inset 0 0 0 var(--project-device-bezel-width) var(--project-device-bezel);
   pointer-events: none;
 }
 
@@ -244,6 +250,40 @@
   object-position: center;
   border: none;
   background: #111;
+}
+
+/* Full app screenshots and screen recordings (P4 DAM, etc.) */
+.device-frame__screen--app-capture {
+  aspect-ratio: 1022 / 532;
+  background: #fff;
+}
+
+/* Let the recording set the frame height so the UI is not letterboxed or cropped */
+.device-frame__screen--app-capture:has(> video) {
+  aspect-ratio: auto;
+  height: auto;
+}
+
+.device-frame__screen--app-capture video {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center top;
+  background: #fff;
+}
+
+.device-frame__screen--app-capture .compare-slider__img--after,
+.device-frame__screen--app-capture .compare-slider__img--before {
+  object-fit: contain;
+  object-position: left top;
+}
+
+.device-frame__screen--app-capture .compare-slider__img--after {
+  object-position: left top;
 }
 
 .device-frame__screen .compare-slider__label {
@@ -492,10 +532,18 @@
     padding: 24px 18px;
   }
 
+  .content-image > .device-stage--dark {
+    padding: 32px 18px;
+  }
+
   .device-frame {
     padding: 0;
     border-radius: calc(var(--project-device-radius) - 4px);
     max-width: min(var(--project-device-max-width), 100%);
+  }
+
+  .device-stage--dark .device-frame {
+    max-width: 100%;
   }
 
   .device-frame__screen {
@@ -944,7 +992,7 @@
   bottom: 0;
   left: 50%;
   width: 0;
-  border-left: 1px solid #111;
+  border-left: 1px solid #b3b3b3;
   background: transparent;
   box-shadow: none;
   transform: translateX(-50%);
@@ -962,7 +1010,7 @@
   width: 22px;
   height: 32px;
   border-radius: 9999px;
-  border: 1px solid #111;
+  border: 1px solid #b3b3b3;
   background: #fff;
   color: #000;
   box-shadow: none;

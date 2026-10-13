@@ -5,8 +5,15 @@
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I ran a paid study with 25 users, presented the findings to the CEO, CMO and Head of Engineering, and redesigned the automation builder so every step shows its data and errors. Budibase later built its AI agents feature on top of it.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cut automation complaints from 8 to 10 a month to zero by redesigning an open-source workflow builder around a 25-user study | Ben Turner">
+    <meta property="og:description" content="I ran a paid study with 25 users, presented the findings to the CEO, CMO and Head of Engineering, and redesigned the automation builder so every step shows its data and errors. Budibase later built its AI agents feature on top of it.">
+    <meta property="og:image" content="https://benturner.work/img/thumbnail/bb-automations-thumbnail.png">
+    <meta property="og:url" content="https://benturner.work/budibase-automations.html">
+    <meta name="twitter:card" content="summary_large_image">
     <style>html,body{background:#fff;color-scheme:only light}</style>
-    <title>Overhauling Budibase Automations to lay the groundwork for AI agents | Ben Turner</title>
+    <title>Cut automation complaints from 8 to 10 a month to zero by redesigning an open-source workflow builder around a 25-user study | Ben Turner</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,35 +45,44 @@
       </a>
       <a href="about.html" class="nav-item">
         <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
-        <span class="nav-item__label">About</span>
+        <span class="nav-item__label">Life</span>
       </a>
     </div>
       </nav>
     </div>
 
-    <header class="project-header">
+    <header class="project-header project-header--budibase">
       <div class="width-container">
         <div class="header-content">
           <div class="project-header-title-block">
-          <p class="project-meta">
-            <a class="project-meta-badge" href="https://budibase.com/" target="_blank" rel="noopener noreferrer" aria-label="Budibase">
-              <img class="project-meta-badge__logo project-meta-badge__logo--wide" src="img/partners/bb.svg" alt="">
-            </a>
-          </p>
-          <h1>Overhauling Budibase Automations to lay the groundwork for AI agents</h1>
-          </div>
-          <div class="project-statistics">
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">25</h3>
-              <p class="stat-description">Paid Maze study participants</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">4+</h3>
-              <p class="stat-description">Workflow features shipped or updated</p>
-            </div>
-            <div class="project-statistics-group">
-              <h3 class="project-statistics-stat">0</h3>
-              <p class="stat-description">Complaints after launch, down from 8–10</p>
+            <div class="project-header-stack">
+              <div class="project-header-meta-row">
+                <p class="project-meta">
+                  <a class="project-meta-badge" href="https://budibase.com/" target="_blank" rel="noopener noreferrer" aria-label="Budibase">
+                    <img class="project-meta-badge__logo project-meta-badge__logo--wide" src="img/partners/bb.svg" alt="">
+                  </a>
+                </p>
+                <p class="project-summary-meta">Automation builder, 2025</p>
+              </div>
+              <h1>Cut automation complaints from 8 to 10 a month to zero by redesigning an open-source workflow builder around a 25-user study</h1>
+              <div class="project-statistics">
+                <div class="project-statistics-group">
+                  <h3 class="project-statistics-stat">25</h3>
+                  <p class="stat-description">Active users in the paid Maze study that shaped the redesign</p>
+                </div>
+                <div class="project-statistics-group">
+                  <h3 class="project-statistics-stat">3</h3>
+                  <p class="stat-description">Executives I presented the findings to: CEO, CMO and Head of Engineering</p>
+                </div>
+                <div class="project-statistics-group">
+                  <h3 class="project-statistics-stat">4</h3>
+                  <p class="stat-description">Improvements shipped: data in and out, inline errors, a sidebar, zoom and pan</p>
+                </div>
+                <div class="project-statistics-group">
+                  <h3 class="project-statistics-stat project-statistics-stat--text">Agents</h3>
+                  <p class="stat-description">Budibase&rsquo;s AI agents feature is built on the redesigned automations</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,14 +93,50 @@
       <div class="width-container">
         <div class="content-container">
           <div class="main-content">
-            <div class="project-details_text"><div class="project-paragraph project-client-description">
-                <h2>Context</h2>
-                <p>As an in-house Product Designer at Budibase, I led the end-to-end UX redesign of the core workflow builder, the visual automation engine at the heart of the platform. Budibase is an open-source, low-code platform that enables businesses to rapidly build custom applications like customer portals, admin panels, and internal tools. Customers can run it self-hosted, keeping their data on their own infrastructure. The work had to support a wider strategic pivot: positioning Budibase as an AI-first automations platform, not just a better builder for today&rsquo;s users.</p>
+            <div class="project-details_text">
+
+              <div class="project-paragraph project-client-description">
+                <h2>The problem</h2>
+                <p>Budibase is an open-source low-code platform for internal apps like customer portals, admin panels and tools. Customers can self-host it and keep their data on their own infrastructure. As the in-house Product Designer I led the redesign of the automation builder.</p>
+                <p>The builder worked, but you could not see your data. People could not tell what data was flowing into or out of a step, or even what they had selected in the tab they were in. Debugging was guesswork, errors did not explain themselves, and complaints kept landing in the community Discord, eight to ten a month on automations alone.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>The Problem</h2>
-                <p>The builder worked, but you could not see your data. People could not tell what data was flowing into or out of a step, or even what they had selected in the tab they were in. Debugging was guesswork, errors did not explain themselves, and complaints kept landing in the community Discord, roughly eight to ten at a time on automations alone. It also left the product unprepared for the planned shift to AI-first automations, which depended on every step showing its data clearly.</p>
+                <h2>Role and team</h2>
+                <p>I designed and ran a paid Maze study with 25 active users and presented the findings to the CEO, CMO and Head of Engineering. I then designed the redesign and helped build it alongside the executive team and the lead developers.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Key decisions</h2>
+                <p>The task in the study was blunt: go through the product and identify the most frustrating part. Data visibility and unclear errors came up repeatedly, along with a need for better debugging and testing tools. The redesign was already planned. The evidence decided what it had to fix.</p>
+
+                <h4>Every step shows the data going in and coming out</h4>
+                <p>The research kept pointing at missing data visibility. Every step needed to show what goes in and what comes out.</p>
+                <p>We considered a log, a console of sorts, and chose tabs instead. Tabs let people open the data they wanted and read it as a list, which was the most straightforward option.</p>
+
+                <h4>A failed step explains itself</h4>
+                <p>Unclear errors were the other recurring complaint. Each failed step needed its own place to say what broke, so people could fix it without guessing or asking on Discord.</p>
+
+                <h4>Settings moved off the canvas into a sidebar</h4>
+                <p>Workflow controls sat on the main canvas and crowded the flow. Moving them into a contextual sidebar left the canvas for the diagram and put the selected step&rsquo;s settings in one place.</p>
+                <p>The design went through a few minor iterations before launch. The research held up, so it did not need many changes.</p>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>Shipped</h2>
+                <div class="table-container">
+                  <table class="improvements-table">
+                    <thead>
+                      <tr><th>Improvement</th><th>Change</th><th>Benefit</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Data In / Data Out</td><td>I added inline tabs to show the data flowing into and out of each step of a workflow.</td><td>People can see what a step received and returned, and trace a wrong value back to where it started.</td></tr>
+                      <tr><td>Inline Error Logging</td><td>I added a dedicated tab with clear error messages for any failed step.</td><td>A failed step says what broke, so people can fix it without asking on Discord.</td></tr>
+                      <tr><td>New Sidebar Panel</td><td>I moved workflow controls out of the main canvas and into a dedicated, contextual sidebar.</td><td>The canvas shows the flow; the selected step&rsquo;s settings live in one place.</td></tr>
+                      <tr><td>Enhanced Canvas &amp; UI</td><td>I added zoom and pan, and made the layout more compact.</td><td>Large workflows fit on screen and stay readable.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               <div class="content-image">
@@ -105,62 +157,41 @@
                     </div>
                   </div>
                 </div>
-                <figcaption>The original builder hid crucial information, while the redesigned UI brings data and controls to the forefront for a clearer experience.</figcaption>
-              </div>
-
-              <div class="project-paragraph">
-                <h2>What the Research Said</h2>
-                <p>I designed and ran a paid Maze study with 25 active users. The task was blunt: go through the product and identify the most frustrating part. The pattern was clear. Data visibility and unclear errors came up repeatedly, along with a need for better debugging and testing tools.</p>
-                <p>I compiled the findings into a PDF and presented it to the Head of Engineering, the CMO, and the CEO. That evidence set the roadmap for the redesign and for the longer-term shift towards AI-first automations. The answer was not one-off UI fixes. It was a data framework where every step shows what goes in and what comes out.</p>
-              </div>
-
-              <div class="project-paragraph">
-                <h2>What Shipped</h2>
-                <div class="table-container">
-                  <table class="improvements-table">
-                    <thead>
-                      <tr><th>Improvement</th><th>Change</th><th>Benefit</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>Data In / Data Out</td><td>I added inline tabs to show the data flowing into and out of each step of a workflow.</td><td>Complete transparency for tracing data.</td></tr>
-                      <tr><td>Inline Error Logging</td><td>I added a dedicated tab with clear error messages for any failed step.</td><td>Less guesswork, faster troubleshooting.</td></tr>
-                      <tr><td>New Sidebar Panel</td><td>I moved workflow controls out of the main canvas and into a dedicated, contextual sidebar.</td><td>A cleaner canvas and a clearer editing experience.</td></tr>
-                      <tr><td>Enhanced Canvas &amp; UI</td><td>I added zoom and pan, and made the layout more compact.</td><td>Easier to manage large, complex workflows.</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                <figcaption>Before and after: the redesigned builder puts data in, data out and errors on each step instead of hiding them.</figcaption>
               </div>
 
               <div class="content-image">
                 <video class="image-with-caption" src="img/project-image/bb-automations/bb-automations-2.mp4" data-autoplay loop muted playsinline preload="none">
                   Your browser does not support the video tag.
                 </video>
-                <figcaption>The new interface features a dedicated sidebar and inline tabs for data and errors, giving users complete control and clarity.</figcaption>
+                <figcaption>The sidebar holds the selected step&rsquo;s settings; inline tabs show the data and any errors for that step.</figcaption>
               </div>
 
               <div class="project-paragraph">
-                <h2>What Happened</h2>
-                <p>The complaints stopped. Before launch, automations drew eight to ten complaints and feedback requests on the Budibase Discord. After I shipped the redesign, that dropped to near zero. Clearer errors meant fewer people needed help in the first place.</p>
+                <h2>The result</h2>
+                <p>Before launch, automations drew eight to ten complaints and feedback requests a month on the Budibase Discord. After I shipped the redesign, that dropped to zero. Clearer errors meant fewer people needed help in the first place.</p>
+                <p>Automations are what Budibase called workflows before AI agents existed, and the redesigned builder became the foundation of its next product. Budibase&rsquo;s agents feature is built directly on automations. An agent can take a new email, classify it and open a Jira ticket for the right team. When a step fails, the same structure shows what went in, what came out and what broke, then lets a person confirm the next action. Budibase now positions itself as an AI workflow toolkit.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>What It Led To</h2>
-                <p>Budibase later added an agents section, built directly on top of automations. Agents work because every step now shows and confirms the data coming in and out, allowing an agent to read that data and understand the context of what is happening. A new email arrives, an agent classifies it, creates a Jira ticket, and assigns it to the right team. The data in and data out framework made that possible, helping Budibase compete with AI workflow tools like n8n.</p>
-                <p>That structure is also how the product recovers when something is wrong. Inline error logging and visible data flow meant a failed step was something you could inspect and fix, not a black box. People needed that capability first, and agents later needed the exact same thing: if a step fails, show what went in, what came out, and what broke, then let a person confirm the next action.</p>
-                <p>At the time, I worked with ChatGPT and the AI tools available.</p>
+                <h2>How I used AI</h2>
+                <p>I used ChatGPT on the Pro plan, the only AI tool we had available at the time. We did not have Claude Code, Codex or Cursor.</p>
+                <!-- TODO(case-study): Name one task ChatGPT helped with on this project (for example, drafting the study questions or summarising responses) -->
+                <div class="todo-marker" data-todo="Name one task ChatGPT helped with on this project"></div>
               </div>
 
               <div class="project-paragraph">
-                <h2>Outcome</h2>
-                <p>Twenty-five users highlighted the core friction points. I presented that evidence to the executive team and redesigned the builder so people could finally see their data. That same structure went on to carry the agents feature, ensuring the AI platform Budibase became was built on workflows users already understood rather than starting from scratch.</p>
+                <h2>Looking back</h2>
+                <p>I would test the design after launch, to check customers were satisfied and to find further improvements. We assumed from the drop in complaints that we had done a good job. For a feature that ended up changing the direction of the company, I would have tested it.</p>
               </div>
 
               <div class="button-group">
-                <a class="next-project-link" href="budibase-ui.html">
+                <a class="next-project-link" href="cityfibre.html">
                   <div class="next-project-card">
-                    <img class="next-project-card__thumb" src="img/thumbnail/bb-ui-thumb.jpg?v=2026-10-04g" alt="" loading="lazy" decoding="async">
+                    <img class="next-project-card__thumb" src="img/thumbnail/rebrand-thumbnail.jpg?v=2026-10-13" alt="" loading="lazy" decoding="async">
                     <div class="next-project-card__content">
-                      <p class="next-project-card__title">Delivering core Budibase features: branches, permissions, and calculations</p>
+                      <p class="next-project-card__title">Raised B2B portal satisfaction from 4/10 to 8/10 and postcode checks by 90% by redesigning a UK fibre provider&rsquo;s website and partner portal</p>
+                      <p class="next-project-card__desc">As lead designer at DawsonAndrews, I redesigned CityFibre&rsquo;s marketing site and the portal Vodafone, TalkTalk and Zen use to book engineers, after a research day with 40 portal users. The work helped win Hyperoptic and fund nine hires.</p>
                     </div>
                   </div>
                 </a>
