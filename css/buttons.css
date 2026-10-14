@@ -83,6 +83,7 @@ button {
 
 .next-project-card__title {
   margin: 0;
+  max-width: 75ch;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -92,6 +93,7 @@ button {
 
 .next-project-card__desc {
   margin: 0;
+  max-width: 75ch;
   font-family: 'Source Sans 3', sans-serif;
   font-size: var(--type-body-md, 14px);
   font-weight: 400;
@@ -99,7 +101,7 @@ button {
   color: rgba(0, 0, 0, 0.72);
 }
 
-button:hover:not(.agents-toggle__switch):not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop) {
+button:hover:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop) {
   background: var(--industrial-orange, #474747);
 }
 

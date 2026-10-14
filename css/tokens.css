@@ -54,24 +54,28 @@ body {
   --case-study-header-content-gap: 48px;
   --case-study-header-block-gap: var(--space-4);
   --case-study-header-stat-label: rgba(0, 0, 0, 0.75);
-  --case-study-header-stat-size: 22px;
+  --case-study-header-stat-size: 20px;
   --project-card-grid-gap: 32px;
   --project-card-content-gap: 20px;
 
   /* Project case-study media chrome — change these to restyle all project images/videos */
   --project-media-radius: 8px;
-  --project-media-border: 1px solid #b3b3b3;
-  --project-media-max-width: 1000px;
+  --project-media-border-color: #D6D6D6;
+  --project-media-border: 1px solid var(--project-media-border-color);
+  --site-max-width: 1200px;
+  --project-media-max-width: 1200px;
   --project-media-max-height: 720px;
 
   /* Tablet device chrome for in-product mockups */
-  --project-device-radius: 12px;
+  --project-device-radius: 18px;
   --project-device-screen-radius: 10px;
-  --project-device-bezel: #000;
-  --project-device-bezel-width: 2px;
-  --project-device-bezel-outer: #b3b3b3;
-  --project-device-bezel-outer-width: 2px;
-  --project-device-stage: rgba(0, 0, 0, 0.04);
+  --project-device-bezel: #111;
+  --project-device-bezel-width: 1.5px;
+  --project-device-bezel-outer: #ececef;
+  --project-device-bezel-outer-edge: #d4d4d8;
+  --project-device-bezel-outer-width: 11px;
+  --project-device-stage: transparent;
+  --project-device-shadow: 0 18px 44px rgba(0, 0, 0, 0.14), 0 4px 14px rgba(0, 0, 0, 0.06);
   --project-device-max-width: 640px;
 
   /* Case study diagrams */
@@ -82,7 +86,7 @@ body {
   --diagram-accent-stroke: #5ce1e6;
   --diagram-warm-fill: rgba(255, 176, 72, 0.22);
   --diagram-warm-stroke: #d48806;
-  --diagram-frame-stroke: rgba(0, 0, 0, 0.14);
+  --diagram-frame-stroke: var(--project-media-border-color);
   --diagram-text: #111;
   --diagram-text-muted: rgba(0, 0, 0, 0.65);
   --diagram-font: 'Source Sans 3', sans-serif;
@@ -94,4 +98,13 @@ body {
   margin: 0 auto;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+/* Project case studies — wrap (840) / prose (680); both divisible by 4 */
+body.case-study,
+body.about {
+  --site-max-width: 840px;
+  --content-max-width: 680px;
+  --project-media-max-width: 840px;
+  --project-device-max-width: 680px;
 }

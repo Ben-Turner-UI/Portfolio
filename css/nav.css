@@ -105,7 +105,7 @@
 
   .nav-container nav {
     width: 88%;
-    max-width: 1000px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
     padding: 10px 0;
     background: transparent;
@@ -169,23 +169,6 @@
     align-items: center;
     gap: 12px;
     padding: 0 12px;
-  }
-
-  /* Reserve Agent view pill width before JS mounts, so Home/About don't jump */
-  .nav-container::after {
-    content: '';
-    flex: 0 0 auto;
-    width: 168px;
-    height: 46px;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  .nav-container:has(.agents-toggle--in-nav)::after {
-    content: none;
-    width: 0;
-    height: 0;
-    margin: 0;
   }
 
   .nav-container nav {

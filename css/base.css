@@ -68,7 +68,6 @@ body {
 
 html,
 body,
-.agents-view,
 .change-modal__content {
   scrollbar-width: auto;
   scrollbar-color: #d6d6d6 #ffffff;
@@ -76,7 +75,6 @@ body,
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar,
-.agents-view::-webkit-scrollbar,
 .change-modal__content::-webkit-scrollbar {
   width: 16px;
   height: 16px;
@@ -85,14 +83,12 @@ body::-webkit-scrollbar,
 
 html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track,
-.agents-view::-webkit-scrollbar-track,
 .change-modal__content::-webkit-scrollbar-track {
   background: #ffffff;
 }
 
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb,
-.agents-view::-webkit-scrollbar-thumb,
 .change-modal__content::-webkit-scrollbar-thumb {
   background: #d6d6d6;
   border: 4px solid #ffffff;
@@ -101,14 +97,12 @@ body::-webkit-scrollbar-thumb,
 
 html::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover,
-.agents-view::-webkit-scrollbar-thumb:hover,
 .change-modal__content::-webkit-scrollbar-thumb:hover {
   background: #c4c4c4;
 }
 
 html::-webkit-scrollbar-button,
 body::-webkit-scrollbar-button,
-.agents-view::-webkit-scrollbar-button,
 .change-modal__content::-webkit-scrollbar-button {
   display: none;
   width: 0;

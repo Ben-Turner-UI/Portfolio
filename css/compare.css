@@ -89,8 +89,8 @@
 .change-block .compare-slider,
 .change-block .before-after {
   margin-top: 16px;
-  width: min(1000px, 88vw);
-  max-width: 1000px;
+  width: min(var(--site-max-width), 88vw);
+  max-width: var(--site-max-width);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -101,8 +101,8 @@
 .project-paragraph > .device-stage,
 .project-details_text > .device-stage {
   margin-top: 12px;
-  width: min(1000px, 88vw);
-  max-width: 1000px;
+  width: min(var(--site-max-width), 88vw);
+  max-width: var(--site-max-width);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -117,35 +117,38 @@
   transform: none;
 }
 
+.project-paragraph > .device-stage.device-stage--prose,
+.device-stage--prose {
+  width: 100%;
+  max-width: 100%;
+  left: auto;
+  transform: none;
+  padding: 16px;
+}
+
 .device-stage {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 36px 40px;
-  border-radius: var(--project-device-radius);
+  padding: 28px 24px 36px;
+  border-radius: 0;
   background: var(--project-device-stage);
   box-sizing: border-box;
+  overflow: visible;
 }
 
 .device-stage--dark {
   background: var(--project-device-stage);
-  padding: 32px;
+  padding: 28px 24px 36px;
 }
 
 .device-stage--dark .device-frame {
   max-width: 100%;
-  box-shadow:
-    0 0 0 var(--project-device-bezel-width) var(--project-device-bezel),
-    0 0 0 calc(var(--project-device-bezel-width) + var(--project-device-bezel-outer-width)) var(--project-device-bezel-outer);
 }
 
 .device-stage--dark .device-frame__screen {
   aspect-ratio: 5650 / 2600;
   background: #111;
-}
-
-.device-stage--dark .device-frame__screen::after {
-  box-shadow: inset 0 0 0 var(--project-device-bezel-width) var(--project-device-bezel);
 }
 
 .device-stage--dark .device-frame__screen .compare-slider {
@@ -163,15 +166,15 @@
 .device-frame {
   width: 100%;
   max-width: var(--project-device-max-width);
-  padding: 0;
-  border: none;
+  padding: var(--project-device-bezel-outer-width);
+  border: 1px solid var(--project-device-bezel-outer-edge);
   border-radius: var(--project-device-radius);
-  background: #fff;
-  box-shadow:
-    0 0 0 var(--project-device-bezel-width) var(--project-device-bezel),
-    0 0 0 calc(var(--project-device-bezel-width) + var(--project-device-bezel-outer-width)) var(--project-device-bezel-outer);
+  background: linear-gradient(165deg, #f7f7f8 0%, #ececef 42%, #e3e3e7 100%);
+  outline: none;
+  box-shadow: var(--project-device-shadow);
   box-sizing: border-box;
   overflow: visible;
+  isolation: isolate;
 }
 
 .device-frame__screen {
@@ -179,19 +182,15 @@
   overflow: hidden;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: var(--project-device-radius);
-  background: #fff;
+  border: var(--project-device-bezel-width) solid var(--project-device-bezel);
+  border-radius: var(--project-device-screen-radius);
+  background: #111;
   line-height: 0;
+  box-sizing: border-box;
 }
 
 .device-frame__screen::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  border-radius: inherit;
-  box-shadow: inset 0 0 0 var(--project-device-bezel-width) var(--project-device-bezel);
-  pointer-events: none;
+  display: none;
 }
 
 .device-frame__screen .compare-slider,
@@ -537,8 +536,8 @@
   }
 
   .device-frame {
-    padding: 0;
-    border-radius: calc(var(--project-device-radius) - 4px);
+    padding: calc(var(--project-device-bezel-outer-width) - 2px);
+    border-radius: calc(var(--project-device-radius) - 2px);
     max-width: min(var(--project-device-max-width), 100%);
   }
 
@@ -547,7 +546,7 @@
   }
 
   .device-frame__screen {
-    border-radius: calc(var(--project-device-radius) - 4px);
+    border-radius: calc(var(--project-device-screen-radius) - 2px);
   }
 }
 
@@ -992,7 +991,7 @@
   bottom: 0;
   left: 50%;
   width: 0;
-  border-left: 1px solid #b3b3b3;
+  border-left: 1px solid var(--project-media-border-color);
   background: transparent;
   box-shadow: none;
   transform: translateX(-50%);
@@ -1010,7 +1009,7 @@
   width: 22px;
   height: 32px;
   border-radius: 9999px;
-  border: 1px solid #b3b3b3;
+  border: 1px solid var(--project-media-border-color);
   background: #fff;
   color: #000;
   box-shadow: none;
@@ -1034,7 +1033,7 @@
   border-radius: 6px;
   background: #fff;
   color: #000;
-  border: 1px solid #b3b3b3;
+  border: 1px solid var(--project-media-border-color);
   box-shadow: none;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 12px;

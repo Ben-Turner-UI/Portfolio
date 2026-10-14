@@ -51,7 +51,7 @@
 
 .table-container--wide {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--project-media-max-width);
   margin: 8px auto 32px;
 }
 

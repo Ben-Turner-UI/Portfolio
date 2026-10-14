@@ -1,0 +1,857 @@
+/* Budibase automations case-study diagrams
+   WorkflowBeforeAfter, ResearchToDesign, AutomationComplaintsChart */
+
+.bb-diagram {
+  --bb-diagram-text: #242424;
+  --bb-diagram-muted: #707070;
+  --bb-diagram-border: var(--project-media-border-color);
+  --bb-diagram-panel: #F3F2EF;
+  --bb-diagram-accent: #5C5C5C;
+  --bb-diagram-accent-soft: #8A8A8A;
+  --bb-diagram-error: #5C5C5C;
+  --bb-diagram-success: #8A8A8A;
+  --bb-diagram-white: #FFFFFF;
+  --bb-diagram-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--bb-diagram-text);
+  font-family: 'Source Sans 3', sans-serif;
+  box-sizing: border-box;
+}
+
+.bb-diagram *,
+.bb-diagram *::before,
+.bb-diagram *::after {
+  box-sizing: border-box;
+}
+
+.bb-diagram__eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bb-diagram-muted);
+}
+
+.bb-diagram__title {
+  margin: 0 0 4px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--type-heading-2);
+  font-weight: 600;
+  line-height: var(--type-heading-2-lh);
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--bb-diagram-text);
+}
+
+.bb-diagram__lede {
+  margin: 0 0 var(--space-3);
+  font-size: var(--type-body-lg);
+  font-weight: 400;
+  line-height: var(--type-body-lg-lh);
+  color: var(--bb-diagram-muted);
+  max-width: none;
+}
+
+.bb-complaints-chart,
+.bb-shipped-diagram,
+.cf-homepage-diagram {
+  padding: 28px 24px;
+  background: var(--project-device-stage);
+  border-radius: var(--project-media-radius);
+}
+
+body.case-study .project-paragraph.bb-research-section {
+  width: 100%;
+  max-width: var(--project-media-max-width);
+  margin-bottom: 24px;
+}
+
+body.case-study .bb-research-section > p {
+  margin-bottom: 12px;
+}
+
+body.case-study .bb-research-section .bb-research-design__metrics {
+  margin: 0 0 16px;
+}
+
+body.case-study .bb-research-section .bb-research-metric p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+body.case-study .bb-research-section .table-container {
+  margin: 0;
+}
+
+.bb-research-painpoints {
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid var(--project-media-border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.bb-research-painpoints__title {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #111;
+}
+
+.bb-research-painpoints .table-container {
+  border: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.bb-research-painpoints .improvements-table thead {
+  display: none;
+}
+
+.bb-research-painpoints .improvements-table tbody td {
+  padding: 8px 0;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.bb-research-painpoints .improvements-table tbody tr:last-child td {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.bb-research-painpoints .improvements-table tbody tr:first-child td {
+  padding-top: 0;
+}
+
+@media (min-width: 769px) {
+  .bb-complaints-chart,
+  .bb-shipped-diagram,
+  .cf-homepage-diagram {
+    padding: 32px;
+  }
+}
+
+.bb-diagram__note {
+  margin: var(--space-2) 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--bb-diagram-muted);
+}
+
+.bb-diagram__caption {
+  margin: var(--space-2) 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--bb-diagram-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Diagram 1 — Workflow before / after
+   -------------------------------------------------------------------------- */
+
+.bb-workflow-compare__panels {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 769px) {
+  .bb-workflow-compare__panels {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+}
+
+.bb-workflow-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: var(--bb-diagram-white);
+  border: 1px solid var(--bb-diagram-border);
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.bb-workflow-panel__label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.bb-workflow-panel__label--before {
+  color: var(--bb-diagram-error);
+}
+
+.bb-workflow-panel__label--after {
+  color: var(--bb-diagram-success);
+}
+
+.bb-workflow-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+.bb-workflow-panel__stage {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  min-width: 0;
+}
+
+.bb-workflow-panel__canvas {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 16px 12px;
+  background: var(--bb-diagram-panel);
+  border: 1px solid var(--bb-diagram-border);
+  border-radius: 8px;
+}
+
+.bb-workflow-node {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 132px;
+  max-width: 100%;
+  padding: 8px 12px;
+  background: var(--bb-diagram-white);
+  border: 1px solid #C8C8C8;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--bb-diagram-text);
+  text-align: center;
+}
+
+.bb-workflow-node--failed {
+  border-color: var(--bb-diagram-error);
+  box-shadow: inset 0 0 0 1px rgba(182, 83, 75, 0.12);
+}
+
+.bb-workflow-node--selected {
+  border-color: var(--bb-diagram-success);
+  box-shadow: inset 0 0 0 1px rgba(57, 129, 91, 0.14);
+}
+
+.bb-workflow-node__icon {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--bb-diagram-error);
+}
+
+.bb-workflow-node__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bb-workflow-connector {
+  position: relative;
+  z-index: 0;
+  width: 1px;
+  height: 18px;
+  background: #B0B0B0;
+  flex-shrink: 0;
+}
+
+.bb-workflow-connector::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #B0B0B0;
+  transform: translateX(-50%);
+}
+
+.bb-workflow-error-chip {
+  margin-top: 10px;
+  padding: 6px 10px;
+  border: 1px solid rgba(182, 83, 75, 0.35);
+  border-radius: 6px;
+  background: rgba(182, 83, 75, 0.06);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--bb-diagram-error);
+  align-self: center;
+}
+
+.bb-workflow-sidebar {
+  width: 72px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 8px;
+  background: var(--bb-diagram-white);
+  border: 1px solid var(--bb-diagram-border);
+  border-radius: 8px;
+}
+
+.bb-workflow-sidebar__title {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bb-diagram-muted);
+}
+
+.bb-workflow-sidebar__line {
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: #E8E8E6;
+}
+
+.bb-workflow-sidebar__line--short {
+  width: 60%;
+}
+
+.bb-workflow-sidebar__line--mid {
+  width: 80%;
+}
+
+.bb-workflow-inspector {
+  border: 1px solid var(--bb-diagram-border);
+  border-radius: 8px;
+  background: var(--bb-diagram-white);
+  overflow: hidden;
+}
+
+.bb-workflow-inspector__title {
+  margin: 0;
+  padding: 10px 12px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bb-diagram-text);
+  border-bottom: 1px solid var(--bb-diagram-border);
+}
+
+.bb-workflow-inspector__tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-bottom: 1px solid var(--bb-diagram-border);
+}
+
+.bb-workflow-inspector__tab {
+  margin: 0;
+  padding: 8px 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--bb-diagram-muted);
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.bb-workflow-inspector__tab--active {
+  color: var(--bb-diagram-text);
+  font-weight: 600;
+  background: var(--bb-diagram-panel);
+  border-bottom-color: var(--bb-diagram-text);
+}
+
+.bb-workflow-inspector__data {
+  margin: 0;
+  padding: 12px;
+  font-family: var(--bb-diagram-mono);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--bb-diagram-text);
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.bb-workflow-panel__caption {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--bb-diagram-muted);
+}
+
+@media (max-width: 420px) {
+  .bb-workflow-panel {
+    padding: 18px;
+  }
+
+  .bb-workflow-panel__stage {
+    flex-direction: column;
+  }
+
+  .bb-workflow-sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .bb-workflow-sidebar__title {
+    width: 100%;
+  }
+
+  .bb-workflow-sidebar__line {
+    flex: 1;
+    min-width: 40px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Diagram 2 — Research to design
+   -------------------------------------------------------------------------- */
+
+.bb-research-design__metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 0;
+  align-items: stretch;
+}
+
+@media (min-width: 560px) {
+  .bb-research-design__metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 769px) {
+  .bb-research-design__metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.bb-research-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px;
+  background: var(--bb-diagram-white);
+  border: 1px solid var(--project-media-border-color);
+  border-radius: 8px;
+  min-width: 0;
+  height: auto;
+}
+
+.bb-research-metric--emphasis {
+  background: var(--bb-diagram-white);
+  border-color: var(--project-media-border-color);
+}
+
+.bb-research-metric__value {
+  margin: 0;
+  font-family: 'Big Shoulders', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--bb-diagram-text);
+}
+
+.bb-research-metric__label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--bb-diagram-muted);
+}
+
+.bb-research-metric__viz + .bb-research-metric__value {
+  margin-top: 2px;
+}
+
+.bb-research-design__section-label {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bb-diagram-muted);
+}
+
+.bb-research-design__columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 769px) {
+  .bb-research-design__columns {
+    grid-template-columns: 42% 58%;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .bb-research-design__responses {
+    padding-left: 28px;
+    border-left: 1px solid var(--bb-diagram-border);
+  }
+}
+
+.bb-research-design__col-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bb-diagram-text);
+}
+
+.bb-research-findings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--bb-diagram-border);
+}
+
+.bb-research-findings__item {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--bb-diagram-border);
+}
+
+.bb-research-findings__num {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bb-diagram-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.bb-research-findings__title {
+  margin: 0 0 2px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bb-diagram-text);
+}
+
+.bb-research-findings__text {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--bb-diagram-muted);
+}
+
+.bb-research-responses {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bb-research-response {
+  padding: 14px 16px;
+  background: var(--bb-diagram-white);
+  border: 1px solid var(--bb-diagram-border);
+  border-radius: 8px;
+}
+
+.bb-research-response__title {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bb-diagram-text);
+}
+
+.bb-research-response__text {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--bb-diagram-muted);
+}
+
+.bb-research-design__conclusion {
+  margin: var(--space-3) 0 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--bb-diagram-border);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--bb-diagram-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Diagram 3 — Complaints chart
+   -------------------------------------------------------------------------- */
+
+.bb-shipped-diagram .bb-diagram__title {
+  margin-bottom: 16px;
+}
+
+.bb-shipped-diagram__table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid var(--project-media-border-color);
+  border-radius: var(--project-media-radius);
+}
+
+.bb-shipped-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.bb-shipped-table thead th {
+  padding: 14px 16px;
+  border-bottom: 1px solid #111;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  color: var(--bb-diagram-text);
+  vertical-align: top;
+}
+
+.bb-shipped-table tbody th,
+.bb-shipped-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--project-media-border-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  color: var(--bb-diagram-muted);
+  vertical-align: top;
+}
+
+.bb-shipped-table tbody th {
+  font-weight: 600;
+  color: var(--bb-diagram-text);
+}
+
+.bb-shipped-table tbody tr:last-child th,
+.bb-shipped-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (min-width: 700px) {
+  .bb-shipped-table thead th:first-child,
+  .bb-shipped-table tbody th {
+    width: 34%;
+  }
+}
+
+.bb-complaints-chart__figure {
+  margin: 0;
+  width: 100%;
+}
+
+.bb-complaints-chart__plot {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bb-complaints-chart__scale,
+.bb-complaints-chart__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 16px;
+  row-gap: 6px;
+  align-items: center;
+}
+
+.bb-complaints-chart__scale-spacer,
+.bb-complaints-chart__value-spacer {
+  display: none;
+}
+
+.bb-complaints-chart__track-col {
+  min-width: 0;
+}
+
+.bb-complaints-chart__ticks {
+  position: relative;
+  height: 16px;
+}
+
+.bb-complaints-chart__tick {
+  position: absolute;
+  top: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bb-diagram-muted);
+  font-variant-numeric: tabular-nums;
+  transform: translateX(-50%);
+}
+
+.bb-complaints-chart__tick:first-child {
+  transform: none;
+}
+
+.bb-complaints-chart__tick:last-child {
+  transform: translateX(-100%);
+}
+
+.bb-complaints-chart__row-label {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bb-diagram-text);
+}
+
+.bb-complaints-chart__track {
+  position: relative;
+  height: 32px;
+  width: 100%;
+  min-width: 0;
+  border-radius: 6px;
+  background-color: var(--bb-diagram-white);
+  background-image:
+    linear-gradient(to right, transparent 0, transparent calc(20% - 0.5px), var(--bb-diagram-border) calc(20% - 0.5px), var(--bb-diagram-border) calc(20% + 0.5px), transparent calc(20% + 0.5px)),
+    linear-gradient(to right, transparent 0, transparent calc(40% - 0.5px), var(--bb-diagram-border) calc(40% - 0.5px), var(--bb-diagram-border) calc(40% + 0.5px), transparent calc(40% + 0.5px)),
+    linear-gradient(to right, transparent 0, transparent calc(60% - 0.5px), var(--bb-diagram-border) calc(60% - 0.5px), var(--bb-diagram-border) calc(60% + 0.5px), transparent calc(60% + 0.5px)),
+    linear-gradient(to right, transparent 0, transparent calc(80% - 0.5px), var(--bb-diagram-border) calc(80% - 0.5px), var(--bb-diagram-border) calc(80% + 0.5px), transparent calc(80% + 0.5px));
+  border: 1px solid var(--bb-diagram-border);
+  overflow: hidden;
+}
+
+.bb-complaints-chart__range {
+  position: absolute;
+  inset: 4px;
+  border-radius: 4px;
+  background: #8A8A8A;
+}
+
+.bb-complaints-chart__value {
+  margin: 0;
+  min-width: 3.25em;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.bb-complaints-chart__value--before {
+  color: #5C5C5C;
+}
+
+.bb-complaints-chart__value--after {
+  color: var(--bb-diagram-accent-soft);
+}
+
+@media (max-width: 559px) {
+  .bb-complaints-chart__row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .bb-complaints-chart__row-label {
+    grid-column: 1 / -1;
+  }
+
+  .bb-complaints-chart__track {
+    grid-column: 1;
+  }
+
+  .bb-complaints-chart__value {
+    grid-column: 2;
+    text-align: right;
+  }
+}
+
+@media (min-width: 560px) {
+  .bb-complaints-chart__scale,
+  .bb-complaints-chart__row {
+    grid-template-columns: 132px minmax(0, 1fr) 3.5em;
+    align-items: center;
+  }
+
+  .bb-complaints-chart__scale-spacer,
+  .bb-complaints-chart__value-spacer {
+    display: block;
+  }
+
+  .bb-complaints-chart__track-col {
+    grid-column: 2;
+  }
+
+  .bb-complaints-chart__row-label {
+    grid-column: 1;
+  }
+
+  .bb-complaints-chart__track {
+    grid-column: 2;
+  }
+
+  .bb-complaints-chart__value {
+    grid-column: 3;
+    text-align: right;
+  }
+}
+
+.bb-complaints-chart__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-diagram * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

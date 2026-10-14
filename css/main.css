@@ -12,10 +12,11 @@
 @import url("layout.css");
 @import url("home.css");
 @import url("case-study.css");
+@import url("case-study-viz.css");
+@import url("bb-automations-diagrams.css");
 @import url("about.css");
 @import url("tables.css");
 @import url("testimonials.css");
 @import url("responsive.css");
 @import url("compare.css");
-@import url("agents.css");
 @import url("motion.css");

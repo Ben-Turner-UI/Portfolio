@@ -8,30 +8,26 @@
     transform: translateY(-3px);
   }
 
-  .project-grid > a:hover .project-grid-thumbnail,
-  .side-project-card:hover .side-project-thumbnail-bg {
+  .side-project-card:hover .side-project-thumbnail-bg,
+  .side-project-card:hover .side-project-thumbnail-olympus-img {
     transform: scale(1.04);
   }
 
-  .side-project-card:hover .side-project-thumbnail-olympus-img {
-    transform: translate(-50%, -50%) scale(1.04);
-  }
-
-  button:not(.agents-toggle__switch):not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):hover {
+  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):hover {
     transform: translateY(-1px);
   }
 
-  button:not(.agents-toggle__switch):not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):active {
+  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):active {
     transform: translateY(0) scale(0.98);
   }
 
   .home-header-content-text .home-contact__link:hover,
-  .agents-toggle__chip:hover {
+  .about-header .home-contact__link:hover {
     transform: translateY(-1px);
   }
 
   .home-header-content-text .home-contact__link:active,
-  .agents-toggle__chip:active {
+  .about-header .home-contact__link:active {
     transform: translateY(0);
   }
 
