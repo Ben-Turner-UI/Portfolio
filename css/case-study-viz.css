@@ -49,44 +49,40 @@
 
 @media (max-width: 800px) {
   .project-key-stats .cs-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 24px;
-  }
-
-  .cs-stat:nth-child(odd) {
-    padding-left: 0;
-  }
-
-  .cs-stat:nth-child(odd)::before {
-    display: none;
-  }
-
-  .cs-stat:nth-child(even) {
-    padding-left: 24px;
-    padding-right: 0;
-  }
-
-  .cs-stat:nth-child(even)::before {
-    display: block;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-key-stats .cs-stats {
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 0;
   }
 
-  .cs-stat,
-  .cs-stat:nth-child(even) {
-    padding: 0;
+  .project-key-stats .cs-stats .cs-stat,
+  .project-key-stats .cs-stats .cs-stat:first-child,
+  .project-key-stats .cs-stats .cs-stat:last-child {
+    padding: 20px 0;
+    border: 0;
   }
 
-  .cs-stat::before {
-    display: none;
+  .project-key-stats .cs-stats .cs-stat:first-child {
+    padding-top: 0;
   }
 
-  .cs-stat--wide {
+  .project-key-stats .cs-stats .cs-stat:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Horizontal rules between stacked stats */
+  .project-key-stats .cs-stats .cs-stat:not(:first-child)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.16);
+  }
+
+  .project-key-stats .cs-stats .cs-stat--wide {
     grid-column: auto;
   }
 }
@@ -230,6 +226,7 @@
 
 .cs-stat__viz.cs-viz-meter {
   width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -343,17 +340,9 @@
   font-size: 14px;
 }
 
-/* Research metric mini viz */
-.bb-research-metric__viz {
-  min-height: 0;
-  height: 10px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
 .cs-viz-meter {
   width: 100%;
+  max-width: 300px;
   height: 22px;
   display: flex;
   flex-direction: column;
@@ -608,10 +597,6 @@
   }
 }
 
-.improvements-table--benefit td:nth-child(3) {
-  color: rgba(0, 0, 0, 0.72);
-}
-
 .project-paragraph blockquote.case-pullquote {
   margin: 16px 0 0;
   padding: 0;
@@ -715,7 +700,7 @@
 }
 
 .project-paragraph + .content-image--code-diff {
-  margin-top: calc(12px - var(--case-study-content-section-gap));
+  margin-top: calc(28px - var(--case-study-content-section-gap));
 }
 
 .cs-flow__label {

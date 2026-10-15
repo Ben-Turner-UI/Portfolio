@@ -81,7 +81,8 @@
 
 @media (min-width: 769px) {
   body {
-    padding-top: var(--nav-top-offset, 56px);
+    /* Matches desktop nav height before nav.js runs; avoids a load jump */
+    padding-top: var(--nav-top-offset, 46px);
   }
 
   header {

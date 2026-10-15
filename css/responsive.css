@@ -46,6 +46,10 @@
     font-size: 16px;
   }
 
+  .project-grid {
+    gap: 28px;
+  }
+
   .project-grid .grid-item {
     flex-direction: column;
   }
@@ -64,10 +68,15 @@
 
   .project-card-body {
     padding: 24px;
+    gap: 10px;
+  }
+
+  .project-grid .project-card-meta {
+    font-size: 15px;
   }
 
   .project-grid .grid-item h2 {
-    font-size: 20px;
+    font-size: 22px;
     max-width: none;
   }
 

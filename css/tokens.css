@@ -61,7 +61,7 @@ body {
   /* Project case-study media chrome — change these to restyle all project images/videos */
   --project-media-radius: 8px;
   --project-media-border-color: #D6D6D6;
-  --project-media-border: 1px solid var(--project-media-border-color);
+  --project-media-border: none;
   --site-max-width: 1200px;
   --project-media-max-width: 1200px;
   --project-media-max-height: 720px;
@@ -100,11 +100,11 @@ body {
   padding-bottom: 0;
 }
 
-/* Project case studies — wrap (840) / prose (680); both divisible by 4 */
+/* Project case studies — prose/header 600 (≈75ch); videos, charts, tables 1000 */
 body.case-study,
 body.about {
-  --site-max-width: 840px;
-  --content-max-width: 680px;
-  --project-media-max-width: 840px;
+  --site-max-width: 1000px;
+  --content-max-width: 600px;
+  --project-media-max-width: 1000px;
   --project-device-max-width: 680px;
 }

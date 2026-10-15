@@ -74,63 +74,323 @@ body.case-study .project-paragraph.bb-research-section {
   margin-bottom: 24px;
 }
 
-body.case-study .bb-research-section > p {
-  margin-bottom: 12px;
+/* Research findings: grouped chart + pain points table */
+.rf {
+  --liked: #4f6df5;
+  --disliked: #f0643c;
+  --disliked-strong: #d6401a;
+  --ink: #1f2330;
+  --muted: #6b7280;
+  --line: var(--project-media-border-color, #e6e8ee);
+  --soft: #f6f7fb;
+  width: 100%;
+  max-width: 100%;
+  color: var(--ink);
+  line-height: 1.5;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
-body.case-study .bb-research-section .bb-research-design__metrics {
-  margin: 0 0 16px;
-}
-
-body.case-study .bb-research-section .bb-research-metric p {
-  margin: 0;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-}
-
-body.case-study .bb-research-section .table-container {
-  margin: 0;
-}
-
-.bb-research-painpoints {
-  padding: 18px 20px;
-  background: #fff;
-  border: 1px solid var(--project-media-border-color);
-  border-radius: 8px;
+.rf *,
+.rf *::before,
+.rf *::after {
   box-sizing: border-box;
 }
 
-.bb-research-painpoints__title {
-  margin: 0 0 10px;
-  font-size: 14px;
+.rf-card {
+  margin-bottom: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.rf-card:last-child {
+  margin-bottom: 0;
+}
+
+body.case-study .bb-research-section .rf-title {
+  margin: 0 0 4px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
-  color: #111;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: normal;
 }
 
-.bb-research-painpoints .table-container {
-  border: 0;
-  padding: 0;
-  overflow: visible;
+body.case-study .bb-research-section .rf-sub {
+  margin: 0 0 16px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
 }
 
-.bb-research-painpoints .improvements-table thead {
-  display: none;
+body.case-study .bb-research-section .rf-note {
+  margin: 20px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
 }
 
-.bb-research-painpoints .improvements-table tbody td {
-  padding: 8px 0;
-  border-bottom: 1px solid #D6D6D6;
+body.case-study .bb-research-section .rf-foot {
+  margin: 12px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted);
 }
 
-.bb-research-painpoints .improvements-table tbody tr:last-child td {
+.rf-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.rf-legend i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+
+.rf-legend .liked {
+  background: var(--liked);
+}
+
+.rf-legend .disliked {
+  background: var(--disliked);
+}
+
+.rf-plot-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  margin: 0 -4px;
+  padding: 0 4px 4px;
+}
+
+.rf-plot {
+  position: relative;
+  width: 640px;
+  max-width: none;
+  height: 340px;
+  padding-left: 44px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 720px) {
+  .rf-plot {
+    width: 100%;
+  }
+}
+
+.rf-grid {
+  position: absolute;
+  left: 44px;
+  right: 0;
+  top: 18px;
+  bottom: 44px;
+}
+
+.rf-grid div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--p) * 1%);
+  height: 0;
+  border-top: 1px solid var(--line);
+}
+
+.rf-grid span {
+  position: absolute;
+  left: -44px;
+  top: 0;
+  width: 36px;
+  transform: translateY(-50%);
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.rf-groups {
+  position: absolute;
+  left: 44px;
+  right: 0;
+  top: 18px;
+  bottom: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.rf-group {
+  flex: 1 1 0;
+  min-width: 88px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.rf-group.hot {
+  background: rgba(240, 100, 60, 0.07);
+}
+
+.rf-bars {
+  height: calc(100% - 44px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+}
+
+.rf-bar {
+  position: relative;
+  width: 34%;
+  max-width: 44px;
+  height: calc(var(--v) * 1%);
+  border-radius: 4px 4px 0 0;
+}
+
+.rf-bar.liked {
+  background: var(--liked);
+}
+
+.rf-bar.disliked {
+  background: var(--disliked);
+}
+
+.rf-bar.disliked.hot {
+  background: var(--disliked-strong);
+}
+
+.rf-bar b {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.rf-label {
+  height: 44px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.rf-note {
+  margin: 20px 0 0;
+  padding: 12px 14px;
+  background: var(--soft);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.rf-table-frame {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.rf-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rf-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.rf-table th {
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+}
+
+.rf-table thead th:first-child {
+  border-top-left-radius: 11px;
+}
+
+.rf-table thead th:last-child {
+  border-top-right-radius: 11px;
+}
+
+.rf-table td {
+  padding: 14px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.rf-table tr:last-child td {
   border-bottom: 0;
-  padding-bottom: 0;
 }
 
-.bb-research-painpoints .improvements-table tbody tr:first-child td {
-  padding-top: 0;
+.rf-theme {
+  font-weight: 600;
+}
+
+.rf-count {
+  display: inline-block;
+  min-width: 28px;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--soft);
+  font-weight: 600;
+}
+
+.rf-table tr.top .rf-count {
+  background: rgba(240, 100, 60, 0.15);
+  color: var(--disliked-strong);
+}
+
+.rf-foot {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+@media (max-width: 560px) {
+  .rf-plot {
+    width: 640px;
+  }
+
+  .rf-label,
+  .rf-bar b,
+  .rf-grid span {
+    font-size: 11px;
+  }
+
+  .rf-groups {
+    gap: 6px;
+  }
+
+  .rf-bars {
+    gap: 4px;
+  }
+
+  .rf-label {
+    line-height: 1.2;
+  }
 }
 
 @media (min-width: 769px) {
@@ -438,66 +698,6 @@ body.case-study .bb-research-section .table-container {
 /* --------------------------------------------------------------------------
    Diagram 2 — Research to design
    -------------------------------------------------------------------------- */
-
-.bb-research-design__metrics {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-  margin: 0;
-  align-items: stretch;
-}
-
-@media (min-width: 560px) {
-  .bb-research-design__metrics {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 769px) {
-  .bb-research-design__metrics {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.bb-research-metric {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 18px;
-  background: var(--bb-diagram-white);
-  border: 1px solid var(--project-media-border-color);
-  border-radius: 8px;
-  min-width: 0;
-  height: auto;
-}
-
-.bb-research-metric--emphasis {
-  background: var(--bb-diagram-white);
-  border-color: var(--project-media-border-color);
-}
-
-.bb-research-metric__value {
-  margin: 0;
-  font-family: 'Big Shoulders', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  font-variant-numeric: tabular-nums lining-nums;
-  color: var(--bb-diagram-text);
-}
-
-.bb-research-metric__label {
-  margin: 0;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.35;
-  color: var(--bb-diagram-muted);
-}
-
-.bb-research-metric__viz + .bb-research-metric__value {
-  margin-top: 2px;
-}
 
 .bb-research-design__section-label {
   margin: 0 0 14px;
