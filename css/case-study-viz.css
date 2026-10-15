@@ -85,6 +85,11 @@
   .project-key-stats .cs-stats .cs-stat--wide {
     grid-column: auto;
   }
+
+  .project-key-stats .cs-stat__lbl {
+    font-size: 15px;
+    line-height: 1.45;
+  }
 }
 
 .cs-stat__viz {
