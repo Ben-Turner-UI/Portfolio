@@ -52,7 +52,8 @@ body.about .project-header .header-content {
   background: transparent;
 }
 
-.personal-entry h2 {
+.personal-entry h2,
+.personal-entry h3 {
   margin: 0 0 var(--case-study-h2-bottom-margin);
   padding-bottom: var(--case-study-heading-divider-padding);
   border-bottom: var(--case-study-heading-divider);
@@ -63,6 +64,10 @@ body.about .project-header .header-content {
   color: #000;
   text-transform: none;
   letter-spacing: normal;
+}
+
+.personal-entry h3 {
+  font-size: var(--type-heading-3);
 }
 
 .personal-entry > p {
@@ -629,10 +634,14 @@ body.personal-lightbox-open {
 .about-cv {
   width: 100%;
   max-width: var(--content-max-width);
-  margin: 0 auto var(--case-study-content-section-gap);
+  margin: 0 auto 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+}
+
+body.about .about-cv + .personal-newsletter {
+  margin-top: var(--space-4);
 }
 
 .about-cv__section {
@@ -736,3 +745,4 @@ body.personal-lightbox-open {
   line-height: var(--case-study-heading-line);
   color: #000;
 }
+

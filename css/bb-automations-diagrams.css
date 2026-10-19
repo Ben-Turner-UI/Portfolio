@@ -61,11 +61,17 @@
 }
 
 .bb-complaints-chart,
-.bb-shipped-diagram,
-.cf-homepage-diagram {
+.bb-shipped-diagram {
   padding: 28px 24px;
   background: var(--project-device-stage);
   border-radius: var(--project-media-radius);
+}
+
+.cf-homepage-diagram {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 }
 
 body.case-study .project-paragraph.bb-research-section {
@@ -395,8 +401,7 @@ body.case-study .bb-research-section .rf-foot {
 
 @media (min-width: 769px) {
   .bb-complaints-chart,
-  .bb-shipped-diagram,
-  .cf-homepage-diagram {
+  .bb-shipped-diagram {
     padding: 32px;
   }
 }

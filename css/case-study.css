@@ -168,12 +168,10 @@ body.case-study .main-content .content-image figcaption {
    Tokens live in tokens.css: --project-media-*.
    ========================================================================== */
 .image-with-caption,
-.content-image--diagram .cf-homepage-diagram,
 .content-image--crop-top .content-image-media,
 .compare-slider,
 .bb-complaints-chart,
-.bb-shipped-diagram,
-.cf-homepage-diagram {
+.bb-shipped-diagram {
   border: var(--project-media-border);
   border-radius: var(--project-media-radius);
   box-sizing: border-box;
@@ -225,7 +223,8 @@ figcaption {
 }
 
 /* Project gallery media: capped width on desktop, aligned with text on mobile */
-.main-content .content-image {
+.main-content .content-image,
+.main-content .cf-homepage-diagram {
   width: 100%;
   max-width: var(--project-media-max-width);
   margin-left: auto;

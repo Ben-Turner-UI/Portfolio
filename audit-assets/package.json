@@ -1,0 +1,8 @@
+{
+  "name": "benturner-audit-assets",
+  "private": true,
+  "type": "module",
+  "description": "Builds the proposed assets for the benturner.work portfolio audit",
+  "scripts": { "build": "node build-assets.mjs" },
+  "dependencies": { "sharp": ">=0.33.0" }
+}

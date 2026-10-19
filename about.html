@@ -176,10 +176,84 @@
               </section>
             </section>
 
+            <article class="personal-newsletter">
+
+                <section class="personal-entry">
+                  <h3>Brazilian Jiu-Jitsu</h3>
+                  <p>I&rsquo;ve trained BJJ for five years, typically three times a week, and martial arts in various forms since 2007. I hold a BJJ purple belt, a black belt in Japanese Jiu-Jitsu, and a green belt in Judo. Consistency on the mat beats any single good round, a point the sport drives home quickly.</p>
+                  <p>Mention a gym ache around me and I&rsquo;ll likely try to diagnose it. Five years in, I have all the confidence of a physical therapist and none of the qualifications.</p>
+                  <div class="personal-entry__media">
+                    <ul class="personal-entry__photos">
+                      <li>
+                        <button type="button" class="personal-thumb" data-lightbox-src="img/life/bjj-mats-portrait.jpg" data-lightbox-alt="Sitting on the mats after Brazilian Jiu-Jitsu" aria-label="Sitting on the mats after Brazilian Jiu-Jitsu">
+                          <img src="img/life/bjj-mats-portrait.jpg" alt="" class="personal-thumb__face">
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="personal-thumb" data-lightbox-src="img/life/bjj-group.jpg" data-lightbox-alt="Brazilian Jiu-Jitsu group on the mats" aria-label="Brazilian Jiu-Jitsu group on the mats">
+                          <img src="img/life/bjj-group.jpg" alt="">
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+                <section class="personal-entry">
+                  <h3>Travel</h3>
+                  <p>I prefer landing somewhere unfamiliar without a rigid itinerary. Recent trips include Lisbon for steep streets and Sintra, preceded by Riga. Local days out usually mean a coastal walk, a forest trail, or an evening at the IMAX.</p>
+                  <div class="personal-entry__media">
+                    <ul class="personal-entry__photos">
+                      <li>
+                        <button type="button" class="personal-thumb" data-lightbox-src="img/life/lisbon-alley.jpg" data-lightbox-alt="A cobblestone street in Lisbon at sunset" aria-label="A cobblestone street in Lisbon at sunset">
+                          <img src="img/life/lisbon-alley.jpg" alt="">
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="personal-thumb" data-lightbox-src="img/life/lisbon-pena-palace.jpg" data-lightbox-alt="Pena Palace in Sintra" aria-label="Pena Palace in Sintra">
+                          <img src="img/life/lisbon-pena-palace.jpg" alt="">
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="personal-thumb" data-lightbox-src="img/life/lisbon-viewpoint.jpg" data-lightbox-alt="At a viewpoint over Lisbon at dusk" aria-label="At a viewpoint over Lisbon at dusk">
+                          <img src="img/life/lisbon-viewpoint.jpg" alt="" class="personal-thumb__face">
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+            </article>
+
           </div>
         </div>
       </div>
     </main>
+
+    <div class="personal-lightbox" id="personal-lightbox" hidden>
+      <button type="button" class="personal-lightbox__backdrop" data-lightbox-close aria-label="Close"></button>
+      <div class="personal-lightbox__panel" role="dialog" aria-modal="true" aria-label="Photo preview">
+        <figure class="personal-lightbox__figure">
+          <div class="personal-lightbox__stage">
+            <img class="personal-lightbox__img" src="" alt="">
+          </div>
+        </figure>
+        <div class="personal-lightbox__controls">
+          <button type="button" class="personal-lightbox__nav personal-lightbox__nav--prev" data-lightbox-prev aria-label="Previous photo">
+            <span class="material-symbols-rounded personal-lightbox__nav-icon" aria-hidden="true">chevron_left</span>
+          </button>
+          <div class="personal-lightbox__meta">
+            <p class="personal-lightbox__caption"></p>
+            <p class="personal-lightbox__counter" aria-live="polite"></p>
+          </div>
+          <button type="button" class="personal-lightbox__nav personal-lightbox__nav--next" data-lightbox-next aria-label="Next photo">
+            <span class="material-symbols-rounded personal-lightbox__nav-icon" aria-hidden="true">chevron_right</span>
+          </button>
+          <button type="button" class="personal-lightbox__close" data-lightbox-close aria-label="Close">
+            <span class="material-symbols-rounded" aria-hidden="true">close</span>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="width-container">
@@ -195,5 +269,6 @@
       </div>
     </footer>
     <script src="nav.js"></script>
+    <script src="personal.js"></script>
   </body>
 </html>
