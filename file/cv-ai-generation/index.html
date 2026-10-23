@@ -64,8 +64,8 @@
       isolation: isolate;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      gap: 16px;
+      justify-content: space-between;
+      gap: 10px;
       box-sizing: border-box;
       width: 210mm;
       height: 297mm;
@@ -178,8 +178,9 @@
     }
     .cv-section > p { margin: 0 0 3px; }
     .cv-section > p:last-child { margin-bottom: 0; }
-    .cv > .cv-role__note {
-      margin: 6px 0 4px;
+    .cv > .cv-role__note,
+    .cv-section > .cv-role__note {
+      margin: 10px 0 0;
     }
     .cv-summary { margin: 0; }
     .cv-summary li, .cv li { margin: 0 0 3px; }
@@ -294,6 +295,12 @@
       padding-left: 1.15em;
       list-style: disc;
     }
+    .cv-role > .cv-role__blurb {
+      margin: 11px 0 0;
+    }
+    .cv-role > .cv-role__blurb + ul {
+      margin-top: 6px;
+    }
     .cv-role > ul {
       margin-top: 11px;
     }
@@ -336,8 +343,8 @@
     html.cv-print .cv {
       isolation: auto;
       background-color: #fff;
-      height: auto;
-      overflow: visible;
+      height: 297mm;
+      overflow: hidden;
     }
     html.cv-print .cv::before {
       position: fixed;
@@ -363,8 +370,8 @@
         border: none;
         padding: 5mm 6.5mm 4.5mm;
         background-color: #fff;
-        height: auto;
-        overflow: visible;
+        height: 297mm;
+        overflow: hidden;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -406,11 +413,11 @@
 
     <section class="cv-section">
       <h2>Summary</h2>
-      <p class="cv-summary">Product Designer with over seven years of experience driving business growth across enterprise, startup, and agency sectors. Known for bridging the gap between design and engineering, leveraging AI workflows and shipping production front-end code to accelerate feature delivery. Proven track record of delivering user-centred interfaces that resolve complex bottlenecks, scale operations, and directly boost enterprise sales.</p>
+      <p class="cv-summary">Product Designer with over seven years of experience across B2B SaaS, enterprise software and agency teams. I use research and product analytics to simplify complex workflows, including automation builders, permissions and enterprise onboarding. I work closely with product managers and engineers from discovery through delivery, contributing production UI code and using AI tools to support design and development.</p>
     </section>
 
     <section class="cv-section">
-      <h2>Experience (7+ years)</h2>
+      <h2>Selected experience</h2>
       <div class="cv-role">
         <div class="cv-role__header">
           <a class="cv-logo-link" href="https://www.perforce.com/" rel="noopener noreferrer"><img class="cv-logo" src="img/perforce.jpg" alt="Perforce"></a>
@@ -419,16 +426,17 @@
               <h3>Product Designer</h3>
               <p class="cv-role__dates">September 2025 to present</p>
             </div>
-            <p class="cv-role__org">Perforce <span class="cv-role__scope">Enterprise planning and digital asset management (DAM) software for games and media.</span></p>
+            <p class="cv-role__org">Perforce <span class="cv-role__scope">Enterprise planning and digital asset management software for games and media.</span></p>
           </div>
         </div>
+        <p class="cv-role__blurb">Lead designer for planning and DAM tools used by major studios, including Electronic Arts, Xbox Game Studios and Meta.</p>
         <ul>
-          <li><strong>Lead designer</strong> for planning and DAM tools used by major studios, including Electronic Arts, Xbox Game Studios, and Meta.</li>
-          <li><strong>Bridged engineering gaps:</strong> When front-end capacity dropped by 66%, I wrote and shipped production UI code using Claude Code. This maintained momentum, increased feature output by 25% compared with six months earlier, and halved planning meeting time per feature.</li>
-          <li><strong>AI innovation:</strong> Built custom Claude skills, MCP servers, and Figma plugins to automate UI generation and design specs. Won Best Designed at the 2026 company hackathon. As a result, I was invited into the company's high-level AI task group to develop new AI features for the design organisation.</li>
-          <li><strong>Driven enterprise sales:</strong> Rebuilt product trial onboarding, removing complex setups so prospects could easily evaluate the software. Sales representatives said it made their job easier and offered more sales opportunities.</li>
-          <li><strong>Resolved user bottlenecks:</strong> Redesigned search, navigation filters, and asset previews to fix severe friction points that previously forced users to rely on the browser back button.</li>
-          <li><strong>Shipped standout features:</strong> Designed Capacity Planning, a highly praised feature that differentiated the product in a crowded marketplace and drew in new customers.</li>
+          <li>Redesigned sales trial onboarding to remove complex setup steps and help prospects evaluate the software sooner. Sales representatives reported easier customer conversations and more opportunities to discuss the product.</li>
+          <li>Worked with my product manager to clarify feature requirements, then wrote production UI code and refined it through developer reviews.</li>
+          <li>When the front-end team shrank from six developers to two, I contributed production code and reusable specification tools to help maintain delivery. The team shipped about 25% more features in Q3 2026 than Q2, while planning meetings fell from an hour to 30 minutes per feature.</li>
+          <li>Redesigned search, navigation filters and asset previews to address usability problems that previously forced users to rely on the browser back button.</li>
+          <li>Designed Capacity Planning to help teams understand how much work they could take on.</li>
+          <li>Built Claude skills, MCP servers and Figma plugins to support design and development, including a workflow that turned feature discussions into structured specifications. This specification workflow won Best Designed at the 2026 company hackathon; at least three product teams now use it or parts of it.</li>
         </ul>
       </div>
       <div class="cv-role">
@@ -439,14 +447,16 @@
               <h3>Product Designer</h3>
               <p class="cv-role__dates">July 2024 to July 2025</p>
             </div>
-            <p class="cv-role__org">Budibase <span class="cv-role__scope">Open-source, low-code platform for internal apps, automations, and AI agents.</span></p>
+            <p class="cv-role__org">Budibase <span class="cv-role__scope">Open-source, low-code platform for internal applications, automations and AI agents.</span></p>
           </div>
         </div>
         <ul>
-          <li><strong>End-to-end ownership:</strong> Owned product design for the platform, helping design the core features that transformed the startup into a near-profitable business.</li>
-          <li><strong>UX overhaul:</strong> Redesigned the automation builder after a 25-user research study. Visualised how data entered and exited each action, reducing community complaints to zero. This redesign became the foundation for Budibase's new AI agent product line.</li>
-          <li><strong>Enterprise features:</strong> Designed complex platform capabilities including conditional branching, role-based permissions, and spreadsheet-style formula calculations.</li>
-          <li><strong>Streamlined onboarding:</strong> Redesigned the licensing system to simplify onboarding across cloud, self-hosted, and air-gapped enterprise environments.</li>
+          <li>Owned end-to-end product design for features across application building, automation and enterprise administration.</li>
+          <li>Designed and ran a paid Maze study with 25 active users, identifying problems with debugging, data visibility and guidance. Presented findings to the CEO, CMO and Head of Engineering to inform the redesign.</li>
+          <li>Worked with lead developers and the executive team to redesign the tool customers use to automate tasks. Made it easier to see what happened at each step, identify errors and fix problems.</li>
+          <li>After launch, monthly complaints and requests for help with automations on the community Discord dropped to zero, down from eight to ten. Budibase later used the redesigned tool as the foundation for its AI agents.</li>
+          <li>Designed complex enterprise features, including conditional branching, role-based permissions and spreadsheet-style formula calculations.</li>
+          <li>Redesigned licensing workflows to simplify enterprise onboarding across cloud, self-hosted and air-gapped deployments.</li>
         </ul>
       </div>
       <div class="cv-role">
@@ -461,46 +471,33 @@
           </div>
         </div>
         <ul>
-          <li><strong>Major client success:</strong> Led design for CityFibre (a major UK telecom). Redesigned their B2B portal and homepage based on extensive user research, doubling user satisfaction. This success helped win new accounts and funded 9 additional agency hires.</li>
-          <li><strong>0-to-1 product launch:</strong> Designed and launched a startup, SportsWork, from scratch across branding and product design. It successfully transitioned into an independent, profitable business.</li>
-          <li><strong>Design systems:</strong> Created and managed enterprise design systems, establishing token structures and component libraries for global clients like CityFibre and GSMA.</li>
-          <li><strong>Team leadership:</strong> Mentored junior and mid-level designers, helping scale the internal design team from 2 to 6 members.</li>
+          <li>Led CityFibre portal research with 40 users, coordinating product managers, developers and designers through interviews, usability tests and card sorting. Synthesised over 1,400 data points to guide the redesign; subsequent testing showed satisfaction rising from 4/10 to 8/10.</li>
+          <li>Used Mouseflow session recordings to identify distractions drawing visitors away from CityFibre's postcode checker. Redesigned the homepage around this key task; postcode checks increased by 90% compared with the month before launch.</li>
+          <li>Worked with a product manager, three front-end developers and a wider back-end team to deliver CityFibre's website and portal. Aligned the Figma design system with CraftCMS and Tailwind, reducing design tickets returned for incorrect implementation from 15% to 5%.</li>
+          <li>Designed SportsWork from initial concept through launch, covering branding and product design. The startup subsequently became an independent, profitable business.</li>
+          <li>Created enterprise design systems for clients including CityFibre and GSMA, and mentored junior and mid-level designers as the internal team grew from two to six.</li>
         </ul>
       </div>
-      <div class="cv-role">
-        <div class="cv-role__header">
-          <a class="cv-logo-link" href="https://www.gov.uk/" rel="noopener noreferrer"><img class="cv-logo cv-logo--nics" src="img/uk-civil-service.jpg" alt="Northern Ireland Civil Service"></a>
-          <div class="cv-role__copy">
-            <div class="cv-role__head">
-              <h3>Product Designer</h3>
-              <p class="cv-role__dates">August 2019 to July 2020</p>
-            </div>
-            <p class="cv-role__org">Northern Ireland Civil Service <span class="cv-role__scope">Public sector digital services.</span></p>
-          </div>
-        </div>
-        <ul>
-          <li><strong>Secure environments:</strong> Served as a lead designer on confidential digital products utilised by the Police Service and the Department of Justice.</li>
-          <li><strong>Public-facing platforms:</strong> Designed digital recruitment and employment experiences used across towns and cities in Northern Ireland.</li>
-          <li><strong>Recognition:</strong> Received a departmental head award for outstanding work in digital service design.</li>
-        </ul>
-      </div>
+      <p class="cv-role__note">Further experience and full career history are available on <a href="https://www.linkedin.com/in/benturnerwork">LinkedIn</a>.</p>
     </section>
 
     <section class="cv-section">
       <h2>Skills</h2>
-      <p><strong>Product &amp; UX Design:</strong> Product ownership, Interaction design, Design systems, Tokens, Typography, Visual hierarchy, Information architecture, Usability testing, Accessibility (WCAG AA), Systems thinking, Data-driven UX.</p>
-      <p><strong>Front-end:</strong> Production code, Near-production prototypes, CSS, Tailwind CSS, HTML, Git, Component-driven development.</p>
-      <p><strong>AI &amp; Workflows:</strong> Cursor, Claude Code, Claude skills, MCP servers, Figma Make, Agentic workflows, Human-in-the-loop UI, Encoding design systems for AI, AI-assisted prototyping.</p>
-      <p><strong>Tools:</strong> Figma, Maze, Jira, Local development environments.</p>
+      <p><strong>Product and UX design:</strong> Interaction design, complex workflows, information architecture, user research, usability testing, enterprise onboarding, systems thinking, accessibility (WCAG AA).</p>
+      <p><strong>Design systems and visual design:</strong> Component libraries, design tokens, typography, visual hierarchy, responsive interfaces.</p>
+      <p><strong>Analytics and research tools:</strong> PostHog, Google Analytics, Hotjar, Mouseflow, Maze, Typeform.</p>
+      <p><strong>Front-end:</strong> HTML, CSS, Tailwind CSS, Git, production UI development, coded prototypes, component-driven development.</p>
+      <p><strong>AI and workflows:</strong> Claude Code, Cursor, Claude skills, MCP servers, Figma Make, AI-assisted prototyping, encoding design systems for AI.</p>
+      <p><strong>Design and delivery tools:</strong> Figma, Jira, local development environments.</p>
     </section>
 
     <section class="cv-section">
       <h2>Education</h2>
-      <p>BDes (Hons) Interaction Design (First Class) - Ulster University (2017 to 2021)</p>
+      <p><strong>BDes (Hons) Interaction Design - First Class</strong><br>Ulster University · 2017 to 2021</p>
     </section>
     <section class="cv-section">
-      <h2>Hobbies</h2>
-      <p>Martial arts since 2007 (BJJ purple belt, Japanese Jiu-Jitsu black belt, Judo green belt), Warhammer 30k, gym, fishkeeping, karting, travel, and dogs.</p>
+      <h2>Interests</h2>
+      <p>Martial arts since 2007: BJJ purple belt, Japanese Jiu-Jitsu black belt and Judo green belt. Warhammer 30k, gym, fishkeeping, karting, travel and dogs.</p>
     </section>
   </article>
   </div>
