@@ -1,6 +1,6 @@
 /* Design tokens: type scale, spacing, case-study variables (declared on body) */
 body {
-  --content-max-width: 640px;
+  --content-max-width: 720px;
 
   /* Portfolio type scale (Source Sans 3), aligned with Adobe Spectrum body sizing */
   --type-headline-lg: 28px;
@@ -12,7 +12,7 @@ body {
   --type-heading-4: 16px;
   --type-heading-4-lh: 1.3;
   --type-big-shoulders-lh: 1.35;
-  --type-body-lg: 16px;
+  --type-body-lg: 15px;
   --type-body-lg-lh: 1.45;
   --type-component-body-lh: 1.45;
   --type-body-md: 14px;
@@ -37,7 +37,7 @@ body {
   --case-study-heading-divider: 1px solid rgba(0, 0, 0, 0.18);
   --prose-subsection-gap: 1rem;
   --prose-h3-margin-top: 1.5rem;
-  --prose-h3-margin-bottom: 0.375rem;
+  --prose-h3-margin-bottom: 0.25rem;
   --prose-h4-margin-top: 0;
   --prose-list-item-gap: 0;
   --case-study-body-size: var(--type-body-lg);
@@ -45,7 +45,7 @@ body {
   --case-study-body-gap: var(--space-2-5);
   --case-study-label-size: var(--type-body-md);
   --case-study-label-line: 1.3;
-  --case-study-stat-size: 18px;
+  --case-study-stat-size: 16px;
   --case-study-stat-line: 1.3;
   --case-study-stat-description-size: var(--type-body-lg);
   --case-study-stat-description-line: 1.3;
@@ -58,13 +58,19 @@ body {
   --project-card-grid-gap: 32px;
   --project-card-content-gap: 20px;
 
-  /* Project case-study media chrome — change these to restyle all project images/videos */
-  --project-media-radius: 8px;
-  --project-media-border-color: #D6D6D6;
-  --project-media-border: none;
-  --site-max-width: 1200px;
-  --project-media-max-width: 1200px;
-  --project-media-max-height: 720px;
+  /* Corner radius scale — site chrome only (diagrams may use smaller values) */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Project media chrome — match homepage project cards */
+  --project-media-radius: var(--radius-lg);
+  --project-media-border-color: var(--ui-1000, #D6D6D6);
+  --project-media-border: 1px solid var(--ui-1000, #D6D6D6);
+  --site-max-width: 720px;
+  --project-media-max-width: 720px;
+  --project-media-max-height: 450px;
 
   /* Tablet device chrome for in-product mockups */
   --project-device-radius: 18px;
@@ -100,11 +106,12 @@ body {
   padding-bottom: 0;
 }
 
-/* Project case studies — prose/header 600 (≈75ch); videos, charts, tables 1000 */
+/* Project case studies / about — one 720px column for site, prose, and media */
 body.case-study,
 body.about {
-  --site-max-width: 1000px;
-  --content-max-width: 600px;
-  --project-media-max-width: 1000px;
+  --site-max-width: 720px;
+  --content-max-width: 720px;
+  --heading-max-width: 720px;
+  --project-media-max-width: 720px;
   --project-device-max-width: 680px;
 }
