@@ -13,19 +13,21 @@
     transform: scale(1.04);
   }
 
-  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):hover {
+  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):not(.cs-lightbox-trigger):not(.cs-lightbox__backdrop):not(.cs-lightbox__nav):not(.cs-lightbox__close):hover {
     transform: translateY(-1px);
   }
 
-  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):active {
+  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):not(.cs-lightbox-trigger):not(.cs-lightbox__backdrop):not(.cs-lightbox__nav):not(.cs-lightbox__close):active {
     transform: translateY(0) scale(0.98);
   }
 
+  .home-header-content .home-contact__link:hover,
   .home-header-content-text .home-contact__link:hover,
   .about-header .home-contact__link:hover {
     transform: translateY(-1px);
   }
 
+  .home-header-content .home-contact__link:active,
   .home-header-content-text .home-contact__link:active,
   .about-header .home-contact__link:active {
     transform: translateY(0);

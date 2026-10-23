@@ -10,7 +10,7 @@ button {
   text-align: center;
   font-weight: 700;
   color: var(--ui-0, #FFF);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--ui-1000, #000);
   transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
@@ -38,15 +38,16 @@ button {
 
 .next-project-card {
   display: flex;
-  align-items: stretch;
-  gap: 0;
-  min-height: 80px;
-  padding: 0;
+  align-items: center;
+  gap: 16px;
+  min-height: 0;
+  padding: 12px 14px;
   border: 1px solid var(--ui-1000, #D6D6D6);
-  border-radius: 8px;
+  border-radius: var(--radius-lg);
   background: var(--ui-0, #FFF);
   overflow: hidden;
   isolation: isolate;
+  box-sizing: border-box;
 }
 
 .next-project-link:focus-visible .next-project-card {
@@ -60,13 +61,16 @@ button {
   width: 148px;
   min-width: 148px;
   max-width: 148px;
-  align-self: stretch;
-  min-height: 100%;
+  align-self: center;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center center;
-  background-color: #f0f0f0;
+  background-color: #ececef;
   position: relative;
   overflow: hidden;
+  border: none;
+  border-radius: var(--radius-md);
 }
 
 .next-project-card__content {
@@ -77,8 +81,8 @@ button {
   justify-content: center;
   align-items: flex-start;
   gap: 4px;
-  align-self: stretch;
-  padding: 12px 20px;
+  align-self: center;
+  padding: 0;
 }
 
 .next-project-card__title {
@@ -101,7 +105,7 @@ button {
   color: rgba(0, 0, 0, 0.72);
 }
 
-button:hover:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop) {
+button:hover:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.cs-lightbox-trigger):not(.cs-lightbox__backdrop):not(.cs-lightbox__close):not(.cs-lightbox__nav) {
   background: var(--industrial-orange, #474747);
 }
 
@@ -109,7 +113,7 @@ button a {
   color: white;
 }
 
-button img {
+button:not(.cs-lightbox-trigger) img {
   width: 16px;
   height: 16px;
   top: 0;

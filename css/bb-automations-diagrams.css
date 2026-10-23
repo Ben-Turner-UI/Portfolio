@@ -68,6 +68,12 @@
   border-radius: var(--project-media-radius);
 }
 
+.cf-homepage-diagram {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
 body.case-study .project-paragraph.bb-research-section {
   width: 100%;
   max-width: var(--project-media-max-width);
@@ -395,8 +401,7 @@ body.case-study .bb-research-section .rf-foot {
 
 @media (min-width: 769px) {
   .bb-complaints-chart,
-  .bb-shipped-diagram,
-  .cf-homepage-diagram {
+  .bb-shipped-diagram {
     padding: 32px;
   }
 }

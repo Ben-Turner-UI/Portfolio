@@ -5,24 +5,25 @@
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="I ran a paid study with 25 users, took the findings to the CEO, CMO and Head of Engineering, and redesigned the automation builder so every step shows its data and errors. Complaints dropped to zero, and Budibase later built its AI agents feature on top of it.">
+    <meta name="description" content="Budibase users struggled to see what each workflow step received, returned or failed to process. I ran a paid study with 25 users and redesigned the builder around debugging. Negative Discord feedback fell from around eight to ten reports a month to none, and the builder later became the foundation for Budibase&rsquo;s AI agents.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Automation complaints from 8 to 10 a month to zero | Ben Turner">
-    <meta property="og:description" content="I ran a paid study with 25 users, took the findings to the CEO, CMO and Head of Engineering, and redesigned the automation builder so every step shows its data and errors. Complaints dropped to zero, and Budibase later built its AI agents feature on top of it.">
+    <meta property="og:title" content="Making workflows easier to debug | Ben Turner">
+    <meta property="og:description" content="Budibase users struggled to see what each workflow step received, returned or failed to process. I ran a paid study with 25 users and redesigned the builder around debugging. Negative Discord feedback fell from around eight to ten reports a month to none, and the builder later became the foundation for Budibase&rsquo;s AI agents.">
     <meta property="og:image" content="https://benturner.work/img/thumbnail/bb-automations-thumbnail.png">
     <meta property="og:url" content="https://benturner.work/budibase-automations.html">
     <meta name="twitter:card" content="summary_large_image">
     <style>html,body{background:#fff;color-scheme:only light}</style>
-    <title>Automation complaints from 8 to 10 a month to zero | Ben Turner</title>
+    <title>Making workflows easier to debug | Ben Turner</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,ads_click,arrow_forward,arrow_upward,chevron_left,chevron_right,close,dock_to_right,download,drag_indicator,emoji_events,grid_view,groups,home,lock,login,mail,open_in_new,palette,person,route,search,settings,smart_toy,swap_horiz,trending_up,warning,widgets,zoom_in&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,ads_click,arrow_forward,arrow_upward,chat_bubble,chevron_left,chevron_right,close,dock_to_right,download,drag_indicator,emoji_events,grid_view,group,groups,home,lock,login,mail,open_in_new,palette,person,route,search,settings,smart_toy,swap_horiz,trending_up,warning,widgets,zoom_in&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,chat_bubble,group&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-96x96.png?v=2026-10-23n" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2026-10-23n" />
+    <link rel="shortcut icon" href="favicon.ico?v=2026-10-23n" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2026-10-23n" />
     <meta name="theme-color" content="#FFFFFF">
     <meta name="msapplication-navbutton-color" content="#FFFFFF">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -57,27 +58,25 @@
           <div class="project-header-title-block">
             <div class="project-header-stack">
               <p class="project-header-meta">Budibase, 2025</p>
-              <h1>Automation complaints from 8 to 10 a month to zero</h1>
-              <p class="project-header-description">I ran a paid study with 25 users, took the findings to the CEO, CMO and Head of Engineering, and redesigned the automation builder so every step shows its data and errors. Complaints dropped to zero, and Budibase later built its AI agents feature on top of it.</p>
-              <div class="project-key-stats">
-                <ul class="cs-stats cs-stats--bb" role="list">
-                  <li class="cs-stat" role="listitem">
-                    <div class="cs-stat__viz cs-viz-cols" aria-hidden="true"><span style="height:22px"></span><span class="cs-viz-cols__flat"></span></div>
-                    <p class="cs-stat__num">10 <span class="material-symbols-rounded cs-stat__arrow" aria-hidden="true">arrow_forward</span> 0</p>
-                    <p class="cs-stat__lbl">User complaints a month on the community Discord</p>
-                  </li>
-                  <li class="cs-stat" role="listitem">
-                    <div class="cs-stat__viz cs-viz-grid25" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-                    <p class="cs-stat__num">25</p>
-                    <p class="cs-stat__lbl">Active users in the paid research study that shaped the redesign</p>
-                  </li>
-                  <li class="cs-stat" role="listitem">
-                    <div class="cs-stat__badge cs-stat__badge--neutral"><span class="material-symbols-rounded" aria-hidden="true">smart_toy</span>Next product</div>
-                    <p class="cs-stat__num">Agents</p>
-                    <p class="cs-stat__lbl">Budibase transformed into an AI focused workflows platform using this work as a launchpad for future designs</p>
-                  </li>
-                </ul>
-              </div>
+              <h1>Making workflows easier to debug</h1>
+              <p class="project-header-description">Budibase is an open-source, low-code platform for building internal tools and business applications. Teams use it to create forms, data views and automated workflows without relying on a full engineering build for every request.</p>
+              <ul class="cs-highlights" role="list">
+                <li class="cs-highlight" role="listitem">
+                  <span class="material-symbols-outlined cs-highlight__icon" aria-hidden="true">chat_bubble</span>
+                  <p class="cs-highlight__title">Workflow complaints fell to zero</p>
+                  <p class="cs-highlight__desc">Previously 8&ndash;10 negative Discord reports a month; none observed after launch.</p>
+                </li>
+                <li class="cs-highlight" role="listitem">
+                  <span class="material-symbols-outlined cs-highlight__icon" aria-hidden="true">group</span>
+                  <p class="cs-highlight__title">25 research participants</p>
+                  <p class="cs-highlight__desc">Paid user research helped set the redesign priorities.</p>
+                </li>
+                <li class="cs-highlight" role="listitem">
+                  <span class="material-symbols-outlined cs-highlight__icon" aria-hidden="true">account_tree</span>
+                  <p class="cs-highlight__title">Foundation for AI agents</p>
+                  <p class="cs-highlight__desc">Budibase later built its AI agents on the redesigned builder.</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -90,29 +89,37 @@
           <div class="main-content">
             <div class="project-details_text">
 
+              <div class="content-image">
+                <video class="image-with-caption" src="img/project-image/bb-automations/bb-automations-2.mp4" data-autoplay loop muted playsinline preload="none">
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>Selecting a step reveals its settings, data and errors beside the workflow.</figcaption>
+              </div>
+
               <div class="project-paragraph project-client-description">
                 <h2>The problem</h2>
-                <p>Budibase is an open-source low-code platform for internal apps like customer portals, admin panels and tools. Customers can self-host it and keep their data on their own infrastructure. As the in-house Product Designer I led the redesign of the automation builder.</p>
-                <p>The builder worked, but you could not see your data. People could not tell what data was flowing into or out of a step, or even what they had selected in the tab they were in. Debugging was guesswork, errors did not explain themselves, and complaints kept landing in the community Discord, eight to ten a month on automations alone.</p>
+                <p>Budibase&rsquo;s workflow builder, called Automations, lets users connect a trigger to a series of actions. Users could build workflows, but struggled to see what each step received, returned or failed to process.</p>
+                <p>Recurring community feedback pointed to this problem. I ran a paid research study to understand it alongside other issues in the builder and establish where a redesign would have the most value.</p>
               </div>
 
               <div class="content-image">
                 <img src="img/project-image/bb-automations/builder-before.png" alt="Original Budibase automation builder" class="image-with-caption">
-                <figcaption>The old workflow builder*</figcaption>
+                <figcaption>The original builder, before step-level data and error inspection were brought into the sidebar.</figcaption>
               </div>
 
               <div class="project-paragraph">
                 <h2>Role and team</h2>
-                <p>I designed and ran a paid Maze study with 25 active users and presented the findings to the CEO, CMO and Head of Engineering. I then designed the redesign and helped build it alongside the executive team and the lead developers.</p>
+                <p>I owned the research and design. I planned and ran the Maze study, analysed the responses and presented the findings to the CEO, CMO and Head of Engineering.</p>
+                <p>I worked with the Head of Product to turn those findings into a direction for the builder, then developed and refined the interactions with developers through implementation.</p>
               </div>
 
               <section class="project-paragraph bb-research-section" aria-labelledby="bb-research-design-title">
-                <h2 id="bb-research-design-title">Research findings</h2>
+                <h2 id="bb-research-design-title">User research</h2>
 
                 <div class="rf">
                   <div class="rf-card">
-                    <h3 class="rf-title">What users liked most vs disliked most about Automations</h3>
-                    <p class="rf-sub">Multiple choice, select all that apply. Based on 25 users.</p>
+                    <h3 class="rf-title">Debugging was the biggest frustration</h3>
+                    <p class="rf-sub">The study asked users what they liked and disliked about the existing builder, allowing them to select multiple answers.</p>
 
                     <div class="rf-legend">
                       <span><i class="liked"></i>Liked most</span>
@@ -181,11 +188,13 @@
                       </div>
                     </div>
 
+                    <p class="rf-sub">Debugging stood out as the most disliked aspect. Users were more positive about the builder&rsquo;s appearance and functionality. The findings pointed towards improving how users understood a workflow once it had been built.</p>
+
                   </div>
 
                   <div class="rf-card">
-                    <h3 class="rf-title">Summary of user pain points</h3>
-                    <p class="rf-sub">Themes grouped from the open-text answers on the hardest part of building an automation, feature requests and other comments.</p>
+                    <h3 class="rf-title">What users needed help with</h3>
+                    <p class="rf-sub">I grouped the open-text responses about difficult tasks, feature requests and other feedback into these themes.</p>
 
                     <div class="rf-table-frame">
                       <div class="rf-scroll">
@@ -193,40 +202,40 @@
                           <thead>
                             <tr>
                               <th>Theme</th>
-                              <th>What users told us</th>
-                              <th>What they asked for</th>
-                              <th>Users</th>
+                              <th>What users struggled with</th>
+                              <th>What they wanted</th>
+                              <th>Users mentioning the theme</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr class="top">
                               <td class="rf-theme">Testing and debugging</td>
-                              <td>Users could not easily check what went into a step or what came out. Test mode gave little information about what went wrong, step outputs were hard to decipher, and JavaScript steps could not be tested.</td>
-                              <td>Better error information, easier viewing of step outputs, a run tree, console output and a test sandbox.</td>
+                              <td>Seeing step inputs and outputs, understanding failures and testing JavaScript steps.</td>
+                              <td>Clearer errors, easier inspection of outputs, console output and better testing tools.</td>
                               <td><span class="rf-count">10</span></td>
                             </tr>
                             <tr>
                               <td class="rf-theme">Getting started and guidance</td>
-                              <td>Choosing a trigger and knowing what a field value meant was difficult. Some could not find a detailed guide or help with OAuth, or were unsure where to start.</td>
-                              <td>Hints in the builder, a written step-by-step guide, a beginner video, and more templates and example use cases.</td>
+                              <td>Choosing triggers, understanding field values and finding setup guidance.</td>
+                              <td>Hints, step-by-step guidance, videos, templates and examples.</td>
                               <td><span class="rf-count">8</span></td>
                             </tr>
                             <tr>
-                              <td class="rf-theme">Loops and branching limits</td>
-                              <td>Loops mixed up step results, and branching only supported one path at a time. This forced separate automations for create and update.</td>
-                              <td>Branching as its own step that works inside loops, plus more complex looping and conditions.</td>
+                              <td class="rf-theme">Loops and branching</td>
+                              <td>Following results inside loops and working around branching limits.</td>
+                              <td>More flexible branching and conditions, including inside loops.</td>
                               <td><span class="rf-count">3</span></td>
                             </tr>
                             <tr>
                               <td class="rf-theme">Limited building blocks</td>
-                              <td>Blocks were too limited for some jobs, leading to workarounds and external scripts. Even deleting a row needed extra queries and display-column values.</td>
+                              <td>Completing tasks without workarounds or external scripts.</td>
                               <td>A JavaScript editor with access to the platform&rsquo;s environment.</td>
                               <td><span class="rf-count">2</span></td>
                             </tr>
                             <tr>
                               <td class="rf-theme">Complex data and technical knowledge</td>
-                              <td>Wrapping and unwrapping JSON was hard, and users without a programming background found errors difficult to understand.</td>
-                              <td>Not specifically requested.</td>
+                              <td>Handling JSON and interpreting errors without a programming background.</td>
+                              <td>No specific solution requested.</td>
                               <td><span class="rf-count">2</span></td>
                             </tr>
                           </tbody>
@@ -234,16 +243,26 @@
                       </div>
                     </div>
 
-                    <p class="rf-foot">Themes are a manual grouping of the open-text responses. A user can appear in more than one theme, so counts do not add up to the number of respondents.</p>
                   </div>
                 </div>
               </section>
 
+              <div class="project-paragraph">
+                <h2>Key decisions</h2>
+                <h3>Prioritise understanding and diagnosing failures.</h3>
+                <p>The research raised requests for guidance, branching and additional building blocks. I prioritised debugging because it stood out in both the study and recurring community feedback.</p>
+                <p>I took that evidence to the executive team to make the case for improving access to step data and errors.</p>
+                <h3>Keep debugging detail beside the workflow.</h3>
+                <p>I reviewed approaches in products including Stack AI, n8n and Airtable. One option was to expand steps on the canvas to show their data and errors.</p>
+                <p>Large amounts of detail would take space away from the overall flow. I chose to show the selected step&rsquo;s inputs, outputs and errors in the right sidebar. Users could inspect one step at a time while keeping the workflow visible.</p>
+                <h3>Give each step a consistent structure.</h3>
+                <p>I worked with the Head of Product on a reusable step structure that brought configuration, data and errors into a consistent experience. The same structure could support future workflow features.</p>
+              </div>
+
               <div class="project-paragraph project-paragraph--media">
                 <div class="project-paragraph__prose">
                   <h2>Design changes</h2>
-                  <p>Here are the design changes I made based on the user research above. They directly address the biggest concern: a lack of testing and debugging for the workflows.</p>
-                </div>
+                  </div>
                 <div class="rf">
                   <div class="rf-table-frame">
                     <div class="rf-scroll">
@@ -258,23 +277,23 @@
                         <tbody>
                           <tr>
                             <td class="rf-theme">Data In / Data Out</td>
-                            <td>I added inline tabs to show the data flowing into and out of each step of a workflow.</td>
-                            <td>People can see what a step received and returned, and trace a wrong value back to where it started.</td>
+                            <td>Brought the selected step&rsquo;s inputs and outputs into the right sidebar.</td>
+                            <td>Users can follow how a step handles data.</td>
                           </tr>
                           <tr>
-                            <td class="rf-theme">Inline Error Logging</td>
-                            <td>I added a dedicated tab with clear error messages for any failed step.</td>
-                            <td>A failed step says what broke, so people can fix it without asking on Discord.</td>
+                            <td class="rf-theme">Error inspection</td>
+                            <td>Added an Errors view for the selected step.</td>
+                            <td>Users can inspect failure details beside the workflow.</td>
                           </tr>
                           <tr>
-                            <td class="rf-theme">New Sidebar Panel</td>
-                            <td>I moved workflow controls out of the main canvas and into a dedicated, contextual sidebar.</td>
-                            <td>The canvas shows the flow; the selected step&rsquo;s settings live in one place.</td>
+                            <td class="rf-theme">Contextual sidebar</td>
+                            <td>Brought configuration and debugging information into the same area.</td>
+                            <td>Users can move between a step&rsquo;s setup and its results in a consistent place.</td>
                           </tr>
                           <tr>
-                            <td class="rf-theme">Enhanced Canvas &amp; UI</td>
-                            <td>I added zoom and pan, and made the layout more compact.</td>
-                            <td>Large workflows fit on screen and stay readable.</td>
+                            <td class="rf-theme">Compact canvas</td>
+                            <td>Made the layout more compact and added zoom and pan.</td>
+                            <td>Users can navigate larger workflows with more of the flow in view.</td>
                           </tr>
                         </tbody>
                       </table>
@@ -283,31 +302,52 @@
                 </div>
               </div>
 
-              <div class="content-image">
-                <video class="image-with-caption" src="img/project-image/bb-automations/bb-automations-2.mp4" data-autoplay loop muted playsinline preload="none">
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption>The sidebar holds the selected step&rsquo;s settings; inline tabs show the data and any errors for that step.</figcaption>
-              </div>
-
-              <div class="project-paragraph">
-                <h2>Impact</h2>
-                <p>Before launch, automations drew eight to ten complaints and feedback requests a month on the Budibase Discord. After I shipped the redesign, that dropped to zero. Clearer errors meant fewer people needed help in the first place.</p>
-                <p>Automations are what Budibase called workflows before AI agents existed, and the redesigned builder became the foundation of its next product. Budibase&rsquo;s agents feature is built directly on automations. An agent can take a new email, classify it and open a Jira ticket for the right team. When a step fails, the same structure shows what went in, what came out and what broke, then lets a person confirm the next action. Budibase now positions itself as an AI workflow toolkit.</p>
-              </div>
-
               <div class="project-paragraph">
                 <h2>How I used AI</h2>
-                <p>I used ChatGPT on the Pro plan, the only AI tool we had available at the time. We did not have Claude Code, Codex or Cursor.</p>
+                <p>I used ChatGPT to help organise the research findings and explore recommendations for the executive proposal. I checked its analysis against the responses and worked with the Head of Product to decide the final direction.</p>
+              </div>
+
+              <div class="project-paragraph project-paragraph--media">
+                <div class="project-paragraph__prose">
+                  <h2>Impact</h2>
+                </div>
+                <div class="rf">
+                  <div class="rf-table-frame">
+                    <div class="rf-scroll">
+                      <table class="rf-table">
+                        <thead>
+                          <tr>
+                            <th>Outcome</th>
+                            <th>Result</th>
+                            <th>Detail</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="rf-theme">Discord feedback</td>
+                            <td>Around 8&ndash;10 reports a month to none</td>
+                            <td>Negative workflow feedback during my post-launch observation period.</td>
+                          </tr>
+                          <tr>
+                            <td class="rf-theme">AI agents</td>
+                            <td>Became the foundation for Budibase&rsquo;s AI agents</td>
+                            <td>The step structure supported work beyond the debugging problem that prompted the redesign.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="project-paragraph">
-                <h2>What I would&rsquo;ve done differently</h2>
-                <p>I would test the design after launch, to check customers were satisfied and to find further improvements. We assumed from the drop in complaints that we had done a good job. For a feature that ended up changing the direction of the company, I would have liked to have tested it but other design and research priorities came up.</p>
+                <h2>What I would have done differently</h2>
+                <p>I would have tested the redesigned builder with users after launch.</p>
+                <p>The decline in negative feedback did not tell us how quickly people diagnosed errors or where they still struggled. A follow-up study would have helped answer those questions. Other startup priorities took over before we completed that work.</p>
               </div>
 
               <section class="testimonials">
-                <h3>Testimonial from someone I worked with at the time</h3>
+                <h3>Testimonial</h3>
                 <div class="testimonial-grid">
                   <div class="testimonial-card testimonial-card--wide">
                     <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
@@ -333,10 +373,10 @@
               <div class="button-group">
                 <a class="next-project-link" href="cityfibre.html">
                   <div class="next-project-card">
-                    <img class="next-project-card__thumb" src="img/thumbnail/rebrand-thumbnail.jpg?v=2026-10-13" alt="" loading="lazy" decoding="async">
+                    <img class="next-project-card__thumb" src="img/thumbnail/rebrand-thumbnail.jpg?v=2026-10-23k" alt="" loading="lazy" decoding="async">
                     <div class="next-project-card__content">
-                      <p class="next-project-card__title">Portal satisfaction doubled and postcode checks rose 90%</p>
-                      <p class="next-project-card__desc">Lead designer on a UK fibre provider&rsquo;s website and the B2B portal used by Vodafone, TalkTalk and Zen.</p>
+                      <p class="next-project-card__title">90% more postcode checks after a homepage redesign</p>
+                      <p class="next-project-card__desc">I adapted CityFibre&rsquo;s new brand across the marketing website and B2B portal, with a focus on making the homepage postcode checker easier to find. Total checks rose 90% compared with the month before launch.</p>
                     </div>
                   </div>
                 </a>

@@ -5,25 +5,30 @@
   flex-direction: column;
   gap: var(--case-study-content-section-gap);
   width: 100%;
-  max-width: var(--content-max-width);
-  margin-left: auto;
-  margin-right: auto;
+  max-width: var(--project-media-max-width);
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
 }
 
 body.about .personal-newsletter,
 body.about .about-cv,
 body.about .main-content .testimonials {
   width: 100%;
-  max-width: var(--content-max-width);
-  margin-left: auto;
-  margin-right: auto;
+  max-width: var(--project-media-max-width);
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
 }
 
 body.about .main-content .testimonials {
   margin-bottom: 0;
 }
 
+body.about .testimonials h2,
 body.about .testimonials h3 {
+  width: 100%;
+  max-width: none;
   margin: 0 0 var(--case-study-h2-bottom-margin);
   padding-bottom: var(--case-study-heading-divider-padding);
   border-bottom: var(--case-study-heading-divider);
@@ -34,12 +39,39 @@ body.about .testimonials h3 {
   letter-spacing: normal;
   color: #000;
   text-transform: none;
+  text-align: left;
 }
 
 body.about .project-header .header-content {
-  max-width: var(--content-max-width);
-  margin-left: auto;
+  max-width: var(--project-media-max-width);
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+body.about .project-header-title-block {
+  width: 100%;
+  align-items: flex-start;
+}
+
+body.about .project-header-title-block h1 {
+  width: 100%;
+  max-width: var(--heading-max-width, 75ch);
+  margin-left: 0;
   margin-right: auto;
+  text-align: left;
+}
+
+body.about .project-summary {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+body.about .project-summary p {
+  max-width: var(--content-max-width);
 }
 
 .personal-entry {
@@ -53,6 +85,8 @@ body.about .project-header .header-content {
 }
 
 .personal-entry h2 {
+  width: 100%;
+  max-width: none;
   margin: 0 0 var(--case-study-h2-bottom-margin);
   padding-bottom: var(--case-study-heading-divider-padding);
   border-bottom: var(--case-study-heading-divider);
@@ -63,6 +97,7 @@ body.about .project-header .header-content {
   color: #000;
   text-transform: none;
   letter-spacing: normal;
+  text-align: left;
 }
 
 .personal-entry > p {
@@ -70,7 +105,9 @@ body.about .project-header .header-content {
   font-size: var(--case-study-body-size);
   line-height: var(--case-study-body-line);
   color: #000;
-  max-width: none;
+  max-width: var(--content-max-width);
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .personal-entry > :last-child {
@@ -118,10 +155,10 @@ body.about .project-header .header-content {
   min-height: 160px;
   aspect-ratio: 4 / 3;
   padding: 0;
-  border: 1px solid #D6D6D6;
-  border-radius: 8px;
+  border: var(--project-media-border, 1px solid #D6D6D6);
+  border-radius: var(--project-media-radius, 12px);
   overflow: hidden;
-  background: #f5f5f5;
+  background: transparent;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
@@ -192,7 +229,7 @@ body.personal-lightbox-open {
   padding: 0;
   background: rgba(0, 0, 0, 0.88);
   border-radius: 0;
-  cursor: default;
+  cursor: pointer;
 }
 
 .personal-lightbox button.personal-lightbox__backdrop:hover,
@@ -233,7 +270,7 @@ body.personal-lightbox-open {
   justify-content: center;
   max-width: 100%;
   line-height: 0;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .personal-lightbox__img {
@@ -242,8 +279,10 @@ body.personal-lightbox-open {
   max-height: calc(100vh - 96px);
   width: auto;
   height: auto;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   background: #111;
+  pointer-events: auto;
+  cursor: default;
 }
 
 .personal-lightbox__controls {
@@ -254,6 +293,11 @@ body.personal-lightbox-open {
   align-items: center;
   justify-content: space-between;
   pointer-events: none;
+}
+
+.personal-lightbox__nav,
+.personal-lightbox button.personal-lightbox__nav {
+  display: none !important;
 }
 
 .personal-lightbox__controls .personal-lightbox__nav,
@@ -272,7 +316,7 @@ body.personal-lightbox-open {
   max-width: min(92%, 22rem);
   margin: 0;
   padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: rgba(71, 71, 71, 0.92);
   color: #fff;
   pointer-events: none;
@@ -328,7 +372,7 @@ body.personal-lightbox-open {
   justify-content: center;
   padding: 0;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: rgba(71, 71, 71, 0.92);
   color: #fff;
   font-family: 'Big Shoulders', sans-serif;
@@ -592,7 +636,7 @@ body.personal-lightbox-open {
     min-height: 44px;
     padding: 0;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     background: rgba(71, 71, 71, 0.92);
     color: #fff;
     cursor: pointer;
@@ -643,12 +687,12 @@ body.personal-lightbox-open {
   padding: 0;
 }
 
-.about-cv__section h3 {
+.about-cv__section h2 {
   margin: 0;
   padding-bottom: var(--case-study-heading-divider-padding);
   border-bottom: var(--case-study-heading-divider);
   font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--type-heading-3);
+  font-size: var(--type-heading-2);
   font-weight: 600;
   line-height: var(--case-study-heading-line);
   color: #000;
@@ -690,12 +734,12 @@ body.personal-lightbox-open {
   margin: 0 0 var(--space-1);
 }
 
-.about-cv__role-head h4 {
+.about-cv__role-head h3 {
   margin: 0;
   font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--type-heading-4);
+  font-size: var(--type-heading-3);
   font-weight: 600;
-  line-height: var(--type-heading-4-lh);
+  line-height: var(--type-heading-3-lh);
   color: #000;
 }
 

@@ -15,6 +15,10 @@
     if (!videos.length) return;
 
     function start(video) {
+      try {
+        video.muted = true;
+        video.playsInline = true;
+      } catch (err) {}
       var play = video.play();
       if (play && play.catch) play.catch(function () {});
     }
@@ -37,9 +41,24 @@
     });
   }
 
+  function loadCaseStudyLightbox() {
+    if (!document.body.classList.contains('case-study')) return;
+    if (document.querySelector('script[data-cs-lightbox]')) return;
+    var script = document.createElement('script');
+    var navScript = document.querySelector('script[src*="nav.js"]');
+    var base = '';
+    if (navScript && navScript.src) {
+      base = navScript.src.replace(/nav\.js(?:\?.*)?$/, '');
+    }
+    script.src = base + 'case-study-lightbox.js';
+    script.setAttribute('data-cs-lightbox', 'true');
+    document.body.appendChild(script);
+  }
+
   function onReady() {
     updateNavOffset();
     playVisibleVideos();
+    loadCaseStudyLightbox();
   }
 
   if (document.readyState === 'loading') {

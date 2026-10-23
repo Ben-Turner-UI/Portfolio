@@ -40,14 +40,15 @@ header.project-header::after {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 120px;
+  height: 100px;
   pointer-events: none;
   z-index: 0;
-  background-image: radial-gradient(circle, rgba(255, 74, 0, 0.22) 0.6px, transparent 0.6px);
+  background-image: radial-gradient(circle, rgba(255, 74, 0, 0.14) 0.6px, transparent 0.6px);
   background-size: 4px 4px;
   background-position: center bottom;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
-  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.35) 35%, #000 100%);
+  /* Keep dots near the bottom edge; fade out behind header text/highlights */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, transparent 55%, rgba(0, 0, 0, 0.25) 78%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, transparent 55%, rgba(0, 0, 0, 0.25) 78%, #000 100%);
 }
 
 header > * {
@@ -69,8 +70,8 @@ header.home {
 header.project-header:not(.about-header) {
   align-items: stretch;
   border-top: none;
-  margin-bottom: var(--case-study-header-content-gap);
-  padding-top: 32px;
+  margin-bottom: 48px;
+  padding-top: 48px;
   padding-bottom: 48px;
   background: linear-gradient(180deg, #fff 0%, #eeedea 100%);
 }
@@ -93,7 +94,9 @@ header.project-header.about-header {
 }
 
 header.project-header.about-header {
-  margin-bottom: var(--case-study-content-section-gap);
+  margin-bottom: 48px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .project-header-title-block {
@@ -271,6 +274,18 @@ header.project-header.about-header {
   margin: var(--prose-h3-margin-top) 0 var(--prose-h3-margin-bottom);
 }
 
+.project-paragraph > h3,
+.project-paragraph-list-item > h3 {
+  margin: var(--prose-h3-margin-top) 0 var(--prose-h3-margin-bottom);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--type-heading-3);
+  font-weight: 600;
+  line-height: var(--type-heading-3-lh);
+  color: #000;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
 .project-paragraph h4,
 .project-paragraph-list-item h4 {
   margin: var(--prose-h4-margin-top) 0 var(--prose-h3-margin-bottom);
@@ -315,7 +330,7 @@ header.project-header.about-header {
 .portrait {
   width: 140px;
   height: 140px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   object-fit: cover;
 }
 
@@ -326,11 +341,21 @@ header.project-header.about-header {
 .home-header-content {
   max-width: var(--site-max-width);
   width: 100%;
-  gap: 48px;
+  gap: 20px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
+  text-align: left;
+}
+
+.home-header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: none;
 }
 
 .home-header-content-text {
@@ -339,29 +364,34 @@ header.project-header.about-header {
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--space-1);
-  max-width: 800px;
+  width: 100%;
+  max-width: none;
   text-align: left;
 }
 
 .home-header-content-text h1,
 .home-header-content-text p {
   margin: 0;
+  max-width: none;
+  text-wrap: balance;
 }
 
 .home-header-content-text p {
   font-size: var(--type-body-lg);
   line-height: var(--type-body-lg-lh);
-  max-width: 70ch;
 }
 
 .home-contact {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
-  margin-top: 12px;
+  margin-top: 0;
 }
 
+.home-header-content .home-contact__link,
 .home-header-content-text .home-contact__link,
 .about-header .home-contact__link {
   display: inline-flex;
@@ -376,10 +406,11 @@ header.project-header.about-header {
   text-decoration: none;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
+  border-radius: var(--radius-md);
   transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+.home-header-content .home-contact__link .material-symbols-rounded,
 .home-header-content-text .home-contact__link .material-symbols-rounded,
 .about-header .home-contact__link .material-symbols-rounded {
   font-size: 16px;
@@ -388,6 +419,7 @@ header.project-header.about-header {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
 }
 
+.home-header-content .home-contact__link:hover,
 .home-header-content-text .home-contact__link:hover,
 .about-header .home-contact__link:hover {
   color: #000;
@@ -400,9 +432,9 @@ header.project-header.about-header {
 
 .home .header-content {
   display: flex;
-  flex-direction: row;
-  gap: 96px;
-  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
 }

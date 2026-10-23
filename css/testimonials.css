@@ -36,7 +36,7 @@
   gap: 0;
   padding: 32px;
   border: 1px solid #D6D6D6;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   background: #fff;
   color: #111;
   box-sizing: border-box;

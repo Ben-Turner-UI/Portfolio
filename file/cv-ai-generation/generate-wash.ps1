@@ -83,10 +83,12 @@ public static class CvWashGenerator {
           cov = 1.0 - u * u * (3 - 2 * u);
         }
         double a = dotOpacity * mask * cov;
+        // No dither at the top of the band — JPEG + dither made a dark seam on the sheet.
+        double d = dither * washMask;
 
-        double r = br * (1.0 - a) + 255 * a + dither;
-        double g = bg * (1.0 - a) + 74 * a + dither;
-        double b = bb * (1.0 - a) + 0 * a + dither;
+        double r = br * (1.0 - a) + 255 * a + d;
+        double g = bg * (1.0 - a) + 74 * a + d;
+        double b = bb * (1.0 - a) + 0 * a + d;
 
         int i = row + x * 3;
         bytes[i] = (byte)Math.Max(0, Math.Min(255, b + 0.5));
@@ -104,7 +106,13 @@ public static class CvWashGenerator {
       g.PixelOffsetMode = PixelOffsetMode.HighQuality;
       g.SmoothingMode = SmoothingMode.HighQuality;
       g.CompositingQuality = CompositingQuality.HighQuality;
+      g.Clear(Color.White);
       g.DrawImage(src, 0, 0, w, h);
+      // Pure white cap so the wash edge never prints as a hairline.
+      int cap = Math.Max(3, h / 80);
+      using (var brush = new SolidBrush(Color.White)) {
+        g.FillRectangle(brush, 0, 0, w, cap);
+      }
     }
     src.Dispose();
 

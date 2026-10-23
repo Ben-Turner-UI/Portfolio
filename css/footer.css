@@ -47,7 +47,7 @@ footer .contact-links {
 .contact-links p img {
   margin-right: 0;
   flex-shrink: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 .footer-text-content p {
