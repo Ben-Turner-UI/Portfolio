@@ -140,15 +140,6 @@
   box-sizing: border-box;
 }
 
-.cs-highlights-label {
-  margin: 0 0 12px;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--case-study-body-size);
-  font-weight: 600;
-  line-height: var(--case-study-body-line);
-  color: #000;
-}
-
 .cs-highlights {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -747,9 +738,15 @@
 }
 
 .cs-code-diff {
+  --cs-diff-accent: #ff4d00;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
+  padding: 24px;
+  background: #fff;
+  border: var(--project-media-border);
+  border-radius: var(--project-media-radius);
+  box-sizing: border-box;
 }
 
 .cs-code-diff__chip {
@@ -758,19 +755,23 @@
   gap: 6px;
   font-size: 13px;
   font-weight: 600;
-  padding: 4px 11px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
   margin-bottom: 10px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
 }
 
 .cs-code-diff__chip--bad {
-  background: #fcebeb;
-  color: #a32d2d;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.62);
+  border-color: rgba(0, 0, 0, 0.16);
 }
 
 .cs-code-diff__chip--good {
-  background: #eaf3de;
-  color: #27500a;
+  background: rgba(255, 77, 0, 0.1);
+  color: var(--cs-diff-accent);
+  border-color: rgba(255, 77, 0, 0.28);
 }
 
 .cs-code-diff__chip .material-symbols-rounded {
@@ -787,10 +788,12 @@
 
 .cs-code-diff__code {
   font: 12.5px/1.85 ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
-  background: rgba(0, 0, 0, 0.04);
-  border-radius: var(--project-media-radius);
+  background: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-md);
   padding: 12px 0;
   overflow-x: auto;
+  color: #111;
 }
 
 .cs-code-diff__ln {
@@ -799,13 +802,13 @@
 }
 
 .cs-code-diff__ln--bad {
-  background: #fcebeb;
-  color: #a32d2d;
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .cs-code-diff__ln--good {
-  background: #eaf3de;
-  color: #27500a;
+  background: rgba(255, 77, 0, 0.1);
+  color: #c43d00;
 }
 
 .cs-code-diff__note {
@@ -825,11 +828,11 @@
 }
 
 .cs-code-diff__note .material-symbols-rounded--bad {
-  color: #a32d2d;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .cs-code-diff__note .material-symbols-rounded--good {
-  color: #27500a;
+  color: var(--cs-diff-accent);
 }
 
 /* Code-diff uses the shared media gap from case-study.css */

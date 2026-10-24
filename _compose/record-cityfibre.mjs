@@ -21,8 +21,7 @@ const CAP_H = 1080;
 const OUT_W = 3840;
 const OUT_H = 2160;
 const RECORD_MS = 10000;
-const ZOOM = 1.25; // light zoom — keep most of the header in frame
-const FREEZE_SECS = 2; // hold final frame so motion stops
+const FREEZE_SECS = 2;
 
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
@@ -40,6 +39,109 @@ const contextOpts = {
   locale: 'en-GB',
   timezoneId: 'Europe/London',
 };
+
+const HIDE_CHROME_CSS = `
+  #onetrust-banner-sdk,
+  #onetrust-consent-sdk,
+  .onetrust-pc-dark-filter,
+  #ot-sdk-btn-floating,
+  .ot-sdk-container,
+  [id*="onetrust"],
+  [class*="onetrust"],
+  /* Recite / accessibility / captcha badges (bottom-right) */
+  #reciteme,
+  #recite-js,
+  .recite-button,
+  [id*="recite" i],
+  [class*="recite" i],
+  [id*="Recite"],
+  [class*="Recite"],
+  iframe[src*="recite" i],
+  iframe[title*="accessibility" i],
+  iframe[title*="Recite" i],
+  [aria-label*="Accessibility" i],
+  [aria-label*="Recite" i],
+  [class*="accessibility-tool" i],
+  [id*="accessibility" i],
+  .cm-widget,
+  #cm-widget,
+  [class*="captivate" i],
+  [id*="captivate" i],
+  .grecaptcha-badge,
+  .grecaptcha-logo,
+  iframe[src*="recaptcha" i],
+  iframe[title*="reCAPTCHA" i],
+  div[style*="z-index: 2147483647"],
+  /* Capita / Recite Me launcher (person icon, bottom-right) */
+  [id*="capita" i],
+  [class*="capita" i],
+  [id*="enablebar" i],
+  [class*="enablebar" i],
+  [id*="accessTool" i],
+  [class*="access-tool" i],
+  [class*="accessibility" i],
+  button[aria-label*="Accessibility" i],
+  a[aria-label*="Accessibility" i],
+  #reciteMeLauncher,
+  .reciteMeLauncher,
+  [data-testid*="accessibility" i] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Breathing room so the full header sits with top margin in frame */
+  html {
+    background: #fff !important;
+  }
+  body {
+    padding-top: 56px !important;
+    box-sizing: border-box !important;
+  }
+`;
+
+const KILL_WIDGETS_JS = `
+(() => {
+  const kill = () => {
+    const sels = [
+      '.grecaptcha-badge',
+      '[id*="recite" i]',
+      '[class*="recite" i]',
+      '[id*="capita" i]',
+      '[class*="capita" i]',
+      '[id*="enablebar" i]',
+      '[aria-label*="Accessibility" i]',
+      '[aria-label*="Recite" i]',
+      'iframe[src*="recaptcha"]',
+      'iframe[src*="recite"]',
+    ];
+    for (const sel of sels) {
+      try {
+        document.querySelectorAll(sel).forEach((n) => n.remove());
+      } catch (_) {}
+    }
+    // Nuke fixed/sticky chips parked in the bottom-right corner
+    document.querySelectorAll('body *').forEach((el) => {
+      try {
+        const s = getComputedStyle(el);
+        if (s.position !== 'fixed' && s.position !== 'sticky') return;
+        const r = el.getBoundingClientRect();
+        if (r.width < 8 || r.width > 120 || r.height < 8 || r.height > 120) return;
+        if (r.bottom < window.innerHeight - 140) return;
+        if (r.right < window.innerWidth - 140) return;
+        el.remove();
+      } catch (_) {}
+    });
+  };
+  kill();
+  const mo = new MutationObserver(() => kill());
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+  setInterval(kill, 400);
+})();
+`;
 
 async function dismissCookies(page) {
   const selectors = [
@@ -61,41 +163,26 @@ async function dismissCookies(page) {
       // ignore
     }
   }
-
-  await page.addStyleTag({
-    content: `
-      #onetrust-banner-sdk,
-      #onetrust-consent-sdk,
-      .onetrust-pc-dark-filter,
-      #ot-sdk-btn-floating,
-      .ot-sdk-container,
-      [id*="onetrust"],
-      [class*="onetrust"] {
-        display: none !important;
-        visibility: hidden !important;
-        pointer-events: none !important;
-      }
-    `,
-  });
-  await page.evaluate(() => {
-    document
-      .querySelectorAll('#onetrust-banner-sdk, #onetrust-consent-sdk, .onetrust-pc-dark-filter')
-      .forEach((n) => n.remove());
-  });
+  await page.addStyleTag({ content: HIDE_CHROME_CSS });
+  await page.addScriptTag({ content: KILL_WIDGETS_JS });
 }
 
-async function lightZoomKeepHeader(page) {
+async function frameFullHeader(page) {
   await page.getByText(/Trusted by millions/i).first().waitFor({
     state: 'visible',
     timeout: 30000,
   });
 
-  await page.evaluate((zoom) => {
-    document.documentElement.style.zoom = String(zoom);
+  // No page zoom — show the full header with natural top/bottom chrome margins.
+  await page.evaluate(() => {
+    document.documentElement.style.zoom = '';
     window.scrollTo(0, 0);
-  }, ZOOM);
+  });
 
-  await page.waitForTimeout(400);
+  // Strip floating widgets again after late injection.
+  await page.addStyleTag({ content: HIDE_CHROME_CSS });
+  await page.addScriptTag({ content: KILL_WIDGETS_JS });
+  await page.waitForTimeout(800);
 }
 
 // Pass 1 — cookies
@@ -114,27 +201,39 @@ async function lightZoomKeepHeader(page) {
   await browser.close();
 }
 
-// Pass 2 — record first 10s after page is ready (no cookie UI)
+// Pass 2 — record
 {
   const browser = await chromium.launch(launchOpts);
   const context = await browser.newContext({
     ...contextOpts,
     storageState: statePath,
-    // Don't start video until page is ready — use a fresh page after setup
   });
   await context.addInitScript(() => {
     Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
   });
-  await context.route('**/*onetrust*', (route) => route.abort());
+  const blockNoise = async (ctx) => {
+    for (const pat of [
+      '**/*onetrust*',
+      '**/*recite*',
+      '**/*reciteme*',
+      '**/*captivate*',
+      '**/*capita*',
+      '**/*enablebar*',
+      '**/*recaptcha*',
+      '**/*gstatic.com/recaptcha*',
+      '**/*accessibility*',
+    ]) {
+      await ctx.route(pat, (route) => route.abort());
+    }
+  };
+  await blockNoise(context);
 
   const prep = await context.newPage();
-  console.log('Prep: load + dismiss…');
   await prep.goto('https://cityfibre.com/', { waitUntil: 'networkidle', timeout: 90000 });
   await dismissCookies(prep);
-  await lightZoomKeepHeader(prep);
+  await frameFullHeader(prep);
   await prep.close();
 
-  // New page in a recording context so the file starts on the live hero
   const recContext = await browser.newContext({
     ...contextOpts,
     storageState: statePath,
@@ -143,30 +242,25 @@ async function lightZoomKeepHeader(page) {
   await recContext.addInitScript(() => {
     Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
   });
-  await recContext.route('**/*onetrust*', (route) => route.abort());
+  await recContext.addInitScript(KILL_WIDGETS_JS);
+  await blockNoise(recContext);
 
   const page = await recContext.newPage();
-  console.log('Record: first 10s…');
+  console.log('Record 10s…');
   await page.goto('https://cityfibre.com/', { waitUntil: 'domcontentloaded', timeout: 90000 });
   await dismissCookies(page);
-  await lightZoomKeepHeader(page);
+  await frameFullHeader(page);
   await page.screenshot({ path: path.join(outDir, 'verify.png'), fullPage: false });
   console.log('verify.png written');
 
   await page.waitForTimeout(RECORD_MS);
 
-  // Freeze site motion before stopping the recorder
   await page.evaluate(() => {
     document.querySelectorAll('*').forEach((el) => {
       const s = getComputedStyle(el);
-      if (s.animationName !== 'none') {
-        el.style.animationPlayState = 'paused';
-      }
-      if (s.transitionProperty !== 'none') {
-        el.style.transition = 'none';
-      }
+      if (s.animationName !== 'none') el.style.animationPlayState = 'paused';
+      if (s.transitionProperty !== 'none') el.style.transition = 'none';
     });
-    document.documentElement.style.setProperty('scroll-behavior', 'auto');
   });
   await page.waitForTimeout(400);
 
@@ -188,13 +282,12 @@ const dur = Number(
     { encoding: 'utf8' }
   ).trim()
 );
-
-// Prefer the last RECORD_MS of the capture (post-load), then hold final frame.
 const start = Math.max(0, dur - RECORD_MS / 1000);
 const tmpMp4 = path.join(outDir, 'clip.mp4');
 const lastFrame = path.join(outDir, 'last.png');
+const freezeMp4 = path.join(outDir, 'freeze.mp4');
 
-console.log(`Clip ${start.toFixed(2)}s→end (${dur.toFixed(2)}s), freeze ${FREEZE_SECS}s, 4K 60fps`);
+console.log(`Encode from ${start.toFixed(2)}s → 4K 60fps (high quality)`);
 
 execFileSync(
   'ffmpeg',
@@ -207,7 +300,8 @@ execFileSync(
     '-t',
     '10',
     '-vf',
-    `scale=${OUT_W}:${OUT_H}:flags=lanczos,fps=60`,
+    // blend interpolate is fast and softens low-fps capture into smoother 60fps
+    `scale=${OUT_W}:${OUT_H}:flags=lanczos,minterpolate=fps=60:mi_mode=blend`,
     '-r',
     '60',
     '-c:v',
@@ -215,7 +309,7 @@ execFileSync(
     '-pix_fmt',
     'yuv420p',
     '-crf',
-    '17',
+    '14',
     '-preset',
     'fast',
     '-an',
@@ -230,8 +324,6 @@ execFileSync(
   { stdio: 'inherit' }
 );
 
-// Concat motion clip + frozen last frame
-const freezeMp4 = path.join(outDir, 'freeze.mp4');
 execFileSync(
   'ffmpeg',
   [
@@ -251,9 +343,9 @@ execFileSync(
     '-pix_fmt',
     'yuv420p',
     '-crf',
-    '17',
+    '16',
     '-preset',
-    'fast',
+    'medium',
     '-an',
     freezeMp4,
   ],
@@ -268,20 +360,7 @@ fs.writeFileSync(
 
 execFileSync(
   'ffmpeg',
-  [
-    '-y',
-    '-f',
-    'concat',
-    '-safe',
-    '0',
-    '-i',
-    listPath,
-    '-c',
-    'copy',
-    '-movflags',
-    '+faststart',
-    mp4Out,
-  ],
+  ['-y', '-f', 'concat', '-safe', '0', '-i', listPath, '-c', 'copy', '-movflags', '+faststart', mp4Out],
   { stdio: 'inherit' }
 );
 

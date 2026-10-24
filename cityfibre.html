@@ -15,6 +15,7 @@
     <style>html,body{background:#fff;color-scheme:only light}</style>
     <title>90% more conversions after a homepage redesign | Ben Turner</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/cf-hero-replica.css?v=8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
@@ -62,7 +63,6 @@
               <p class="project-header-description"><strong>Context</strong><br>I led the design work for CityFibre at DawsonAndrews, rebranding its website and business-to-business portal. A key part of the project was improving conversions on the marketing website. I researched how visitors used it, redesigned the opening screen around its main conversion action and adapted the new brand across CityFibre&rsquo;s digital products.</p>
               <p class="project-header-description project-header-role"><strong>Role and team</strong><br>A separate branding agency created the identity. I adapted it for the website, portal, campaigns and emails, and built the Figma design system and implementation documentation. I worked with three front-end developers, a larger back-end team, a project manager and the branding agency.</p>
               <div class="cs-highlights-block">
-                <p class="cs-highlights-label">Outcomes</p>
                 <ul class="cs-highlights" role="list">
                   <li class="cs-highlight" role="listitem">
                     <span class="cs-highlight__icon" aria-hidden="true"><span class="material-symbols-outlined">trending_up</span></span>
@@ -93,14 +93,67 @@
           <div class="main-content">
             <div class="project-details_text">
 
-              <div class="content-image content-image--ui">
+              <figure class="content-image content-image--ui cf-hero-embed">
                 <div class="content-image__stage">
-                  <video class="image-with-caption" src="img/project-image/cityfibre-rebrand/cf-homepage-hero.mp4" data-autoplay muted playsinline preload="none" aria-label="CityFibre homepage with Trusted by millions headline and availability checker">
-                    Your browser does not support the video tag.
-                  </video>
+                  <div class="cf-hero" role="img" aria-label="CityFibre homepage: Trusted by millions headline, animated circle background, and availability checker">
+                    <div class="cf-hero__page">
+                      <svg class="cf-hero__bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                        <defs>
+                          <circle id="cf-hero-c1" cx="379" cy="540" r="426">
+                            <animate attributeName="cx" values="379;1920;379" keyTimes="0;0.5;1" dur="7s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.674 0.136 0.1 1;0.674 0.136 0.1 1" />
+                            <animate attributeName="r" values="426;150;426" keyTimes="0;0.5;1" dur="7s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.674 0.136 0.1 1;0.674 0.136 0.1 1" />
+                          </circle>
+                          <circle id="cf-hero-c2" cx="1418" cy="540" r="750">
+                            <animate attributeName="cx" values="1418;650;1418" keyTimes="0;0.5;1" dur="7s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.674 0.136 0.1 1;0.674 0.136 0.1 1" />
+                            <animate attributeName="r" values="750;950;750" keyTimes="0;0.5;1" dur="7s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.674 0.136 0.1 1;0.674 0.136 0.1 1" />
+                          </circle>
+                          <clipPath id="cf-hero-clip">
+                            <use href="#cf-hero-c2" />
+                          </clipPath>
+                        </defs>
+                        <path fill="#12e664" d="M0 0h1980v1080H0z" />
+                        <g fill="#00aacd">
+                          <use href="#cf-hero-c1" />
+                          <use href="#cf-hero-c2" />
+                        </g>
+                        <use href="#cf-hero-c1" fill="#12e664" clip-path="url(#cf-hero-clip)" />
+                      </svg>
+
+                      <div class="cf-hero__chrome">
+                        <img class="cf-hero__logo" src="img/project-image/cityfibre-rebrand/cf-logo.svg" alt="" width="156" height="48" decoding="async">
+                        <ul class="cf-hero__nav">
+                          <li>Get Connected <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></li>
+                          <li>Our Company <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></li>
+                          <li>Help &amp; Support <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></li>
+                        </ul>
+                        <span class="cf-hero__search" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </span>
+                      </div>
+
+                      <div class="cf-hero__body">
+                        <p class="cf-hero__title">Trusted by millions</p>
+                        <p class="cf-hero__lede">Our full fibre network delivers fast, reliable broadband and is built to support a new generation of speeds of up to 8.5 Gbps. Enter your postcode to see which broadband providers and speeds are available in your area.</p>
+
+                        <div class="cf-hero__checker">
+                          <ul class="cf-hero__tabs">
+                            <li class="cf-hero__tab cf-hero__tab--active">For Homes</li>
+                            <li class="cf-hero__tab cf-hero__tab--idle">For Business</li>
+                          </ul>
+                          <div class="cf-hero__field">
+                            <svg class="cf-hero__pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span class="cf-hero__placeholder">Your home postcode i.e. SW1A 1AA</span>
+                            <span class="cf-hero__cta">Check Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <svg class="cf-hero__scroll" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
                 </div>
                 <figcaption>The redesigned homepage makes the availability check the main action in the opening screen.</figcaption>
-              </div>
+              </figure>
 
               <div class="project-paragraph project-client-description">
                 <h2>The problem</h2>
@@ -276,5 +329,33 @@
       </div>
     </footer>
     <script src="nav.js"></script>
+    <script>
+      (function () {
+        var root = document.querySelector('.cf-hero');
+        if (!root) return;
+
+        function fitScale() {
+          root.style.setProperty('--cf-scale', String(root.clientWidth / 1920));
+        }
+        fitScale();
+        if ('ResizeObserver' in window) {
+          new ResizeObserver(fitScale).observe(root);
+        } else {
+          window.addEventListener('resize', fitScale);
+        }
+
+        if (!('IntersectionObserver' in window)) return;
+        var anims = root.querySelectorAll('animate');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            anims.forEach(function (a) {
+              try { a.beginElement(); } catch (e) {}
+            });
+          });
+        }, { threshold: 0.35 });
+        io.observe(root);
+      })();
+    </script>
   </body>
 </html>

@@ -844,6 +844,11 @@ body.case-study header.project-header:has(.cs-highlights-block) {
   margin-bottom: 48px;
 }
 
+/* Media-first case studies: no extra white band — the stage sits on the header pad like prose does */
+body.case-study:has(.project-details_text > .content-image:first-child) header.project-header:has(.cs-highlights-block) {
+  margin-bottom: 0;
+}
+
 body.case-study .project-header-stack .cs-highlights-block + .project-header-role {
   margin-top: var(--space-2);
 }

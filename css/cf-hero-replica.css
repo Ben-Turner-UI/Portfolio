@@ -1,0 +1,299 @@
+/* CityFibre homepage hero replica
+   Built at real desktop size (1920×1200), then scaled into the media column. */
+
+@font-face {
+  font-family: "CF Sohne";
+  src: url("../img/project-image/cityfibre-rebrand/Sohne-Buch.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CF Sohne";
+  src: url("../img/project-image/cityfibre-rebrand/Sohne-Halbfett.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CF Sohne Schmal";
+  src: url("../img/project-image/cityfibre-rebrand/SohneSchmal-Fett.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+.cf-hero-embed {
+  width: 100%;
+  max-width: var(--project-media-max-width);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cf-hero-embed > .content-image__stage {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cf-hero {
+  --cf-teal: #00aacd;
+  --cf-green: #12e664;
+  --cf-ink: #2d2d2d;
+  --cf-page-w: 1920;
+  --cf-page-h: 1200;
+  container-type: inline-size;
+  container-name: cf-hero;
+  position: relative;
+  aspect-ratio: 1920 / 1200;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: var(--project-media-radius, 12px);
+  background: var(--cf-teal);
+  color: var(--cf-ink);
+  font-family: "CF Sohne", "Source Sans 3", sans-serif;
+  box-shadow: var(--project-ui-float-shadow, 0 12px 40px rgba(0, 0, 0, 0.12));
+  user-select: none;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.cf-hero__page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  transform-origin: top left;
+  /* Scale set in JS — browsers reject cqw inside transform: scale() */
+  transform: scale(var(--cf-scale, 0.35));
+}
+
+.cf-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+.cf-hero__chrome {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  height: 88px;
+  padding: 0 48px;
+  background: #fff;
+}
+
+.cf-hero__logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cf-hero__nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.cf-hero__nav li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cf-ink);
+  white-space: nowrap;
+}
+
+.cf-hero__nav svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+.cf-hero__search {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: var(--cf-ink);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.cf-hero__search svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cf-hero__body {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 48px 160px 72px;
+  text-align: center;
+}
+
+.cf-hero__title {
+  margin: 0;
+  font-family: "CF Sohne Schmal", "Arial Narrow", sans-serif;
+  font-weight: 800;
+  font-size: 96px;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--cf-ink);
+}
+
+.cf-hero__lede {
+  margin: 28px auto 0;
+  max-width: 720px;
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: var(--cf-ink);
+}
+
+.cf-hero__checker {
+  width: 640px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.cf-hero__tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cf-hero__tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border: 2px solid var(--cf-ink);
+  border-bottom: 0;
+  border-radius: 14px 14px 0 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.cf-hero__tab--active {
+  background: #fff;
+  color: var(--cf-ink);
+  position: relative;
+  z-index: 2;
+  border-bottom-color: #fff;
+  margin-bottom: -2px;
+}
+
+.cf-hero__tab--idle {
+  background: var(--cf-ink);
+  color: #fff;
+}
+
+.cf-hero__field {
+  --cf-field-pad: 12px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 2px solid var(--cf-ink);
+  border-top: 0;
+  border-radius: 0 12px 12px 12px;
+  padding: var(--cf-field-pad);
+}
+
+.cf-hero__pin {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  color: #000;
+}
+
+.cf-hero__placeholder {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 18px;
+  color: #6b6b6b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cf-hero__cta {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: var(--cf-ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.cf-hero__cta svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cf-hero__scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  color: rgba(45, 45, 45, 0.55);
+  z-index: 2;
+}
+
+@media (max-width: 720px) {
+  .cf-hero {
+    aspect-ratio: 4 / 5;
+  }
+
+  .cf-hero__page {
+    /* Keep width scale; crop height via overflow */
+    height: 2400px;
+  }
+}
