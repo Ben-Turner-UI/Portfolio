@@ -840,8 +840,8 @@ body.case-study .project-header-stack .project-header-role + .project-key-stats 
 /* Top pad, bottom pad, and white gap below all match (same as header margin-bottom) */
 body.case-study header.project-header:has(.cs-highlights-block) {
   padding-top: 48px;
-  padding-bottom: 32px;
-  margin-bottom: 32px;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 body.case-study .project-header-stack .cs-highlights-block + .project-header-role {
