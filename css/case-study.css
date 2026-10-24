@@ -997,9 +997,9 @@ body.case-study--ui-gallery .button-group {
   margin-top: 0;
 }
 
-/* Parent flex gap is 56px; pull next-project closer after the gallery */
+/* Same section gap as other case studies (parent flex gap) */
 body.case-study--ui-gallery .project-details_text > .ui-grid + .button-group {
-  margin-top: calc(var(--space-3) - var(--case-study-content-section-gap));
+  margin-top: 0;
 }
 
 /* ==========================================================================

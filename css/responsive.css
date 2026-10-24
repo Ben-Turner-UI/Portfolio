@@ -224,7 +224,7 @@
   }
 
   body.case-study--ui-gallery .project-details_text > .ui-grid + .button-group {
-    margin-top: calc(var(--space-2) - var(--case-study-content-section-gap));
+    margin-top: 0;
   }
 }
 
