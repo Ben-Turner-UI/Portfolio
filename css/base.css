@@ -16,13 +16,6 @@ h1,
   letter-spacing: 0.1px;
 }
 
-.project-grid .grid-item h3,
-.side-project-content h3 {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 600;
-  letter-spacing: normal;
-}
-
 strong,
 b {
   font-weight: 600;

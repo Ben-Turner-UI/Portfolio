@@ -13,8 +13,8 @@
 
   .side-project-card {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 16px;
+    gap: 0;
+    padding: 0;
   }
 
   .side-project-thumbnail {
@@ -23,19 +23,19 @@
     min-width: 0;
     max-width: none;
     height: auto;
+    min-height: 0;
     aspect-ratio: 16 / 9;
     max-height: none;
     border: none;
-    border-radius: var(--radius-md);
+    border-radius: 0;
   }
 
   .side-project-content {
     grid-column: 1;
-    padding: 0;
+    padding: 20px 24px;
   }
 
   .side-project-content h3 {
-    font-size: var(--type-heading-3);
     max-width: none;
   }
 
@@ -56,13 +56,14 @@
   }
 
   .project-grid {
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .project-grid .grid-item {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 16px;
+    gap: 0;
+    padding: 0;
   }
 
   .project-grid-thumbnail {
@@ -78,13 +79,13 @@
     background-color: #ececef;
     padding: 0;
     border: none;
-    border-radius: var(--radius-md);
+    border-radius: 0;
   }
 
   .project-card-body {
     grid-column: 1;
-    padding: 0;
-    gap: 4px;
+    padding: 20px 24px;
+    gap: 8px;
   }
 
   .project-grid .project-card-meta {
@@ -92,7 +93,6 @@
   }
 
   .project-grid .grid-item h3 {
-    font-size: var(--type-heading-3);
     max-width: none;
   }
 
@@ -146,6 +146,11 @@
   .main-content .content-image > .cs-lightbox-trigger,
   .main-content .content-image > .cs-lightbox-trigger > .image-with-caption,
   .main-content .content-image > .cs-lightbox-trigger > video.image-with-caption,
+  .main-content .content-image > .content-image__stage,
+  .main-content .content-image__stage > .image-with-caption,
+  .main-content .content-image__stage > .cs-lightbox-trigger,
+  .main-content .content-image__stage > .cs-lightbox-trigger > .image-with-caption,
+  .main-content .content-image__stage > .cs-lightbox-trigger > video.image-with-caption,
   .main-content .content-image-media,
   .main-content .content-image-media > .image-with-caption,
   .main-content .content-image-media > video.image-with-caption {
@@ -154,6 +159,10 @@
     height: auto;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .main-content .content-image--ui > .content-image__stage {
+    padding: 20px 16px;
   }
 
   .main-content .content-image--crop-top .content-image-media {
@@ -176,9 +185,9 @@
   .button-group .next-project-link .next-project-card {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 16px;
     min-height: 0;
-    padding: 12px;
+    padding: 18px;
   }
 
   .button-group .next-project-link .next-project-card > .next-project-card__thumb {
@@ -202,14 +211,20 @@
     flex: 1;
     min-width: 0;
     align-self: stretch;
+    gap: 8px;
   }
 
   .button-group .next-project-link .next-project-card__desc {
-    font-size: 13px;
+    font-size: var(--type-body-lg, 15px);
+    line-height: var(--type-body-lg-lh, 1.45);
   }
 
   .ui-grid {
     gap: var(--space-4);
+  }
+
+  body.case-study--ui-gallery .project-details_text > .ui-grid + .button-group {
+    margin-top: calc(var(--space-2) - var(--case-study-content-section-gap));
   }
 }
 

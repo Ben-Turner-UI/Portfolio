@@ -348,7 +348,7 @@
 .browser-skeleton__dots span {
   width: 8px;
   height: 8px;
-  border-radius: 9999px;
+  border-radius: var(--radius-sm);
   background: #cfcfcf;
 }
 
@@ -397,7 +397,7 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 9999px;
+  border-radius: var(--radius-md);
   color: #9a9a9a;
 }
 
@@ -417,7 +417,7 @@
   flex: 1;
   height: 28px;
   padding: 0 12px;
-  border-radius: 9999px;
+  border-radius: var(--radius-md);
   background: #f3f3f3;
   border: 1px solid #e8e8e8;
   box-sizing: border-box;
@@ -427,7 +427,7 @@
   display: block;
   width: 55%;
   height: 6px;
-  border-radius: 9999px;
+  border-radius: var(--radius-sm);
   background: #d6d6d6;
 }
 
@@ -443,7 +443,7 @@
   display: block;
   height: 8px;
   width: 70%;
-  border-radius: 9999px;
+  border-radius: var(--radius-sm);
   background: #ececec;
 }
 
@@ -489,7 +489,7 @@
   height: 22px;
   left: 50%;
   top: 50%;
-  border-radius: 9999px;
+  border-radius: var(--radius-sm);
   border: 2px solid rgba(17, 17, 17, 0.22);
   background: rgba(17, 17, 17, 0.05);
   pointer-events: none;
@@ -1008,7 +1008,7 @@
   gap: 0;
   width: 22px;
   height: 32px;
-  border-radius: 9999px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--project-media-border-color);
   background: #fff;
   color: #000;

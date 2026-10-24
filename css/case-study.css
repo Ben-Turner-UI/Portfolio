@@ -148,7 +148,7 @@ body.case-study .project-item-group {
 .project-paragraph-list ul li,
 .project-paragraph-list ol li {
   margin: 0;
-  padding-left: 10px;
+  padding-left: 6px;
 }
 
 .project-paragraph > ul li + li,
@@ -156,6 +156,11 @@ body.case-study .project-item-group {
 .project-paragraph-list ul li + li,
 .project-paragraph-list ol li + li {
   margin-top: var(--prose-list-item-gap);
+}
+
+/* Results bullets: slightly tighter than body paragraph gap */
+.project-paragraph > h2 + ul li + li {
+  margin-top: var(--space-2);
 }
 
 .project-paragraph-list ul,
@@ -312,6 +317,38 @@ figcaption {
   margin-right: 0;
 }
 
+/* Pull media closer to related prose than full section gaps (equal above and below) */
+body.case-study .project-details_text > .content-image,
+body.case-study .project-details_text > .bb-diagram,
+body.case-study .project-details_text > .cf-homepage-diagram {
+  margin-top: calc(var(--case-study-media-gap) - var(--case-study-content-section-gap));
+  margin-bottom: calc(var(--case-study-media-gap) - var(--case-study-content-section-gap));
+}
+
+/* First block after the header keeps the full section gap, like other case studies */
+body.case-study .project-details_text > .content-image:first-child,
+body.case-study .project-details_text > .bb-diagram:first-child,
+body.case-study .project-details_text > .cf-homepage-diagram:first-child,
+body.case-study .project-details_text > .cs-process:first-child {
+  margin-top: 0;
+}
+
+/* Keep full section gap when the next block opens a new h2 section */
+body.case-study .project-details_text > .content-image:has(+ .project-paragraph > h2:first-child),
+body.case-study .project-details_text > .bb-diagram:has(+ .project-paragraph > h2:first-child),
+body.case-study .project-details_text > .cf-homepage-diagram:has(+ .project-paragraph > h2:first-child) {
+  margin-bottom: 0;
+}
+
+/* Avoid double-pull when two media blocks follow each other */
+body.case-study .project-details_text > .content-image + .content-image,
+body.case-study .project-details_text > .content-image + .bb-diagram,
+body.case-study .project-details_text > .content-image + .cf-homepage-diagram,
+body.case-study .project-details_text > .bb-diagram + .content-image,
+body.case-study .project-details_text > .cf-homepage-diagram + .content-image {
+  margin-top: 0;
+}
+
 /* Tablet / device media: no padded stage — same border as homepage cards */
 .content-image--tablet .media-tablet {
   padding: 0;
@@ -329,6 +366,35 @@ figcaption {
   border: var(--project-media-border);
   border-radius: var(--project-media-radius);
   background: transparent;
+}
+
+/* Floating product UI: padded stage behind the screenshot / video */
+.content-image--ui > .content-image__stage {
+  width: 100%;
+  padding: var(--project-ui-stage-pad);
+  background: var(--project-ui-stage-bg);
+  border-radius: var(--project-media-radius);
+  box-sizing: border-box;
+}
+
+.content-image--ui .content-image__stage > .image-with-caption,
+.content-image--ui .content-image__stage > .cs-lightbox-trigger,
+.content-image--ui .content-image__stage > .media-tablet {
+  display: block;
+  width: 100%;
+  max-width: none;
+}
+
+.content-image--ui .content-image__stage .image-with-caption {
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  box-shadow: var(--project-ui-float-shadow);
+}
+
+.content-image--ui .content-image__stage > .media-tablet .image-with-caption {
+  box-shadow: var(--project-ui-float-shadow);
 }
 
 body.case-study .main-content .content-image--device {
@@ -582,7 +648,7 @@ body.case-study .content-image > .device-stage {
 
 .cf-screen__chrome {
   height: 20px;
-  background: #ECEBE8;
+  background: #f0f0f0;
   border-bottom: 1px solid var(--project-media-border-color);
   flex-shrink: 0;
 }
@@ -594,7 +660,7 @@ body.case-study .content-image > .device-stage {
   justify-content: center;
   gap: 10px;
   padding: 20px 16px;
-  background: #F3F2EF;
+  background: #f5f5f5;
   flex: 0 0 42%;
 }
 
@@ -626,7 +692,7 @@ body.case-study .content-image > .device-stage {
   min-width: 148px;
   padding: 8px 14px;
   border: 1.5px solid #111;
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   background: #fff;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 12px;
@@ -650,7 +716,7 @@ body.case-study .content-image > .device-stage {
       rgba(0, 0, 0, 0.04) 0 1px,
       transparent 1px 8px
     ),
-    #E8E7E3;
+    #e8e8e8;
   border-top: 1px solid var(--project-media-border-color);
 }
 
@@ -721,14 +787,19 @@ body.case-study .project-header-stack {
 }
 
 body.case-study .project-header-meta {
+  display: block;
   width: 100%;
   max-width: var(--heading-max-width, 75ch);
-  margin: 0 0 12px;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: var(--type-body-md);
   font-weight: 500;
   line-height: var(--type-body-md-lh);
-  color: rgba(0, 0, 0, 0.72);
+  color: #595959;
   text-align: left;
+  border: 0;
+  background: transparent;
 }
 
 body.case-study .project-header-stack h1 {
@@ -753,8 +824,37 @@ body.case-study .project-header-stack .project-header-description + .project-hea
 }
 
 body.case-study .project-header-stack .project-header-description + .project-key-stats,
-body.case-study .project-header-stack .project-header-description + .cs-highlights {
-  margin-top: 32px;
+body.case-study .project-header-stack .project-header-description + .cs-highlights-block {
+  margin-top: var(--space-4);
+}
+
+body.case-study .project-header-stack .project-header-role {
+  max-width: var(--content-max-width);
+}
+
+body.case-study .project-header-stack .project-header-role + .cs-highlights-block,
+body.case-study .project-header-stack .project-header-role + .project-key-stats {
+  margin-top: var(--space-4);
+}
+
+/* Top pad, bottom pad, and white gap below all match (same as header margin-bottom) */
+body.case-study header.project-header:has(.cs-highlights-block) {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+}
+
+body.case-study .project-header-stack .cs-highlights-block + .project-header-role {
+  margin-top: var(--space-2);
+}
+
+body.case-study .project-header-stack .project-header-description strong {
+  font-weight: 600;
+  color: #000;
+}
+
+body.case-study .cf-homepage-diagram > figcaption {
+  margin-top: var(--space-2);
 }
 
 body.case-study .project-header-stack .project-key-stats {
@@ -781,7 +881,7 @@ body.case-study .project-key-stats .cs-stats {
   gap: var(--space-7);
   width: 100%;
   max-width: var(--project-media-max-width);
-  margin: 0 0 var(--case-study-content-section-gap);
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -791,6 +891,10 @@ body.case-study .project-key-stats .cs-stats {
   gap: var(--space-2);
   min-width: 0;
   margin: 0;
+}
+
+.ui-grid__item > .ui-grid__copy {
+  margin-bottom: var(--space-1);
 }
 
 .ui-grid__media {
@@ -862,15 +966,25 @@ body.case-study .project-key-stats .cs-stats {
   color: #111;
 }
 
-.ui-grid__caption {
+.ui-grid__body {
   margin: 0;
   font-size: var(--type-body-lg);
   line-height: var(--type-body-lg-lh);
   color: #554d45;
+  max-width: var(--content-max-width);
+}
+
+/* Spacing between stacked body paragraphs comes from .ui-grid__copy gap */
+
+.ui-grid__caption {
+  margin: 0;
+  font-size: var(--type-body-md);
+  line-height: var(--type-body-md-lh);
+  color: #595959;
 }
 
 .ui-grid__item--soon .ui-grid__title,
-.ui-grid__item--soon .ui-grid__caption {
+.ui-grid__item--soon .ui-grid__body {
   color: #6b6560;
 }
 
@@ -880,7 +994,12 @@ body.case-study--ui-gallery .project-header .header-content {
 
 body.case-study--ui-gallery .button-group {
   max-width: var(--project-media-max-width);
-  margin-top: var(--space-4);
+  margin-top: 0;
+}
+
+/* Parent flex gap is 56px; pull next-project closer after the gallery */
+body.case-study--ui-gallery .project-details_text > .ui-grid + .button-group {
+  margin-top: calc(var(--space-3) - var(--case-study-content-section-gap));
 }
 
 /* ==========================================================================
@@ -1171,46 +1290,51 @@ body.cs-lightbox-open {
   }
 
   .cs-lightbox {
-    padding: 0;
+    padding: 12px;
+    padding-top: calc(12px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     width: 100%;
     height: 100dvh;
-    align-items: stretch;
-    justify-content: stretch;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
   .cs-lightbox__shell {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    max-height: none;
+    max-height: 100%;
     gap: 0;
   }
 
   .cs-lightbox__stage {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 0;
     width: 100%;
     min-height: 0;
-    max-height: none;
-    background: #000;
+    max-height: 100%;
+    background: transparent;
   }
 
   .cs-lightbox__img,
   .cs-lightbox__video {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     width: 100%;
-    min-height: 0;
-    max-width: 100%;
-    max-height: none;
     height: auto;
-    border-radius: 0;
+    max-width: 100%;
+    max-height: calc(100dvh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    min-height: 0;
+    border-radius: var(--radius-md);
     object-fit: contain;
-    background: #000;
+    background: #111;
   }
 
   .cs-lightbox__rail {

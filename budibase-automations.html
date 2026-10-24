@@ -1,14 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Budibase users struggled to see what each workflow step received, returned or failed to process. I ran a paid study with 25 users and redesigned the builder around debugging. Negative Discord feedback fell from around eight to ten reports a month to none, and the builder later became the foundation for Budibase&rsquo;s AI agents.">
+    <meta name="description" content="I led research and redesigned workflows so users could inspect step data and understand failures. Negative Discord feedback fell from around eight to ten reports a month to zero after launch, during the period I monitored.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Making workflows easier to debug | Ben Turner">
-    <meta property="og:description" content="Budibase users struggled to see what each workflow step received, returned or failed to process. I ran a paid study with 25 users and redesigned the builder around debugging. Negative Discord feedback fell from around eight to ten reports a month to none, and the builder later became the foundation for Budibase&rsquo;s AI agents.">
+    <meta property="og:description" content="I led research and redesigned workflows so users could inspect step data and understand failures. Negative Discord feedback fell from around eight to ten reports a month to zero after launch, during the period I monitored.">
     <meta property="og:image" content="https://benturner.work/img/thumbnail/bb-automations-thumbnail.png">
     <meta property="og:url" content="https://benturner.work/budibase-automations.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -59,24 +59,28 @@
             <div class="project-header-stack">
               <p class="project-header-meta">Budibase, 2025</p>
               <h1>Making workflows easier to debug</h1>
-              <p class="project-header-description">Budibase is an open-source, low-code platform for building internal tools and business applications. Teams use it to create forms, data views and automated workflows without relying on a full engineering build for every request.</p>
-              <ul class="cs-highlights" role="list">
-                <li class="cs-highlight" role="listitem">
-                  <span class="material-symbols-outlined cs-highlight__icon" aria-hidden="true">chat_bubble</span>
-                  <p class="cs-highlight__title">Workflow complaints fell to zero</p>
-                  <p class="cs-highlight__desc">Previously 8&ndash;10 negative Discord reports a month; none observed after launch.</p>
-                </li>
-                <li class="cs-highlight" role="listitem">
-                  <span class="material-symbols-outlined cs-highlight__icon" aria-hidden="true">group</span>
-                  <p class="cs-highlight__title">25 research participants</p>
-                  <p class="cs-highlight__desc">Paid user research helped set the redesign priorities.</p>
-                </li>
-                <li class="cs-highlight" role="listitem">
-                  <span class="material-symbols-outlined cs-highlight__icon" aria-hidden="true">account_tree</span>
-                  <p class="cs-highlight__title">Foundation for AI agents</p>
-                  <p class="cs-highlight__desc">Budibase later built its AI agents on the redesigned builder.</p>
-                </li>
-              </ul>
+              <p class="project-header-description"><strong>Context</strong><br>Budibase is a low-code platform for building internal tools and business applications. Its workflows connect a trigger to a series of actions, allowing users to automate tasks. I led research and redesigned the workflows product area so users could understand failures and fix them. I also designed the step structure with future AI workflows in mind.</p>
+              <p class="project-header-description project-header-role"><strong>Role and team</strong><br>I owned the research and design, working with the Head of Product to set priorities and with developers to refine the interactions through implementation.</p>
+              <div class="cs-highlights-block">
+                <p class="cs-highlights-label">Outcomes</p>
+                <ul class="cs-highlights" role="list">
+                  <li class="cs-highlight" role="listitem">
+                    <span class="cs-highlight__icon" aria-hidden="true"><span class="material-symbols-outlined">chat_bubble</span></span>
+                    <p class="cs-highlight__title">Workflow complaints fell to zero</p>
+                    <p class="cs-highlight__desc">Monthly negative Discord reports fell from 8&ndash;10 to zero during post-launch monitoring.</p>
+                  </li>
+                  <li class="cs-highlight" role="listitem">
+                    <span class="cs-highlight__icon" aria-hidden="true"><span class="material-symbols-outlined">group</span></span>
+                    <p class="cs-highlight__title">25 research participants</p>
+                    <p class="cs-highlight__desc">Paid research helped identify the problems users faced and set the redesign priorities.</p>
+                  </li>
+                  <li class="cs-highlight" role="listitem">
+                    <span class="cs-highlight__icon" aria-hidden="true"><span class="material-symbols-outlined">account_tree</span></span>
+                    <p class="cs-highlight__title">Foundation for AI agents</p>
+                    <p class="cs-highlight__desc">The workflow structure supported Budibase&rsquo;s later redesign of the product around AI agents.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -89,37 +93,27 @@
           <div class="main-content">
             <div class="project-details_text">
 
-              <div class="content-image">
-                <video class="image-with-caption" src="img/project-image/bb-automations/bb-automations-2.mp4" data-autoplay loop muted playsinline preload="none">
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption>Selecting a step reveals its settings, data and errors beside the workflow.</figcaption>
-              </div>
-
               <div class="project-paragraph project-client-description">
                 <h2>The problem</h2>
-                <p>Budibase&rsquo;s workflow builder, called Automations, lets users connect a trigger to a series of actions. Users could build workflows, but struggled to see what each step received, returned or failed to process.</p>
-                <p>Recurring community feedback pointed to this problem. I ran a paid research study to understand it alongside other issues in the builder and establish where a redesign would have the most value.</p>
+                <p>Users could build a workflow, but understanding where it failed was harder. They struggled to see what data went into and came out of each step. If a step failed, it was difficult to understand why.</p>
+                <p>This came up repeatedly in community feedback. People were also asking for better guidance, more flexible branching and additional building blocks. I needed to understand which problems deserved the most attention.</p>
               </div>
 
-              <div class="content-image">
-                <img src="img/project-image/bb-automations/builder-before.png" alt="Original Budibase automation builder" class="image-with-caption">
-                <figcaption>The original builder, before step-level data and error inspection were brought into the sidebar.</figcaption>
-              </div>
-
-              <div class="project-paragraph">
-                <h2>Role and team</h2>
-                <p>I owned the research and design. I planned and ran the Maze study, analysed the responses and presented the findings to the CEO, CMO and Head of Engineering.</p>
-                <p>I worked with the Head of Product to turn those findings into a direction for the builder, then developed and refined the interactions with developers through implementation.</p>
+              <div class="content-image content-image--ui">
+                <div class="content-image__stage">
+                  <img src="img/project-image/bb-automations/builder-before.png" alt="Original Budibase automation builder with expanded step settings" class="image-with-caption">
+                </div>
+                <figcaption>The original automation builder, before step-level data and errors were brought into the sidebar.</figcaption>
               </div>
 
               <section class="project-paragraph bb-research-section" aria-labelledby="bb-research-design-title">
-                <h2 id="bb-research-design-title">User research</h2>
+                <h2 id="bb-research-design-title">What the research showed</h2>
+                <p>I planned and ran a paid Maze study, analysed the responses and presented the findings to the CEO, CMO and Head of Engineering.</p>
 
                 <div class="rf">
                   <div class="rf-card">
                     <h3 class="rf-title">Debugging was the biggest frustration</h3>
-                    <p class="rf-sub">The study asked users what they liked and disliked about the existing builder, allowing them to select multiple answers.</p>
+                    <p class="rf-sub">The study asked what users liked and disliked about the existing builder (multiple answers allowed). Debugging stood out: <strong>68% selected it among the aspects they disliked most</strong>. Appearance, functionality and setup scored more positively.</p>
 
                     <div class="rf-legend">
                       <span><i class="liked"></i>Liked most</span>
@@ -127,7 +121,7 @@
                     </div>
 
                     <div class="rf-plot-scroll">
-                      <div class="rf-plot" role="img" aria-label="Grouped column chart. Debugging was disliked most by 68 percent of users and liked most by 23 percent. Visual appeal, functionality and setup were liked most by 73, 62 and 58 percent and disliked most by 12 percent each. Documentation was liked by 27 percent and disliked by 28 percent.">
+                      <div class="rf-plot" role="img" aria-label="Grouped column chart. Debugging was disliked most by 68 percent of users and liked most by 23 percent. Visual appeal, functionality and setup were liked most by 73, 62 and 58 percent and disliked most by 12 percent each. Documentation was liked by 27 percent and disliked by 28 percent. Other was liked by 4 percent and disliked by 12 percent. Users could select multiple answers.">
                         <div class="rf-grid">
                           <div style="--p:0"><span>0%</span></div>
                           <div style="--p:25"><span>25%</span></div>
@@ -188,13 +182,11 @@
                       </div>
                     </div>
 
-                    <p class="rf-sub">Debugging stood out as the most disliked aspect. Users were more positive about the builder&rsquo;s appearance and functionality. The findings pointed towards improving how users understood a workflow once it had been built.</p>
-
                   </div>
 
                   <div class="rf-card">
                     <h3 class="rf-title">What users needed help with</h3>
-                    <p class="rf-sub">I grouped the open-text responses about difficult tasks, feature requests and other feedback into these themes.</p>
+                    <p class="rf-sub">I grouped the written responses into themes covering difficult tasks, requested features and other feedback. Testing and debugging appeared most often: people wanted to inspect inputs and outputs, understand failures and test JavaScript steps. Getting started and guidance came next, with further requests around loops, branching, additional building blocks and working with complex data.</p>
 
                     <div class="rf-table-frame">
                       <div class="rf-scroll">
@@ -245,105 +237,54 @@
 
                   </div>
                 </div>
+
+                <p>The findings gave us a reason to prioritise debugging over the other requests. I used the study and recurring community feedback to make the case to the executive team, then agreed the direction with the Head of Product.</p>
               </section>
 
               <div class="project-paragraph">
-                <h2>Key decisions</h2>
-                <h3>Prioritise understanding and diagnosing failures.</h3>
-                <p>The research raised requests for guidance, branching and additional building blocks. I prioritised debugging because it stood out in both the study and recurring community feedback.</p>
-                <p>I took that evidence to the executive team to make the case for improving access to step data and errors.</p>
+                <h2>What I changed and why</h2>
                 <h3>Keep debugging detail beside the workflow.</h3>
-                <p>I reviewed approaches in products including Stack AI, n8n and Airtable. One option was to expand steps on the canvas to show their data and errors.</p>
-                <p>Large amounts of detail would take space away from the overall flow. I chose to show the selected step&rsquo;s inputs, outputs and errors in the right sidebar. Users could inspect one step at a time while keeping the workflow visible.</p>
-                <h3>Give each step a consistent structure.</h3>
-                <p>I worked with the Head of Product on a reusable step structure that brought configuration, data and errors into a consistent experience. The same structure could support future workflow features.</p>
+                <p>I reviewed approaches in products including Stack AI, n8n and Airtable.</p>
+                <p>One option was to expand steps on the canvas to show their data and errors. That would put the information directly inside the workflow, but large outputs could take up a lot of space. Users still needed to see how the steps connected.</p>
+                <p>I chose the right sidebar. Data In and Data Out showed what the selected step received and returned. An Errors view explained failures so users could identify the problem, amend the step and fix bugs in their workflow.</p>
+                <p>This kept the detail beside the canvas, allowing users to inspect one step while following the overall flow.</p>
               </div>
 
-              <div class="project-paragraph project-paragraph--media">
-                <div class="project-paragraph__prose">
-                  <h2>Design changes</h2>
-                  </div>
-                <div class="rf">
-                  <div class="rf-table-frame">
-                    <div class="rf-scroll">
-                      <table class="rf-table">
-                        <thead>
-                          <tr>
-                            <th>Improvement</th>
-                            <th>Change</th>
-                            <th>Benefit</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="rf-theme">Data In / Data Out</td>
-                            <td>Brought the selected step&rsquo;s inputs and outputs into the right sidebar.</td>
-                            <td>Users can follow how a step handles data.</td>
-                          </tr>
-                          <tr>
-                            <td class="rf-theme">Error inspection</td>
-                            <td>Added an Errors view for the selected step.</td>
-                            <td>Users can inspect failure details beside the workflow.</td>
-                          </tr>
-                          <tr>
-                            <td class="rf-theme">Contextual sidebar</td>
-                            <td>Brought configuration and debugging information into the same area.</td>
-                            <td>Users can move between a step&rsquo;s setup and its results in a consistent place.</td>
-                          </tr>
-                          <tr>
-                            <td class="rf-theme">Compact canvas</td>
-                            <td>Made the layout more compact and added zoom and pan.</td>
-                            <td>Users can navigate larger workflows with more of the flow in view.</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+              <div class="content-image content-image--ui">
+                <div class="content-image__stage">
+                  <video class="image-with-caption" src="img/project-image/bb-automations/bb-automations-2.mp4" data-autoplay loop muted playsinline preload="none" aria-label="Selecting a step reveals its configuration, inputs, outputs and errors beside the workflow">
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
+                <figcaption>Selecting a step reveals its configuration, inputs, outputs and errors beside the workflow.</figcaption>
+              </div>
+
+              <div class="project-paragraph">
+                <h3>Make larger workflows easier to navigate.</h3>
+                <p>I made the canvas more compact and added zoom and pan. Users could move around larger workflows while keeping more of the flow in view.</p>
+                <h3>Give each step a structure we could build on.</h3>
+                <p>I worked with the Head of Product on a reusable structure for configuration, data and errors. Users could look in the same place when setting up a step or checking its results.</p>
+                <p>I also designed with future AI workflows in mind. I expected workflows to become increasingly important as AI systems and agents became part of products. A consistent step structure gave us something we could build on beyond the immediate debugging problem.</p>
               </div>
 
               <div class="project-paragraph">
                 <h2>How I used AI</h2>
-                <p>I used ChatGPT to help organise the research findings and explore recommendations for the executive proposal. I checked its analysis against the responses and worked with the Head of Product to decide the final direction.</p>
-              </div>
-
-              <div class="project-paragraph project-paragraph--media">
-                <div class="project-paragraph__prose">
-                  <h2>Impact</h2>
-                </div>
-                <div class="rf">
-                  <div class="rf-table-frame">
-                    <div class="rf-scroll">
-                      <table class="rf-table">
-                        <thead>
-                          <tr>
-                            <th>Outcome</th>
-                            <th>Result</th>
-                            <th>Detail</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="rf-theme">Discord feedback</td>
-                            <td>Around 8&ndash;10 reports a month to none</td>
-                            <td>Negative workflow feedback during my post-launch observation period.</td>
-                          </tr>
-                          <tr>
-                            <td class="rf-theme">AI agents</td>
-                            <td>Became the foundation for Budibase&rsquo;s AI agents</td>
-                            <td>The step structure supported work beyond the debugging problem that prompted the redesign.</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
+                <p>I used ChatGPT to help organise the research findings and explore recommendations for the executive proposal.</p>
+                <p>I checked its analysis against the original responses before using it in those discussions. The research chart and theme table kept the proposal grounded in what users had told us.</p>
               </div>
 
               <div class="project-paragraph">
-                <h2>What I would have done differently</h2>
-                <p>I would have tested the redesigned builder with users after launch.</p>
-                <p>The decline in negative feedback did not tell us how quickly people diagnosed errors or where they still struggled. A follow-up study would have helped answer those questions. Other startup priorities took over before we completed that work.</p>
+                <h2>Results</h2>
+                <ul>
+                  <li><strong>Negative feedback about the workflows product area fell from around eight to ten Discord reports a month to zero after launch</strong>, during the period I monitored.</li>
+                  <li><strong>The workflows product area became the foundation for Budibase&rsquo;s later redesign around AI agents.</strong> The reusable step structure supported the product&rsquo;s new direction as well as the debugging needs that had prompted the work.</li>
+                </ul>
+              </div>
+
+              <div class="project-paragraph">
+                <h2>What I would do differently</h2>
+                <p>The decline in negative reports suggested that the changes had addressed the debugging problem. I would have liked to validate that with users after launch and understand how quickly they could diagnose errors or where they still struggled.</p>
+                <p>There was ongoing pressure to release features, particularly in a startup like Budibase. I had to move on to the next product area before we completed that follow-up work.</p>
               </div>
 
               <section class="testimonials">
@@ -375,8 +316,8 @@
                   <div class="next-project-card">
                     <img class="next-project-card__thumb" src="img/thumbnail/rebrand-thumbnail.jpg?v=2026-10-23k" alt="" loading="lazy" decoding="async">
                     <div class="next-project-card__content">
-                      <p class="next-project-card__title">90% more postcode checks after a homepage redesign</p>
-                      <p class="next-project-card__desc">I adapted CityFibre&rsquo;s new brand across the marketing website and B2B portal, with a focus on making the homepage postcode checker easier to find. Total checks rose 90% compared with the month before launch.</p>
+                      <p class="next-project-card__title">90% more conversions after a homepage redesign</p>
+                      <p class="next-project-card__desc">Research with Mouseflow and Google Analytics showed visitors passing the main conversion input. I redesigned the homepage around it as part of the rebrand. Completed availability checks rose 90% compared with the month before launch.</p>
                     </div>
                   </div>
                 </a>

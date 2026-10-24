@@ -99,10 +99,10 @@ button {
   margin: 0;
   max-width: 75ch;
   font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--type-body-md, 14px);
+  font-size: var(--case-study-body-size, var(--type-body-lg, 15px));
   font-weight: 400;
-  line-height: var(--type-body-md-lh, 1.45);
-  color: rgba(0, 0, 0, 0.72);
+  line-height: var(--case-study-body-line, var(--type-body-lg-lh, 1.45));
+  color: rgba(0, 0, 0, 0.62);
 }
 
 button:hover:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.cs-lightbox-trigger):not(.cs-lightbox__backdrop):not(.cs-lightbox__close):not(.cs-lightbox__nav) {

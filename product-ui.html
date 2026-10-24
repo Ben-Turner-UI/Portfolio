@@ -5,15 +5,15 @@
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Selected interfaces Ben Turner has designed and shipped, covering workflow logic, permissions, data and navigation.">
+    <meta name="description" content="A closer look at interfaces I&rsquo;ve designed and shipped, including workflow branches, role permissions, calculations and asset navigation.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="More product UI | Ben Turner">
-    <meta property="og:description" content="Selected interfaces Ben Turner has designed and shipped, covering workflow logic, permissions, data and navigation.">
+    <meta property="og:title" content="Product UI collection | Ben Turner">
+    <meta property="og:description" content="A closer look at interfaces I&rsquo;ve designed and shipped, including workflow branches, role permissions, calculations and asset navigation.">
     <meta property="og:image" content="https://benturner.work/img/thumbnail/other-thumbnail.jpg">
     <meta property="og:url" content="https://benturner.work/product-ui.html">
     <meta name="twitter:card" content="summary_large_image">
     <style>html,body{background:#fff;color-scheme:only light}</style>
-    <title>More product UI | Ben Turner</title>
+    <title>Product UI collection | Ben Turner</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,8 +57,8 @@
           <div class="project-header-title-block">
             <div class="project-header-stack">
               <p class="project-header-meta">Selected work</p>
-              <h1>More product UI</h1>
-              <p class="project-header-description">Selected interfaces I&rsquo;ve designed and shipped, covering workflow logic, permissions, data and navigation.</p>
+              <h1>Product UI collection</h1>
+              <p class="project-header-description"><strong>Context</strong><br>A closer look at interfaces I&rsquo;ve designed and shipped, including workflow branches, role permissions, calculations and asset navigation.</p>
             </div>
           </div>
         </div>
@@ -74,85 +74,97 @@
               <div class="ui-grid" role="list">
 
                 <article class="ui-grid__item" role="listitem">
-                  <div class="ui-grid__media">
-                    <video class="ui-grid__asset" src="img/project-image/bb-ui/Automate.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Branch conditions sit beside their paths in the workflow.">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Budibase</p>
                     <h2 class="ui-grid__title">Automation branches</h2>
-                    <p class="ui-grid__caption">Budibase&rsquo;s automation builder lets people connect actions into workflows. Branches allow a run to follow different paths depending on conditions. Builders needed to understand those paths while looking at the workflow. I designed branch steps with conditions attached to each path, so users could see what determined the route and where to add another condition without leaving the canvas.</p>
+                    <p class="ui-grid__body">A workflow can follow different paths depending on its conditions. Someone building it needs to understand what sends a run down each path and how those paths connect to the rest of the workflow.</p>
+                    <p class="ui-grid__body">I designed branch steps with conditions attached to each path. This kept the logic visible on the canvas, so builders could follow the routes and see where to add another condition.</p>
                   </div>
-                </article>
-
-                <article class="ui-grid__item" role="listitem">
                   <div class="ui-grid__media">
-                    <video class="ui-grid__asset" src="img/project-image/bb-ui/Roles.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Permissions organised around Read, Write and Execute, with role assignment nearby in settings.">
+                    <video class="ui-grid__asset" src="img/project-image/bb-ui/Automate.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Branch conditions sit beside the paths they control in the workflow">
                       Your browser does not support the video tag.
                     </video>
                   </div>
+                  <figcaption class="ui-grid__caption">Branch conditions sit beside the paths they control in the workflow.</figcaption>
+                </article>
+
+                <article class="ui-grid__item" role="listitem">
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Budibase</p>
                     <h2 class="ui-grid__title">Role permissions</h2>
-                    <p class="ui-grid__caption">Custom roles let administrators control what people can access and do within an application. The existing permissions experience relied on a flat list of toggles that was difficult to scan. I reorganised it around Read, Write and Execute levels, giving administrators a clearer structure for reviewing access. I also placed assignment beside the roles in settings.</p>
+                    <p class="ui-grid__body">Custom roles let administrators decide what people can access and do within an application. The existing interface presented permissions as a flat list of toggles, which was difficult to scan.</p>
+                    <p class="ui-grid__body">I reorganised the permissions around Read, Write and Execute levels. This gave administrators a clearer structure for reviewing what each role could do.</p>
+                    <p class="ui-grid__body">I also placed role assignment beside the roles in settings.</p>
                   </div>
-                </article>
-
-                <article class="ui-grid__item" role="listitem">
                   <div class="ui-grid__media">
-                    <video class="ui-grid__asset" src="img/project-image/bb-ui/Calculations.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Calculated columns can be checked against the data within the view builder.">
+                    <video class="ui-grid__asset" src="img/project-image/bb-ui/Roles.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Role management and assignment in Budibase, with permissions organised around Read, Write and Execute">
                       Your browser does not support the video tag.
                     </video>
                   </div>
+                  <figcaption class="ui-grid__caption">Role management and assignment in Budibase, with permissions organised around Read, Write and Execute.</figcaption>
+                </article>
+
+                <article class="ui-grid__item" role="listitem">
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Budibase</p>
                     <h2 class="ui-grid__title">View calculations</h2>
-                    <p class="ui-grid__caption">Budibase views let builders shape how data appears in their applications. Some needed calculated values alongside the existing fields. I brought spreadsheet-style formulas into the view builder, with JavaScript available for more complex calculations. Results updated within the view, allowing builders to check a calculation against real rows while working on it.</p>
+                    <p class="ui-grid__body">Builders sometimes needed calculated values alongside the data already in their views. I brought spreadsheet-style formulas into the view builder, with JavaScript available for more complex calculations. Results updated within the view, so builders could check a calculation against real rows while working on it.</p>
                   </div>
+                  <div class="ui-grid__media">
+                    <video class="ui-grid__asset" src="img/project-image/bb-ui/Calculations.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Builders configure calculations in the view and check the results against their data">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <figcaption class="ui-grid__caption">Builders configure calculations in the view and check the results against their data.</figcaption>
                 </article>
 
                 <article class="ui-grid__item" role="listitem">
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-after.png" alt="Active filters remain visible above the asset results and can be removed individually." loading="lazy" decoding="async">
-                  </div>
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Perforce · P4 DAM</p>
                     <h2 class="ui-grid__title">Advanced filtering</h2>
-                    <p class="ui-grid__caption">P4 DAM users apply filters to narrow down asset libraries. With several filters active, they needed to understand why particular assets appeared in the results. The existing experience put that information inside a panel users had to reopen. I surfaced active selections as removable chips above the results, making it easier to review the current query and clear an individual filter.</p>
+                    <p class="ui-grid__body">When several filters were active, users needed to understand why particular assets appeared in their results. The existing interface kept that information inside a panel, so they had to reopen it to check their selections.</p>
+                    <p class="ui-grid__body">I brought the active filters above the results as removable chips. Users could see the current query and remove a filter without losing sight of the assets.</p>
                   </div>
+                  <div class="ui-grid__media">
+                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-after.png" alt="Active filters remain visible above the asset results and can be removed individually" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="ui-grid__caption">Active filters remain visible above the asset results and can be removed individually.</figcaption>
                 </article>
 
                 <article class="ui-grid__item" role="listitem">
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-product/homepage-after.png" alt="Recent files and active reviews are available on the dashboard." loading="lazy" decoding="async">
-                  </div>
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Perforce · P4 DAM</p>
                     <h2 class="ui-grid__title">Dashboard</h2>
-                    <p class="ui-grid__caption">People returning to P4 DAM often need to pick up an asset or review they were already working on. The previous home screen made them navigate further into the product to find that work. I redesigned the dashboard to bring recent files, active reviews and search forward, giving users direct starting points for continuing work or finding another asset.</p>
+                    <p class="ui-grid__body">People returning to P4 DAM often wanted to continue working on an asset or review. The previous home screen made them navigate further into the product to find that work.</p>
+                    <p class="ui-grid__body">I redesigned the dashboard to bring recent files, active reviews and search forward. This gave users more direct starting points for continuing their work or finding another asset.</p>
                   </div>
+                  <div class="ui-grid__media">
+                    <img class="ui-grid__asset" src="img/project-image/p4-product/homepage-after.png" alt="Search, projects and recent assets are available from the dashboard" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="ui-grid__caption">Search, projects and recent assets are available from the dashboard.</figcaption>
                 </article>
 
                 <article class="ui-grid__item" role="listitem">
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-product/breadcrumbs-after.png" alt="A consistent breadcrumb pattern shows the current location within the folder hierarchy." loading="lazy" decoding="async">
-                  </div>
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Perforce · P4 DAM</p>
                     <h2 class="ui-grid__title">Breadcrumbs</h2>
-                    <p class="ui-grid__caption">P4 DAM organises assets within folder hierarchies. Users need to understand their current location and move between folders as they browse. Navigation patterns differed across the product. I standardised the breadcrumbs, including how long paths were shortened and how users moved to parent or sibling folders.</p>
+                    <p class="ui-grid__body">P4 DAM organises assets within folder hierarchies. As users moved through them, they needed to understand their location and find their way to other folders.</p>
+                    <p class="ui-grid__body">Navigation patterns differed across the product. I standardised the breadcrumbs, including how long paths were shortened and how users moved to parent or sibling folders.</p>
                   </div>
+                  <div class="ui-grid__media">
+                    <img class="ui-grid__asset" src="img/project-image/p4-product/breadcrumbs-after.png" alt="The breadcrumb trail shows the project, collection and current folder" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="ui-grid__caption">The breadcrumb trail shows the project, collection and current folder.</figcaption>
                 </article>
 
                 <article class="ui-grid__item ui-grid__item--soon" role="listitem">
-                  <div class="ui-grid__media ui-grid__media--soon" aria-hidden="true">
-                    <span class="ui-grid__soon-label">Coming soon</span>
-                  </div>
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Perforce</p>
                     <h2 class="ui-grid__title">P4 Plan</h2>
-                    <p class="ui-grid__caption">Planning and scheduling work from Perforce. Screens and recordings will appear here once they are cleared for publication.</p>
+                    <p class="ui-grid__body">Planning and scheduling work from Perforce. Screens and recordings will appear here once they are cleared for publication.</p>
+                  </div>
+                  <div class="ui-grid__media ui-grid__media--soon" aria-hidden="true">
+                    <span class="ui-grid__soon-label">Coming soon</span>
                   </div>
                 </article>
 
@@ -164,7 +176,7 @@
                     <img class="next-project-card__thumb" src="img/thumbnail/p4-product.png?v=2026-10-23k" alt="" loading="lazy" decoding="async">
                     <div class="next-project-card__content">
                       <p class="next-project-card__title">From design to production code in P4 DAM</p>
-                      <p class="next-project-card__desc">P4 DAM is Perforce&rsquo;s digital asset management product. When its front-end team fell from six developers to two, I began taking some features from design through to production code. The team shipped around 25% more features in Q3 2026 than Q2.</p>
+                      <p class="next-project-card__desc">I began working directly in production code with Claude Code after developers were reassigned. My implementation work and faster GitHub handovers helped the team ship around 25% more features in Q3 2026 than in Q2.</p>
                     </div>
                   </div>
                 </a>

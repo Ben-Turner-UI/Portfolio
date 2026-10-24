@@ -73,7 +73,6 @@ header.project-header:not(.about-header) {
   margin-bottom: 48px;
   padding-top: 48px;
   padding-bottom: 48px;
-  background: linear-gradient(180deg, #fff 0%, #eeedea 100%);
 }
 
 header.project-header.about-header {
@@ -256,9 +255,7 @@ header.project-header.about-header {
   margin-bottom: var(--case-study-h2-bottom-margin);
 }
 
-.project-header h3:not(.project-statistics-stat),
-.project-paragraph h3,
-.project-paragraph-list-item h3 {
+.project-header h3:not(.project-statistics-stat) {
   margin: 0 0 var(--case-study-h3-gap);
   font-family: 'Source Sans 3', sans-serif;
   font-size: var(--type-heading-3);
@@ -272,15 +269,22 @@ header.project-header.about-header {
 .project-paragraph h3,
 .project-paragraph-list-item h3 {
   margin: var(--prose-h3-margin-top) 0 var(--prose-h3-margin-bottom);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--type-heading-4);
+  font-weight: 600;
+  line-height: var(--type-heading-4-lh);
+  color: #000;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .project-paragraph > h3,
 .project-paragraph-list-item > h3 {
   margin: var(--prose-h3-margin-top) 0 var(--prose-h3-margin-bottom);
   font-family: 'Source Sans 3', sans-serif;
-  font-size: var(--type-heading-3);
+  font-size: var(--type-heading-4);
   font-weight: 600;
-  line-height: var(--type-heading-3-lh);
+  line-height: var(--type-heading-4-lh);
   color: #000;
   text-transform: none;
   letter-spacing: normal;
