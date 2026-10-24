@@ -141,8 +141,15 @@
 }
 
 .cs-highlights {
+  /* Equal columns fill the row; fixed gutters keep rules evenly spaced */
+  --cs-highlight-gutter: 40px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns:
+    minmax(0, 1fr)
+    var(--cs-highlight-gutter)
+    minmax(0, 1fr)
+    var(--cs-highlight-gutter)
+    minmax(0, 1fr);
   column-gap: 0;
   row-gap: 0;
   align-items: stretch;
@@ -155,24 +162,41 @@
 }
 
 .cs-highlight {
+  position: relative;
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: 1 / span 3;
   row-gap: 0;
+  width: auto;
+  max-width: none;
   min-width: 0;
   align-items: start;
   text-align: left;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.cs-highlight + .cs-highlight {
-  border-left: 1px solid rgba(0, 0, 0, 0.14);
-  margin-left: 28px;
-  padding-left: 28px;
+.cs-highlights > .cs-highlight:nth-child(1) { grid-column: 1; }
+.cs-highlights > .cs-highlight:nth-child(3) { grid-column: 3; }
+.cs-highlights > .cs-highlight:nth-child(5) { grid-column: 5; }
+
+.cs-highlights__rule {
+  grid-row: 1 / span 3;
+  justify-self: center;
+  align-self: stretch;
+  width: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.14);
+  pointer-events: none;
 }
+
+.cs-highlights > .cs-highlights__rule:nth-child(2) { grid-column: 2; }
+.cs-highlights > .cs-highlights__rule:nth-child(4) { grid-column: 4; }
 
 .cs-highlight__icon {
-  display: grid;
-  place-items: center;
+  display: block;
   align-self: end;
   justify-self: start;
   margin: 0 0 14px;
@@ -184,26 +208,35 @@
   border-radius: var(--radius-sm);
   background: rgba(0, 0, 0, 0.04);
   color: rgba(0, 0, 0, 0.72);
+  overflow: hidden;
 }
 
-.cs-highlight__icon .material-symbols-outlined {
+.cs-highlight__icon .material-symbols-rounded {
   display: block;
-  font-family: 'Material Symbols Outlined', sans-serif;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Material Symbols Rounded', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1;
-  width: 1em;
-  height: 1em;
+  /* Fill the inner box so the glyph’s em-square is centered by the line box */
+  line-height: 30px;
+  text-align: center;
   color: inherit;
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
   font-style: normal;
   letter-spacing: normal;
   text-transform: none;
   white-space: nowrap;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
-  /* Glyph ink sits high-right in the em box — optical center */
-  translate: -1.5px 1.5px;
+  speak: never;
+  /* Glyph ink sits high in the Material em-box — measured optical nudge */
+  translate: 0 1px;
 }
 
 .cs-highlight__title {
@@ -245,22 +278,24 @@
 @media (max-width: 900px) {
   .cs-highlights {
     grid-template-columns: 1fr;
+    column-gap: 0;
     row-gap: 30px;
   }
 
   .cs-highlight {
     display: flex;
     flex-direction: column;
+    grid-column: auto;
     grid-row: auto;
     grid-template-rows: none;
     row-gap: 0;
     gap: 0;
+    width: auto;
+    max-width: none;
   }
 
-  .cs-highlight + .cs-highlight {
-    border-left: 0;
-    margin-left: 0;
-    padding-left: 0;
+  .cs-highlights__rule {
+    display: none;
   }
 
   .cs-highlight__icon {

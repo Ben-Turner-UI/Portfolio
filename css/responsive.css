@@ -8,7 +8,7 @@
   }
 
   .side-project-grid {
-    gap: 16px;
+    gap: 24px;
   }
 
   .side-project-card {
@@ -57,7 +57,7 @@
 
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
   }
 
   .project-grid .grid-item {

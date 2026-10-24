@@ -21,7 +21,7 @@
 .side-project-grid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -155,7 +155,7 @@ a.side-project-card:hover {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 24px;
   align-items: stretch;
 }
 
