@@ -15,7 +15,7 @@
     <style>html,body{background:#fff;color-scheme:only light}</style>
     <title>90% more conversions after a homepage redesign | Ben Turner</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/cf-hero-replica.css?v=8">
+    <link rel="stylesheet" type="text/css" href="css/cf-hero-replica.css?v=11">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
@@ -77,7 +77,7 @@
                   <li class="cs-highlight" role="listitem">
                     <span class="cs-highlight__icon" aria-hidden="true"><span class="material-symbols-outlined">handshake</span></span>
                     <p class="cs-highlight__title">Hyperoptic became a client</p>
-                    <p class="cs-highlight__desc">A Hyperoptic director cited the work as a key reason for choosing DawsonAndrews. The Hyperoptic account supported nine additional hires.</p>
+                    <p class="cs-highlight__desc">A Hyperoptic director cited my design work as a key reason for choosing DawsonAndrews. The Hyperoptic account supported nine additional hires.</p>
                   </li>
                 </ul>
               </div>
@@ -335,7 +335,9 @@
         if (!root) return;
 
         function fitScale() {
-          root.style.setProperty('--cf-scale', String(root.clientWidth / 1920));
+          var page = root.querySelector('.cf-hero__page');
+          var designW = page ? parseFloat(getComputedStyle(page).width) || 1920 : 1920;
+          root.style.setProperty('--cf-scale', String(root.clientWidth / designW));
         }
         fitScale();
         if ('ResizeObserver' in window) {

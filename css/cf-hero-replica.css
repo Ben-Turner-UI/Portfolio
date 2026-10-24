@@ -159,8 +159,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 28px;
   min-height: 0;
-  padding: 48px 160px 72px;
+  padding: 64px 160px;
   text-align: center;
 }
 
@@ -176,7 +177,7 @@
 }
 
 .cf-hero__lede {
-  margin: 28px auto 0;
+  margin: 0 auto;
   max-width: 720px;
   font-size: 20px;
   line-height: 1.45;
@@ -186,7 +187,7 @@
 
 .cf-hero__checker {
   width: 640px;
-  margin-top: 40px;
+  margin: 0;
   text-align: left;
 }
 
@@ -215,7 +216,8 @@
   color: var(--cf-ink);
   position: relative;
   z-index: 2;
-  border-bottom-color: #fff;
+  /* Covers the field’s top border so the tab joins the input */
+  border-bottom: 2px solid #fff;
   margin-bottom: -2px;
 }
 
@@ -225,7 +227,7 @@
 }
 
 .cf-hero__field {
-  --cf-field-pad: 12px;
+  --cf-field-pad: 14px;
   position: relative;
   z-index: 1;
   display: flex;
@@ -233,13 +235,14 @@
   gap: 14px;
   background: #fff;
   border: 2px solid var(--cf-ink);
-  border-top: 0;
   border-radius: 0 12px 12px 12px;
   padding: var(--cf-field-pad);
+  box-sizing: border-box;
 }
 
 .cf-hero__pin {
   flex: 0 0 auto;
+  display: block;
   width: 22px;
   height: 22px;
   color: #000;
@@ -249,6 +252,7 @@
   flex: 1 1 auto;
   min-width: 0;
   font-size: 18px;
+  line-height: 1.2;
   color: #6b6b6b;
   white-space: nowrap;
   overflow: hidden;
@@ -259,8 +263,10 @@
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  padding: 14px 20px;
+  height: 44px;
+  padding: 0 20px;
   border-radius: 10px;
   background: var(--cf-ink);
   color: #fff;
@@ -269,6 +275,7 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .cf-hero__cta svg {
@@ -287,13 +294,98 @@
   z-index: 2;
 }
 
+/* Phone artboard — stop shrinking the desktop layout into a postage stamp */
 @media (max-width: 720px) {
   .cf-hero {
     aspect-ratio: 4 / 5;
   }
 
   .cf-hero__page {
-    /* Keep width scale; crop height via overflow */
-    height: 2400px;
+    width: 390px;
+    height: 488px;
+  }
+
+  .cf-hero__chrome {
+    height: 56px;
+    padding: 0 20px;
+  }
+
+  .cf-hero__logo {
+    height: 28px;
+  }
+
+  .cf-hero__nav {
+    display: none;
+  }
+
+  .cf-hero__search {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cf-hero__body {
+    gap: 16px;
+    padding: 28px 22px;
+  }
+
+  .cf-hero__title {
+    font-size: 42px;
+  }
+
+  .cf-hero__lede {
+    max-width: none;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .cf-hero__checker {
+    width: 100%;
+  }
+
+  .cf-hero__tab {
+    padding: 8px 14px;
+    border-width: 1.5px;
+    border-radius: 10px 10px 0 0;
+    font-size: 13px;
+  }
+
+  .cf-hero__tab--active {
+    border-bottom-width: 1.5px;
+    margin-bottom: -1.5px;
+  }
+
+  .cf-hero__field {
+    --cf-field-pad: 10px;
+    gap: 10px;
+    border-width: 1.5px;
+    border-radius: 0 10px 10px 10px;
+  }
+
+  .cf-hero__pin {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cf-hero__placeholder {
+    font-size: 13px;
+  }
+
+  .cf-hero__cta {
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    gap: 4px;
+  }
+
+  .cf-hero__cta svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .cf-hero__scroll {
+    bottom: 16px;
+    width: 22px;
+    height: 22px;
   }
 }

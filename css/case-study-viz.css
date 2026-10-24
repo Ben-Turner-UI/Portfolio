@@ -171,9 +171,8 @@
 }
 
 .cs-highlight__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   align-self: end;
   justify-self: start;
   margin: 0 0 14px;
@@ -189,12 +188,12 @@
 
 .cs-highlight__icon .material-symbols-outlined {
   display: block;
-  width: 18px;
-  height: 18px;
   font-family: 'Material Symbols Outlined', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
   color: inherit;
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
   font-style: normal;
@@ -203,8 +202,8 @@
   white-space: nowrap;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
-  /* Material Symbols sit optically high; nudge into true center */
-  transform: translateY(1px);
+  /* Glyph ink sits high-right in the em box — optical center */
+  translate: -1.5px 1.5px;
 }
 
 .cs-highlight__title {
