@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A selection of interfaces I&rsquo;ve designed to help people build workflows, manage access, work with data and find their files.">
+    <meta name="description" content="Here&rsquo;s a selection of features and interfaces I&rsquo;ve designed over the years, various complex UX problems with interesting and unique solutions.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Product UI collection | Ben Turner">
-    <meta property="og:description" content="A selection of interfaces I&rsquo;ve designed to help people build workflows, manage access, work with data and find their files.">
+    <meta property="og:description" content="Here&rsquo;s a selection of features and interfaces I&rsquo;ve designed over the years, various complex UX problems with interesting and unique solutions.">
     <meta property="og:image" content="https://benturner.work/img/thumbnail/other-thumbnail.jpg">
     <meta property="og:url" content="https://benturner.work/product-ui.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -58,7 +58,7 @@
             <div class="project-header-stack">
               <p class="project-header-meta">Selected work</p>
               <h1>Product UI collection</h1>
-              <p class="project-header-description">A selection of interfaces I&rsquo;ve designed to help people build workflows, manage access, work with data and find their files.</p>
+              <p class="project-header-description">Here&rsquo;s a selection of features and interfaces I&rsquo;ve designed over the years, various complex UX problems with interesting and unique solutions.</p>
             </div>
           </div>
         </div>
@@ -77,7 +77,8 @@
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Budibase</p>
                     <h2 class="ui-grid__title">Automation branches</h2>
-                    <p class="ui-grid__body">Workflows sometimes need to take different routes. I designed a way for people to add conditions to each route and see them beside the path they control. This made it easier to understand what would happen when the workflow ran.</p>
+                    <p class="ui-grid__body">Automated workflows sometimes need to take different routes depending on what happens. For example, an invoice over £500 might need a manager’s approval, while a smaller invoice could move straight to the next step.</p>
+                    <p class="ui-grid__body">I designed a way for people to add these “if this, then that” conditions to each branch and see them beside the path they control. This kept the rules visible in the flowchart, making it easier to build and follow the workflow without writing code.</p>
                   </div>
                   <div class="ui-grid__media">
                     <video class="ui-grid__asset" src="img/project-image/bb-ui/Automate.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Conditions shown beside each workflow path">
@@ -91,8 +92,8 @@
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Budibase</p>
                     <h2 class="ui-grid__title">Role permissions</h2>
-                    <p class="ui-grid__body">Administrators need to control what people can see and do in an app. The old settings were a long list of switches, which made permissions difficult to check.</p>
-                    <p class="ui-grid__body">I grouped them into Read, Write and Execute: viewing information, changing it and running actions. I also brought role assignment into the same settings area.</p>
+                    <p class="ui-grid__body">Administrators need to control what people can see and do inside their applications. A manager might need to edit records and run actions, while another team member only needs to view information. The old settings presented permissions as a long list of switches, making access difficult to check.</p>
+                    <p class="ui-grid__body">I grouped permissions into Read, Write and Execute: viewing information, changing it and running actions. This gave administrators a clearer way to set access to data and queries for each custom role. I also brought role assignment into the same settings area, so they could define a role’s permissions and assign it to the right people in one place.</p>
                   </div>
                   <div class="ui-grid__media">
                     <video class="ui-grid__asset" src="img/project-image/bb-ui/Roles.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Creating roles, setting permissions and assigning them to users">
@@ -106,7 +107,8 @@
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Budibase</p>
                     <h2 class="ui-grid__title">View calculations</h2>
-                    <p class="ui-grid__body">I designed a way for people to calculate values within their data, using formulas similar to a spreadsheet. They could see the results alongside their existing rows and check them as they worked. JavaScript was also available for more complex calculations.</p>
+                    <p class="ui-grid__body">People often need to calculate values from their data without exporting it to a spreadsheet. This could mean working out a sales total or calculating a value from information already stored in a row.</p>
+                    <p class="ui-grid__body">I designed an interface for creating calculated fields using familiar, spreadsheet-style formulas, with JavaScript available for more complex calculations. Results appeared alongside the existing data, so people could check their calculations as they worked and use the new fields throughout their app.</p>
                   </div>
                   <div class="ui-grid__media">
                     <video class="ui-grid__asset" src="img/project-image/bb-ui/Calculations.mp4" data-autoplay loop muted playsinline preload="auto" autoplay aria-label="Adding a calculation and checking its results">
@@ -120,49 +122,18 @@
                   <div class="ui-grid__copy">
                     <p class="ui-grid__product">Perforce · P4 DAM</p>
                     <h2 class="ui-grid__title">Advanced filtering</h2>
-                    <p class="ui-grid__body">People had to reopen the filter panel to check which filters were affecting their results.</p>
-                    <p class="ui-grid__body">I moved the selected filters above the results, where they stayed visible. Users could see what was applied and remove individual filters without opening the panel again.</p>
+                    <p class="ui-grid__body">This design builds on my experience creating advanced filtering interfaces for assets, databases and other complex datasets. It involved extensive research, with AI-generated browser prototypes helping me test interactions and iterate faster.</p>
+                    <p class="ui-grid__body">The main challenge was making active filters easy to understand while giving users full visibility and control over their selections. I placed removable filter pills directly inside the filter containers, so users could see and adjust their choices in context.</p>
+                    <p class="ui-grid__body">The interface brings together visibility, flexibility and ease of use. Products like Airtable, Jira and Notion offered useful references, but I felt each left parts of that experience unresolved. This was an opportunity to explore how those elements could work better together.</p>
                   </div>
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-after.png" alt="Selected filters displayed above the files" loading="lazy" decoding="async">
+                  <div class="ui-grid__media ui-grid__media--contain">
+                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-pills.png?v=2026-10-24e" alt="Filter controls with removable pills for the selected values" loading="lazy" decoding="async">
                   </div>
-                  <figcaption class="ui-grid__caption">Selected filters displayed above the files.</figcaption>
-                </article>
-
-                <article class="ui-grid__item" role="listitem">
-                  <div class="ui-grid__copy">
-                    <p class="ui-grid__product">Perforce · P4 DAM</p>
-                    <h2 class="ui-grid__title">Dashboard</h2>
-                    <p class="ui-grid__body">I redesigned the home screen to help people get back to their work. Recent files, ongoing reviews and search were easier to reach, so users could pick up where they left off without digging through the product.</p>
+                  <figcaption class="ui-grid__caption">Removable filter pills sit inside each filter control.</figcaption>
+                  <div class="ui-grid__media ui-grid__media--contain">
+                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-advanced.png?v=2026-10-24e" alt="Advanced filter builder with nested and and or condition groups" loading="lazy" decoding="async">
                   </div>
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-product/homepage-after.png" alt="The redesigned home screen with search and recent work" loading="lazy" decoding="async">
-                  </div>
-                  <figcaption class="ui-grid__caption">The redesigned home screen with search and recent work.</figcaption>
-                </article>
-
-                <article class="ui-grid__item" role="listitem">
-                  <div class="ui-grid__copy">
-                    <p class="ui-grid__product">Perforce · P4 DAM</p>
-                    <h2 class="ui-grid__title">Folder navigation</h2>
-                    <p class="ui-grid__body">People needed to know where they were as they moved through folders. I made the navigation trail consistent across the product, showing their current location and giving them a way to move back or switch to a nearby folder.</p>
-                    <p class="ui-grid__body">I also defined how longer folder paths should display without taking up too much space.</p>
-                  </div>
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-product/breadcrumbs-after.png" alt="A navigation trail showing the current folder and the folders above it" loading="lazy" decoding="async">
-                  </div>
-                  <figcaption class="ui-grid__caption">A navigation trail showing the current folder and the folders above it.</figcaption>
-                </article>
-
-                <article class="ui-grid__item ui-grid__item--soon" role="listitem">
-                  <div class="ui-grid__copy">
-                    <p class="ui-grid__product">Perforce</p>
-                    <h2 class="ui-grid__title">P4 Plan</h2>
-                    <p class="ui-grid__body">Design work for Perforce&rsquo;s planning and scheduling product. I&rsquo;ll add examples once they&rsquo;re approved for sharing.</p>
-                  </div>
-                  <div class="ui-grid__media ui-grid__media--soon" aria-hidden="true">
-                    <span class="ui-grid__soon-label">Coming soon</span>
-                  </div>
+                  <figcaption class="ui-grid__caption">Nested and/or groups in the advanced filter builder.</figcaption>
                 </article>
 
               </div>

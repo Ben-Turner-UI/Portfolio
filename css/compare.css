@@ -859,7 +859,7 @@
 .before-after {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: var(--space-4);
   margin-top: 20px;
   width: 100%;
 }
@@ -1054,7 +1054,7 @@
 @media (min-width: 640px) {
   .before-after {
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: var(--space-4);
   }
 
   .before-after--single {

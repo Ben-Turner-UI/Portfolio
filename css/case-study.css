@@ -305,7 +305,7 @@ body.case-study .project-item-group {
 }
 
 figcaption {
-  margin-top: 12px;
+  margin-top: 12px; /* close under the image, with a little air */
   color: #595959;
 }
 
@@ -865,7 +865,7 @@ body.case-study .project-header-stack .project-header-description strong {
 }
 
 body.case-study .cf-homepage-diagram > figcaption {
-  margin-top: var(--space-2);
+  margin-top: 12px;
 }
 
 body.case-study .project-header-stack .project-key-stats {
@@ -899,13 +899,23 @@ body.case-study .project-key-stats .cs-stats {
 .ui-grid__item {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: 0;
   min-width: 0;
   margin: 0;
 }
 
 .ui-grid__item > .ui-grid__copy {
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+/* Caption hugs the image above; next image gets a clear break */
+.ui-grid__media + .ui-grid__caption {
+  margin-top: 12px;
+}
+
+.ui-grid__caption + .ui-grid__media,
+.ui-grid__media + .ui-grid__media {
+  margin-top: var(--space-4);
 }
 
 .ui-grid__media {
@@ -917,6 +927,17 @@ body.case-study .project-key-stats .cs-stats {
   border: var(--project-media-border);
   border-radius: var(--project-media-radius);
   box-sizing: border-box;
+}
+
+/* Full product screenshots: show the whole frame, don’t crop into empty chrome */
+.ui-grid__media--contain {
+  background: #f3f5f7;
+}
+
+.ui-grid__media--contain > .ui-grid__asset,
+.ui-grid__media--contain > .cs-lightbox-trigger > .ui-grid__asset {
+  object-fit: contain;
+  object-position: top center;
 }
 
 .ui-grid__asset {
@@ -992,6 +1013,18 @@ body.case-study .project-key-stats .cs-stats {
   font-size: var(--type-body-md);
   line-height: var(--type-body-md-lh);
   color: #595959;
+}
+
+/* Side-by-side media pairs (if used): keep frames visually separate */
+.ui-grid__media-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.ui-grid__media-row > .ui-grid__media {
+  margin-top: 0;
 }
 
 .ui-grid__item--soon .ui-grid__title,
