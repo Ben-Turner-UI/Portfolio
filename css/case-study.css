@@ -837,6 +837,17 @@ body.case-study .project-header-stack .project-header-role + .project-key-stats 
   margin-top: var(--space-4);
 }
 
+/* Impact row: same full content width on every case study */
+body.case-study .project-header-stack .cs-highlights-block {
+  width: 100%;
+  max-width: var(--project-media-max-width);
+  align-self: stretch;
+}
+
+body.case-study .project-header-stack .cs-highlights {
+  width: 100%;
+}
+
 /* Top pad, bottom pad, and white gap below all match (same as header margin-bottom) */
 body.case-study header.project-header:has(.cs-highlights-block) {
   padding-top: 48px;
