@@ -82,6 +82,11 @@
     border-radius: 0;
   }
 
+  .project-grid-thumbnail--contain {
+    object-fit: contain;
+    object-position: top center;
+  }
+
   .project-card-body {
     grid-column: 1;
     padding: 20px 24px;

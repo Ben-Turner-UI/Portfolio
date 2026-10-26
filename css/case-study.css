@@ -1097,6 +1097,13 @@ body.case-study--ui-gallery .project-details_text > .ui-grid + .button-group {
   object-position: top left;
 }
 
+/* Lightbox wrap reuses the rule above; contain frames must stay uncropped */
+.ui-grid__media--contain > .ui-grid__asset,
+.ui-grid__media--contain > .cs-lightbox-trigger > .ui-grid__asset {
+  object-fit: contain;
+  object-position: top center;
+}
+
 .ui-grid__media > .cs-lightbox-trigger > video.ui-grid__asset {
   background: transparent;
 }

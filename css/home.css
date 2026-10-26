@@ -222,6 +222,12 @@ a.side-project-card:hover {
   border-radius: 0;
 }
 
+/* Wide UI screenshots: show the full frame instead of cropping the sides */
+.project-grid-thumbnail--contain {
+  object-fit: contain;
+  object-position: top center;
+}
+
 .project-card-body {
   grid-column: 1;
   min-width: 0;
