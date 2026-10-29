@@ -273,7 +273,8 @@ body.case-study .project-item-group {
 
 .image-with-caption--contain,
 .content-image--contain .image-with-caption {
-  object-fit: contain;
+  /* Fill the frame; crop overflow instead of letterboxing */
+  object-fit: cover;
   max-height: none;
 }
 
@@ -368,13 +369,14 @@ body.case-study .project-details_text > .cf-homepage-diagram + .content-image {
   background: transparent;
 }
 
-/* Floating product UI: padded stage behind the screenshot / video */
+/* Product UI screenshots fill the media frame edge-to-edge (no stage bars) */
 .content-image--ui > .content-image__stage {
   width: 100%;
   padding: var(--project-ui-stage-pad);
   background: var(--project-ui-stage-bg);
   border-radius: var(--project-media-radius);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .content-image--ui .content-image__stage > .image-with-caption,
@@ -390,11 +392,11 @@ body.case-study .project-details_text > .cf-homepage-diagram + .content-image {
   max-width: none;
   max-height: none;
   margin: 0;
-  box-shadow: var(--project-ui-float-shadow);
+  box-shadow: none;
 }
 
 .content-image--ui .content-image__stage > .media-tablet .image-with-caption {
-  box-shadow: var(--project-ui-float-shadow);
+  box-shadow: none;
 }
 
 body.case-study .main-content .content-image--device {
@@ -929,15 +931,15 @@ body.case-study .project-key-stats .cs-stats {
   box-sizing: border-box;
 }
 
-/* Full product screenshots: show the whole frame, don’t crop into empty chrome */
+/* Keep modifier for older markup; always fill the frame (no letterbox bars) */
 .ui-grid__media--contain {
-  background: #f3f5f7;
+  background: transparent;
 }
 
 .ui-grid__media--contain > .ui-grid__asset,
 .ui-grid__media--contain > .cs-lightbox-trigger > .ui-grid__asset {
-  object-fit: contain;
-  object-position: top center;
+  object-fit: cover;
+  object-position: top left;
 }
 
 .ui-grid__asset {
@@ -1097,11 +1099,11 @@ body.case-study--ui-gallery .project-details_text > .ui-grid + .button-group {
   object-position: top left;
 }
 
-/* Lightbox wrap reuses the rule above; contain frames must stay uncropped */
+/* Lightbox wrap reuses cover fill so frames stay edge-to-edge */
 .ui-grid__media--contain > .ui-grid__asset,
 .ui-grid__media--contain > .cs-lightbox-trigger > .ui-grid__asset {
-  object-fit: contain;
-  object-position: top center;
+  object-fit: cover;
+  object-position: top left;
 }
 
 .ui-grid__media > .cs-lightbox-trigger > video.ui-grid__asset {

@@ -83,7 +83,7 @@
   }
 
   .project-grid-thumbnail--contain {
-    object-fit: contain;
+    object-fit: cover;
     object-position: top center;
   }
 
@@ -167,7 +167,7 @@
   }
 
   .main-content .content-image--ui > .content-image__stage {
-    padding: 20px 16px;
+    padding: 0;
   }
 
   .main-content .content-image--crop-top .content-image-media {
