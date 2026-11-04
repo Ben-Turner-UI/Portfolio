@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url("fonts/NotoSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("fonts/NotoSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("fonts/NotoSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("fonts/NotoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --ink: #171717;
+  --muted: #44403c;
+  --rule: #e7e5e4;
+  --accent: #9a3412;
+  --bg: #fffcf8;
+  --page-w: 210mm;
+  --page-h: 297mm;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(154, 52, 18, 0.18);
+  color: var(--ink);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #e7e5e4;
+  color: var(--ink);
+  font-family: "Noto Sans", sans-serif;
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 48px;
+}
+
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  background: var(--bg);
+  padding: 14mm 15mm 12mm;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(23, 23, 23, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.mast {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--ink);
+  margin-bottom: 14px;
+  flex: 0 0 auto;
+}
+
+.mast h1 {
+  margin: 0;
+  font-size: 20pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.mast__meta {
+  margin: 3px 0 0;
+  font-size: 10pt;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.mast__links {
+  margin: 0;
+  font-size: 9.5pt;
+  white-space: nowrap;
+}
+
+.headline {
+  margin: 0 0 10px;
+  font-size: 23pt;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  max-width: none;
+  flex: 0 0 auto;
+}
+
+.lede {
+  margin: 0 0 14px;
+  font-size: 11pt;
+  line-height: 1.4;
+  max-width: 54ch;
+  flex: 0 0 auto;
+}
+
+.hero {
+  margin: 0 0 14px;
+  padding: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 105mm;
+  object-fit: cover;
+  object-position: left center;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+
+.strengths {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px 14px;
+  margin: 0 0 14px;
+  flex: 0 0 auto;
+}
+
+.strength h3 {
+  margin: 0 0 5px;
+  font-size: 9.5pt;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.strength p {
+  margin: 0;
+  font-size: 9.25pt;
+  line-height: 1.38;
+  color: var(--ink);
+}
+
+.outcome {
+  margin: 0 0 14px;
+  padding: 11px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  flex: 0 0 auto;
+}
+
+.outcome__figure {
+  margin: 0 0 3px;
+  font-size: 16pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  line-height: 1.15;
+}
+
+.outcome__note {
+  margin: 0;
+  font-size: 9.5pt;
+  line-height: 1.35;
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+.close {
+  margin-top: auto;
+  flex: 0 0 auto;
+}
+
+.close__invite {
+  margin: 0 0 8px;
+  font-size: 12pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.close__contact {
+  margin: 0;
+  font-size: 9.5pt;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.close__contact .sep {
+  margin: 0 0.35em;
+  color: #a8a29e;
+}
+
+@media print {
+  html, body {
+    background: #fff;
+    padding: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  body {
+    display: block;
+  }
+
+  .page {
+    box-shadow: none;
+    margin: 0;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}

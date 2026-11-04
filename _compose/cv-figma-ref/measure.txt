@@ -1,0 +1,165 @@
+PAGE 1 rect Rect(0.0, 0.0, 892.0, 1262.0)
+  y=  40.5 x=  32.0- 216.9 size=48.0   | Ben Turner.
+  y= 140.0 x=  32.0- 580.8 size=20.0   | Product Designer, enterprise UX, design systems & AI workflows.
+  y= 182.6 x=  32.0- 846.5 size=16.0   | Product Designer with over seven years' experience boosting sales for enteprise, winning new clients
+  y= 204.6 x=  32.0- 820.8 size=16.0   | startups reach profitabilty. My AI workflows and systems won this years hackathon and are used acros
+  y= 226.6 x=  32.0- 800.6 size=16.0   | areas. I use research to make my decisions, speaking with real users face to face and across qualifi
+  y= 248.6 x=  32.0- 418.0 size=16.0   | impactful design decisions and build inteillgent workflows.
+  y= 302.6 x=  32.0- 126.9 size=20.0   | Experience
+  y=  32.0 x= 374.0- 513.8 size=16.0   | Location: Belfast, UK
+  y=  59.0 x= 374.0- 545.9 size=16.0   | My Work: benturner.work
+  y=  86.0 x= 374.0- 534.1 size=16.0   | Phone: +44 7546 182198
+  y=  32.0 x= 574.0- 724.4 size=16.0   | Work: Remote / hybrid
+  y=  59.0 x= 574.0- 859.3 size=16.0   | Email: Benjamin.turner.design@gmail.com
+  y=  86.0 x= 574.0- 851.6 size=16.0   | LinkedIn: linkedin.com/in/benturnerwork
+  y= 359.2 x=  92.0- 290.7 size=16.0   | Product Designer at Perforce
+  y= 381.2 x=  92.0- 335.3 size=16.0   | P4 DAM, P4 Plan, P4 Cloud and more.
+  y= 403.2 x=  92.0- 269.2 size=16.0   | September 2025 to present
+  y= 441.2 x=  32.0- 826.4 size=16.0   | Increased Product Sales: Rebuilt trial onboarding to eliminate setup friction so prospects could sel
+  y= 463.2 x=  32.0- 608.3 size=16.0   | streamlining the sales process and generating a higher volume of pipeline opportunities.
+  y= 493.2 x=  32.0- 826.9 size=16.0   | Front-End Engineering: Leveraged Claude Code to build and ship production UI, boosting feature veloc
+  y= 515.2 x=  32.0- 383.1 size=16.0   | leaner team and cutting feature-planning time in half.
+  y= 545.2 x=  32.0- 853.2 size=16.0   | AI Innovation & Leadership: Engineered custom Claude workflows to automate UI generation and design 
+  y= 567.2 x=  32.0- 790.7 size=16.0   | "Best Designed" at the 2026 company hackathon, scaled adoption across 5+ design groups, and earned a
+  y= 589.2 x=  32.0- 641.4 size=16.0   | company's high-level AI task group to shape AI workflows for a 20-person design organisation.
+  y= 619.2 x=  32.0- 861.2 size=16.0   | Product Ownership: Directed end-to-end product design across multiple product offerings, including s
+  y= 641.2 x=  32.0- 803.2 size=16.0   | digital asset management, and creative project planning, while partnering with executive leadership 
+  y= 663.2 x=  32.0- 200.3 size=16.0   | acquisition and retention.
+  y= 693.2 x=  32.0- 828.1 size=16.0   | UX & Navigation Overhaul: Eliminated friction points by redesigning information architecture and in-
+  y= 715.2 x=  32.0- 676.0 size=16.0   | replacing clunky user workarounds with seamless journeys that measurably improved satisfaction.
+  y= 755.7 x= 144.0- 153.9 size=16.0   | ↗
+  y= 758.2 x=  47.0- 133.3 size=13.0   | View Case Study
+  y= 813.2 x=  92.0- 296.4 size=16.0   | Product Designer at Budibase
+  y= 835.2 x=  92.0- 516.2 size=16.0   | Low-code platform for internal apps, automations and AI agents.
+  y= 857.2 x=  92.0- 235.2 size=16.0   | July 2024 to July 2025
+  y= 895.2 x=  32.0- 791.4 size=16.0   | AI-Focused: Solved data-heavy UX challenges common in complex AI workflow systems, demonstrating the
+  y= 917.2 x=  32.0- 367.1 size=16.0   | independently design intuitive, AI-driven interfaces.
+  y= 947.2 x=  32.0- 820.7 size=16.0   | End-to-End Ownership: Spearheaded product direction and design for core features, helping Budibase a
+  y= 969.2 x=  32.0- 304.7 size=16.0   | profitability as an independent AI startup.
+  y= 999.2 x=  32.0- 786.9 size=16.0   | UX Transformation: Partnered with the Head of Design and Product to rebuild the core infrastructure 
+  y=1021.2 x=  32.0- 486.2 size=16.0   | successfully driving user complaints down from 25 per month to zero.
+  y=1051.2 x=  32.0- 796.1 size=16.0   | Streamlined Onboarding: Reduced onboarding friction from 20 steps to 3 to accelerate time-to-value, 
+  y=1073.2 x=  32.0- 599.1 size=16.0   | conversions and driving the purchase of additional products and professional licenses.
+  y=1113.7 x= 144.0- 153.9 size=16.0   | ↗
+  y=1116.2 x=  47.0- 133.3 size=13.0   | View Case Study
+drawings 44
+  type=f rect=Rect(0.0, 0.0, 892.0, 1262.0) color=None fill=(0.0, 0.0, 0.0) width=None
+  type=f rect=Rect(0.0, 0.0, 892.0, 1262.0) color=None fill=(1.0, 1.0, 1.0) width=None
+  type=f rect=Rect(32.0, 50.099979400634766, 204.45762634277344, 88.9079818725586) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(206.0, 83.00396728515625, 214.83200073242188, 88.49996948242188) color=None fill=(1.0, 0.2999923825263977, 0.0) width=None
+  type=f rect=Rect(374.0, 36.4320068359375, 437.93511962890625, 48.19200897216797) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(442.1197814941406, 36.41595458984375, 513.7364501953125, 50.71995544433594) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(374.0, 63.78394317626953, 437.7615051269531, 78.10394287109375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(442.203125, 63.60798645019531, 545.7603759765625, 75.19198608398438) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(374.0, 90.7839584350586, 421.97503662109375, 102.19195556640625) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(426.078125, 91.60003662109375, 533.4678955078125, 102.1920394897461) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(574.0, 36.783958435058594, 614.1021118164062, 48.191959381103516) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(619.078125, 36.60796356201172, 723.0679931640625, 51.343963623046875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(574.0, 63.4320068359375, 616.9125366210938, 75.19200897216797) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(621.1425170898438, 63.60795211791992, 858.077392578125, 78.58395385742188) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(574.0, 90.4320068359375, 638.5288696289062, 102.19200897216797) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(643.0697631835938, 90.6080322265625, 851.4093017578125, 104.56002807617188) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 145.54005432128906, 579.5735473632812, 164.2200469970703) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 171.99998474121094, 822.0, 172.5999755859375) color=None fill=(0.6899977326393127, 0.6899977326393127, 0.6899977326393127) width=None
+  type=f rect=Rect(32.0, 187.0159454345703, 843.1466674804688, 268.1839294433594) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 308.1399841308594, 126.17524719238281, 326.2799987792969) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 334.5999450683594, 860.0, 335.199951171875) color=None fill=(0.6899977326393127, 0.6899977326393127, 0.6899977326393127) width=None
+  type=f rect=Rect(92.0, 363.6320495605469, 290.14910888671875, 378.5760498046875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 385.8080139160156, 334.2245788574219, 399.9200134277344) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 407.8080139160156, 269.02386474609375, 422.4800109863281) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 445.61602783203125, 822.5117797851562, 482.7840270996094) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 497.61602783203125, 822.6050415039062, 534.7840576171875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(31.90399932861328, 549.6160278320312, 848.9445190429688, 608.7840576171875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 623.6160278320312, 857.28857421875, 682.47998046875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 697.6160278320312, 824.164306640625, 734.7839965820312) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 753.2000122070312, 170.0, 781.2000122070312) color=None fill=(1.0, 1.0, 1.0) width=None
+  type=f rect=Rect(31.0, 752.2000122070312, 171.0, 782.2000122070312) color=None fill=(0.7156481146812439, 0.7156481146812439, 0.7156481146812439) width=None
+  type=f rect=Rect(47.0, 761.9440307617188, 133.18701171875, 773.9169921875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(144.0, 764.531982421875, 152.09600830078125, 771.7000122070312) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 817.6320190429688, 295.77410888671875, 832.5759887695312) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 839.6160278320312, 515.1248168945312, 854.7839965820312) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 861.8079833984375, 234.47662353515625, 876.5440063476562) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(31.90399932861328, 899.6160278320312, 787.6495361328125, 936.7839965820312) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 951.6160278320312, 816.3075561523438, 988.5440063476562) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 1003.615966796875, 783.0242919921875, 1040.783935546875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 1055.615966796875, 792.3489990234375, 1092.7840576171875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  IMG xref=12 bbox=(-85.21659088134766, 512.0, 975.2164916992188, 1262.0) 1240x877
+  IMG xref=8 bbox=(-18.999996185302734, -32.7999267578125, 872.9999389648438, 1229.199951171875) 1273x1800
+  IMG xref=8 bbox=(-18.999996185302734, -57.7999267578125, 872.9999389648438, 1204.199951171875) 1273x1800
+PAGE 2 rect Rect(0.0, 0.0, 892.0, 1262.0)
+  y=  32.0 x=  92.0- 311.9 size=16.0   | UX Designer at DawsonAndrews
+  y=  54.0 x=  92.0- 290.4 size=16.0   | Digital product design agency.
+  y=  76.0 x=  92.0- 240.4 size=16.0   | June 2021 to July 2024
+  y= 114.0 x=  32.0- 849.4 size=16.0   | Major Client Success: Led research-driven redesigns of CityFibre's B2B portal and homepage, doubling
+  y= 136.0 x=  32.0- 862.5 size=16.0   | increasing completed availability checks by 90%. This generated tens of thousands of pounds in addit
+  y= 158.0 x=  32.0- 556.8 size=16.0   | major new agency account and funding nine new hires, including two designers.
+  y= 188.0 x=  32.0- 843.7 size=16.0   | Team Leadership: Mentored junior and mid-level designers while scaling the team from two to six. I’m
+  y= 210.0 x=  32.0- 577.5 size=16.0   | supported designers who have since built thriving careers in the Belfast tech scene.
+  y= 240.0 x=  32.0- 812.2 size=16.0   | 0-to-1 Product Launch: Partnered with former rugby international star David Humphreys to design, bra
+  y= 262.0 x=  32.0- 801.4 size=16.0   | SportsWork as a dedicated sporting jobs platform from scratch, successfully scaling it into an indep
+  y= 284.0 x=  32.0-  93.5 size=16.0   | business.
+  y= 314.0 x=  32.0- 797.9 size=16.0   | Cross-Domain Expertise: Delivered impactful design solutions across diverse sectors, including start
+  y= 336.0 x=  32.0- 783.4 size=16.0   | platforms, e-commerce, news outlets, public sector services, enterprise software, public infrastruct
+  y= 366.0 x=  32.0- 823.1 size=16.0   | Design Systems: Built complex design systems, tokens, and component libraries for CityFibre and GSMA
+  y= 388.0 x=  32.0- 860.6 size=16.0   | improved development metrics, making the team a top performer across 10 service partners. Streamline
+  y= 410.0 x=  32.0- 474.9 size=16.0   | developer questions and cut design rework tickets from 15% to 5%.
+  y= 450.5 x= 143.0- 152.9 size=16.0   | ↗
+  y= 453.0 x=  46.0- 132.3 size=13.0   | View Case Study
+  y= 508.0 x=  92.0- 275.4 size=16.0   | Contract Product Designer
+  y= 530.0 x=  92.0- 252.4 size=16.0   | August 2020 to May 2021
+  y= 568.0 x=  32.0- 853.2 size=16.0   | Partnered with local companies, including LoyalBe, alongside an Australian law firm and independent 
+  y= 590.0 x=  32.0- 296.7 size=16.0   | design expertise between full time roles.
+  y= 644.0 x=  92.0- 460.6 size=16.0   | Service Designer at the Northern Ireland Civil Service
+  y= 666.0 x=  92.0- 253.2 size=16.0   | August 2019 to July 2020
+  y= 704.0 x=  32.0- 857.0 size=16.0   | Secure Environments: Served as lead designer on confidential digital products utilized by the Police
+  y= 726.0 x=  32.0- 318.2 size=16.0   | of Justice, and other public sector agencies.
+  y= 756.0 x=  32.0- 814.9 size=16.0   | Public-Facing Platforms: Designed digital recruitment and employment experiences deployed across tow
+  y= 778.0 x=  32.0- 674.1 size=16.0   | throughout Northern Ireland, positively impacting hundreds of recruiters across targeted services.
+  y= 808.0 x=  32.0- 672.7 size=16.0   | Recognition: Received a Departmental Head Award for outstanding work in digital service design.
+  y= 846.0 x=  32.0- 474.7 size=16.0   | Further experience and full career history are available on LinkedIn.
+  y= 900.0 x=  32.0-  79.1 size=20.0   | Skills
+  y= 942.6 x=  32.0- 801.7 size=16.0   | Product & UX Design: Product ownership, Interaction design, Design systems, Tokens, Typography, Visu
+  y= 964.6 x=  32.0- 698.2 size=16.0   | Information architecture, Usability testing, Accessibility (WCAG AA), Systems thinking, Data-driven 
+  y= 992.6 x=  32.0- 833.6 size=16.0   | Front-end: Production code, Near-production prototypes, CSS, Tailwind CSS, HTML, Git, Component-driv
+  y=1020.6 x=  32.0- 823.6 size=16.0   | AI & Workflows: Cursor, Claude Code, Claude skills, MCP servers, Figma Make, Agentic workflows, Huma
+  y=1042.6 x=  32.0- 397.6 size=16.0   | Encoding design systems for AI, AI-assisted prototyping.
+  y=1070.6 x=  32.0- 422.1 size=16.0   | Tools: Figma, Maze, Jira, Local development environments.
+  y=1124.6 x=  32.0- 118.9 size=20.0   | Education
+  y=1167.2 x=  32.0- 529.4 size=16.0   | BDes (Hons) Interaction Design (First Class) - Ulster University (2017 to 2021)
+drawings 32
+  type=f rect=Rect(0.0, 0.0, 892.0, 1262.0) color=None fill=(0.0, 0.0, 0.0) width=None
+  type=f rect=Rect(0.0, 0.0, 892.0, 1262.0) color=None fill=(1.0, 1.0, 1.0) width=None
+  type=f rect=Rect(92.0, 36.431968688964844, 311.4993896484375, 51.37596893310547) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 58.60795211791992, 289.4207763671875, 73.58395385742188) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 80.60795593261719, 239.93724060058594, 95.34396362304688) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 118.41596984863281, 858.2122192382812, 177.58396911621094) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 192.4159698486328, 839.9686279296875, 229.58396911621094) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 244.41600036621094, 807.9039306640625, 300.1919860839844) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 318.416015625, 794.5574340820312, 355.2799987792969) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 370.41595458984375, 856.1857299804688, 429.5839538574219) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 448.0, 170.0, 476.0) color=None fill=(1.0, 1.0, 1.0) width=None
+  type=f rect=Rect(31.0, 447.0, 171.0, 477.0) color=None fill=(0.7156481146812439, 0.7156481146812439, 0.7156481146812439) width=None
+  type=f rect=Rect(46.0, 456.7439880371094, 132.18701171875, 468.7170104980469) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(143.0, 459.3320007324219, 151.09600830078125, 466.5) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 512.4319458007812, 275.3683776855469, 527.3759765625) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 535.5039672851562, 251.51380920410156, 549.583984375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 572.416015625, 849.853271484375, 609.583984375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 648.4320068359375, 460.0341491699219, 663.3759765625) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(92.0, 670.6079711914062, 252.4823760986328, 685.583984375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 708.416015625, 853.6820068359375, 745.583984375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 760.4320068359375, 811.2649536132812, 797.583984375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 812.416015625, 671.6263427734375, 827.583984375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 850.416015625, 473.6414489746094, 865.343994140625) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 905.5399780273438, 78.50963592529297, 920.239990234375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 932.0, 860.0, 932.5999755859375) color=None fill=(0.6899977326393127, 0.6899977326393127, 0.6899977326393127) width=None
+  type=f rect=Rect(32.0, 947.031982421875, 797.7266845703125, 984.1839599609375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 997.2079467773438, 832.5418701171875, 1011.9439697265625) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(31.90399932861328, 1025.0159912109375, 819.68212890625, 1062.1839599609375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 1075.2078857421875, 421.01080322265625, 1090.1839599609375) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 1130.1400146484375, 117.68878173828125, 1144.8399658203125) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  type=f rect=Rect(32.0, 1156.5999755859375, 860.0, 1157.199951171875) color=None fill=(0.6899977326393127, 0.6899977326393127, 0.6899977326393127) width=None
+  type=f rect=Rect(32.0, 1171.4879150390625, 528.0465087890625, 1186.783935546875) color=None fill=(0.06698710471391678, 0.06698710471391678, 0.06698710471391678) width=None
+  IMG xref=12 bbox=(-85.21659088134766, 512.0, 975.2164916992188, 1262.0) 1240x877
+  IMG xref=8 bbox=(-18.999996185302734, -21.0, 872.9999389648438, 1240.9998779296875) 1273x1800
+  IMG xref=8 bbox=(-18.999996185302734, 101.0, 872.9999389648438, 1362.9998779296875) 1273x1800
+  IMG xref=8 bbox=(-18.999996185302734, 96.0001220703125, 872.9999389648438, 1358.0) 1273x1800
