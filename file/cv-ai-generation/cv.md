@@ -19,8 +19,8 @@ P4 DAM, P4 Plan, P4 Cloud and more.
 - **Increased Product Sales:** Rebuilt trial onboarding to eliminate setup friction so prospects could self-evaluate seamlessly, streamlining the sales process and generating a higher volume of pipeline opportunities.
 - **Front-End Engineering:** Leveraged Claude Code to build and ship production UI, boosting feature velocity by 25% with a leaner team and cutting feature-planning time in half.
 - **AI Innovation & Leadership:** Engineered custom Claude workflows to automate UI generation and design specifications. Won "Best Designed" at the 2026 company hackathon, scaled adoption across 5+ design groups, and earned a seat on the company's high-level AI task group to shape AI workflows for a 20-person design organisation.
-- **Product Ownership:** Directed end-to-end product design across multiple product offerings, including software version control, digital asset management, and creative project planning, while partnering with executive leadership to drive customer acquisition and retention.
-- **UX & Navigation Overhaul:** Eliminated friction points by redesigning information architecture and in-product navigation, replacing clunky user workarounds with seamless journeys that measurably improved satisfaction.
+- **Product Ownership:** Directed end-to-end product design across multiple product offerings, including software version control, digital asset management,s and creative project planning, while partnering with executive leadership to drive customer acquisition and retention.
+- **UX & Navigation Overhaul:** Eliminated friction points by redesigning information architecture and in-product navigation, replacing clunky user workarounds with seamless journeys that measurably improved user satisfaction.
 
 [View Case Study](https://benturner.work/p4-dam.html)
 
