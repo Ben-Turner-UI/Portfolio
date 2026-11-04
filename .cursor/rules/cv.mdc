@@ -1,7 +1,11 @@
 ---
-description: How to edit Ben Turner’s public CV.
+description: How to edit Ben Turner’s public CV and company packs.
 globs: file/cv-ai-generation/**
 alwaysApply: false
 ---
 
-Read `file/cv-ai-generation/CONTEXT.md`. Edit `cv.md` only. Run `export.ps1` to rebuild `file/Ben-Turner-CV.pdf`. Do not hand-edit `cv.html` or the PDF.
+Read `file/cv-ai-generation/CONTEXT.md`.
+
+- Public site: edit `cv.md`, run `export.ps1`, bump `?v=` on download links.
+- Company request: create `packs/{Company} - {Role}/` with tailored `cv.md` and export `Ben-Turner-CV.pdf` into that folder. Do not change the public master for one employer.
+- Do not hand-edit `cv.html` or PDFs.

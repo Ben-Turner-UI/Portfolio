@@ -1,18 +1,31 @@
-# Build a plain 2-page CV PDF from cv.md (Source Sans, no wash/logos).
-# Writes file/Ben-Turner-CV.pdf by default.
-# Never overwrite original.pdf if it still exists.
+# Build a plain 2-page CV PDF from markdown (Source Sans, no wash/logos).
+# Default: root cv.md -> file/Ben-Turner-CV.pdf
+# Pack:    .\export.ps1 -Md "packs\Acme - Product Designer\cv.md" -Out "packs\Acme - Product Designer\Ben-Turner-CV.pdf"
 
 param(
+  [string]$Md,
   [string]$Out
 )
 
 $ErrorActionPreference = 'Stop'
 $here = $PSScriptRoot
 $fileDir = Split-Path $here -Parent
+
+if (-not $Md) { $Md = Join-Path $here 'cv.md' }
+elseif (-not [IO.Path]::IsPathRooted($Md)) { $Md = Join-Path $here $Md }
+if (-not (Test-Path $Md)) { throw "Markdown not found: $Md" }
+
+$mdDir = Split-Path $Md -Parent
+$html = Join-Path $mdDir 'cv.html'
+
 if (-not $Out) {
-  $pdfOut = Join-Path $fileDir 'Ben-Turner-CV.pdf'
+  if ($mdDir -eq $here) {
+    $pdfOut = Join-Path $fileDir 'Ben-Turner-CV.pdf'
+  } else {
+    $pdfOut = Join-Path $mdDir 'Ben-Turner-CV.pdf'
+  }
 } else {
-  if (-not [IO.Path]::IsPathRooted($Out)) { $Out = Join-Path $fileDir $Out }
+  if (-not [IO.Path]::IsPathRooted($Out)) { $Out = Join-Path $here $Out }
   $pdfOut = $Out
 }
 if ([IO.Path]::GetFileName($pdfOut) -eq 'original.pdf') {
@@ -23,10 +36,9 @@ $pythonCmd = Get-Command python -ErrorAction SilentlyContinue
 if (-not $pythonCmd) { throw 'python not found on PATH' }
 $python = $pythonCmd.Source
 
-& $python (Join-Path $here 'md_to_html.py') (Join-Path $here 'cv.md') (Join-Path $here 'cv.html')
+& $python (Join-Path $here 'md_to_html.py') $Md $html
 if ($LASTEXITCODE -ne 0) { throw 'md_to_html.py failed' }
 
-$html = Join-Path $here 'cv.html'
 $pdfTmp = Join-Path $env:TEMP 'Ben-Turner-CV-export.pdf'
 $chrome = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 if (-not (Test-Path $chrome)) { throw "Chrome not found at $chrome" }
@@ -49,7 +61,6 @@ Start-Process $chrome -ArgumentList $chromeArgs -Wait | Out-Null
 Start-Sleep -Seconds 1
 if (-not (Test-Path $pdfTmp)) { throw "Chrome did not write $pdfTmp" }
 
-# Prefer Ghostscript compression when available; otherwise keep Chrome output.
 $gs = @(
   'C:\Program Files\gs\gs10.04.0\bin\gswin64c.exe',
   'C:\Program Files\gs\gs10.03.1\bin\gswin64c.exe',
@@ -68,7 +79,6 @@ if ($gs) {
     $pdfTmp = $pdfCompressed
   }
 } else {
-  # Fallback: Python strip/rewrite to drop unused objects when pypdf is present.
   $compressPy = Join-Path $here 'compress_pdf.py'
   if (Test-Path $compressPy) {
     & $python $compressPy $pdfTmp $pdfCompressed

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import html
+import os
 import re
 import sys
 from pathlib import Path
@@ -97,19 +98,19 @@ TEMPLATE = """<!DOCTYPE html>
       font-family: "Source Sans 3";
       font-style: normal;
       font-weight: 400;
-      src: url("fonts/source-sans-3-400.ttf") format("truetype");
+      src: url("{fonts}/source-sans-3-400.ttf") format("truetype");
     }}
     @font-face {{
       font-family: "Source Sans 3";
       font-style: normal;
       font-weight: 600;
-      src: url("fonts/source-sans-3-600.ttf") format("truetype");
+      src: url("{fonts}/source-sans-3-600.ttf") format("truetype");
     }}
     @font-face {{
       font-family: "Source Sans 3";
       font-style: normal;
       font-weight: 700;
-      src: url("fonts/source-sans-3-700.ttf") format("truetype");
+      src: url("{fonts}/source-sans-3-700.ttf") format("truetype");
     }}
     @page {{ size: A4; margin: 14mm 14mm 14mm 14mm; }}
     html, body {{
@@ -161,16 +162,26 @@ TEMPLATE = """<!DOCTYPE html>
 """
 
 
+def fonts_rel(out_path: Path, fonts_dir: Path) -> str:
+    rel = Path(os.path.relpath(fonts_dir, start=out_path.parent))
+    return rel.as_posix()
+
+
 def main() -> int:
     here = Path(__file__).resolve().parent
+    fonts_dir = here / "fonts"
     md_path = here / "cv.md"
     out_path = here / "cv.html"
     if len(sys.argv) > 1:
-        md_path = Path(sys.argv[1])
+        md_path = Path(sys.argv[1]).resolve()
     if len(sys.argv) > 2:
-        out_path = Path(sys.argv[2])
+        out_path = Path(sys.argv[2]).resolve()
     body = convert(md_path.read_text(encoding="utf-8"))
-    out_path.write_text(TEMPLATE.format(body=body), encoding="utf-8")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(
+        TEMPLATE.format(body=body, fonts=fonts_rel(out_path, fonts_dir)),
+        encoding="utf-8",
+    )
     print(f"wrote {out_path}")
     return 0
 
