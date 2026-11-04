@@ -7,7 +7,7 @@ description: Creates or revises a per-role application pack for Ben Turner (brie
 
 Packs live at `C:\Users\reape\My Drive\Career\Applications\CVs\{Company} - {Role}`. Read `_master/CONTEXT.md` and `_master/claims.md` there first. Then `_cv/CONTEXT.md` for layout and copy law.
 
-Do not edit `file/cv-ai-generation/index.html` or overwrite `file/Ben-Turner-CV.pdf` for one employer. Voice follow-ups: append `notes.md` in the pack, patch that pack, re-export.
+Do not edit `file/cv-ai-generation/cv.md` or overwrite `file/Ben-Turner-CV.pdf` for one employer. Voice follow-ups: append `notes.md` in the pack, patch that pack, re-export.
 
 ## New pack
 

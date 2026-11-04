@@ -1,7 +1,7 @@
 ---
-description: How to edit Ben Turner’s HTML CV.
+description: How to edit Ben Turner’s public CV.
 globs: file/cv-ai-generation/**
 alwaysApply: false
 ---
 
-Read `file/cv-ai-generation/CONTEXT.md`. Edit `index.html`. Do not overwrite `original.pdf`.
+Read `file/cv-ai-generation/CONTEXT.md`. Edit `cv.md` only. Run `export.ps1` to rebuild `file/Ben-Turner-CV.pdf`. Do not hand-edit `cv.html` or the PDF.
