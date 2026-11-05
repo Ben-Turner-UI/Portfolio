@@ -46,6 +46,7 @@ Digital product design agency.
 - **0-to-1 Product Launch:** Partnered with former rugby international star David Humphreys to design, brand, and launch SportsWork as a dedicated sporting jobs platform from scratch, successfully scaling it into an independent, profitable business.
 - **Cross-Domain Expertise:** Delivered impactful design solutions across diverse sectors, including startups, marketing platforms, e-commerce, news outlets, public sector services, enterprise software, public infrastructure, and sports.
 - **Design Systems:** Built complex design systems, tokens, and component libraries for CityFibre and GSMA. These systems improved development metrics, making the team a top performer across 10 service partners. Streamlined handovers reduced developer questions and cut design rework tickets from 15% to 5%.
+- **Accessible Design:** Adapted CityFibre’s vivid brand colours to meet AA contrast requirements and adjusted typography for readability across the website and portal.
 
 [View Case Study](https://benturner.work/cityfibre.html)
 
@@ -81,3 +82,7 @@ Further experience and full career history are available on [LinkedIn](https://w
 
 **BDes (Hons) Interaction Design (First Class)**  
 Ulster University · 2017 to 2021
+
+## Hobbies
+
+Martial arts since 2007: BJJ purple belt, Japanese Jiu-Jitsu black belt, and Judo green belt. Also Warhammer 30k, the gym, fishkeeping, karting, travel, and dogs, especially fluffy ones.

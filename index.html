@@ -14,22 +14,23 @@
   <meta property="og:url" content="https://benturner.work/">
   <meta name="twitter:card" content="summary_large_image">
   <style>
-    html,body{background:#fff;color-scheme:only light}
+    html,body{background:#FAF9F5;color-scheme:only light}
+    body.home{background:#FAF9F5}
     @media (min-width:769px){:root{--nav-top-offset:46px}}
-    header.home{background:linear-gradient(180deg,#fff 0%,#eeedea 100%)}
+    header.home{background:#141413;color:#FAF9F5}
   </style>
   <title>Ben Turner, Product Designer, Northern Ireland</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,500..600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,ads_click,arrow_forward,arrow_upward,business,chevron_left,chevron_right,close,download,drag_indicator,emoji_events,flag,grid_view,groups,home,language,lock,login,mail,open_in_new,palette,person,route,search,settings,smart_toy,trending_up,widgets&display=block" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css?v=2026-11-05-sidegap16">
   <link rel="icon" type="image/png" href="favicon-96x96.png?v=2026-10-23n" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2026-10-23n">
   <link rel="shortcut icon" href="favicon.ico?v=2026-10-23n">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2026-10-23n">
-  <meta name="theme-color" content="#FFFFFF">
-  <meta name="msapplication-navbutton-color" content="#FFFFFF">
+  <meta name="theme-color" content="#141413">
+  <meta name="msapplication-navbutton-color" content="#141413">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTRN14NFN"></script>
   <script>
@@ -40,17 +41,16 @@
   </script>
 </head>
 
-<body>
+<body class="home">
 
 <div class="nav-container">
   <nav>
+    <a href="index.html" class="nav-name">Ben Turner<span class="nav-name__mark">.</span></a>
     <div class="nav-group">
-      <a href="index.html" class="nav-item" id="nav-item-active" aria-current="page">
-        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">home</span>
-        <span class="nav-item__label">Home</span>
+      <a href="index.html#projects" class="nav-item" id="nav-item-active" aria-current="page">
+        <span class="nav-item__label">Work</span>
       </a>
       <a href="about.html" class="nav-item">
-        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
         <span class="nav-item__label">About</span>
       </a>
     </div>
@@ -74,23 +74,29 @@
       <div class="home-header-content">
         <div class="home-header-main">
           <div class="home-header-content-text">
-            <h1>Ben Turner, Product Designer<span class="home-accent">.</span></h1>
-            <p>I lead design on P4 DAM and P4 Plan at <a href="https://www.perforce.com/">Perforce</a>, the tools game studios, semiconductor designers and aerospace contractors use to manage their assets and plan their projects. I ship production code myself, with Claude Code.</p>
+            <div class="home-header-identity">
+              <img class="home-header-portrait dot-portrait" src="img/ben-cutout.png" alt="Portrait of Ben Turner" width="655" height="819">
+              <p class="home-header-kicker"><span>Product Designer</span><span class="home-header-kicker__rule" aria-hidden="true"></span><span>Belfast, UK</span></p>
+            </div>
+            <h1><span class="home-headline home-headline--full">Making complex interfaces easier&nbsp;to&nbsp;use,<br>from first idea to production code<span class="home-accent">.</span></span></h1>
+            <div class="home-header-bio">
+              <p class="home-bio home-bio--full">I&rsquo;m a product designer with over seven years&rsquo; experience across startups, agencies and enterprise software. I combine user research, interface design and hands-on development.</p>
+            </div>
+            <div class="home-contact">
+              <a href="file/Ben-Turner-CV.pdf?v=2026-11-04-export5" class="home-contact__link" download="Ben-Turner-CV.pdf" rel="nofollow">
+                <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                <span>Download CV</span>
+              </a>
+              <a href="mailto:Benjamin.turner.design@gmail.com" class="home-contact__link nav-copy-email" data-copy-email="Benjamin.turner.design@gmail.com" aria-label="Copy email address">
+                <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+                <span>Copy email</span>
+              </a>
+              <a href="https://www.linkedin.com/in/benturnerwork" class="home-contact__link" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="home-contact">
-          <a href="file/Ben-Turner-CV.pdf?v=2026-11-04-export3" class="home-contact__link" download="Ben-Turner-CV.pdf" rel="nofollow">
-            <span class="material-symbols-rounded" aria-hidden="true">download</span>
-            <span>Download CV</span>
-          </a>
-          <a href="mailto:Benjamin.turner.design@gmail.com" class="home-contact__link nav-copy-email" data-copy-email="Benjamin.turner.design@gmail.com" aria-label="Copy email address">
-            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-            <span>Copy email</span>
-          </a>
-          <a href="https://www.linkedin.com/in/benturnerwork" class="home-contact__link" target="_blank" rel="noopener noreferrer">
-            <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
-            <span>LinkedIn</span>
-          </a>
         </div>
       </div>
     </div>
@@ -100,70 +106,40 @@
 <section class="projects" id="projects">
   <div class="width-container">
     <h2>Case studies</h2>
-    <div class="project-grid">
-
-      <a href="p4-dam.html" class="project-card-link">
-        <article class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/p4-product.png?v=2026-10-23k" alt="P4 DAM product UI collage" decoding="async">
-          <div class="project-card-body">
-            <p class="project-card-meta">Perforce · 2026</p>
-            <h3>Bridging design and engineering to help a smaller team ship 25% more features</h3>
-            <p class="project-description">I designed and built features for a digital asset management product using Claude Code, helping a smaller development team ship around 25% more features.</p>
-            <ul class="project-card-tags" aria-label="Focus areas">
-              <li>Product design</li>
-              <li>AI-assisted development</li>
-            </ul>
-          </div>
-        </article>
+    <div class="project-cards">
+      <a href="p4-dam.html" class="project-card">
+        <span class="project-card__thumb project-card__thumb--dam">
+          <img class="project-card__shot" src="img/project-image/p4-dam/viewer-lighting-ship.png" alt="P4 DAM 3D viewer with lighting settings open beside a model" decoding="async">
+        </span>
+        <p class="project-card__meta">Perforce, 2026</p>
+        <h3>Bridging design and engineering to help a smaller team ship 25% more features</h3>
+        <p>I designed and built features for a digital asset management product using Claude Code, helping a smaller development team ship around 25% more features.</p>
       </a>
-
-      <a href="budibase-automations.html" class="project-card-link">
-        <article class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/bb-automations-thumbnail.jpg?v=2026-10-26" alt="Budibase automation builder UI" loading="lazy" decoding="async">
-          <div class="project-card-body">
-            <p class="project-card-meta">Budibase · 2025</p>
-            <h3>Redesigning complex workflows to help users understand errors and fix problems faster</h3>
-            <p class="project-description">I led user research and redesigned a low-code workflow builder so people could understand errors, inspect their data and fix failed steps.</p>
-            <ul class="project-card-tags" aria-label="Focus areas">
-              <li>User research</li>
-              <li>Interaction design</li>
-            </ul>
-          </div>
-        </article>
+      <a href="budibase-automations.html" class="project-card">
+        <span class="project-card__thumb project-card__thumb--bb">
+          <img class="project-card__shot" src="img/project-image/bb-automations/builder-after.png" alt="Budibase automation builder with the workflow and step data open" loading="lazy" decoding="async">
+        </span>
+        <p class="project-card__meta">Budibase, 2025</p>
+        <h3>Redesigning complex workflows to help users understand errors and fix problems faster</h3>
+        <p>I led user research and redesigned a low-code workflow builder so people could understand errors, inspect their data and fix failed steps.</p>
       </a>
-
-      <a href="cityfibre.html" class="project-card-link">
-        <article class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/rebrand-thumbnail.jpg?v=2026-10-23k" alt="CityFibre homepage redesign" loading="lazy" decoding="async">
-          <div class="project-card-body">
-            <p class="project-card-meta">CityFibre · 2024</p>
-            <h3>Redesigning the broadband customer journey to drive a 90% increase in postcode checks</h3>
-            <p class="project-description">I researched how visitors used CityFibre&rsquo;s website, redesigned its availability-check journey and applied the new brand across the website and business portal.</p>
-            <ul class="project-card-tags" aria-label="Focus areas">
-              <li>Conversion optimisation</li>
-              <li>Digital rebrand</li>
-            </ul>
-          </div>
-        </article>
+      <a href="cityfibre.html" class="project-card">
+        <span class="project-card__thumb project-card__thumb--cf">
+          <img class="project-card__shot" src="img/project-image/cityfibre-rebrand/cf-homepage-hero.png" alt="CityFibre homepage with the postcode check in the hero" loading="lazy" decoding="async">
+        </span>
+        <p class="project-card__meta">CityFibre, 2024</p>
+        <h3>Redesigning the broadband customer journey to drive a 90% increase in postcode checks</h3>
+        <p>I researched how visitors used CityFibre&rsquo;s website, redesigned its availability-check journey and applied the new brand across the website and business portal.</p>
       </a>
-
-      <a href="product-ui.html" class="project-card-link">
-        <article class="grid-item">
-          <img class="project-grid-thumbnail" src="img/thumbnail/other-thumbnail.jpg?v=2026-10-24i" alt="Product UI collection" loading="lazy" decoding="async">
-          <div class="project-card-body">
-            <p class="project-card-meta">Selected work</p>
-            <h3>Solving complex product challenges through thoughtful interaction design and intuitive interfaces</h3>
-            <p class="project-description">Here&rsquo;s a selection of features and interfaces I&rsquo;ve designed over the years, various complex UX problems with interesting and unique solutions.</p>
-            <ul class="project-card-tags" aria-label="Focus areas">
-              <li>Interface design</li>
-              <li>Interaction design</li>
-            </ul>
-          </div>
-        </article>
+      <a href="product-ui.html" class="project-card">
+        <span class="project-card__thumb project-card__thumb--ui">
+          <img class="project-card__shot" src="img/project-image/p4-product/filters-advanced.png" alt="P4 DAM advanced filter with nested and and or conditions" loading="lazy" decoding="async">
+        </span>
+        <p class="project-card__meta">Selected work</p>
+        <h3>Solving complex product challenges through thoughtful interaction design and intuitive interfaces</h3>
+        <p>Here&rsquo;s a selection of features and interfaces I&rsquo;ve designed over the years, various complex UX problems with interesting and unique solutions.</p>
       </a>
-
     </div>
-
   </div>
 </section>
 
@@ -205,14 +181,10 @@
       <h3>Ben Turner, Product Designer</h3>
       <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
     </div>
-    <div class="contact-links">
-      <p><a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg" alt="">Benjamin.turner.design@gmail.com</a></p>
-      <p><a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg" alt="">LinkedIn</a></p>
-    </div>
     <p class="copyright">&copy;2026, All Rights Reserved</p>
   </div>
 </footer>
 
-<script src="nav.js"></script>
+<script src="nav.js?v=2026-11-05-navflash"></script>
 </body>
 </html>

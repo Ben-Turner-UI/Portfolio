@@ -770,6 +770,23 @@ body.personal-lightbox-open {
   margin: 0;
 }
 
+.about-cv__study,
+.about-cv__more {
+  margin: var(--space-2) 0 0;
+}
+
+.about-cv a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
+.about-cv a:hover {
+  text-decoration-thickness: 2px;
+}
+
 .about-personal-heading {
   margin: 0 0 var(--case-study-h2-bottom-margin);
   padding-bottom: var(--case-study-heading-divider-padding);

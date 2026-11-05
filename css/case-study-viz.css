@@ -171,7 +171,9 @@
 }
 
 .cs-highlight__icon {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-self: end;
   justify-self: start;
   margin: 0 0 14px;
@@ -183,24 +185,22 @@
   border-radius: var(--radius-sm);
   background: rgba(0, 0, 0, 0.04);
   color: rgba(0, 0, 0, 0.72);
-  overflow: hidden;
 }
 
 .cs-highlight__icon .material-symbols-rounded {
   display: block;
   box-sizing: border-box;
-  width: 30px;
-  height: 30px;
+  width: 1em;
+  height: 1em;
   margin: 0;
   padding: 0;
   font-family: 'Material Symbols Rounded', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  /* Fill the inner box so the glyph’s em-square is centered by the line box */
-  line-height: 30px;
+  line-height: 1;
   text-align: center;
   color: inherit;
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
   font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';
   font-style: normal;
@@ -210,8 +210,7 @@
   direction: ltr;
   -webkit-font-smoothing: antialiased;
   speak: never;
-  /* Glyph ink sits high in the Material em-box — measured optical nudge */
-  translate: 0 1px;
+  translate: 0.3px 0.85px;
 }
 
 .cs-highlight__title {

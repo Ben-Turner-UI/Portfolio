@@ -1,5 +1,44 @@
-/* Pointer motion only. Entrance fades used to hold the page at opacity 0
-   until each stagger finished, which made the first paint feel late. */
+/* Header field and a few entrances. Content stays visible if motion is off. */
+
+@property --dot-spacing {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 3.2px;
+}
+
+@property --dot-radius {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0.85px;
+}
+
+/* Decorative header field. The earlier header rule caps ::before at 220px,
+   which cuts a hard line through the hero, so height is reset here. */
+header.home::before,
+header.project-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  max-height: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+header.home::before,
+header.project-header::before {
+  background-image:
+    radial-gradient(circle, rgba(250, 249, 245, 0.12) 0.5px, transparent 0.65px),
+    radial-gradient(ellipse 46% 38% at 8% 88%, rgba(255, 77, 0, 0.025), transparent 72%);
+  background-size: 11px 11px, 100% 100%;
+  background-repeat: repeat, no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 40%, rgba(0, 0, 0, 0.4) 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 40%, rgba(0, 0, 0, 0.4) 72%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .project-grid > a:hover .grid-item,
@@ -8,16 +47,15 @@
     transform: translateY(-3px);
   }
 
-  .side-project-card:hover .side-project-thumbnail-bg,
-  .side-project-card:hover .side-project-thumbnail-olympus-img {
+  .side-project-card:hover .side-project-thumbnail-bg {
     transform: scale(1.04);
   }
 
-  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):not(.cs-lightbox-trigger):not(.cs-lightbox__backdrop):not(.cs-lightbox__nav):not(.cs-lightbox__close):hover {
+  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):not(.cs-lightbox-trigger):not(.cs-lightbox__backdrop):not(.cs-lightbox__nav):not(.cs-lightbox__close):not(.project-selector__thumb):not(.project-selector__nav):hover {
     transform: translateY(-1px);
   }
 
-  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):not(.cs-lightbox-trigger):not(.cs-lightbox__backdrop):not(.cs-lightbox__nav):not(.cs-lightbox__close):active {
+  button:not(.cv-btn):not(.personal-thumb):not(.personal-lightbox__backdrop):not(.personal-lightbox__nav):not(.personal-lightbox__close):not(.cs-lightbox-trigger):not(.cs-lightbox__backdrop):not(.cs-lightbox__nav):not(.cs-lightbox__close):not(.project-selector__thumb):not(.project-selector__nav):active {
     transform: translateY(0) scale(0.98);
   }
 
@@ -39,5 +77,59 @@
 
   .nav-item:hover .nav-item__icon {
     transform: translateY(-1px);
+  }
+
+  header.home::before,
+  header.project-header::before {
+    animation: header-field 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .cs-highlight,
+  .project-cards .project-card,
+  .side-project-grid .side-project-card {
+    animation: rise-in 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .cs-highlight:nth-child(2),
+  .project-cards .project-card:nth-child(2),
+  .side-project-grid .side-project-card:nth-child(2) {
+    animation-delay: 70ms;
+  }
+
+  .cs-highlight:nth-child(3),
+  .project-cards .project-card:nth-child(3) {
+    animation-delay: 140ms;
+  }
+
+  .project-cards .project-card:nth-child(4) {
+    animation-delay: 210ms;
+  }
+}
+
+@keyframes header-field {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header.home::before,
+  header.project-header::before,
+  .cs-highlight,
+  .project-cards .project-card,
+  .side-project-grid .side-project-card {
+    animation: none;
+    opacity: 1;
+    translate: none;
   }
 }

@@ -39,21 +39,30 @@ def convert(md: str) -> str:
     lines = md.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     out: list[str] = []
     i = 0
+    after_role = False
     while i < len(lines):
         line = lines[i]
         if not line.strip():
             i += 1
             continue
+        if line.strip() == "---":
+            out.append("<hr>")
+            after_role = False
+            i += 1
+            continue
         if line.startswith("# "):
             out.append(f"<h1>{inline(line[2:].strip())}</h1>")
+            after_role = False
             i += 1
             continue
         if line.startswith("## "):
             out.append(f"<h2>{inline(line[3:].strip())}</h2>")
+            after_role = False
             i += 1
             continue
         if line.startswith("### "):
             out.append(f"<h3>{inline(line[4:].strip())}</h3>")
+            after_role = True
             i += 1
             continue
         if line.startswith("- "):
@@ -62,28 +71,29 @@ def convert(md: str) -> str:
                 items.append(f"<li>{inline(lines[i][2:].strip())}</li>")
                 i += 1
             out.append("<ul>\n" + "\n".join(items) + "\n</ul>")
+            after_role = False
             continue
-        # Paragraph: gather until blank line; soft-break on trailing spaces or mid-block newlines
         chunk: list[str] = []
         while i < len(lines) and lines[i].strip():
-            if lines[i].startswith(("# ", "## ", "### ", "- ")):
+            if lines[i].startswith(("# ", "## ", "### ", "- ")) or lines[i].strip() == "---":
                 break
             chunk.append(lines[i])
             i += 1
-        bits: list[str] = []
-        for raw in chunk:
-            soft = raw.endswith("  ")
-            text = raw.rstrip()
-            if soft or (bits and not text.startswith("**") and bits[-1] and not bits[-1].endswith("</strong>")):
-                # Prefer <br> when the source used a hard line break (trailing spaces)
-                pass
-            bits.append(inline(text.rstrip()))
-        # Rebuild with <br> where original lines had trailing double-spaces, else join with space
-        # Simpler rule matching the CV markdown: consecutive non-list lines in a block use <br>
-        if len(chunk) > 1:
+        bits: list[str] = [inline(raw.rstrip()) for raw in chunk]
+        first_raw = chunk[0].rstrip()
+        # Under a role heading, **date** then blurb become meta + body
+        if (
+            after_role
+            and len(chunk) > 1
+            and re.fullmatch(r"\*\*[^*]+\*\*", first_raw)
+        ):
+            out.append(f'<p class="meta">{bits[0]}</p>')
+            out.append("<p>" + "<br>\n".join(bits[1:]) + "</p>")
+        elif len(chunk) > 1:
             out.append("<p>" + "<br>\n".join(bits) + "</p>")
         else:
             out.append("<p>" + bits[0] + "</p>")
+        after_role = False
     return "\n".join(out)
 
 
@@ -112,47 +122,144 @@ TEMPLATE = """<!DOCTYPE html>
       font-weight: 700;
       src: url("{fonts}/source-sans-3-700.ttf") format("truetype");
     }}
-    @page {{ size: A4; margin: 14mm 14mm 14mm 14mm; }}
+    /* Fit cascade: section 11pt, para/bullet tighter, lh 1.32, TB 12mm, body 10pt */
+    @page {{
+      size: A4;
+      margin: 12mm 17mm 12mm 17mm;
+    }}
     html, body {{
       margin: 0;
       padding: 0;
       background: #fff;
-      color: #111;
+      color: #242424;
       font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.38;
+      font-size: 10pt;
+      font-weight: 400;
+      line-height: 1.32;
+      text-align: left;
+      letter-spacing: normal;
+      hyphens: none;
+      -webkit-hyphens: none;
       font-variant-ligatures: none;
+      -webkit-font-smoothing: antialiased;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }}
+    h1, h2, h3 {{
+      color: #171717;
+      text-align: left;
+      letter-spacing: normal;
+      hyphens: none;
+      -webkit-hyphens: none;
+    }}
     h1 {{
-      margin: 0 0 0.1em;
-      font-size: 20pt;
-      font-weight: 700;
+      margin: 0 0 4pt;
+      font-size: 26pt;
+      font-weight: 600;
       line-height: 1.1;
     }}
-    h2 {{
-      margin: 1.1em 0 0.35em;
+    /* Professional title */
+    h1 + p {{
+      margin: 0 0 6pt;
       font-size: 12pt;
-      font-weight: 700;
-      border-bottom: 1px solid #bbb;
-      padding-bottom: 0.15em;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #242424;
+    }}
+    h1 + p strong {{
+      font-weight: 400;
+    }}
+    /* Contact block */
+    h1 + p + p {{
+      margin: 0;
+      font-size: 10pt;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #242424;
+    }}
+    h2 {{
+      margin: 11pt 0 6pt;
+      font-size: 13pt;
+      font-weight: 600;
+      line-height: 1.25;
+      break-after: avoid;
       page-break-after: avoid;
     }}
     h3 {{
-      margin: 0.85em 0 0.15em;
-      font-size: 11pt;
-      font-weight: 700;
+      margin: 10pt 0 3pt;
+      font-size: 11.5pt;
+      font-weight: 600;
+      line-height: 1.3;
+      break-after: avoid;
       page-break-after: avoid;
     }}
-    p {{ margin: 0.28em 0; }}
-    ul {{
-      margin: 0.25em 0 0.45em;
-      padding-left: 1.15em;
+    /* First role under a section sits tighter */
+    h2 + h3 {{
+      margin-top: 0;
     }}
-    li {{ margin: 0.18em 0; }}
-    strong {{ font-weight: 700; }}
-    a {{ color: #111; text-underline-offset: 2px; }}
+    /* Dates / metadata under a role */
+    p.meta {{
+      margin: 0 0 5pt;
+      color: #606060;
+      font-size: 10pt;
+      font-weight: 400;
+      line-height: 1.3;
+      break-after: avoid;
+      page-break-after: avoid;
+    }}
+    p.meta strong {{
+      font-weight: 400;
+      color: #606060;
+    }}
+    h3, h3 + p, h3 + p.meta {{
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }}
+    h3 + p {{
+      break-after: avoid;
+      page-break-after: avoid;
+    }}
+    p {{
+      margin: 0 0 4pt;
+      orphans: 2;
+      widows: 2;
+    }}
+    ul {{
+      margin: 2pt 0 4pt;
+      padding-left: 4.5mm;
+      list-style-type: disc;
+      list-style-position: outside;
+    }}
+    li {{
+      margin: 2pt 0 0;
+      padding-left: 0;
+      font-size: 10pt;
+      line-height: 1.32;
+      orphans: 2;
+      widows: 2;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }}
+    li:first-child {{
+      margin-top: 0;
+    }}
+    strong {{
+      font-weight: 600;
+    }}
+    a {{
+      color: #305775;
+      text-decoration: underline;
+      text-underline-offset: 1.5px;
+      text-decoration-thickness: 0.6px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }}
+    hr {{
+      border: 0;
+      border-top: 0.5pt solid #DEDEDE;
+      margin: 8pt 0;
+      height: 0;
+    }}
   </style>
 </head>
 <body>

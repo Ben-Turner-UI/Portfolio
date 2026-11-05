@@ -23,47 +23,144 @@
       font-weight: 700;
       src: url("fonts/source-sans-3-700.ttf") format("truetype");
     }
-    @page { size: A4; margin: 14mm 14mm 14mm 14mm; }
+    /* Fit cascade: section 11pt, para/bullet tighter, lh 1.32, TB 12mm, body 10pt */
+    @page {
+      size: A4;
+      margin: 12mm 17mm 12mm 17mm;
+    }
     html, body {
       margin: 0;
       padding: 0;
       background: #fff;
-      color: #111;
+      color: #242424;
       font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.38;
+      font-size: 10pt;
+      font-weight: 400;
+      line-height: 1.32;
+      text-align: left;
+      letter-spacing: normal;
+      hyphens: none;
+      -webkit-hyphens: none;
       font-variant-ligatures: none;
+      -webkit-font-smoothing: antialiased;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
+    h1, h2, h3 {
+      color: #171717;
+      text-align: left;
+      letter-spacing: normal;
+      hyphens: none;
+      -webkit-hyphens: none;
+    }
     h1 {
-      margin: 0 0 0.1em;
-      font-size: 20pt;
-      font-weight: 700;
+      margin: 0 0 4pt;
+      font-size: 26pt;
+      font-weight: 600;
       line-height: 1.1;
     }
-    h2 {
-      margin: 1.1em 0 0.35em;
+    /* Professional title */
+    h1 + p {
+      margin: 0 0 6pt;
       font-size: 12pt;
-      font-weight: 700;
-      border-bottom: 1px solid #bbb;
-      padding-bottom: 0.15em;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #242424;
+    }
+    h1 + p strong {
+      font-weight: 400;
+    }
+    /* Contact block */
+    h1 + p + p {
+      margin: 0;
+      font-size: 10pt;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #242424;
+    }
+    h2 {
+      margin: 11pt 0 6pt;
+      font-size: 13pt;
+      font-weight: 600;
+      line-height: 1.25;
+      break-after: avoid;
       page-break-after: avoid;
     }
     h3 {
-      margin: 0.85em 0 0.15em;
-      font-size: 11pt;
-      font-weight: 700;
+      margin: 10pt 0 3pt;
+      font-size: 11.5pt;
+      font-weight: 600;
+      line-height: 1.3;
+      break-after: avoid;
       page-break-after: avoid;
     }
-    p { margin: 0.28em 0; }
-    ul {
-      margin: 0.25em 0 0.45em;
-      padding-left: 1.15em;
+    /* First role under a section sits tighter */
+    h2 + h3 {
+      margin-top: 0;
     }
-    li { margin: 0.18em 0; }
-    strong { font-weight: 700; }
-    a { color: #111; text-underline-offset: 2px; }
+    /* Dates / metadata under a role */
+    p.meta {
+      margin: 0 0 5pt;
+      color: #606060;
+      font-size: 10pt;
+      font-weight: 400;
+      line-height: 1.3;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    p.meta strong {
+      font-weight: 400;
+      color: #606060;
+    }
+    h3, h3 + p, h3 + p.meta {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    h3 + p {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    p {
+      margin: 0 0 4pt;
+      orphans: 2;
+      widows: 2;
+    }
+    ul {
+      margin: 2pt 0 4pt;
+      padding-left: 4.5mm;
+      list-style-type: disc;
+      list-style-position: outside;
+    }
+    li {
+      margin: 2pt 0 0;
+      padding-left: 0;
+      font-size: 10pt;
+      line-height: 1.32;
+      orphans: 2;
+      widows: 2;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    li:first-child {
+      margin-top: 0;
+    }
+    strong {
+      font-weight: 600;
+    }
+    a {
+      color: #305775;
+      text-decoration: underline;
+      text-underline-offset: 1.5px;
+      text-decoration-thickness: 0.6px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    hr {
+      border: 0;
+      border-top: 0.5pt solid #DEDEDE;
+      margin: 8pt 0;
+      height: 0;
+    }
   </style>
 </head>
 <body>
@@ -75,8 +172,8 @@
 <p>Product Designer with over seven years&#x27; experience boosting sales for enterprise, winning new clients for agency and helping startups reach profitability. My AI workflows and systems won this year&#x27;s hackathon and are used across multiple product areas. I use research to make my decisions, speaking with real users face to face and across qualitative studies to make impactful design decisions and build intelligent workflows.</p>
 <h2>Experience</h2>
 <h3>Product Designer at Perforce</h3>
-<p><strong>September 2025 to present</strong><br>
-P4 DAM, P4 Plan, P4 Cloud and more.</p>
+<p class="meta"><strong>September 2025 to present</strong></p>
+<p>P4 DAM, P4 Plan, P4 Cloud and more.</p>
 <ul>
 <li><strong>Increased Product Sales:</strong> Rebuilt trial onboarding to eliminate setup friction so prospects could self-evaluate seamlessly, streamlining the sales process and generating a higher volume of pipeline opportunities.</li>
 <li><strong>Front-End Engineering:</strong> Leveraged Claude Code to build and ship production UI, boosting feature velocity by 25% with a leaner team and cutting feature-planning time in half.</li>
@@ -86,8 +183,8 @@ P4 DAM, P4 Plan, P4 Cloud and more.</p>
 </ul>
 <p><a href="https://benturner.work/p4-dam.html">View Case Study</a></p>
 <h3>Product Designer at Budibase</h3>
-<p><strong>July 2024 to July 2025</strong><br>
-Low-code platform for internal apps, automations and AI agents.</p>
+<p class="meta"><strong>July 2024 to July 2025</strong></p>
+<p>Low-code platform for internal apps, automations and AI agents.</p>
 <ul>
 <li><strong>AI-Focused:</strong> Solved data-heavy UX challenges common in complex AI workflow systems, demonstrating the ability to independently design intuitive, AI-driven interfaces.</li>
 <li><strong>End-to-End Ownership:</strong> Spearheaded product direction and design for core features, helping Budibase advance toward profitability as an independent AI startup.</li>
@@ -96,25 +193,26 @@ Low-code platform for internal apps, automations and AI agents.</p>
 </ul>
 <p><a href="https://benturner.work/budibase-automations.html">View Case Study</a></p>
 <h3>UX Designer at DawsonAndrews</h3>
-<p><strong>June 2021 to July 2024</strong><br>
-Digital product design agency.</p>
+<p class="meta"><strong>June 2021 to July 2024</strong></p>
+<p>Digital product design agency.</p>
 <ul>
 <li><strong>Major Client Success:</strong> Led research-driven redesigns of CityFibre&#x27;s B2B portal and homepage, doubling user satisfaction and increasing completed availability checks by 90%. This generated tens of thousands of pounds in additional revenue, securing a major new agency account and funding nine new hires, including two designers.</li>
 <li><strong>Team Leadership:</strong> Mentored junior and mid-level designers while scaling the team from two to six. I&#x27;m super proud to have supported designers who have since built thriving careers in the Belfast tech scene.</li>
 <li><strong>0-to-1 Product Launch:</strong> Partnered with former rugby international star David Humphreys to design, brand, and launch SportsWork as a dedicated sporting jobs platform from scratch, successfully scaling it into an independent, profitable business.</li>
 <li><strong>Cross-Domain Expertise:</strong> Delivered impactful design solutions across diverse sectors, including startups, marketing platforms, e-commerce, news outlets, public sector services, enterprise software, public infrastructure, and sports.</li>
 <li><strong>Design Systems:</strong> Built complex design systems, tokens, and component libraries for CityFibre and GSMA. These systems improved development metrics, making the team a top performer across 10 service partners. Streamlined handovers reduced developer questions and cut design rework tickets from 15% to 5%.</li>
+<li><strong>Accessible Design:</strong> Adapted CityFibre’s vivid brand colours to meet AA contrast requirements and adjusted typography for readability across the website and portal.</li>
 </ul>
 <p><a href="https://benturner.work/cityfibre.html">View Case Study</a></p>
 <h3>Contract Product Designer</h3>
-<p><strong>August 2020 to May 2021</strong><br>
-Contract design for startups, law firms and local businesses.</p>
+<p class="meta"><strong>August 2020 to May 2021</strong></p>
+<p>Contract design for startups, law firms and local businesses.</p>
 <ul>
 <li>Partnered with local companies, including LoyalBe, alongside an Australian law firm and independent projects to broaden UX design expertise between full-time roles.</li>
 </ul>
 <h3>Service Designer at the Northern Ireland Civil Service</h3>
-<p><strong>August 2019 to July 2020</strong><br>
-Public sector digital services.</p>
+<p class="meta"><strong>August 2019 to July 2020</strong></p>
+<p>Public sector digital services.</p>
 <ul>
 <li><strong>Secure Environments:</strong> Served as lead designer on confidential digital products utilised by the Police Service, the Department of Justice, and other public sector agencies.</li>
 <li><strong>Public-Facing Platforms:</strong> Designed digital recruitment and employment experiences deployed across towns and cities throughout Northern Ireland, positively impacting hundreds of recruiters across targeted services.</li>
@@ -129,5 +227,7 @@ Public sector digital services.</p>
 <h2>Education</h2>
 <p><strong>BDes (Hons) Interaction Design (First Class)</strong><br>
 Ulster University · 2017 to 2021</p>
+<h2>Hobbies</h2>
+<p>Martial arts since 2007: BJJ purple belt, Japanese Jiu-Jitsu black belt, and Judo green belt. Also Warhammer 30k, the gym, fishkeeping, karting, travel, and dogs, especially fluffy ones.</p>
 </body>
 </html>

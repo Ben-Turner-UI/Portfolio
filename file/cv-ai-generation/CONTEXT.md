@@ -2,7 +2,7 @@
 
 Markdown-first public CV. Edit `cv.md`, then run `export.ps1` to build `file/Ben-Turner-CV.pdf`.
 
-Plain Source Sans (same as site body copy), no wash, logos, or case-study chrome. Target: two A4 pages, small PDF.
+Rendered-Markdown reading view for print. Full design/layout spec and QA checklist live in `.cursor/skills/cv-edit/SKILL.md` (`/cv-edit`). Shared stylesheet: `md_to_html.py`. Target: at most two A4 pages. No wash, logos, or case-study chrome.
 
 ## Files
 
@@ -28,12 +28,14 @@ That overwrites `file/Ben-Turner-CV.pdf`. After a content change, bump `?v=` on 
 
 Preview: open the generated `cv.html` in a browser.
 
-## Company packs
+## Company packs (archive)
 
-When Ben asks to build a CV for a company (or company + role):
+`packs/` is the archive of tailored CVs. Use past packs as context when generating a new one (tone, lead/bury, what worked for similar roles).
+
+When Ben asks to build a CV for a company (or company + role), or drops markdown to turn into PDFs:
 
 1. Create a folder under `packs/` named `{Company} - {Role}` (human-readable; include the role).
-2. Put a tailored `cv.md` in that folder (start from the public master; reweight only — same jobs, dates, title, and numbers; no invented facts).
+2. Put a tailored `cv.md` in that folder (from the public master or Ben’s file; reweight only — same jobs, dates, title, and numbers; no invented facts).
 3. Export a PDF into the same folder:
 
 ```powershell
@@ -47,7 +49,11 @@ Each pack folder must contain at least:
 - `cv.md` — the tailored copy Ben edits or sends
 - `Ben-Turner-CV.pdf` — the export he attaches or uploads
 
+If Ben also wants copies in Downloads, export or copy the PDF there with a clear name (`Ben-Turner-CV-{Company}.pdf`).
+
 Optional in the pack: `jd.md` / `jd.pdf`, notes. Do not change the public `cv.md` or `file/Ben-Turner-CV.pdf` for one employer.
+
+Current packs include: Citi, DHD, Bettor Faster.
 
 ## Rules
 

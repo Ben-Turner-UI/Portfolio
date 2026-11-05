@@ -499,7 +499,7 @@ body.case-study .content-image > .device-stage {
 }
 
 [data-color-scheme="dark"] .project-key-stats-label {
-  color: rgba(255, 255, 255, 0.72);
+  color: #FAF9F5;
 }
 
 .project-key-stats .project-statistics {
@@ -513,7 +513,7 @@ body.case-study .content-image > .device-stage {
 }
 
 [data-color-scheme="dark"] .project-header-stack .project-header-description {
-  color: rgba(255, 255, 255, 0.8);
+  color: #FAF9F5;
 }
 
 .project-header-meta-row .project-meta {
@@ -855,6 +855,12 @@ body.case-study header.project-header:has(.cs-highlights-block) {
   padding-top: 48px;
   padding-bottom: 48px;
   margin-bottom: 48px;
+}
+
+@media (min-width: 769px) {
+  body.case-study header.project-header:has(.cs-highlights-block) {
+    padding-top: max(0px, calc(48px - var(--nav-top-offset, 68px)));
+  }
 }
 
 body.case-study .project-header-stack .cs-highlights-block + .project-header-role {

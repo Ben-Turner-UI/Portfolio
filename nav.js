@@ -55,18 +55,56 @@
     document.body.appendChild(script);
   }
 
+  function updateNavSurface() {
+    var nav = document.querySelector('.nav-container');
+    if (!nav) return;
+    var desktop = window.matchMedia('(min-width: 769px)').matches;
+    var probe = desktop ? nav : (nav.querySelector('nav') || nav);
+    var band = probe.getBoundingClientRect();
+    var regions = document.querySelectorAll('header, footer');
+    var onDark = false;
+    for (var i = 0; i < regions.length; i++) {
+      var rect = regions[i].getBoundingClientRect();
+      var overlaps = rect.bottom > band.top && rect.top < band.bottom;
+      var continuesUnder = rect.top <= band.bottom + 2 && rect.bottom > band.bottom;
+      if (overlaps || continuesUnder) {
+        onDark = true;
+        break;
+      }
+    }
+    nav.classList.toggle('nav-on-light', !onDark);
+    nav.classList.toggle('nav-on-dark', onDark);
+  }
+
+  var navSurfaceFrame = 0;
+  function requestNavSurface() {
+    if (navSurfaceFrame) return;
+    navSurfaceFrame = window.requestAnimationFrame(function () {
+      navSurfaceFrame = 0;
+      updateNavSurface();
+    });
+  }
+
   function onReady() {
     updateNavOffset();
+    updateNavSurface();
     playVisibleVideos();
     loadCaseStudyLightbox();
   }
+
+  updateNavOffset();
+  updateNavSurface();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', onReady);
   } else {
     onReady();
   }
-  window.addEventListener('resize', updateNavOffset);
+  window.addEventListener('resize', function () {
+    updateNavOffset();
+    requestNavSurface();
+  });
+  window.addEventListener('scroll', requestNavSurface, { passive: true });
 
   var EMAIL = 'Benjamin.turner.design@gmail.com';
 

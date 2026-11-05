@@ -47,7 +47,7 @@ The review is based on *State of UX Portfolios 2026* (`C:\Users\reape\Desktop\Jo
 
 - Reuse existing markup and classes (`project-statistics`, `project-summary-meta`, `project-paragraph`, `compare-slider`, `improvements-table`, `content-image`, `next-project-card`). Do not change CSS, layout, scripts or fonts.
 - Leave existing `<!-- was: ... -->` comments alone. Remove a TODO marker only when its fix is done.
-- Do not edit the CV here. CV changes go through the `edit-cv` skill (Phase 6).
+- Do not edit the CV here. CV changes go through the `cv-edit` skill (Phase 6).
 
 ## Confirmed facts (Ben, 2026-10-11)
 
@@ -266,7 +266,7 @@ Ben approves every crop before it replaces a file. Save new files beside the old
 
 **Status: CV copy + PDF export done (2026-10-11).** LinkedIn check and deploy are Ben's.
 
-- Use the `edit-cv` skill. Change the Perforce bullet "cut review times in half" to "halved planning meeting time per feature" so it matches the case study. Then follow the skill's export steps. **Done.**
+- Use the `cv-edit` skill. Change the Perforce bullet "cut review times in half" to "halved planning meeting time per feature" so it matches the case study. Then follow the skill's export steps. **Done.**
 - Ben checks LinkedIn against the final pages: titles, dates, the nine hires, Budibase "zero", the CityFibre 90% definition.
 - Ben deploys. The live site at benturner.work still shows the old five-card homepage.
 

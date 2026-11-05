@@ -12,9 +12,9 @@
     <meta property="og:image" content="https://benturner.work/img/thumbnail/p4-product.png">
     <meta property="og:url" content="https://benturner.work/p4-dam.html">
     <meta name="twitter:card" content="summary_large_image">
-    <style>html,body{background:#fff;color-scheme:only light}</style>
+    <style>html,body{background:#FAF9F5;color-scheme:only light}header.project-header{background:#141413;color:#FAF9F5}</style>
     <title>Bridging design and engineering to help a smaller team ship 25% more features | Ben Turner</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css?v=2026-11-05-sidegap16">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
@@ -24,8 +24,8 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2026-10-23n" />
     <link rel="shortcut icon" href="favicon.ico?v=2026-10-23n" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2026-10-23n" />
-    <meta name="theme-color" content="#FFFFFF">
-    <meta name="msapplication-navbutton-color" content="#FFFFFF">
+    <meta name="theme-color" content="#141413">
+    <meta name="msapplication-navbutton-color" content="#141413">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-THTRN14NFN"></script>
     <script>
@@ -39,17 +39,16 @@
   <body class="case-study">
     <div class="nav-container">
       <nav>
-        <div class="nav-group">
-      <a href="index.html" class="nav-item">
-        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">home</span>
-        <span class="nav-item__label">Home</span>
+    <a href="index.html" class="nav-name">Ben Turner<span class="nav-name__mark">.</span></a>
+    <div class="nav-group">
+      <a href="index.html#projects" class="nav-item" id="nav-item-active" aria-current="page">
+        <span class="nav-item__label">Work</span>
       </a>
       <a href="about.html" class="nav-item">
-        <span class="material-symbols-rounded nav-item__icon" aria-hidden="true">person</span>
         <span class="nav-item__label">About</span>
       </a>
     </div>
-      </nav>
+  </nav>
     </div>
 
     <header class="project-header">
@@ -66,7 +65,7 @@
                   <li class="cs-highlight" role="listitem">
                     <span class="cs-highlight__icon" aria-hidden="true"><span class="material-symbols-rounded">emoji_events</span></span>
                     <p class="cs-highlight__title">Best Designed award</p>
-                    <p class="cs-highlight__desc">My system won Best Designed at Perforce&rsquo;s company-wide 2026 AI hackathon. At least three product teams now use the skill or parts of its workflow.</p>
+                    <p class="cs-highlight__desc">My system won Best Designed at Perforce&rsquo;s company-wide 2026 AI hackathon. Five product teams* now use the skill or parts of its workflow.</p>
                   </li>
                   <li class="cs-highlight" role="listitem">
                     <span class="cs-highlight__icon" aria-hidden="true"><span class="material-symbols-rounded">deployed_code</span></span>
@@ -95,15 +94,15 @@
               <div class="project-paragraph">
                 <h2>How I build and hand over features</h2>
 
-                <h3>01 &middot; Gather context with the product owner</h3>
+                <h3>1. Gather context with the product owner</h3>
                 <p>I start by understanding the problem and clarifying what the feature needs to do. My product owner and I built a system that turns feedback from our repository and directly from users into Markdown files.</p>
                 <p>These give Claude relevant product context before I start designing or building.</p>
 
-                <h3>02 &middot; Prototype and refine together</h3>
+                <h3>2. Prototype and refine together</h3>
                 <p>I usually build an HTML prototype so we can try the interactions early. A small group, typically one developer, one product manager and me, reviews it together.</p>
                 <p>I gather feedback and iterate quickly. Working with a prototype makes it easier to discuss how the feature behaves and agree on what needs to change.</p>
 
-                <h3>03 &middot; Document the states for wider review</h3>
+                <h3>3. Document the states for wider review</h3>
                 <p>Once we&rsquo;re happy with the prototype, I use a Claude skill to create specifications and visual snapshots of its interface states. I share these with the wider team for feedback before implementation.</p>
                 <p>The first version missed some states. Developer feedback helped me improve the skill&rsquo;s instructions, and the example below covers six lighting and background states from the 3D viewer.</p>
               </div>
@@ -116,11 +115,11 @@
               </div>
 
               <div class="project-paragraph">
-                <h3>04 &middot; Build directly in production code</h3>
+                <h3>4. Build directly in production code</h3>
                 <p>I bring the prototype, documentation and feedback into Claude Code. Using my agents and workflows, I implement the feature in the product, checking the interactions and correcting the generated code as I go.</p>
                 <p>This lets me take on implementation work and gives developers less UI to build from scratch.</p>
 
-                <h3>05 &middot; Hand over for developer sign-off</h3>
+                <h3>5. Hand over for developer sign-off</h3>
                 <p>I share the code through GitHub for review, alongside the specifications, snapshots and CLAUDE.md context.</p>
                 <p>Developers can inspect the implementation and try the behaviour themselves. They flag changes before signing off and integrating the feature. They reported that the revised handovers made the work significantly easier to follow.</p>
               </div>
@@ -230,7 +229,6 @@
                     <img class="next-project-card__thumb" src="img/thumbnail/bb-automations-thumbnail.jpg?v=2026-10-26" alt="" loading="lazy" decoding="async">
                     <div class="next-project-card__content">
                       <p class="next-project-card__title">Redesigning complex workflows to help users understand errors and fix problems faster</p>
-                      <p class="next-project-card__desc">I led research and redesigned workflows so users could inspect step data and understand failures. Negative Discord feedback fell from around eight to ten reports a month to zero after launch, during the period I monitored.</p>
                     </div>
                   </div>
                 </a>
@@ -248,14 +246,10 @@
           <h3>Ben Turner, Product Designer</h3>
           <p>Based in Carrickfergus, Northern Ireland, United Kingdom</p>
         </div>
-        <div class="contact-links">
-          <p><a href="mailto:Benjamin.turner.design@gmail.com"><img src="img/mail.svg" alt="">Benjamin.turner.design@gmail.com</a></p>
-          <p><a href="https://www.linkedin.com/in/benturnerwork"><img src="img/linkedin.svg" alt="">LinkedIn</a></p>
-        </div>
         <p class="copyright">&copy;2026, All Rights Reserved</p>
       </div>
     </footer>
-    <script src="nav.js"></script>
+    <script src="nav.js?v=2026-11-05-navflash"></script>
     <script src="change-modal.js"></script>
   </body>
 </html>

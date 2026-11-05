@@ -8,39 +8,51 @@
   }
 
   .side-project-grid {
-    gap: 24px;
+    gap: 48px;
   }
 
   .side-project-card {
-    grid-template-columns: 1fr;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
     padding: 0;
   }
 
   .side-project-thumbnail {
-    grid-column: 1;
     width: 100%;
     min-width: 0;
     max-width: none;
     height: auto;
     min-height: 0;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     max-height: none;
     border: none;
-    border-radius: 0;
+    border-radius: var(--radius-lg);
   }
 
   .side-project-content {
-    grid-column: 1;
-    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
   }
 
   .side-project-content h3 {
+    width: 100%;
     max-width: none;
+    color: #141413;
+    text-wrap: wrap;
   }
 
   .side-project-description {
     max-width: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: rgba(20, 20, 19, 0.82);
   }
 
   .testimonial-grid {
@@ -134,9 +146,22 @@
     justify-content: flex-start;
   }
 
+  body.home .width-container {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+
   header.home {
     margin-top: 0;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
+    padding-top: 24px;
+    padding-bottom: 36px;
+  }
+
+  body.home .projects h2 {
+    margin-top: 0;
   }
 
   .main-content .content-image {
@@ -192,7 +217,7 @@
     align-items: stretch;
     gap: 16px;
     min-height: 0;
-    padding: 18px;
+    padding: 0 0 16px;
   }
 
   .button-group .next-project-link .next-project-card > .next-project-card__thumb {
@@ -208,11 +233,11 @@
     object-position: center center;
     background-color: #ececef;
     border: none;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
 
   .button-group .next-project-link .next-project-card__content {
-    padding: 0;
+    padding: 0 16px;
     flex: 1;
     min-width: 0;
     align-self: stretch;
@@ -245,4 +270,107 @@
     word-break: break-word;
     vertical-align: top;
   }
+}
+
+/* Site colour scheme: dark headers, cream page. Loaded last so it beats header text colours set in case-study.css. */
+header.project-header,
+header.project-header.about-header {
+  background: #141413;
+  color: #FAF9F5;
+}
+
+header.project-header .project-summary p,
+header.project-header .project-summary-lede,
+header.project-header .project-key-stats-label,
+header.project-header h1,
+header.project-header h3,
+header.project-header .project-statistics-stat,
+header.project-header .project-statistics-stat--text,
+header.project-header .project-statistics-stat--inline {
+  color: #FAF9F5;
+}
+
+/* Body copy on dark headers. Titles (strong, h1, highlight titles) stay cream below. */
+header.project-header .project-header-description,
+header.project-header .project-header-description.project-header-role,
+body header.project-header .project-header-meta {
+  color: rgba(250, 249, 245, 0.58);
+}
+
+header.project-header .project-header-description strong,
+body.case-study header.project-header .project-header-description strong,
+header.project-header h1,
+header.project-header .cs-highlight__title {
+  color: #FAF9F5;
+}
+
+body header.project-header .project-meta,
+body header.project-header .project-summary-meta,
+body header.project-header .project-meta-badge--label {
+  color: #FAF9F5;
+}
+
+header.project-header .project-key-stats .project-statistics {
+  border-top-color: rgba(250, 249, 245, 0.18);
+}
+
+header.project-header .cs-highlight__desc {
+  color: rgba(250, 249, 245, 0.58);
+}
+
+header.project-header .cs-highlight__title,
+header.project-header h1,
+header.project-header .project-header-description strong,
+body.case-study header.project-header .project-header-description strong {
+  color: #FAF9F5;
+}
+
+header.project-header .cs-highlight__icon {
+  border-color: rgba(250, 249, 245, 0.28);
+  background: rgba(250, 249, 245, 0.08);
+  color: #FAF9F5;
+}
+
+header.project-header .project-meta-badge__logo {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+header.project-header a.project-meta-badge:focus-visible {
+  outline-color: #FAF9F5;
+}
+
+header.about-header .home-contact__link,
+header.project-header .home-contact__link {
+  background-color: transparent;
+  color: #FAF9F5;
+  border-color: rgba(250, 249, 245, 0.28);
+  box-shadow: none;
+}
+
+header.about-header .home-contact__link:hover,
+header.project-header .home-contact__link:hover {
+  color: #FAF9F5;
+  background: transparent;
+  border-color: #FAF9F5;
+  box-shadow: none;
+}
+
+header.about-header .home-contact__link .material-symbols-rounded,
+header.project-header .home-contact__link .material-symbols-rounded {
+  color: #FAF9F5;
+}
+
+/* Final say: case-study header body is a readable cream grey. Titles stay cream. */
+header.project-header .project-header-description,
+header.project-header .project-header-description.project-header-role,
+body header.project-header .project-header-meta,
+header.project-header .cs-highlight__desc {
+  color: rgba(250, 249, 245, 0.58);
+}
+
+header.project-header h1,
+header.project-header .cs-highlight__title,
+header.project-header .project-header-description strong,
+body.case-study header.project-header .project-header-description strong {
+  color: #FAF9F5;
 }
