@@ -298,7 +298,7 @@ header.project-header .project-statistics-stat--inline {
 header.project-header .project-header-description,
 header.project-header .project-header-description.project-header-role,
 body header.project-header .project-header-meta {
-  color: rgba(250, 249, 245, 0.58);
+  color: rgba(250, 249, 245, 0.64);
 }
 
 header.project-header .project-header-description strong,
@@ -306,6 +306,26 @@ body.case-study header.project-header .project-header-description strong,
 header.project-header h1,
 header.project-header .cs-highlight__title {
   color: #FAF9F5;
+}
+
+@media (min-width: 769px) {
+  body.case-study header.project-header:not(.about-header) {
+    padding-top: 96px !important;
+    padding-bottom: 64px !important;
+  }
+
+  body.about header.project-header.about-header {
+    padding-top: 96px !important;
+    padding-bottom: 64px !important;
+  }
+}
+
+header.about-header .project-header-title-block {
+  gap: 16px;
+}
+
+header.about-header .project-summary p {
+  color: rgba(250, 249, 245, 0.64);
 }
 
 body header.project-header .project-meta,
@@ -319,7 +339,7 @@ header.project-header .project-key-stats .project-statistics {
 }
 
 header.project-header .cs-highlight__desc {
-  color: rgba(250, 249, 245, 0.58);
+  color: rgba(250, 249, 245, 0.64);
 }
 
 header.project-header .cs-highlight__title,
@@ -354,8 +374,8 @@ header.project-header .home-contact__link {
 header.about-header .home-contact__link:hover,
 header.project-header .home-contact__link:hover {
   color: #FAF9F5;
-  background: transparent;
-  border-color: #FAF9F5;
+  background: rgba(250, 249, 245, 0.1);
+  border-color: rgba(250, 249, 245, 0.72);
   box-shadow: none;
 }
 
@@ -369,7 +389,7 @@ header.project-header .project-header-description,
 header.project-header .project-header-description.project-header-role,
 body header.project-header .project-header-meta,
 header.project-header .cs-highlight__desc {
-  color: rgba(250, 249, 245, 0.58);
+  color: rgba(250, 249, 245, 0.64);
 }
 
 header.project-header h1,

@@ -41,12 +41,16 @@ html:has(body.home)::-webkit-scrollbar-thumb {
 .projects h2,
 .side-projects h2,
 .testimonials h2 {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Big Shoulders', sans-serif;
   font-size: var(--type-heading-2);
   font-weight: 600;
   line-height: var(--type-heading-2-lh);
   letter-spacing: normal;
   margin-bottom: 12px;
+}
+
+.testimonials h2 {
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 body.home .projects h2,
@@ -244,6 +248,10 @@ a.side-project-card:hover {
   box-sizing: border-box;
   background-color: #e8e6e1;
   isolation: isolate;
+}
+
+.project-card__thumb::before {
+  content: none;
 }
 
 .project-card__shot {

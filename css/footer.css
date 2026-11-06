@@ -73,6 +73,10 @@ footer .contact-links {
   line-height: var(--type-big-shoulders-lh);
 }
 
+.footer-name__mark {
+  color: #ff4d00;
+}
+
 .copyright {
   margin: 0;
   color: #FAF9F5;
