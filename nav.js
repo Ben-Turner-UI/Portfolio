@@ -136,8 +136,22 @@
     return ok;
   }
 
-  function showCopiedDialog(text) {
-    window.alert('Copied:\n' + text);
+  function showCopied(button) {
+    var icon = button.querySelector('.material-symbols-rounded');
+    var label = button.querySelector('span:not(.material-symbols-rounded)');
+    if (!label) return;
+    var previousLabel = label.textContent;
+    var previousIcon = icon ? icon.textContent : '';
+    var previousAria = button.getAttribute('aria-label');
+    label.textContent = 'Copied';
+    if (icon) icon.textContent = 'check';
+    button.setAttribute('aria-label', 'Email address copied');
+    window.clearTimeout(button.copyTimer);
+    button.copyTimer = window.setTimeout(function () {
+      label.textContent = previousLabel;
+      if (icon) icon.textContent = previousIcon;
+      if (previousAria) button.setAttribute('aria-label', previousAria);
+    }, 1600);
   }
 
   document.addEventListener('click', function (event) {
@@ -149,7 +163,7 @@
 
     copyToClipboard(email).then(function (ok) {
       if (ok) {
-        showCopiedDialog(email);
+        showCopied(button);
       } else {
         window.prompt('Copy this email address:', email);
       }

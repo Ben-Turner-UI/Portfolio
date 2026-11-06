@@ -250,6 +250,14 @@
   cursor: pointer;
 }
 
+.material-symbols-rounded,
+.material-symbols-outlined {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  flex: none;
+}
+
 .material-symbols-rounded {
   font-family: 'Material Symbols Rounded';
   font-weight: normal;
@@ -261,6 +269,7 @@
   display: inline-block;
   white-space: nowrap;
   direction: ltr;
+  vertical-align: middle;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;

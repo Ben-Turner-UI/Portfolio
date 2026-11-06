@@ -1,7 +1,34 @@
 /* Homepage: side projects, project grid, stats, tags */
 body.home {
   --site-max-width: 1200px;
-  background: #FAF9F5;
+  background: #FAF9F6;
+}
+
+html:has(body.home) {
+  background-color: #FAF9F6;
+  scrollbar-color: #d6d6d6 #FAF9F6;
+}
+
+html:has(body.home)::-webkit-scrollbar,
+html:has(body.home)::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+
+html:has(body.home)::-webkit-scrollbar-thumb {
+  border-color: #FAF9F6;
+}
+
+@media (min-width: 769px) {
+  body.home .nav-container.nav-on-light {
+    background: #FAF9F6;
+  }
+}
+
+@media (max-width: 768px) {
+  body.home .nav-container nav,
+  body.home .nav-container.nav-on-light nav {
+    background: #FAF9F6;
+  }
 }
 /* ==========================================================================
    SIDE PROJECTS SECTION STYLES
@@ -206,10 +233,6 @@ a.side-project-card:hover {
 }
 
 .project-card__thumb {
-  --wash-a: #c9d0ea;
-  --wash-b: #e4d4f2;
-  --wash-c: #f4f0e8;
-  --wash-base: #e6e4de;
   position: relative;
   display: block;
   width: 100%;
@@ -217,69 +240,10 @@ a.side-project-card:hover {
   margin: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  background-color: var(--wash-base);
+  border: 1px solid #dddbd5;
+  box-sizing: border-box;
+  background-color: #e8e6e1;
   isolation: isolate;
-}
-
-.project-card__thumb::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      140% 125% at 14% 16%,
-      var(--wash-a) 0%,
-      color-mix(in srgb, var(--wash-a) 78%, var(--wash-base)) 16%,
-      color-mix(in srgb, var(--wash-a) 52%, var(--wash-base)) 34%,
-      color-mix(in srgb, var(--wash-a) 28%, var(--wash-base)) 52%,
-      color-mix(in srgb, var(--wash-a) 10%, var(--wash-base)) 70%,
-      transparent 88%
-    ),
-    radial-gradient(
-      130% 140% at 88% 88%,
-      var(--wash-b) 0%,
-      color-mix(in srgb, var(--wash-b) 74%, var(--wash-base)) 18%,
-      color-mix(in srgb, var(--wash-b) 46%, var(--wash-base)) 38%,
-      color-mix(in srgb, var(--wash-b) 22%, var(--wash-base)) 58%,
-      color-mix(in srgb, var(--wash-b) 8%, var(--wash-base)) 76%,
-      transparent 92%
-    ),
-    radial-gradient(
-      100% 90% at 74% 4%,
-      var(--wash-c) 0%,
-      color-mix(in srgb, var(--wash-c) 55%, var(--wash-base)) 24%,
-      color-mix(in srgb, var(--wash-c) 24%, var(--wash-base)) 48%,
-      color-mix(in srgb, var(--wash-c) 8%, var(--wash-base)) 68%,
-      transparent 84%
-    );
-}
-
-.project-card__thumb--dam {
-  --wash-a: #9eb4ff;
-  --wash-b: #d4c2ff;
-  --wash-c: #f6f1e6;
-  --wash-base: #e3e6f4;
-}
-
-.project-card__thumb--bb {
-  --wash-a: #3d9a72;
-  --wash-b: #c45b86;
-  --wash-c: #2c4a3c;
-  --wash-base: #1c2420;
-}
-
-.project-card__thumb--cf {
-  --wash-a: #7eb6ff;
-  --wash-b: #7eecc4;
-  --wash-c: #d9e4ff;
-  --wash-base: #d7e6ff;
-}
-
-.project-card__thumb--ui {
-  --wash-a: #f0a98c;
-  --wash-b: #9eb6ff;
-  --wash-c: #f6e2cf;
-  --wash-base: #f6e7dc;
 }
 
 .project-card__shot {
@@ -291,15 +255,24 @@ a.side-project-card:hover {
   height: auto;
   max-width: 84%;
   max-height: 78%;
+  object-fit: contain;
   border: 1px solid rgba(20, 20, 19, 0.08);
   border-radius: 8px;
-  box-shadow: 0 18px 36px rgba(20, 20, 19, 0.22);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   transform: translate(-50%, -50%);
-  transition: transform 0.22s ease;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.project-card:hover .project-card__shot {
-  transform: translate(-50%, calc(-50% - 6px));
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-card__shot {
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+
+  .project-card:hover h3 {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.14em;
+  }
 }
 
 .project-card h3 {
@@ -312,12 +285,6 @@ a.side-project-card:hover {
   letter-spacing: 0.1px;
   width: 100%;
   text-wrap: wrap;
-}
-
-.project-card:hover h3 {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.14em;
 }
 
 .project-card:focus-visible {

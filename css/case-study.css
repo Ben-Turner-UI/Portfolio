@@ -895,15 +895,28 @@ body.case-study .project-key-stats .cs-stats {
    UI GALLERY — one interface at a time
    ========================================================================== */
 .ui-index {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 20px;
   width: 100%;
   max-width: var(--project-media-max-width);
+  margin: 0 0 var(--space-7);
+}
+
+.ui-index__list {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  border-top: 1px solid #d6d6d6;
+}
+
+.ui-index__list li {
+  border-bottom: 1px solid #d6d6d6;
 }
 
 .ui-index a {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  column-gap: 24px;
+  align-items: baseline;
+  padding: 11px 0;
   color: #141413;
   font-size: var(--type-body-lg);
   line-height: var(--type-body-lg-lh);
@@ -924,12 +937,11 @@ body.case-study .project-key-stats .cs-stats {
 .ui-index__product {
   color: #595959;
   font-weight: 400;
-  margin-right: 0.35em;
 }
 
 .ui-index a:focus-visible {
   outline: 2px solid #111;
-  outline-offset: 3px;
+  outline-offset: -2px;
 }
 
 html:has(body.case-study--ui-gallery) {

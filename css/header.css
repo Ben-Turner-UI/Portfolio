@@ -392,7 +392,12 @@ header.project-header.about-header {
 }
 
 .home-header-content-text > h1,
-.home-header-bio,
+.home-header-bio {
+  width: 100%;
+  max-width: 600px;
+  align-self: stretch;
+}
+
 .home-header-content-text > .home-contact {
   width: 100%;
   max-width: none;
@@ -472,7 +477,7 @@ header.project-header.about-header {
   }
 
   .home-header-portrait {
-    position: static;
+    position: relative;
     grid-column: auto;
     grid-row: auto;
     width: 68px;
@@ -513,6 +518,7 @@ header.project-header.about-header {
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: 0.1px;
+  max-width: 600px;
   text-wrap: wrap;
 }
 
@@ -588,7 +594,7 @@ header.project-header.about-header {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-md);
-  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
 }
 
 header.home .home-header-content .home-contact__link,
@@ -607,8 +613,8 @@ header.home .home-header-content-text a:hover {
 header.home .home-header-content .home-contact__link:hover,
 header.home .home-header-content-text .home-contact__link:hover {
   color: #FAF9F5;
-  background: transparent;
-  border-color: #FAF9F5;
+  background: rgba(250, 249, 245, 0.1);
+  border-color: rgba(250, 249, 245, 0.72);
   box-shadow: none;
 }
 

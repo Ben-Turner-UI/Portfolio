@@ -14,11 +14,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <style>html,body{background:#FAF9F5;color-scheme:only light}header.project-header{background:#141413;color:#FAF9F5}</style>
     <title>Solving complex product challenges through thoughtful interaction design and intuitive interfaces | Ben Turner</title>
-    <link rel="stylesheet" href="css/main.css?v=2026-11-06-split">
+    <link rel="stylesheet" href="css/main.css?v=2026-11-06-list">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,600&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,ads_click,arrow_forward,arrow_upward,chevron_left,chevron_right,close,download,drag_indicator,emoji_events,grid_view,groups,home,lock,login,mail,open_in_new,palette,person,route,search,settings,smart_toy,trending_up,widgets&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=account_tree,ads_click,arrow_forward,arrow_upward,chevron_left,chevron_right,close,download,drag_indicator,emoji_events,grid_view,groups,home,lock,login,mail,open_in_new,palette,person,route,search,settings,smart_toy,trending_up,widgets&display=block" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon-96x96.png?v=2026-10-23n" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2026-10-23n" />
     <link rel="shortcut icon" href="favicon.ico?v=2026-10-23n" />
@@ -71,17 +73,51 @@
             <div class="project-details_text">
 
               <nav class="ui-index" aria-label="Designs on this page">
-                <a href="#automation-branches"><span class="ui-index__product">Budibase</span><span class="ui-index__title">Automation branches</span></a>
-                <a href="#role-permissions"><span class="ui-index__product">Budibase</span><span class="ui-index__title">Role permissions</span></a>
-                <a href="#view-calculations"><span class="ui-index__product">Budibase</span><span class="ui-index__title">View calculations</span></a>
-                <a href="#advanced-filtering"><span class="ui-index__product">P4 DAM</span><span class="ui-index__title">Advanced filtering</span></a>
-                <a href="#capacity-planning"><span class="ui-index__product">P4 Plan</span><span class="ui-index__title">Capacity planning</span></a>
-                <a href="#visit-belfast"><span class="ui-index__product">Visit Belfast</span><span class="ui-index__title">Helping people plan where to go in Belfast</span></a>
-                <a href="#5g-transformation-hub"><span class="ui-index__product">GSMA</span><span class="ui-index__title">Scanning real uses of 5G</span></a>
-                <a href="#cityfibre-roadshow"><span class="ui-index__product">CityFibre</span><span class="ui-index__title">Registering interest at the roadshow</span></a>
+                <ol class="ui-index__list">
+                  <li><a href="#advanced-filtering"><span class="ui-index__product">P4 DAM</span><span class="ui-index__title">Advanced filtering</span></a></li>
+                  <li><a href="#capacity-planning"><span class="ui-index__product">P4 Plan</span><span class="ui-index__title">Capacity planning</span></a></li>
+                  <li><a href="#automation-branches"><span class="ui-index__product">Budibase</span><span class="ui-index__title">Automation branches</span></a></li>
+                  <li><a href="#role-permissions"><span class="ui-index__product">Budibase</span><span class="ui-index__title">Role permissions</span></a></li>
+                  <li><a href="#view-calculations"><span class="ui-index__product">Budibase</span><span class="ui-index__title">View calculations</span></a></li>
+                  <li><a href="#visit-belfast"><span class="ui-index__product">Visit Belfast</span><span class="ui-index__title">Helping people plan where to go in Belfast</span></a></li>
+                  <li><a href="#5g-transformation-hub"><span class="ui-index__product">GSMA</span><span class="ui-index__title">Scanning real uses of 5G</span></a></li>
+                  <li><a href="#cityfibre-roadshow"><span class="ui-index__product">CityFibre</span><span class="ui-index__title">Registering interest at the roadshow</span></a></li>
+                </ol>
               </nav>
 
               <div class="ui-grid" role="list">
+
+                <article class="ui-grid__item" id="advanced-filtering" role="listitem">
+                  <div class="ui-grid__copy">
+                    <p class="ui-grid__product">Perforce · P4 DAM</p>
+                    <h2 class="ui-grid__title">Advanced filtering</h2>
+                    <p class="ui-grid__body">This design builds on my experience creating advanced filtering interfaces for assets, databases and other complex datasets. It involved extensive research, with AI-generated browser prototypes helping me test interactions and iterate faster.</p>
+                    <p class="ui-grid__body">The main challenge was making active filters easy to understand while giving users full visibility and control over their selections. I placed removable filter pills directly inside the filter containers, so users could see and adjust their choices in context.</p>
+                    <p class="ui-grid__body">The interface brings together visibility, flexibility and ease of use. Products like Airtable, Jira and Notion offered useful references, but I felt each left parts of that experience unresolved. This was an opportunity to explore how those elements could work better together.</p>
+                  </div>
+                  <div class="ui-grid__media">
+                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-pills.png?v=2026-10-24e" alt="Filter controls with removable pills for the selected values" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="ui-grid__caption">Removable filter pills sit inside each filter control.</figcaption>
+                  <div class="ui-grid__media">
+                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-advanced.png?v=2026-10-24e" alt="Advanced filter builder with nested and and or condition groups" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="ui-grid__caption">Nested and/or groups in the advanced filter builder.</figcaption>
+                </article>
+
+                <article class="ui-grid__item" id="capacity-planning" role="listitem">
+                  <div class="ui-grid__copy">
+                    <p class="ui-grid__product">Perforce · P4 Plan</p>
+                    <h2 class="ui-grid__title">Capacity planning</h2>
+                    <p class="ui-grid__body">Project managers need to see who has room for more work and who is already stretched, across people, groups and projects. Without that view, overloads show up late and spare capacity goes unused.</p>
+                    <p class="ui-grid__body">I designed a workload grid that shows capacity against assigned work over time, with colour for under and over capacity and a clear pattern for time out of office. People can switch between users, groups and projects, change the time scale, and read the same data as percentages, hours or variance.</p>
+                    <p class="ui-grid__body">The feature gave studios a way to balance work before it became a problem. Customers singled it out as something competing planning tools did not offer, and it helped pull new accounts into the product.</p>
+                  </div>
+                  <div class="ui-grid__media">
+                    <img class="ui-grid__asset" src="img/project-image/p4-plan/capacity-planning.png?v=2026-10-29" alt="Users workload view with capacity totals and daily utilisation across a four-week timeline" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="ui-grid__caption">Daily utilisation against capacity across the team.</figcaption>
+                </article>
 
                 <article class="ui-grid__item" id="automation-branches" role="listitem">
                   <div class="ui-grid__copy">
@@ -126,38 +162,6 @@
                     </video>
                   </div>
                   <figcaption class="ui-grid__caption">Adding a calculation and checking its results.</figcaption>
-                </article>
-
-                <article class="ui-grid__item" id="advanced-filtering" role="listitem">
-                  <div class="ui-grid__copy">
-                    <p class="ui-grid__product">Perforce · P4 DAM</p>
-                    <h2 class="ui-grid__title">Advanced filtering</h2>
-                    <p class="ui-grid__body">This design builds on my experience creating advanced filtering interfaces for assets, databases and other complex datasets. It involved extensive research, with AI-generated browser prototypes helping me test interactions and iterate faster.</p>
-                    <p class="ui-grid__body">The main challenge was making active filters easy to understand while giving users full visibility and control over their selections. I placed removable filter pills directly inside the filter containers, so users could see and adjust their choices in context.</p>
-                    <p class="ui-grid__body">The interface brings together visibility, flexibility and ease of use. Products like Airtable, Jira and Notion offered useful references, but I felt each left parts of that experience unresolved. This was an opportunity to explore how those elements could work better together.</p>
-                  </div>
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-pills.png?v=2026-10-24e" alt="Filter controls with removable pills for the selected values" loading="lazy" decoding="async">
-                  </div>
-                  <figcaption class="ui-grid__caption">Removable filter pills sit inside each filter control.</figcaption>
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-product/filters-advanced.png?v=2026-10-24e" alt="Advanced filter builder with nested and and or condition groups" loading="lazy" decoding="async">
-                  </div>
-                  <figcaption class="ui-grid__caption">Nested and/or groups in the advanced filter builder.</figcaption>
-                </article>
-
-                <article class="ui-grid__item" id="capacity-planning" role="listitem">
-                  <div class="ui-grid__copy">
-                    <p class="ui-grid__product">Perforce · P4 Plan</p>
-                    <h2 class="ui-grid__title">Capacity planning</h2>
-                    <p class="ui-grid__body">Project managers need to see who has room for more work and who is already stretched, across people, groups and projects. Without that view, overloads show up late and spare capacity goes unused.</p>
-                    <p class="ui-grid__body">I designed a workload grid that shows capacity against assigned work over time, with colour for under and over capacity and a clear pattern for time out of office. People can switch between users, groups and projects, change the time scale, and read the same data as percentages, hours or variance.</p>
-                    <p class="ui-grid__body">The feature gave studios a way to balance work before it became a problem. Customers singled it out as something competing planning tools did not offer, and it helped pull new accounts into the product.</p>
-                  </div>
-                  <div class="ui-grid__media">
-                    <img class="ui-grid__asset" src="img/project-image/p4-plan/capacity-planning.png?v=2026-10-29" alt="Users workload view with capacity totals and daily utilisation across a four-week timeline" loading="lazy" decoding="async">
-                  </div>
-                  <figcaption class="ui-grid__caption">Daily utilisation against capacity across the team.</figcaption>
                 </article>
 
                 <article class="ui-grid__item" id="visit-belfast" role="listitem">

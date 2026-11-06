@@ -47,16 +47,10 @@ header.project-header::before {
     transform: translateY(0) scale(0.98);
   }
 
-  .home-header-content .home-contact__link:hover,
-  .home-header-content-text .home-contact__link:hover,
-  .about-header .home-contact__link:hover {
-    transform: translateY(-1px);
-  }
-
   .home-header-content .home-contact__link:active,
   .home-header-content-text .home-contact__link:active,
   .about-header .home-contact__link:active {
-    transform: translateY(0);
+    transform: none;
   }
 
   .personal-thumb:hover {
@@ -67,36 +61,64 @@ header.project-header::before {
     transform: translateY(-1px);
   }
 
-  header.home::before,
-  header.project-header::before {
-    animation: header-field 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  }
-
   .cs-highlight,
-  .project-cards .project-card,
   .side-project-grid .side-project-card {
     animation: rise-in 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .cs-highlight:nth-child(2),
-  .project-cards .project-card:nth-child(2),
   .side-project-grid .side-project-card:nth-child(2) {
     animation-delay: 70ms;
   }
 
-  .cs-highlight:nth-child(3),
-  .project-cards .project-card:nth-child(3) {
-    animation-delay: 140ms;
+  html.motion .home-header-kicker,
+  html.motion .home-header-content-text > h1,
+  html.motion .home-header-bio,
+  html.motion .home-contact {
+    animation: hero-in 640ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
-  .project-cards .project-card:nth-child(4) {
-    animation-delay: 210ms;
+  html.motion .home-header-content-text > h1 {
+    animation-delay: 60ms;
+  }
+
+  html.motion .home-header-bio {
+    animation-delay: 120ms;
+  }
+
+  html.motion .home-contact {
+    animation-delay: 180ms;
+  }
+
+  html.motion .project-cards .project-card {
+    opacity: 0;
+  }
+
+  html.motion .project-cards .project-card.is-in {
+    animation: card-in 460ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 }
 
-@keyframes header-field {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes card-in {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    translate: 0 7px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
 
 @keyframes rise-in {
@@ -115,7 +137,11 @@ header.project-header::before {
   header.project-header::before,
   .cs-highlight,
   .project-cards .project-card,
-  .side-project-grid .side-project-card {
+  .side-project-grid .side-project-card,
+  .home-header-kicker,
+  .home-header-content-text > h1,
+  .home-header-bio,
+  .home-contact {
     animation: none;
     opacity: 1;
     translate: none;
