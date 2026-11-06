@@ -152,7 +152,7 @@ header.project-header.about-header {
     --brightness: .82;
     top: 50%;
     right: 0;
-    width: clamp(269px, calc(20.8vw - 51px), 301px);
+    width: clamp(255px, calc(19.5vw - 48px), 285px);
     -webkit-mask-image:
       linear-gradient(to bottom, #000 0% 76%, transparent 100%),
       linear-gradient(to right, transparent 0%, #000 34%, #000 78%, transparent 100%);
