@@ -262,7 +262,7 @@ header.project-header.about-header {
   border-bottom: var(--case-study-heading-divider);
   font-family: 'Source Sans 3', sans-serif;
   font-size: var(--type-heading-2);
-  font-weight: 700;
+  font-weight: 600;
   line-height: var(--case-study-heading-line);
   color: #000;
   text-transform: none;
@@ -403,37 +403,52 @@ header.project-header.about-header {
 }
 
 .home-header-portrait {
+  --dot-size: 3px;
+  --dot-strength: 1;
+  --brightness: .50;
   position: absolute;
   top: 50%;
   right: 0;
   display: block;
   width: 300px;
-  height: auto;
+  aspect-ratio: 655 / 819;
   transform: translateY(-50%);
+  isolation: isolate;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 0% 63%, transparent 100%),
+    linear-gradient(to right, #000 0% 46%, transparent 100%);
+  mask-image:
+    linear-gradient(to bottom, #000 0% 63%, transparent 100%),
+    linear-gradient(to right, #000 0% 46%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
 
-.dot-portrait {
-  --dot-spacing: 3.2px;
-  --dot-radius: 0.85px;
-  max-width: 100%;
-  filter: grayscale(1) contrast(1.15) brightness(1.32);
-  -webkit-mask-image:
-    radial-gradient(circle, #000 var(--dot-radius), transparent calc(var(--dot-radius) + 0.1px)),
-    linear-gradient(to top, transparent 0%, #000 32%),
-    radial-gradient(circle at 100% 100%, transparent 0%, #000 55%),
-    linear-gradient(to left, transparent 0%, #000 52%);
-  mask-image:
-    radial-gradient(circle, #000 var(--dot-radius), transparent calc(var(--dot-radius) + 0.1px)),
-    linear-gradient(to top, transparent 0%, #000 32%),
-    radial-gradient(circle at 100% 100%, transparent 0%, #000 55%),
-    linear-gradient(to left, transparent 0%, #000 52%);
-  -webkit-mask-size: var(--dot-spacing) var(--dot-spacing), 100% 100%, 100% 100%, 100% 100%;
-  mask-size: var(--dot-spacing) var(--dot-spacing), 100% 100%, 100% 100%, 100% 100%;
-  -webkit-mask-repeat: repeat, no-repeat, no-repeat, no-repeat;
-  mask-repeat: repeat, no-repeat, no-repeat, no-repeat;
-  -webkit-mask-composite: source-in, source-in, source-in;
-  mask-composite: intersect, intersect, intersect;
-  mask-mode: alpha;
+.home-header-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home-header-portrait__photo {
+  filter: grayscale(1) brightness(var(--brightness)) contrast(1.12);
+}
+
+.home-header-portrait__dots {
+  position: absolute;
+  inset: 0;
+  filter: grayscale(1) brightness(1.3) contrast(1.2);
+  opacity: var(--dot-strength);
+  -webkit-mask-image: radial-gradient(circle, #000 0 .65px, transparent .85px);
+  mask-image: radial-gradient(circle, #000 0 .65px, transparent .85px);
+  -webkit-mask-size: var(--dot-size) var(--dot-size);
+  mask-size: var(--dot-size) var(--dot-size);
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -462,28 +477,8 @@ header.project-header.about-header {
     width: 68px;
     height: auto;
     flex: none;
-    object-fit: contain;
     border-radius: 0;
     transform: none;
-  }
-
-  .home-header-identity .dot-portrait {
-    filter: grayscale(1);
-    -webkit-mask-image:
-      linear-gradient(to top, transparent 0%, #000 32%),
-      radial-gradient(circle at 100% 100%, transparent 0%, #000 55%),
-      linear-gradient(to left, transparent 0%, #000 52%);
-    mask-image:
-      linear-gradient(to top, transparent 0%, #000 32%),
-      radial-gradient(circle at 100% 100%, transparent 0%, #000 55%),
-      linear-gradient(to left, transparent 0%, #000 52%);
-    -webkit-mask-size: 100% 100%, 100% 100%, 100% 100%;
-    mask-size: 100% 100%, 100% 100%, 100% 100%;
-    -webkit-mask-repeat: no-repeat, no-repeat, no-repeat;
-    mask-repeat: no-repeat, no-repeat, no-repeat;
-    -webkit-mask-composite: source-in, source-in;
-    mask-composite: intersect, intersect;
-    mask-mode: alpha;
   }
 
   .home-header-identity .home-header-kicker {

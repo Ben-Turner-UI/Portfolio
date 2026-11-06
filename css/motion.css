@@ -1,17 +1,5 @@
 /* Header field and a few entrances. Content stays visible if motion is off. */
 
-@property --dot-spacing {
-  syntax: "<length>";
-  inherits: true;
-  initial-value: 3.2px;
-}
-
-@property --dot-radius {
-  syntax: "<length>";
-  inherits: true;
-  initial-value: 0.85px;
-}
-
 /* Decorative header field. The earlier header rule caps ::before at 220px,
    which cuts a hard line through the hero, so height is reset here. */
 header.home::before,

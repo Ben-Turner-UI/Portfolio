@@ -5,7 +5,7 @@
 
 .nav-container {
   position: fixed;
-  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
   left: 0;
   right: 0;
   z-index: 1000;
@@ -134,7 +134,7 @@
     gap: 0;
     min-width: 44px;
     min-height: 44px;
-    padding: 0 12px;
+    padding: 0 8px;
     margin: 0;
     font-family: 'Source Sans 3', sans-serif;
     font-size: 16px;
@@ -203,13 +203,14 @@
   }
 
   .nav-container nav {
-    --nav-bar-padding: 6px 12px;
+    --nav-bar-padding: 4px 14px;
     align-items: center;
     width: max-content;
     max-width: calc(100% - 32px);
-    min-height: 0;
+    box-sizing: border-box;
+    min-height: 52px;
     gap: 32px;
-    padding: 6px 12px;
+    padding: 4px 14px;
     background: #141413;
     border-radius: var(--radius-md);
     border: 1px solid rgba(255, 255, 255, 0.16);
@@ -227,8 +228,8 @@
   .nav-item {
     border-radius: var(--radius-md);
     min-width: 0;
-    min-height: 0;
-    padding: 4px 8px;
+    min-height: 40px;
+    padding: 8px 12px;
     font-weight: 500;
     align-self: center;
     justify-content: center;
@@ -412,6 +413,14 @@ body .nav-container.nav-on-light .nav-item__label {
   body .nav-container.nav-on-light .nav-item,
   body .nav-container.nav-on-light .nav-item__label {
     color: rgba(20, 20, 19, 0.72);
+  }
+
+  .nav-container #nav-item-active,
+  body .nav-container.nav-on-light #nav-item-active,
+  body .nav-container.nav-on-dark #nav-item-active {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-height: 0;
   }
 
   .nav-container #nav-item-active,

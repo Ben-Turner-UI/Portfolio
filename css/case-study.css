@@ -894,6 +894,54 @@ body.case-study .project-key-stats .cs-stats {
 /* ==========================================================================
    UI GALLERY — one interface at a time
    ========================================================================== */
+.ui-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  width: 100%;
+  max-width: var(--project-media-max-width);
+  margin: 0;
+}
+
+.ui-index a {
+  color: #141413;
+  font-size: var(--type-body-lg);
+  line-height: var(--type-body-lg-lh);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.ui-index__title {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.ui-index a:hover .ui-index__title {
+  text-decoration-thickness: 2px;
+}
+
+.ui-index__product {
+  color: #595959;
+  font-weight: 400;
+  margin-right: 0.35em;
+}
+
+.ui-index a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+html:has(body.case-study--ui-gallery) {
+  scroll-padding-top: 88px;
+}
+
+@media (max-width: 768px) {
+  html:has(body.case-study--ui-gallery) {
+    scroll-padding-top: 16px;
+  }
+}
+
 .ui-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -935,6 +983,11 @@ body.case-study .project-key-stats .cs-stats {
   border: var(--project-media-border);
   border-radius: var(--project-media-radius);
   box-sizing: border-box;
+}
+
+/* Campaign stills are wider than the interface crop */
+.ui-grid__media--wide {
+  aspect-ratio: 2640 / 1350;
 }
 
 /* Keep modifier for older markup; always fill the frame (no letterbox bars) */
