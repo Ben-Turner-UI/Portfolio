@@ -480,8 +480,6 @@ header.project-header.about-header {
     flex: none;
     border-radius: 0;
     transform: none;
-    -webkit-mask-image: none;
-    mask-image: none;
   }
 
   .home-header-portrait__photo {
