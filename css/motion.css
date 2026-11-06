@@ -1,47 +1,4 @@
-/* Header field and a few entrances. Content stays visible if motion is off. */
-
-/* Decorative header field. The earlier header rule caps ::before at 220px,
-   which cuts a hard line through the hero, so height is reset here. */
-header.home::before,
-header.project-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  max-height: none;
-  z-index: 0;
-  pointer-events: none;
-}
-
-header.home::before,
-header.project-header::before {
-  background-image:
-    radial-gradient(circle, rgba(250, 249, 245, 0.12) 0.5px, transparent 0.65px),
-    radial-gradient(ellipse 46% 38% at 8% 88%, rgba(255, 77, 0, 0.025), transparent 72%);
-  background-size: 11px 11px, 100% 100%;
-  background-repeat: repeat, no-repeat;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 40%, rgba(0, 0, 0, 0.4) 72%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 40%, rgba(0, 0, 0, 0.4) 72%, transparent 100%);
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-
-/* Homepage art needs no additional grid; project headers use a quieter CSS-only field. */
-header.home::before {
-  background: none;
-  -webkit-mask-image: none;
-  mask-image: none;
-}
-
-header.project-header::before,
-header.project-header::after {
-  content: none;
-  background: none;
-  -webkit-mask-image: none;
-  mask-image: none;
-}
+/* Header and content entrances. Content stays visible if motion is off. */
 
 @media (prefers-reduced-motion: no-preference) {
   .project-grid > a:hover .grid-item,
@@ -215,8 +172,6 @@ header.project-header::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  header.home::before,
-  header.project-header::before,
   .cs-highlight,
   .project-cards .project-card,
   .side-project-grid .side-project-card,

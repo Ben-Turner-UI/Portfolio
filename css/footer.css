@@ -74,7 +74,7 @@ footer .contact-links {
 }
 
 .footer-name__mark {
-  color: #ff4d00;
+  color: var(--accent-gold);
 }
 
 .copyright {

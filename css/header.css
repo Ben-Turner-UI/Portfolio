@@ -19,36 +19,6 @@ header {
   overflow: hidden;
 }
 
-/* Case-study header wash. The homepage field lives in motion.css. */
-header.project-header::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: min(100%, 220px);
-  pointer-events: none;
-  z-index: 0;
-  background: linear-gradient(to top, rgba(255, 74, 0, 0.24) 0%, transparent 100%);
-}
-
-header.project-header::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100px;
-  pointer-events: none;
-  z-index: 0;
-  background-image: radial-gradient(circle, rgba(255, 74, 0, 0.14) 0.6px, transparent 0.6px);
-  background-size: 4px 4px;
-  background-position: center bottom;
-  /* Keep dots near the bottom edge; fade out behind header text/highlights */
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, transparent 55%, rgba(0, 0, 0, 0.25) 78%, #000 100%);
-  mask-image: linear-gradient(180deg, transparent 0%, transparent 55%, rgba(0, 0, 0, 0.25) 78%, #000 100%);
-}
-
 header > * {
   position: relative;
   z-index: 1;
@@ -102,20 +72,6 @@ header.project-header.about-header {
   background: #141413;
 }
 
-header.project-header::before,
-header.project-header::after {
-  content: none;
-}
-
-[data-color-scheme="dark"] header.project-header:not(.about-header) {
-  color: #FAF9F5;
-}
-
-[data-color-scheme="dark"] header.project-header:not(.about-header) .project-summary-meta,
-[data-color-scheme="dark"] header.project-header:not(.about-header) .project-meta {
-  color: #FAF9F5;
-}
-
 .project-header .header-content {
   gap: 0;
 }
@@ -151,7 +107,7 @@ header.project-header.about-header {
   body.home .home-header-portrait {
     --brightness: .82;
     top: 50%;
-    right: 0;
+    right: clamp(16px, 4vw, 64px);
     width: clamp(255px, calc(19.5vw - 48px), 285px);
     -webkit-mask-image:
       linear-gradient(to bottom, #000 0% 76%, transparent 100%),
@@ -169,14 +125,6 @@ header.project-header.about-header {
     filter: grayscale(1) sepia(1) saturate(1.8) hue-rotate(340deg) brightness(1.5) contrast(1.15);
   }
 
-  header.project-header:not(.about-header) {
-    padding-top: 100px;
-    padding-bottom: 32px;
-  }
-
-  header.project-header.about-header {
-    padding-top: max(0px, calc(48px - var(--nav-top-offset, 68px)));
-  }
 }
 
 .project-header-title-block {
@@ -586,7 +534,7 @@ header.project-header.about-header {
 }
 
 .home-header-content-text .home-accent {
-  color: #ff4d00;
+  color: var(--accent-gold);
 }
 
 .home-header-content-text p {

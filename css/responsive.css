@@ -350,9 +350,9 @@ body.case-study header.project-header .project-header-description strong {
 }
 
 header.project-header .cs-highlight__icon {
-  border-color: rgba(250, 249, 245, 0.28);
-  background: rgba(250, 249, 245, 0.08);
-  color: #FAF9F5;
+  border-color: rgba(214, 162, 74, 0.56);
+  background: rgba(214, 162, 74, 0.12);
+  color: var(--accent-gold);
 }
 
 header.project-header .project-meta-badge__logo {

@@ -296,7 +296,7 @@ a.side-project-card:hover {
 }
 
 .project-card:focus-visible {
-  outline: 2px solid #ff4d00;
+  outline: 2px solid var(--accent-gold);
   outline-offset: 4px;
 }
 
@@ -342,7 +342,7 @@ a.side-project-card:hover {
 }
 
 .project-grid > a.project-card-link:focus-visible {
-  outline: 2px solid #ff4d00;
+  outline: 2px solid var(--accent-gold);
   outline-offset: 2px;
 }
 
@@ -460,7 +460,7 @@ a.side-project-card:hover {
 .project-statistics-group--quote {
   justify-content: center;
   padding-left: 16px;
-  border-left: 3px solid #ff4d00;
+  border-left: 3px solid var(--accent-gold);
   box-sizing: border-box;
 }
 

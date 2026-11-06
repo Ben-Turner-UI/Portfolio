@@ -736,7 +736,7 @@
 }
 
 .cs-code-diff {
-  --cs-diff-accent: #ff4d00;
+  --cs-diff-accent: var(--accent-gold);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -767,9 +767,9 @@
 }
 
 .cs-code-diff__chip--good {
-  background: rgba(255, 77, 0, 0.1);
+  background: rgba(214, 162, 74, 0.1);
   color: var(--cs-diff-accent);
-  border-color: rgba(255, 77, 0, 0.28);
+  border-color: rgba(214, 162, 74, 0.28);
 }
 
 .cs-code-diff__chip .material-symbols-rounded {
@@ -820,7 +820,7 @@
 }
 
 .cs-code-diff__ln--good {
-  background: rgba(255, 77, 0, 0.1);
+  background: rgba(214, 162, 74, 0.1);
   color: #c43d00;
 }
 
@@ -1033,7 +1033,7 @@
   --cs-process-bg: var(--ui-0, #fff);
   --cs-process-line: rgba(0, 0, 0, 0.14);
   --cs-process-muted: rgba(0, 0, 0, 0.55);
-  --cs-process-accent: #ff4d00;
+  --cs-process-accent: var(--accent-gold);
   width: 100%;
   max-width: var(--project-media-max-width);
   margin: 0;

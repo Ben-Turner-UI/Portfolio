@@ -1,6 +1,7 @@
 /* Design tokens: type scale, spacing, case-study variables (declared on body) */
 body {
   --content-max-width: 720px;
+  --accent-gold: #d6a24a;
 
   /* Portfolio type scale (Source Sans 3), aligned with Adobe Spectrum body sizing */
   --type-headline-lg: 28px;

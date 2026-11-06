@@ -53,7 +53,7 @@
   font-size: 48px;
   font-weight: 600;
   line-height: 0.7;
-  color: #ff4d00;
+  color: var(--accent-gold);
 }
 
 .testimonial-body {
@@ -87,7 +87,7 @@
   background: none;
   padding: 0;
   text-decoration: underline;
-  text-decoration-color: #ff4d00;
+  text-decoration-color: var(--accent-gold);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }

@@ -340,7 +340,7 @@
 
 .nav-name__mark,
 body .nav-container.nav-on-light .nav-name__mark {
-  color: #ff4d00;
+  color: var(--accent-gold);
 }
 
 .nav-container nav {
@@ -360,7 +360,7 @@ body .nav-container.nav-on-light .nav-name__mark {
 
 .nav-name:focus-visible,
 .nav-item:focus-visible {
-  outline: 2px solid #ff4d00;
+  outline: 2px solid var(--accent-gold);
   outline-offset: 3px;
 }
 
