@@ -1,4 +1,8 @@
 (function () {
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    document.documentElement.classList.add('motion');
+  }
+
   function updateNavOffset() {
     var nav = document.querySelector('.nav-container');
     if (!nav) return;
