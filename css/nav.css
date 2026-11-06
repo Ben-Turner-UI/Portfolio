@@ -418,8 +418,7 @@ body .nav-container.nav-on-light .nav-item__label {
   .nav-container #nav-item-active,
   body .nav-container.nav-on-light #nav-item-active,
   body .nav-container.nav-on-dark #nav-item-active {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 6px 14px;
     min-height: 0;
   }
 
