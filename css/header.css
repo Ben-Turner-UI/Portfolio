@@ -83,6 +83,12 @@ header.project-header.about-header {
 }
 
 @media (min-width: 769px) {
+  /* Anchor the desktop portrait to the header, not the text column, so its
+     vertical position stays centered as the copy reflows at narrower widths. */
+  body.home .home-header-content-text {
+    position: static;
+  }
+
   body.home header.home {
     background-image: url('../img/warm-fluted-glass-lightscape.png');
     background-position: center center;
@@ -109,6 +115,10 @@ header.project-header.about-header {
     top: 50%;
     right: clamp(16px, 4vw, 64px);
     width: clamp(255px, calc(19.5vw - 48px), 285px);
+    /* The cutout carries more visual weight below its midpoint. Lift its box
+       slightly so the visible portrait, rather than its transparent canvas,
+       reads as vertically centred in the header. */
+    transform: translateY(-55%);
     -webkit-mask-image:
       linear-gradient(to bottom, #000 0% 76%, transparent 100%),
       linear-gradient(to right, transparent 0%, #000 34%, #000 78%, transparent 100%);

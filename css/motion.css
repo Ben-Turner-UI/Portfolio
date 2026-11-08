@@ -158,11 +158,11 @@
 @keyframes portrait-settle {
   from {
     opacity: 0;
-    transform: translateY(-46%) scale(0.96);
+    transform: translateY(-51%) scale(0.96);
   }
   to {
     opacity: 1;
-    transform: translateY(-50%) scale(1);
+    transform: translateY(-55%) scale(1);
   }
 }
 
